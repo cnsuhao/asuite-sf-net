@@ -1,0 +1,10 @@
+VirtualTree http://soft-gems.net/VirtualTreeview/
+CoolTrayicons http://subsimple.com/delphi.asp
+FastMM4 http://sourceforge.net/projects/fastmm/
+ClassicSpeedButton Launcher source zip
+
+
+Instructions for component VirtualTree (VirtualTrees.pas):
+
+Search and delete (or comment) this (line 18388, procedure TBaseVirtualTree.DoFreeNode(Node: PVirtualNode);):
+and ([vsInitialized, vsInitialUserData] * Node.States <> [])
