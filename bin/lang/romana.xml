@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ASuite>
+  <Info>
+	<PathReadme>docs\readme.rtf</PathReadme>
+  </Info>
+  <Form1><!--List-->
+	<!--Software's Menu-->
+	<TabListCaption>Lista</TabListCaption>
+	<TabSearchCaption>Cauta</TabSearchCaption>
+	<TabStatsCaption>Statistici</TabStatsCaption>
+	<ButtonSearch>Cauta</ButtonSearch>
+	<ColumnName>Nume</ColumnName>
+	<ColumnCategory>Categorie</ColumnCategory>
+	<!--Stats-->
+	<!--System-->
+	<GroupBoxSystem>Sistem</GroupBoxSystem>
+	<LabelPcName>Nume computer: </LabelPcName>
+	<LabelCurrentUser>Utilizator curent: </LabelCurrentUser>
+	<!--Drive-->
+	<GroupBoxDrive>Disc %s:</GroupBoxDrive>
+	<LabelSize>Marime: </LabelSize>
+	<LabelFreeSpace>Spatiu liber: </LabelFreeSpace>
+	<LabelUsedSpace>Spatiu ocupat: </LabelUsedSpace>
+	<!--Launcher-->
+	<GroupBoxASuite>ASuite</GroupBoxASuite>
+	<LabelSwInserted>Softuri adaugate: </LabelSwInserted>
+	<LabelCatInserted>Categorii adaugate: </LabelCatInserted>
+	<LabelTotal>Total: </LabelTotal>
+	<!--ASuite's Menu-->
+	<!--File Menu-->
+	<MenuFile>Fisier</MenuFile>
+	<MenuOption>Optiuni</MenuOption>
+	<MenuSave>Salveaza lista</MenuSave>
+	<MenuImportList>Importa lista...</MenuImportList>
+	<MenuExportList>Exporta lista...</MenuExportList>
+	<MenuScanExecutables>Scaneaza dupa fisiere...</MenuScanExecutables>
+	<MenuExit>Iesire</MenuExit>
+	<!--Edit List Menu/PopUp Menu-->
+	<MenuSortList>Ordoneaza lista</MenuSortList>
+	<MenuEdit>Editeaza</MenuEdit>
+	<MenuSortCategoryItems>Ordoneaza elementele categoriei</MenuSortCategoryItems>
+	<MenuRun>Lanseaza</MenuRun>
+	<MenuRunAs>Lanseaza ca...</MenuRunAs>
+	<MenuOpenFolder>Arata dosarul aplicatiei</MenuOpenFolder>
+	<MenuVisitWebSite>Viziteza website-ul</MenuVisitWebSite>
+	<MenuAddCat>Adauga categorie</MenuAddCat>
+	<MenuAddSw>Adauga aplicatie</MenuAddSw>
+	<MenuAddGroupSw>Adauga grup de aplicatii</MenuAddGroupSw>
+	<MenuAddFolder>Adauga dosar</MenuAddFolder>
+	<MenuAddSeparator>Adauga separator</MenuAddSeparator>
+	<MenuDelete>Sterge</MenuDelete>
+	<MenuProperty>Proprietati</MenuProperty>
+	<!--Help Menu-->
+	<MenuCheckUpdates>Verifica actualizari</MenuCheckUpdates>
+	<MenuHelp>Ajutor</MenuHelp>
+	<MenuReadme>Citeste-ma</MenuReadme>
+	<MenuASuiteInfo>Despre ASuite</MenuASuiteInfo>
+	<!--Trayicon Menu-->
+	<TrayiconShowASuite>Arata ASuite</TrayiconShowASuite>
+	<TrayiconMRU>Recente</TrayiconMRU>
+	<TrayiconExit>Iesire</TrayiconExit>
+	<!--Trayicon Default Menu-->
+	<DefaultMenuButtonOptions>Optiuni...</DefaultMenuButtonOptions>
+	<DefaultMenuButtonSearch>Cauta...</DefaultMenuButtonSearch>
+	<DefaultMenuButtonAbout>Despre ASuite</DefaultMenuButtonAbout>
+  </Form1>
+  <Form2><!--Card-->
+	<!--ASuite's Page-->
+	<FormCaptionAbout>Despre</FormCaptionAbout>
+	<LabelASVersion>Versiune </LabelASVersion>
+	<LabelIntro>ASuite este o platforma pentru lansare de aplicatii ce poate organiza un numar nelimitat de fisiere, dosare si pagini web in vederea unui acces rapid. Este conceput pentru a rula pe medii de stocare ca discuri USB, discuri fixe, iPod-uri, etc.[br][br]Cum ASuite foloseste cai de acces relative, se potriveste perfect pentru utilizarea cu aplicatii portabile.</LabelIntro>
+	<LabelInfo>Pentru mai multe informatii vizitati</LabelInfo>
+	<!--Software's Page-->
+	<FormCaptionCard>Informatii</FormCaptionCard>
+	<GroupBoxSoftware>Softuri</GroupBoxSoftware>
+	<LabelNameSw>Nume</LabelNameSw>
+	<LabelDeveloper>Dezvoltator</LabelDeveloper>
+	<LabelVersion>Versiune</LabelVersion>
+	<LabelWebSite>Pagina mama</LabelWebSite>
+	<LabelDescription>Descriere</LabelDescription>
+	<LabelNote>Note</LabelNote>
+	<LabelOpinion>Clasare</LabelOpinion> 
+  </Form2>
+  <Form3><!--Option-->
+	<Form3Caption>Optiuni</Form3Caption>
+	<!--General-->
+	<TabGeneralCaption>General</TabGeneralCaption>
+	<!--Startup-->
+	<GroupBoxStartup>Pornire</GroupBoxStartup>
+	<CheckBoxWindowsStartup>Porneste ASuite la pornirea sistemului</CheckBoxWindowsStartup>
+	<CheckBoxStartUp>Arata fereastra la pornire</CheckBoxStartUp>
+	<CheckBoxMenuStartUp>Show trayicon menu on startup</CheckBoxMenuStartUp>
+	<CheckBoxAutorun>Activeaza autolansarea</CheckBoxAutorun>
+	<!--Window-->
+	<GroupBoxWindow>Fereastra</GroupBoxWindow>
+	<CheckBoxHoldSize>Mentine marimea ferestrei</CheckBoxHoldSize>
+	<CheckBoxFormCard>Arata informatii despre aplicatie</CheckBoxFormCard>
+	<CheckBoxWindowOnTop>Fereastra deasupra</CheckBoxWindowOnTop>
+	<CheckBoxWindowHotkey>Arata fereastra cand tastele rapide sunt apasate</CheckBoxWindowHotkey>
+	<CheckBoxMenuHotkey>Show trayicon menu when hotkey is pressed</CheckBoxMenuHotkey>
+	<CheckBoxCustomTitle>Titlu fereastra individualizat</CheckBoxCustomTitle>
+	<LabelLanguage>Limba</LabelLanguage>
+	<!--Treeview-->
+	<GroupBoxTreeView>Vedere tip arbore</GroupBoxTreeView>
+	<ButtonFontSettings>Setari font...</ButtonFontSettings>
+	<CheckBoxBackground>Imagine fundal activa</CheckBoxBackground>
+	<ButtonBrowseBackground>Rasfoieste</ButtonBrowseBackground>
+	<!--Tabs-->
+	<GroupBoxTabs>Taburi</GroupBoxTabs> 
+	<CheckBoxHideSearch>Ascunde cautare tab</CheckBoxHideSearch>
+	<CheckBoxHideStats>Ascunde statistici taburi</CheckBoxHideStats>
+	<!--Advanced-->
+	<TabAdvancedCaption>Avansat</TabAdvancedCaption>
+	<!--MRU-->
+	<GroupBoxMRU>Recente</GroupBoxMRU>
+	<CheckBoxMRU>Activare MRU</CheckBoxMRU>
+	<CheckBoxSubMenuMRU>MRU in submeniul iconitei din subsol</CheckBoxSubMenuMRU>
+	<LabelMRUMax>Numar maxim MRU</LabelMRUMax>
+	<ButtonClearMRU>Sterge toate MRU</ButtonClearMRU>
+	<!--Backup-->
+	<GroupBoxBackup>Copie rezerva</GroupBoxBackup>
+	<CheckBoxBackup>Copie rezerva activa</CheckBoxBackup>
+	<LabelBackupMax>Numar maxim copii rezerva</LabelBackupMax>
+	<ButtonClearBackup>Sterge toate copiile de rezerva</ButtonClearBackup>
+	<!--Check list-->
+	<GroupBoxCheckList>Verifica lista</GroupBoxCheckList>
+	<CheckBoxCheckList>Activeaza verificarea listei</CheckBoxCheckList>
+	<LabelCheckListTime>Interval de timp</LabelCheckListTime>
+	<!--Other functions-->
+	<GroupBoxOtherFunctions>Alte functii</GroupBoxOtherFunctions>
+	<CheckBoxHotKey>Activeaza tasta rapida</CheckBoxHotKey>
+	<CheckBoxCache>Activeaza colectarea</CheckBoxCache>
+	<CheckBoxSaveSecurity>Activeaza salvarea securitatii</CheckBoxSaveSecurity>
+	<CheckBoxScheduler>Activeaza orarul</CheckBoxScheduler>
+	<!--Clear elements-->
+	<LabelClearElements>Sterge toate MRU, copii rezerva si/sau colectarea iconitelor</LabelClearElements>
+	<ButtonClearElements>Sterge elementele...</ButtonClearElements>
+	<!--Various-->
+	<TabVariousCaption>Variate</TabVariousCaption>
+	<!--Execution-->
+	<GroupBoxExecution>Executare</GroupBoxExecution>
+	<CheckBoxSingleClick>Executa cu un singur clic</CheckBoxSingleClick>
+	<LabelActionOnExe>La executare</LabelActionOnExe>
+	<ListActionOnExe1>Doar ruleaza fisierul</ListActionOnExe1>
+	<ListActionOnExe2>Ruleaza fisier si ascunde ASuite</ListActionOnExe2>
+	<ListActionOnExe3>Ruleaza fisier si inchide ASuite</ListActionOnExe3>
+	<!--System Tray-->
+	<GroupBoxTrayicon>Subsol sistem</GroupBoxTrayicon>
+	<ButtonCustomTrayicon>Alege iconita</ButtonCustomTrayicon>
+	<CheckBoxTrayicon>Activeaza Iconita din Subsol</CheckBoxTrayicon>
+	<ListActionTrayicon1>Nici o actiune</ListActionTrayicon1>
+	<ListActionTrayicon2>Arata fereastra</ListActionTrayicon2>
+	<ListActionTrayicon3>Arata meniul</ListActionTrayicon3>
+	<CheckBoxClassicMenu>Foloseste meniul clasic</CheckBoxClassicMenu>
+	<!--Trayicon Default Menu-->
+	<LabelMenuTheme>Tema</LabelMenuTheme>
+	<ButtonMenuFolders>Meniu dosare</ButtonMenuFolders>
+	<CheckBoxMenuFade>Activeaza incetosarea meniului</CheckBoxMenuFade>
+	<!--Mouse-->
+	<GroupBoxMouse>Senzori maus</GroupBoxMouse>
+	<LabelSide>Laterala</LabelSide>
+	<LabelTop>Varf</LabelTop>
+	<LabelLeft>Stanga</LabelLeft>
+	<LabelRight>Dreapta</LabelRight>
+	<LabelBottom>Jos</LabelBottom>
+	<LabelLeftClick>Clic stanga</LabelLeftClick>
+	<LabelRightClick>Clic dreapta</LabelRightClick>
+	<ListActionMouse1>Nefunctional</ListActionMouse1>
+	<ListActionMouse2>Arata fereastra</ListActionMouse2>
+	<ListActionMouse3>Arata meniul</ListActionMouse3>
+	<ButtonOk>OK</ButtonOk>
+	<ButtonCancel>Anuleaza</ButtonCancel>
+  </Form3>
+  <Form45><!--Property Sw/Cat-->
+	<Form45Caption>Proprietati</Form45Caption>
+	<TabGeneralCaption>General</TabGeneralCaption>
+	<TabAdvancedCaption>Avansat</TabAdvancedCaption>
+	<TabInfoCaption>Informatii</TabInfoCaption>
+	<LabelName>Nume</LabelName>
+	<LabelVersion>Versiune</LabelVersion>
+	<LabelDeveloper>Dezvoltator</LabelDeveloper>
+	<LabelWebSite>Pagina mama</LabelWebSite>
+	<LabelPathExeA>Executabil/dosar/cale pagina web</LabelPathExeA>
+	<LabelPathExeB>Executabile/dosare/cai pagini web</LabelPathExeB>
+	<LabelParameters>Parametri (optional)</LabelParameters>
+	<LabelWorkingDir>Dosar de lucru individualizat (optional)</LabelWorkingDir>
+	<LabelPathIcon>Cale iconita individualizata (optional)</LabelPathIcon>
+	<HideWindow>La executare ascunde fereastra</HideWindow>
+	<LabelDescription>Descriere</LabelDescription>
+	<LabelOpinion>Clasare</LabelOpinion>
+	<LabelNote>Note</LabelNote>
+	<LabelInformation1>Fiecare pagina in ASuite cere informatii despre aplicatia respectiva. Toate campurile sunt optionale cu exceptia numelui aplicatiei.</LabelInformation1>
+	<LabelInformation3>Nota: Poti folosi $ASuite chiar si cand aplicatiile sunt in acelasi dosar cu ASuite.</LabelInformation3>
+	<ButtonBrowse>Rasfoieste</ButtonBrowse>
+	<ButtonRetrieve>Extrage</ButtonRetrieve>
+	<LabelAutoExecute>Autoexecuta</LabelAutoExecute>
+	<ButtonChangeOrder>Schimba ordinea</ButtonChangeOrder>
+	<ComboBoxAutoExecute0>Niciodata</ComboBoxAutoExecute0>
+	<ComboBoxAutoExecute1>Intotdeauna la start</ComboBoxAutoExecute1>
+	<ComboBoxAutoExecute2A>Numai cand nici o instanta anterioara nu ruleaza</ComboBoxAutoExecute2A>
+	<ComboBoxAutoExecute2B>Numai cand nici o instanta anterioara nu ruleaza</ComboBoxAutoExecute2B>
+	<ComboBoxAutoExecute3>Intotdeauna la Oprire</ComboBoxAutoExecute3>
+	<LabelOnExecution>La executare</LabelOnExecution>
+	<ComboBoxActionOnExe0>De baza (optiuni)</ComboBoxActionOnExe0>
+	<ComboBoxActionOnExe1A>Doar ruleaza fisierul</ComboBoxActionOnExe1A>
+	<ComboBoxActionOnExe1B>Doar ruleaza fisierele</ComboBoxActionOnExe1B>
+	<ComboBoxActionOnExe2>Ruleaza si ascunde ASuite</ComboBoxActionOnExe2>
+	<ComboBoxActionOnExe3>Ruleaza si inchide ASuite</ComboBoxActionOnExe3>
+	<CheckBoxHotKey>Activeaza tasta rapida</CheckBoxHotKey>
+	<LabelWindowState>Situatia ferestrei</LabelWindowState>
+	<ComboBoxWSNormal>Normal</ComboBoxWSNormal>
+	<ComboBoxWSMinimized>Minimizat</ComboBoxWSMinimized>
+	<ComboBoxWSMaximized>Maximizat</ComboBoxWSMaximized>
+	<LabelDontInsertMRUA>Nu adauga aplicatia la MRU</LabelDontInsertMRUA>
+	<LabelDontInsertMRUB>Nu adauga grupul de aplicatii la MRU</LabelDontInsertMRUB>
+	<LabelShortcutDesktop>Creeaza scurtatura pe spatiul de lucru cand ASuite ruleaza</LabelShortcutDesktop>
+	<LabelHideSoftwareMenuA>Ascunde aceasta aplicatie in meniu</LabelHideSoftwareMenuA>
+	<LabelHideSoftwareMenuB>Ascunde acest grup de aplicatii in meniu</LabelHideSoftwareMenuB>
+	<LabelScheduler>Orar</LabelScheduler>
+	<ComboBoxSchedulerMode0>Nefunctional</ComboBoxSchedulerMode0>
+	<ComboBoxSchedulerMode1>O data</ComboBoxSchedulerMode1>
+	<ComboBoxSchedulerMode2>In fiecare ora</ComboBoxSchedulerMode2>
+	<ComboBoxSchedulerMode3>Zilnic</ComboBoxSchedulerMode3>
+	<ButtonAddPath>Adauga</ButtonAddPath>
+	<ButtonReplacePath>Inlocuieste</ButtonReplacePath>
+	<ButtonDeletePath>Sterge</ButtonDeletePath>
+	<ButtonOk>OK</ButtonOk>
+	<ButtonCancel>Anuleaza</ButtonCancel>
+  </Form45>
+  <Form6><!--Import List-->
+	<Form6Caption>Importa lista</Form6Caption>
+	<LabelPathList>Calea listei</LabelPathList>
+	<LabelList>Selecteaza aplicatiile pentru import</LabelList>
+	<ButtonSelectAll>Selecteaza tot</ButtonSelectAll>
+	<ButtonDeSelectAll>Deselecteaza tot</ButtonDeSelectAll>
+	<ButtonBrowse>Rasfoieste</ButtonBrowse>
+	<ButtonOk>OK</ButtonOk>
+	<ButtonCancel>Anuleaza</ButtonCancel>
+  </Form6>
+  <Form7>
+	<Form7Caption>Scaneaza dosar</Form7Caption>
+	<LabelFolderPath>Cale dosar</LabelFolderPath>
+	<ButtonBrowse>Rasfoieste</ButtonBrowse>
+	<CheckboxSubFolders>Scaneaza subdosare</CheckboxSubFolders>
+	<LabelTypes>Tipuri fisier</LabelTypes>
+	<LabelExclude>Exclude fisier</LabelExclude>
+	<ButtonAdd>Adauga</ButtonAdd>
+	<ButtonReplace>Inlocuie</ButtonReplace>
+	<ButtonDelete>Sterge</ButtonDelete>
+	<CheckboxRetrieveInfo>Extrage informatii din executabile</CheckboxRetrieveInfo>
+	<ButtonScan>Scaneaza</ButtonScan>
+	<ButtonCancel>Anuleaza</ButtonCancel>
+  </Form7>
+  <Form8>
+	<GroupboxCurrentTask>Sarcina curenta</GroupboxCurrentTask>
+	<MessageDownload>Descarcare %s</MessageDownload>
+	<GroupboxDownloadInfo>Info descarcare</GroupboxDownloadInfo>
+	<LabelFileName>Nume fisier</LabelFileName>
+	<LabelSpeed>Viteza</LabelSpeed>
+	<LabelTotalSize>Marime totala</LabelTotalSize>
+	<LabelBytesReceived>Byti primiti</LabelBytesReceived>
+	<ButtonCancel>Anuleaza</ButtonCancel>
+  </Form8>
+  <Form9>
+	<Form9Caption>Sterge elemente</Form9Caption>
+	<LabelClearElements>Sterge urmatoarele elemente acum:</LabelClearElements>
+	<CheckBoxMRU>MRU</CheckBoxMRU>
+	<CheckBoxBackup>Copii rezerva</CheckBoxBackup>
+	<CheckBoxCache>Colecteaza iconite</CheckBoxCache>
+	<ButtonClear>Sterge</ButtonClear>
+	<ButtonCancel>Anuleaza</ButtonCancel>
+  </Form9>
+  <Form10>
+	<Form10Caption>Ordine aplicatii</Form10Caption>
+	<LabelInfoStartupOrder>Ordoneaza lista de aplicatii la startul ASuite</LabelInfoStartupOrder>
+	<LabelInfoShutdownOrder>Ordoneaza lista de aplicatii la oprirea ASuite</LabelInfoShutdownOrder>
+	<ButtonOk>OK</ButtonOk>
+	<ButtonCancel>Anuleaza</ButtonCancel>
+  </Form10>
+  <Form11>
+	<Form11Caption>Ruleaza ca</Form11Caption>
+	<LabelUsername>Nume utilizator</LabelUsername>
+	<LabelPassword>Parola</LabelPassword>
+	<ButtonOk>OK</ButtonOk>
+	<ButtonCancel>Anuleaza</ButtonCancel>
+  </Form11>
+  <Form12>
+	<Form12Caption>Schimba dosarele meniului</Form12Caption>
+	<LabelFolderName>Nume dosar</LabelFolderName>
+	<LabelFolderPath>Cale dosar</LabelFolderPath>
+	<ButtonBrowse>Rasfoieste</ButtonBrowse>
+	<ButtonOk>OK</ButtonOk>
+	<ButtonCancel>Anuleaza</ButtonCancel>
+  </Form12>
+  <String>
+	<string01>Fisier negasit</string01>
+	<string02>Eroare in numele categoriei: %s</string02>
+	<string03>Eroare in numele aplicatiei: %s</string03>
+	<string04>Fara nume</string04>
+	<string05>Fara descriere</string05>  
+	<string06>Fara clasare</string06>   
+	<string07>Fara note</string07>
+	<string08>Esti sigur?</string08>
+	<string09>Nu pot rula %s</string09>
+	<string10> Incarcarea fisierului xml incompleta datorita unei erori</string10>
+	<string11>%s eroare, cu mesajul: %s</string11>
+	<string12>Campul nume al aplicatiei gol</string12>
+	<string13>Calea spre executabil invalida</string13>
+	<string14>Maxim 10 programe in grupul de aplicatii</string14>
+	<string15>Nu pot folosi iconita %s</string15>
+	<string16>Nu pot gasi iconita %s</string16>
+	<string17>Salvare completa</string17>
+	<string18>Salvare esuata datorita unei erori</string18>
+	<string19>Importare in curs...</string19>
+	<string20>Importare esuata datorita unei erori</string20>
+	<string21>ASuite nu a fost oprit corect. Restaurez ultima sesiune?</string21>
+	<string22>Nu pot inregistra aceasta tasta rapida</string22>
+	<string23>Scanare in curs...</string23>
+	<string24>O noua versiune ASuite este disponibila. Vrei sa o descarc si sa o instalez?</string24>
+	<string25>Nici o version disponibila</string25>
+  </String>
+</ASuite>
