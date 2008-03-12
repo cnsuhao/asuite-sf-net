@@ -135,7 +135,6 @@ type
     procedure cxThemeExit(Sender: TObject);
     procedure btnMenuFoldersClick(Sender: TObject);
     procedure cbMenuHotKeyClick(Sender: TObject);
-    procedure cbMenuStartupClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -482,11 +481,6 @@ procedure TfrmOption.cbMenuHotKeyClick(Sender: TObject);
 begin
 cxMenuHotKeyMod.Enabled  := cbMenuHotKey.Checked;
   cxMenuHotKeyCode.Enabled := cbMenuHotKey.Checked;
-end;
-
-procedure TfrmOption.cbMenuStartupClick(Sender: TObject);
-begin
-
 end;
 
 procedure TfrmOption.cbTrayiconClick(Sender: TObject);
