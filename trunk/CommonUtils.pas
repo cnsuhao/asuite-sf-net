@@ -1,4 +1,4 @@
-{    
+{
 Copyright (C) 2006-2008 Matteo Salvi of SalvadorSoftware
 
 This program is free software; you can redistribute it and/or
@@ -52,6 +52,7 @@ procedure DeleteFiles(PathDir, FileName: String);
 procedure DeleteShortcutOnDesktop(FileName: WideString);
 function  FileFolderPageWebNotExists(Sender: TBaseVirtualTree;Node: PVirtualNode): Boolean;
 function  GetNumberSubFolders(FolderPath: String): Integer;
+function  GetParametersFromPath(Path: String): String;
 function  GetShortcutTarget(const LinkFileName:String;ShortcutType: TGetShortcutType):String;
 procedure RunScanFolder(Sender: TBaseVirtualTree;ImageList: TImageList;PathExe: string;
                         ParentNode: PVirtualNode;Dialog: TForm);
@@ -432,8 +433,8 @@ end;
 
 procedure RunProcess(Sender: TBaseVirtualTree;NodeData: PTreeData;RunIfNoInstancesRunning: Boolean);
 var
-  WorkingDir, PathTemp, Parameters : String;
-  WindowState, ErrorCode, I : Integer;
+  WorkingDir, PathTemp, Parameters: String;
+  WindowState, ErrorCode, I, J: Integer;
 begin
   for I := 0 to High(NodeData.PathExe) do
   begin
@@ -456,7 +457,23 @@ begin
       WindowState := 1;
     end;
     //Parameters
-    Parameters := NodeData.Parameters;
+    if NodeData.Tipo = 2 then
+    begin
+      //Software Group
+      Parameters := GetParametersFromPath(PathTemp);
+      //Get Path
+      if Parameters <> '' then
+      begin
+        //Delete first "
+        Delete(PathTemp,1,1);
+        //Delete parameters from Path
+        PathTemp := StringReplace(PathTemp,'"' + Parameters,'',[rfIgnoreCase])
+      end;
+    end
+    else begin
+      //Software
+      Parameters := NodeData.Parameters;
+    end;
     //Check variables in parameters to use RelativeToAbsolute
     if (pos('$',Parameters) <> 0) then
       Parameters := RelativeToAbsolute(Parameters);
@@ -712,6 +729,21 @@ begin
     end;
   until FindNext(SearchRec) <> 0;
   FindClose(SearchRec);
+end; 
+
+function GetParametersFromPath(Path: String): String;
+var
+  J : Integer;
+begin
+  Result := '';
+  if Pos('"',Path) = 1 then
+  begin
+    //Delete first "
+    Delete(Path,1,1);
+    J := Pos('"',Path);
+    //Get parameters
+    Result := Copy(Path,J + 1,Length(Path) - J);
+  end;
 end;
 
 function GetShortcutTarget(const LinkFileName:String;ShortcutType: TGetShortcutType):String;

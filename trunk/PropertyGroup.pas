@@ -214,6 +214,7 @@ begin
     if ((Items.Count) = 1) and (Items[0] = '') then
       Items.Delete(0);
     Items.AddObject(edtPathExe.Text,Pointer(clBlack));
+    edtPathExe.Clear;
   end;
 end;
 
@@ -346,7 +347,8 @@ begin
     begin
       Items.InsertObject(ItemIndex,edtPathExe.Text,Pointer(clBlack));
       Items.Delete(ItemIndex + 1);
-      ItemIndex := -1;
+      ItemIndex := -1; 
+      edtPathExe.Clear;
     end;
 end;
 
@@ -381,6 +383,7 @@ var
   I        : Integer;
   Color    : pointer;
   PathTemp : String;
+  Parameters : string;
 begin
   TranslateForm(LauncherOptions.LangName);
   PageControl1.ActivePageIndex := 0;
@@ -393,6 +396,15 @@ begin
       if VNDataGroup.PathExe[I] <> '' then
       begin
         PathTemp := RelativeToAbsolute(VNDataGroup.PathExe[I]);
+        Parameters := GetParametersFromPath(PathTemp);
+        //Get Path
+        if Parameters <> '' then
+        begin
+          //Delete first "
+          Delete(PathTemp,1,1);
+          //Delete parameters from Path
+          PathTemp := StringReplace(PathTemp,'"' + Parameters,'',[rfIgnoreCase])
+        end;
         if ((VNDataGroup.Tipo = 1) or (VNDataGroup.Tipo = 2)) and
            Not((FileExists(PathTemp)) or (DirectoryExists(PathTemp)) or
            (pos('http://',PathTemp) = 1) or (pos('https://',PathTemp) = 1) or
