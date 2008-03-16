@@ -63,6 +63,7 @@ copy ..\bin\Lang\korean.xml Lang
 copy ..\bin\Lang\romana.xml Lang
 copy ..\bin\Lang\slovak.xml Lang
 copy ..\bin\Lang\norwegian.xml Lang
+copy ..\bin\Lang\japanese.xml Lang
 
 copy ..\bin\Docs\leggimi.rtf Docs
 copy ..\bin\Docs\license.txt Docs
@@ -89,8 +90,7 @@ copy ..\bin\MenuThemes\Default\IconTheme\pictures.ico MenuThemes\Default\IconThe
 copy ..\bin\MenuThemes\Default\IconTheme\search.ico MenuThemes\Default\IconTheme
 copy ..\bin\MenuThemes\Default\IconTheme\videos.ico MenuThemes\Default\IconTheme
 
-copy ..\bin\MenuThemes\Default\Theme\background.jpg MenuThemes\Default\Theme
-copy ..\bin\MenuThemes\Default\Theme\background_top.bmp MenuThemes\Default\Theme
+copy ..\bin\MenuThemes\Default\Theme\background.png MenuThemes\Default\Theme
 copy ..\bin\MenuThemes\Default\Theme\divider.jpg MenuThemes\Default\Theme
 copy ..\bin\MenuThemes\Default\Theme\drive_space_slider.bmp MenuThemes\Default\Theme
 
@@ -109,7 +109,6 @@ copy ..\bin\MenuThemes\Blacksuite\IconTheme\search.ico MenuThemes\Blacksuite\Ico
 copy ..\bin\MenuThemes\Blacksuite\IconTheme\videos.ico MenuThemes\Blacksuite\IconTheme
 
 copy ..\bin\MenuThemes\Blacksuite\Theme\background.jpg MenuThemes\Blacksuite\Theme
-copy ..\bin\MenuThemes\Blacksuite\Theme\background_top.bmp MenuThemes\Blacksuite\Theme
 copy ..\bin\MenuThemes\Blacksuite\Theme\divider.jpg MenuThemes\Blacksuite\Theme
 copy ..\bin\MenuThemes\Blacksuite\Theme\drive_space_slider.bmp MenuThemes\Blacksuite\Theme
 

@@ -22,7 +22,7 @@ interface
 
 uses Windows, Classes, Forms, StdCtrls, Buttons, ExtCtrls, ComCtrls, Messages,
 	Jpeg, ShellAPI, Controls, Graphics, Dialogs, SysUtils, VirtualTrees, AppEvnts,
-    ClassicSpeedButton;
+    ClassicSpeedButton, NGImages;
 
 type
 	TfrmMenu = class(TForm)
@@ -89,8 +89,6 @@ type
       Node: PVirtualNode; Kind: TVTImageKind; Column: TColumnIndex;
       var Ghosted: Boolean; var ImageIndex: Integer);
     procedure RunExeFromMenu(Sender: TObject);
-    procedure LoadJPEGInCanvas(PathFile: String;Canvas: TCanvas);  
-    procedure LoadBMPInCanvas(PathFile: String;Canvas: TCanvas);
     procedure FormShow(Sender: TObject);
     procedure vstMenuGetHint(Sender: TBaseVirtualTree; Node: PVirtualNode;
       Column: TColumnIndex; var LineBreakStyle: TVTTooltipLineBreakStyle;
@@ -152,9 +150,10 @@ end;
 procedure TfrmMenu.CopyImageInVst(Source: TImage;Dest: TVirtualStringTree);
 var
   RectSource, RectDest : TRect;
-  bmpTempImage : TBitmap;
+  bmpTempImage, bmpTempBG : TBitmap;
 begin
   bmpTempImage := TBitmap.Create;
+  bmpTempBG    := TBitmap.Create;
   try
     bmpTempImage.Height := Dest.Height;
     bmpTempImage.Width  := Dest.Width;
@@ -169,11 +168,16 @@ begin
     RectDest.Right      := Dest.Width;
     RectDest.Bottom     := Dest.Height;
     //CopyRect in bmpTempImage and use it as background for Dest vst
-    bmpTempImage.canvas.CopyRect(RectDest, Source.Canvas, RectSource);
+    if (Source.Picture.graphic is TNGImage) then
+      bmpTempBG := (Source.Picture.Graphic as TNGImage).CopyBitmap
+    else
+      bmpTempBG.Assign(Source.Picture.Graphic);
+    bmpTempImage.canvas.CopyRect(RectDest, bmpTempBG.Canvas, RectSource);
     Dest.Background.Bitmap := bmpTempImage;
     Dest.Background.Bitmap.Transparent := true;
   finally
-    bmpTempImage.Free;
+    bmpTempImage.Free;    
+    bmpTempBG.Free;
   end;
 end;
 
@@ -188,20 +192,12 @@ begin
 end;
 
 procedure TFrmMenu.FormCreate(Sender: TObject);
-var
-  bmpTempImage : TBitmap;
 begin
   //NodeDataSize
   vstMenu.NodeDataSize    := SizeOf(TTreeDataX);
   vstRecents.NodeDataSize := SizeOf(TTreeDataX);
   vstMenu.Images          := frmMain.ImageList1;
   vstRecents.Images       := frmMain.ImageList1;
-  //Empty bitmap in imgBackground
-	bmpTempImage        := TBitmap.Create;
-  bmpTempImage.Height := frmMenu.Height;
-  bmpTempImage.Width  := frmMenu.Width;
-	imgBackground.Picture.Bitmap := bmpTempImage;
-	bmpTempImage.Free;
   //Position
   Top  := Screen.WorkAreaRect.Bottom - Height;
   Left := Screen.WorkAreaRect.Right - Width;
@@ -228,8 +224,12 @@ begin
     if Not(DirectoryExists(PathTheme + LauncherOptions.MenuTheme)) then
       LauncherOptions.MenuTheme := 'Default';
   	//Load Theme
-    LoadJPEGInCanvas(PathTheme + LauncherOptions.MenuTheme + '\Theme\background.jpg',imgBackground.Canvas);
-    LoadBMPInCanvas(PathTheme + LauncherOptions.MenuTheme + '\Theme\background_top.bmp',imgBackground.Canvas);
+    //Load background.png (if it isn't exist, load background.jpg)
+    if FileExists(PathTheme + LauncherOptions.MenuTheme + '\Theme\background.png') then
+      imgBackground.Picture.LoadFromFile(PathTheme + LauncherOptions.MenuTheme + '\Theme\background.png')
+    else
+      if FileExists(PathTheme + LauncherOptions.MenuTheme + '\Theme\background.jpg') then
+        imgBackground.Picture.LoadFromFile(PathTheme + LauncherOptions.MenuTheme + '\Theme\background.jpg');
     imgDriveSpace.Picture.LoadFromFile(PathTheme + LauncherOptions.MenuTheme + '\Theme\drive_space_slider.bmp');
     if FileExists(PathTheme + LauncherOptions.MenuTheme + '\Theme\divider.jpg') then
       imgDividerLong.Picture.LoadFromFile(PathTheme + LauncherOptions.MenuTheme + '\Theme\divider.jpg');
@@ -297,26 +297,6 @@ begin
   //Workaround for vst trasparent
   CopyImageInVst(imgBackground,vstMenu);
   CopyImageInVst(imgBackground,vstRecents);
-end;
-
-procedure TfrmMenu.LoadJPEGInCanvas(PathFile: String;Canvas: TCanvas);
-var
-	jpgTempImage : TJPEGImage;
-begin
-  jpgTempImage := TJPEGImage.Create;
-  jpgTempImage.LoadFromFile(PathFile);
-  Canvas.Draw(0,0,jpgTempImage);
-  jpgTempImage.Free;
-end;
-
-procedure TfrmMenu.LoadBMPInCanvas(PathFile: String;Canvas: TCanvas);
-var
-	bmpTempImage : TBitmap;
-begin
-  bmpTempImage := TBitmap.Create;
-  bmpTempImage.LoadFromFile(PathFile);
-  Canvas.Draw(0,0,bmpTempImage);
-  bmpTempImage.Free;
 end;
 
 procedure TfrmMenu.sbtnASuiteClick(Sender: TObject);
