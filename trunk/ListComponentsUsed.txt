@@ -2,7 +2,7 @@ VirtualTree http://soft-gems.net/VirtualTreeview/
 CoolTrayicons http://subsimple.com/delphi.asp
 FastMM4 http://sourceforge.net/projects/fastmm/
 ClassicSpeedButton Launcher source zip
-
+TNGImage http://sourceforge.net/projects/libmng/
 
 Instructions for component VirtualTree (VirtualTrees.pas):
 

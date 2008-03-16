@@ -434,7 +434,7 @@ end;
 procedure RunProcess(Sender: TBaseVirtualTree;NodeData: PTreeData;RunIfNoInstancesRunning: Boolean);
 var
   WorkingDir, PathTemp, Parameters: String;
-  WindowState, ErrorCode, I, J: Integer;
+  WindowState, ErrorCode, I: Integer;
 begin
   for I := 0 to High(NodeData.PathExe) do
   begin
