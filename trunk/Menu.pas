@@ -211,7 +211,8 @@ var
   Drive        : Char;
   dblDriveSize : Double;
  	dblDriveUsed : Double;
-begin                 
+  NGImage      : TNGImage;
+begin
   TranslateForm(LauncherOptions.LangName);
   if LauncherOptions.RefreshMenuTheme then
   begin
@@ -226,7 +227,16 @@ begin
   	//Load Theme
     //Load background.png (if it isn't exist, load background.jpg)
     if FileExists(PathTheme + LauncherOptions.MenuTheme + '\Theme\background.png') then
-      imgBackground.Picture.LoadFromFile(PathTheme + LauncherOptions.MenuTheme + '\Theme\background.png')
+    begin
+      NGImage := TNGImage.Create;
+      try
+        NGImage.BGColor := clFuchsia;
+        NGImage.LoadFromFile(PathTheme + LauncherOptions.MenuTheme + '\Theme\background.png');
+        imgBackground.Picture.Assign(NGImage);
+      finally
+        NGImage.Free;
+      end;
+    end
     else
       if FileExists(PathTheme + LauncherOptions.MenuTheme + '\Theme\background.jpg') then
         imgBackground.Picture.LoadFromFile(PathTheme + LauncherOptions.MenuTheme + '\Theme\background.jpg');
