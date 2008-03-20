@@ -269,7 +269,7 @@ var
 begin
   if (Sender = btnBrowseBackground) then
   begin
-    OpenDialog1.Filter     := 'Files supported (*.jpg;*.jpeg;*.bmp)|*.jpg;*.jpeg;*.bmp|All files|*.*';
+    OpenDialog1.Filter     := 'Files supported (*.png;*.jpg;*.jpeg;*.bmp)|*.jpg;*.jpeg;*.bmp|All files|*.*';
     OpenDialog1.InitialDir := ExtractFileDir(RelativeToAbsolute(edtBackground.Text));
   end;  
   if (Sender = btnCustomTrayIcon) then

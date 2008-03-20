@@ -26,10 +26,6 @@ object frmOption: TfrmOption
     TabOrder = 0
     object TabSheet1: TTabSheet
       Caption = 'General'
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 461
       object gbWindow: TGroupBox
         Left = 8
         Top = 88
@@ -50,7 +46,7 @@ object frmOption: TfrmOption
           Width = 153
           Height = 21
           Style = csDropDownList
-          ItemHeight = 0
+          ItemHeight = 13
           TabOrder = 11
         end
         object cxWindowHotKeyCode: TComboBox
@@ -127,7 +123,14 @@ object frmOption: TfrmOption
             'Shift + Alt'
             'Shift + Crtl'
             'Shift + Crtl + Alt'
-            'WinKey')
+            'WinKey'
+            'WinKey + Alt'
+            'WinKey + Crtl'
+            'WinKey + Shift'
+            'WinKey + Crtl + Alt'
+            'WinKey + Shift + Alt'
+            'WinKey + Shift + Crtl'
+            'WinKey + Shift + Crtl + Alt')
         end
         object cbWindowHotKey: TCheckBox
           Left = 8
@@ -284,7 +287,14 @@ object frmOption: TfrmOption
             'Shift + Alt'
             'Shift + Crtl'
             'Shift + Crtl + Alt'
-            'WinKey')
+            'WinKey'
+            'WinKey + Alt'
+            'WinKey + Crtl'
+            'WinKey + Shift'
+            'WinKey + Crtl + Alt'
+            'WinKey + Shift + Alt'
+            'WinKey + Shift + Crtl'
+            'WinKey + Shift + Crtl + Alt')
         end
       end
       object gbTreeView: TGroupBox
@@ -374,10 +384,6 @@ object frmOption: TfrmOption
     object TabSheet2: TTabSheet
       Caption = 'Advanced'
       ImageIndex = 4
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 269
-      ExplicitHeight = 0
       object gbRecents: TGroupBox
         Left = 8
         Top = 16

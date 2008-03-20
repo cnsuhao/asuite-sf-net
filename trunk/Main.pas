@@ -170,6 +170,7 @@ type
     procedure miCheckUpdatesClick(Sender: TObject);
     procedure miRunAsClick(Sender: TObject);
     procedure FormActivate(Sender: TObject);
+    procedure CoolTrayIcon1DblClick(Sender: TObject);
   private
     { Private declarations }
     SessionEnding: boolean;
@@ -400,9 +401,17 @@ begin
   end;
 end;
 
+procedure TfrmMain.CoolTrayIcon1DblClick(Sender: TObject);
+begin
+  if LauncherOptions.ActionClickLeft = 0 then
+    ShowMainForm(Sender);
+end;
+
 procedure TfrmMain.CoolTrayIcon1MouseDown(Sender: TObject; Button: TMouseButton;
   Shift: TShiftState; X, Y: Integer);
 begin
+  if StartUpTime then
+    Exit;
   if (Button = mbLeft) then
   begin
     case LauncherOptions.ActionClickLeft of
@@ -1727,8 +1736,10 @@ begin
     //Show frmMain or execute a software (or group)
     if Msg.HotKey = Integer(frmMain.Handle) then
     begin
-      CoolTrayIcon1.ShowMainForm;
-      ShowWindow(Application.Handle, SW_RESTORE);
+      if frmMain.Showing then
+        CoolTrayIcon1.HideMainForm
+      else
+        ShowMainForm(self);
     end
     else begin
       if Msg.HotKey = frmMenuID then
