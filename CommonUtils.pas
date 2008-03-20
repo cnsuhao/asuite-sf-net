@@ -1631,12 +1631,12 @@ begin
         frmMain.Left := GetDeviceCaps(GetDC(frmMain.Handle), HORZRES) - frmMain.Width;
       frmMain.Position := poDesigned;
     end;
-  //Window Hotkey
-  if (LauncherOptions.HotKey) and (LauncherOptions.WindowHotkey) then
-    RegisterHotKey(frmMain.Handle, frmMain.Handle, GetHotKeyMod(LauncherOptions.WindowHotKeyMod),GetHotKeyCode(LauncherOptions.WindowHotKeyCode));
-  //Menu Hotkey
-  if (LauncherOptions.HotKey) and (LauncherOptions.MenuHotkey) then
-    RegisterHotKey(frmMain.Handle, frmMenuID, GetHotKeyMod(LauncherOptions.MenuHotKeyMod),GetHotKeyCode(LauncherOptions.menuHotKeyCode));
+    //Window Hotkey
+    if (LauncherOptions.HotKey) and (LauncherOptions.WindowHotkey) then
+      RegisterHotKey(frmMain.Handle, frmMain.Handle, GetHotKeyMod(LauncherOptions.WindowHotKeyMod),GetHotKeyCode(LauncherOptions.WindowHotKeyCode));
+    //Menu Hotkey
+    if (LauncherOptions.HotKey) and (LauncherOptions.MenuHotkey) then
+      RegisterHotKey(frmMain.Handle, frmMenuID, GetHotKeyMod(LauncherOptions.MenuHotKeyMod),GetHotKeyCode(LauncherOptions.menuHotKeyCode));
   end;
 end;
 
@@ -2248,14 +2248,21 @@ Function GetHotKeyMod(KeyMod: Integer) : Integer;
 begin
   Result := -1;
   case KeyMod of
-    0: Result := MOD_ALT;
-    1: Result := MOD_CONTROL;
-    2: Result := MOD_SHIFT;
-    3: Result := MOD_CONTROL or MOD_ALT;
-    4: Result := MOD_SHIFT or MOD_ALT;
-    5: Result := MOD_SHIFT or MOD_CONTROL;
-    6: Result := MOD_SHIFT or MOD_CONTROL or MOD_ALT;  
-   	7: Result := MOD_WIN;
+    0:  Result := MOD_ALT;
+    1:  Result := MOD_CONTROL;
+    2:  Result := MOD_SHIFT;
+    3:  Result := MOD_CONTROL or MOD_ALT;
+    4:  Result := MOD_SHIFT or MOD_ALT;
+    5:  Result := MOD_SHIFT or MOD_CONTROL;
+    6:  Result := MOD_SHIFT or MOD_CONTROL or MOD_ALT;
+   	7:  Result := MOD_WIN;
+    8:  Result := MOD_WIN or MOD_ALT;
+    9:  Result := MOD_WIN or MOD_CONTROL;
+    10: Result := MOD_WIN or MOD_SHIFT;
+    11: Result := MOD_WIN or MOD_CONTROL or MOD_ALT;
+    12: Result := MOD_WIN or MOD_SHIFT or MOD_ALT;
+    13: Result := MOD_WIN or MOD_SHIFT or MOD_CONTROL;
+    14: Result := MOD_WIN or MOD_SHIFT or MOD_CONTROL or MOD_ALT;
   end;
 end;
 

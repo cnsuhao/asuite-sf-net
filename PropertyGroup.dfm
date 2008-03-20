@@ -198,10 +198,6 @@ object frmPropertyGroup: TfrmPropertyGroup
     object tsInfo2: TTabSheet
       Caption = 'Advanced'
       ImageIndex = 1
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       object lbScheduler: TLabel
         Left = 8
         Top = 136
@@ -243,7 +239,7 @@ object frmPropertyGroup: TfrmPropertyGroup
         Width = 129
         Height = 21
         Style = csDropDownList
-        ItemHeight = 0
+        ItemHeight = 13
         TabOrder = 8
         OnChange = cxSchedulerChange
       end
@@ -282,7 +278,7 @@ object frmPropertyGroup: TfrmPropertyGroup
         Width = 121
         Height = 21
         Style = csDropDownList
-        ItemHeight = 0
+        ItemHeight = 13
         TabOrder = 5
         Items.Strings = (
           'Alt'
@@ -292,7 +288,14 @@ object frmPropertyGroup: TfrmPropertyGroup
           'Shift + Alt'
           'Shift + Crtl'
           'Shift + Crtl + Alt'
-          'WinKey')
+          'WinKey'
+          'WinKey + Alt'
+          'WinKey + Crtl'
+          'WinKey + Shift'
+          'WinKey + Crtl + Alt'
+          'WinKey + Shift + Alt'
+          'WinKey + Shift + Crtl'
+          'WinKey + Shift + Crtl + Alt')
       end
       object cbHotKey: TCheckBox
         Left = 8
@@ -309,7 +312,7 @@ object frmPropertyGroup: TfrmPropertyGroup
         Width = 49
         Height = 21
         Style = csDropDownList
-        ItemHeight = 0
+        ItemHeight = 13
         TabOrder = 6
         Items.Strings = (
           'A'
@@ -367,7 +370,7 @@ object frmPropertyGroup: TfrmPropertyGroup
         Width = 233
         Height = 21
         Style = csDropDownList
-        ItemHeight = 0
+        ItemHeight = 13
         TabOrder = 2
         OnChange = cxAutoExecuteChange
       end
@@ -377,7 +380,7 @@ object frmPropertyGroup: TfrmPropertyGroup
         Width = 102
         Height = 21
         Style = csDropDownList
-        ItemHeight = 0
+        ItemHeight = 13
         TabOrder = 9
       end
       object cxActionOnExe: TComboBox
@@ -386,7 +389,7 @@ object frmPropertyGroup: TfrmPropertyGroup
         Width = 153
         Height = 21
         Style = csDropDownList
-        ItemHeight = 0
+        ItemHeight = 13
         TabOrder = 7
       end
       object edtPathIcon: TEdit

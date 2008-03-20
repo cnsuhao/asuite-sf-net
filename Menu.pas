@@ -210,7 +210,7 @@ var
   Node         : PVirtualNode;
   Drive        : Char;
   dblDriveSize : Double;
- 	dblDriveUsed : Double;
+  dblDriveUsed : Double;
   NGImage      : TNGImage;
 begin
   TranslateForm(LauncherOptions.LangName);

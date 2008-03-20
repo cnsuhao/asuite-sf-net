@@ -283,7 +283,14 @@ object frmPropertySw: TfrmPropertySw
           'Shift + Alt'
           'Shift + Crtl'
           'Shift + Crtl + Alt'
-          'WinKey')
+          'WinKey'
+          'WinKey + Alt'
+          'WinKey + Crtl'
+          'WinKey + Shift'
+          'WinKey + Crtl + Alt'
+          'WinKey + Shift + Alt'
+          'WinKey + Shift + Crtl'
+          'WinKey + Shift + Crtl + Alt')
       end
       object cxHotKey2: TComboBox
         Left = 144
@@ -436,6 +443,10 @@ object frmPropertySw: TfrmPropertySw
     end
     object tsInfo3: TTabSheet
       Caption = 'Information'
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object lbDesc: TLabel
         Left = 8
         Top = 8
