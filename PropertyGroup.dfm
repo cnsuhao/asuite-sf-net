@@ -45,6 +45,10 @@ object frmPropertyGroup: TfrmPropertyGroup
     TabOrder = 0
     object tsInfo1: TTabSheet
       Caption = 'General'
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object lbPathExe: TLabel
         Left = 8
         Top = 48
@@ -198,6 +202,10 @@ object frmPropertyGroup: TfrmPropertyGroup
     object tsInfo2: TTabSheet
       Caption = 'Advanced'
       ImageIndex = 1
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object lbScheduler: TLabel
         Left = 8
         Top = 136
@@ -239,7 +247,7 @@ object frmPropertyGroup: TfrmPropertyGroup
         Width = 129
         Height = 21
         Style = csDropDownList
-        ItemHeight = 13
+        ItemHeight = 0
         TabOrder = 8
         OnChange = cxSchedulerChange
       end
@@ -370,7 +378,7 @@ object frmPropertyGroup: TfrmPropertyGroup
         Width = 233
         Height = 21
         Style = csDropDownList
-        ItemHeight = 13
+        ItemHeight = 0
         TabOrder = 2
         OnChange = cxAutoExecuteChange
       end
@@ -380,7 +388,7 @@ object frmPropertyGroup: TfrmPropertyGroup
         Width = 102
         Height = 21
         Style = csDropDownList
-        ItemHeight = 13
+        ItemHeight = 0
         TabOrder = 9
       end
       object cxActionOnExe: TComboBox
@@ -389,7 +397,7 @@ object frmPropertyGroup: TfrmPropertyGroup
         Width = 153
         Height = 21
         Style = csDropDownList
-        ItemHeight = 13
+        ItemHeight = 0
         TabOrder = 7
       end
       object edtPathIcon: TEdit

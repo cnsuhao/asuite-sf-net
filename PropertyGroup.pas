@@ -324,7 +324,7 @@ begin
           SchedulerApp[I] := nil;
     end;
     VNDataGroup.SchMode     := cxScheduler.ItemIndex;
-    VNDataGroup.SchDate     := FormatDateTime('dd/mm/yy',dtpSchDate.Date);
+    VNDataGroup.SchDate     := FormatDateTime('dd/mm/yyyy',dtpSchDate.Date);
     VNDataGroup.SchTime     := FormatDateTime(LongTimeFormat,dtpSchTime.Date);
     VNDataGroup.ImageIndex  := IconAdd(frmMain.vstList, frmMain.ImageList1,
                                        VNDataGroup.pNode);

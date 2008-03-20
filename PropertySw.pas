@@ -303,7 +303,7 @@ begin
           SchedulerApp[I] := nil;
     end;
     VNDataSoft.SchMode := cxScheduler.ItemIndex;
-    VNDataSoft.SchDate := FormatDateTime('dd/mm/yy',dtpSchDate.Date);
+    VNDataSoft.SchDate := FormatDateTime('dd/mm/yyyy',dtpSchDate.Date);
     VNDataSoft.SchTime := FormatDateTime(LongTimeFormat,dtpSchTime.Time);
     //Info
     VNDataSoft.Desc    := StringReplace(memDesc.Text,#13#10,'[br]',[rfReplaceAll]);

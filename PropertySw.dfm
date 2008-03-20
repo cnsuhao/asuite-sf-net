@@ -45,6 +45,10 @@ object frmPropertySw: TfrmPropertySw
     TabOrder = 0
     object tsInfo1: TTabSheet
       Caption = 'General'
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object lbInfo1: TLabel
         Left = 9
         Top = 9
@@ -178,6 +182,10 @@ object frmPropertySw: TfrmPropertySw
     end
     object tsInfo2: TTabSheet
       Caption = 'Advanced'
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object lbPathIcon: TLabel
         Left = 8
         Top = 48
@@ -245,7 +253,7 @@ object frmPropertySw: TfrmPropertySw
         Width = 249
         Height = 21
         Style = csDropDownList
-        ItemHeight = 13
+        ItemHeight = 0
         TabOrder = 4
         OnChange = cxAutoExecuteChange
       end
@@ -255,7 +263,7 @@ object frmPropertySw: TfrmPropertySw
         Width = 102
         Height = 21
         Style = csDropDownList
-        ItemHeight = 13
+        ItemHeight = 0
         TabOrder = 11
       end
       object cbHotKey: TCheckBox
@@ -373,7 +381,7 @@ object frmPropertySw: TfrmPropertySw
         Width = 153
         Height = 21
         Style = csDropDownList
-        ItemHeight = 13
+        ItemHeight = 0
         TabOrder = 9
       end
       object cbDontInsertMRU: TCheckBox
@@ -419,7 +427,7 @@ object frmPropertySw: TfrmPropertySw
         Width = 129
         Height = 21
         Style = csDropDownList
-        ItemHeight = 13
+        ItemHeight = 0
         TabOrder = 10
         OnChange = cxSchedulerChange
       end
