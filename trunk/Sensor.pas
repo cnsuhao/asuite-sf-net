@@ -51,7 +51,7 @@ const
 
 implementation
 
-uses Main, CommonUtils;
+uses Main, CommonUtils,Menu;
 
 {$R *.dfm}
 
@@ -70,11 +70,18 @@ begin
 end;
 
 procedure TfrmSensor.ExecuteActionSensor(ArraySensor: Array of Integer);
+Var Point: TPoint;
 begin
   with frmMain do
     case ArraySensor[Side] of
       1: ShowMainForm(self);
       2: ShowTrayiconMenu(vstList, pmTrayicon);
+      3: begin
+         GetCursorPos(Point);
+         SetForegroundWindow(frmMain.Handle);
+         UpdateClassicMenu(vstList, pmTrayicon);
+         pmTrayicon.Popup(Point.X, Point.Y);
+         end;
     end;
 end;
 

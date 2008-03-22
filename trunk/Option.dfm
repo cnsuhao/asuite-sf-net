@@ -22,7 +22,7 @@ object frmOption: TfrmOption
     Top = 8
     Width = 281
     Height = 497
-    ActivePage = TabSheet1
+    ActivePage = TabSheet3
     TabOrder = 0
     object TabSheet1: TTabSheet
       Caption = 'General'
@@ -575,10 +575,6 @@ object frmOption: TfrmOption
     object TabSheet3: TTabSheet
       Caption = 'Various'
       ImageIndex = 2
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 269
-      ExplicitHeight = 0
       object gbExecution: TGroupBox
         Left = 8
         Top = 0
@@ -607,7 +603,7 @@ object frmOption: TfrmOption
           Width = 169
           Height = 21
           Style = csDropDownList
-          ItemHeight = 0
+          ItemHeight = 13
           TabOrder = 1
         end
       end
@@ -645,7 +641,7 @@ object frmOption: TfrmOption
           Width = 145
           Height = 21
           Style = csDropDownList
-          ItemHeight = 0
+          ItemHeight = 13
           TabOrder = 2
         end
         object btnCustomTrayIcon: TButton
@@ -671,7 +667,7 @@ object frmOption: TfrmOption
           Width = 145
           Height = 21
           Style = csDropDownList
-          ItemHeight = 0
+          ItemHeight = 13
           TabOrder = 5
           OnExit = cxThemeExit
         end
@@ -708,7 +704,7 @@ object frmOption: TfrmOption
           Width = 145
           Height = 21
           Style = csDropDownList
-          ItemHeight = 0
+          ItemHeight = 13
           TabOrder = 4
         end
       end
@@ -792,7 +788,7 @@ object frmOption: TfrmOption
           Width = 97
           Height = 21
           Style = csDropDownList
-          ItemHeight = 0
+          ItemHeight = 13
           TabOrder = 0
         end
         object cxLCLeft: TComboBox
@@ -801,7 +797,7 @@ object frmOption: TfrmOption
           Width = 97
           Height = 21
           Style = csDropDownList
-          ItemHeight = 0
+          ItemHeight = 13
           TabOrder = 2
         end
         object cxLCRight: TComboBox
@@ -810,7 +806,7 @@ object frmOption: TfrmOption
           Width = 97
           Height = 21
           Style = csDropDownList
-          ItemHeight = 0
+          ItemHeight = 13
           TabOrder = 4
         end
         object cxLCBottom: TComboBox
@@ -819,7 +815,7 @@ object frmOption: TfrmOption
           Width = 97
           Height = 21
           Style = csDropDownList
-          ItemHeight = 0
+          ItemHeight = 13
           TabOrder = 6
         end
         object cxRCTop: TComboBox
@@ -828,7 +824,7 @@ object frmOption: TfrmOption
           Width = 97
           Height = 21
           Style = csDropDownList
-          ItemHeight = 0
+          ItemHeight = 13
           TabOrder = 1
         end
         object cxRCBottom: TComboBox
@@ -837,7 +833,7 @@ object frmOption: TfrmOption
           Width = 97
           Height = 21
           Style = csDropDownList
-          ItemHeight = 0
+          ItemHeight = 13
           TabOrder = 7
         end
         object cxRCRight: TComboBox
@@ -846,7 +842,7 @@ object frmOption: TfrmOption
           Width = 97
           Height = 21
           Style = csDropDownList
-          ItemHeight = 0
+          ItemHeight = 13
           TabOrder = 5
         end
         object cxRCLeft: TComboBox
@@ -855,7 +851,7 @@ object frmOption: TfrmOption
           Width = 97
           Height = 21
           Style = csDropDownList
-          ItemHeight = 0
+          ItemHeight = 13
           TabOrder = 3
         end
       end

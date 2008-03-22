@@ -244,7 +244,7 @@ begin
     lbBottom.caption     := ChildNodes['LabelBottom'].Text;
     lbLeftClick.caption  := ChildNodes['LabelLeftClick'].Text;
     lbRightClick.caption := ChildNodes['LabelRightClick'].Text;
-    for I := 1 to 3 do
+    for I := 1 to 4 do
     begin
       //Left Click
       cxLCTop.Items.Add(ChildNodes['ListActionMouse' + IntToStr(I)].Text);
