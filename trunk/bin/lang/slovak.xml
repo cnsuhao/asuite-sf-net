@@ -167,7 +167,8 @@
 	<LabelRightClick>Pravé kliknutie</LabelRightClick>
 	<ListActionMouse1>Zakázaný</ListActionMouse1>
 	<ListActionMouse2>Zobraziť okno</ListActionMouse2>
-	<ListActionMouse3>Zobraziť menu</ListActionMouse3>
+	<ListActionMouse3>Show default menu</ListActionMouse3>
+	<ListActionMouse4>Show classic menu</ListActionMouse4>
 	<ButtonOk>Ok</ButtonOk>
 	<ButtonCancel>Zrušiť</ButtonCancel>
   </Form3>

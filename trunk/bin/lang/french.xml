@@ -168,7 +168,8 @@
 	<LabelRightClick>Clic droit</LabelRightClick>
 	<ListActionMouse1>Désactivé</ListActionMouse1>
 	<ListActionMouse2>Afficher la fenêtre</ListActionMouse2>
-	<ListActionMouse3>Afficher le menu</ListActionMouse3>
+	<ListActionMouse3>Show default menu</ListActionMouse3>
+	<ListActionMouse4>Show classic menu</ListActionMouse4>
 	<ButtonOk>Ok</ButtonOk>
 	<ButtonCancel>Annuler</ButtonCancel>
   </Form3>

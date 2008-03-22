@@ -75,13 +75,24 @@ begin
   with frmMain do
     case ArraySensor[Side] of
       1: ShowMainForm(self);
-      2: ShowTrayiconMenu(vstList, pmTrayicon);
-      3: begin
-         GetCursorPos(Point);
-         SetForegroundWindow(frmMain.Handle);
-         UpdateClassicMenu(vstList, pmTrayicon);
-         pmTrayicon.Popup(Point.X, Point.Y);
-         end;
+      2: //Default Menu
+      begin
+        if frmMenu.Visible then
+          frmMenu.CloseMenu
+        else
+          frmMenu.OpenMenu;
+      end;
+      3: //Classic Menu
+      begin        
+        //Get Mouse coordinates
+        GetCursorPos(Point);
+        //Classic Menu
+        SetForegroundWindow(frmMain.Handle);
+        //Populate classic menu at runtime
+        UpdateClassicMenu(vstList, pmTrayicon);
+        //Show classic menu
+        pmTrayicon.Popup(Point.X, Point.Y);
+      end;
     end;
 end;
 

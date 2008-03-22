@@ -169,7 +169,8 @@ use with portable applications.</LabelIntro>
        <LabelRightClick>Høire klikk</LabelRightClick>
        <ListActionMouse1>Deaktiveret</ListActionMouse1>
        <ListActionMouse2>Vis vindu</ListActionMouse2>
-       <ListActionMouse3>Vis meny</ListActionMouse3>
+	<ListActionMouse3>Show default menu</ListActionMouse3>
+	<ListActionMouse4>Show classic menu</ListActionMouse4>
    <ButtonOk>Ok</ButtonOk>
    <ButtonCancel>Avbryt</ButtonCancel>
  </Form3>
