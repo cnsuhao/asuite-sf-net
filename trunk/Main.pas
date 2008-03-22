@@ -431,17 +431,32 @@ end;
 
 procedure TfrmMain.DeleteSwCat(Sender: TObject);
 var
-  Node, NodeTemp : PVirtualNode;
+  Node, ParentNode : PVirtualNode;
 begin
   Node := vstList.GetFirstSelected;
+  ParentNode := nil;
   if Assigned(Node) and (MessageDlg(ArrayMessages[8],mtWarning, [mbYes,mbNo], 0) = mrYes) then
   begin
+    //Deselect children node, if its parent node is selected, too
     while Assigned(Node) do
     begin
-      NodeTemp := Node;
+      if (ParentNode = nil) and (vstList.HasChildren[ParentNode]) then
+        ParentNode := Node
+      else
+        if vstList.HasAsParent(Node,ParentNode) then
+        begin
+          //Deselect node
+          vstList.Selected[Node] := false;
+          vstList.FocusedNode := nil;
+        end;
       Node := vstList.GetNextSelected(Node);
-      if (NodeTemp.Parent = vstList.RootNode) or (vstList.Selected[NodeTemp.Parent]) then
-        vstList.DeleteNode(NodeTemp);
+    end;
+    //Delete nodes
+    Node := vstList.GetFirstSelected;
+    while Assigned(Node) do
+    begin
+      vstList.DeleteNode(Node);
+      Node := vstList.GetNextSelected(Node);
     end;
     RefreshList(vstList,pmTrayicon, true);
   end;
