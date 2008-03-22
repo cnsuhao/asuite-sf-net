@@ -203,8 +203,6 @@ var
   fili : TSHFileInfo;
   aka  : Integer;
 begin
-  if Pos('..',xpath) <> 0 then
-    xpath := StringReplace(xpath,ApplicationPath,'',[rfReplaceAll,rfIgnoreCase]);
   aka := SHGFI_ICON or SHGFI_SMALLICON;
   if getopen then
     aka := aka or SHGFI_OPENICON;
@@ -1940,12 +1938,6 @@ begin
     EnvVar := Copy(EnvVar,1,pos('%',EnvVar) - 1);
     PathFile := StringReplace(PathFile, '%' + EnvVar + '%', GetEnvVarValue(
       EnvVar), [rfIgnoreCase]);
-  end;
-  if (pos(':',PathFile) = 0) and (pos('www.',PathFile) <> 1) and
-     (pos('\\',PathFile) <> 1) and (pos('%',PathFile) = 0)  and
-     (pos('-',PathFile) <> 1) and (pos('/',PathFile) = 0) then
-  begin
-    PathFile := ApplicationPath + PathFile;
   end;
   Result := PathFile;
 end;
