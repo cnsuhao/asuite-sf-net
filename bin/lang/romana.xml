@@ -167,7 +167,8 @@
 	<LabelRightClick>Clic dreapta</LabelRightClick>
 	<ListActionMouse1>Nefunctional</ListActionMouse1>
 	<ListActionMouse2>Arata fereastra</ListActionMouse2>
-	<ListActionMouse3>Arata meniul</ListActionMouse3>
+	<ListActionMouse3>Show default menu</ListActionMouse3>
+	<ListActionMouse4>Show classic menu</ListActionMouse4>
 	<ButtonOk>OK</ButtonOk>
 	<ButtonCancel>Anuleaza</ButtonCancel>
   </Form3>

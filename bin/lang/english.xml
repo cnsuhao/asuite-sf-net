@@ -167,7 +167,8 @@
 	<LabelRightClick>Right click</LabelRightClick>
 	<ListActionMouse1>Disabled</ListActionMouse1>
 	<ListActionMouse2>Show window</ListActionMouse2>
-	<ListActionMouse3>Show menu</ListActionMouse3>
+	<ListActionMouse3>Show default menu</ListActionMouse3>
+	<ListActionMouse4>Show classic menu</ListActionMouse4>
 	<ButtonOk>Ok</ButtonOk>
 	<ButtonCancel>Cancel</ButtonCancel>
   </Form3>

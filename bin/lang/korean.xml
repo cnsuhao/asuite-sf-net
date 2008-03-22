@@ -167,7 +167,8 @@
 	<LabelRightClick>오른쪽 클릭</LabelRightClick>
 	<ListActionMouse1>사용 안 함</ListActionMouse1>
 	<ListActionMouse2>창 보이기</ListActionMouse2>
-	<ListActionMouse3>메뉴 보이기</ListActionMouse3>
+	<ListActionMouse3>Show default menu</ListActionMouse3>
+	<ListActionMouse4>Show classic menu</ListActionMouse4>
 	<ButtonOk>확인</ButtonOk>
 	<ButtonCancel>취소</ButtonCancel>
   </Form3>

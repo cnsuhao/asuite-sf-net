@@ -173,7 +173,8 @@
 		<LabelRightClick>Rechtsklick</LabelRightClick>
 		<ListActionMouse1>Ausgeschaltet</ListActionMouse1>
 		<ListActionMouse2>Zeige Fenster</ListActionMouse2>
-		<ListActionMouse3>Zeige Menü</ListActionMouse3>
+	<ListActionMouse3>Show default menu</ListActionMouse3>
+	<ListActionMouse4>Show classic menu</ListActionMouse4>
 		<ButtonOk>Ok</ButtonOk>
 		<ButtonCancel>Abbrechen</ButtonCancel>
 	</Form3>

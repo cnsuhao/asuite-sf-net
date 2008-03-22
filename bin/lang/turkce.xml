@@ -167,7 +167,8 @@
 	<LabelRightClick>Sağ Tıklama</LabelRightClick>
 	<ListActionMouse1>Etkisiz</ListActionMouse1>
 	<ListActionMouse2>Pencereyi Göster</ListActionMouse2>
-	<ListActionMouse3>Menüyü Göster</ListActionMouse3>
+	<ListActionMouse3>Show default menu</ListActionMouse3>
+	<ListActionMouse4>Show classic menu</ListActionMouse4>
 	<ButtonOk>Peki</ButtonOk>
 	<ButtonCancel>Boşver</ButtonCancel>
   </Form3>
