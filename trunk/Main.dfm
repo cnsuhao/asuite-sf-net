@@ -235,10 +235,6 @@ object frmMain: TfrmMain
     object tbSearch: TTabSheet
       Caption = 'Search'
       ImageIndex = 1
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       DesignSize = (
         186
         318)
@@ -307,10 +303,6 @@ object frmMain: TfrmMain
     object tbStats: TTabSheet
       Caption = 'Stats'
       ImageIndex = 2
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       DesignSize = (
         186
         318)

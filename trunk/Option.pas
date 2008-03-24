@@ -115,6 +115,7 @@ type
     cxMenuHotKeyCode: TComboBox;
     cxMenuHotKeyMod: TComboBox;
     cbMenuStartup: TCheckBox;
+    cbAutoOpClCat: TCheckBox;
     procedure btnOkClick(Sender: TObject);
     procedure btnCancelClick(Sender: TObject);
     procedure tbMRUChange(Sender: TObject);
@@ -313,6 +314,7 @@ var
   I            : Integer;
 begin
   //General
+  LauncherOptions.AutoOpClCategories   := cbAutoOpClCat.Checked;
   LauncherOptions.WindowsStartup   := cbWindowsStartup.Checked;
   LauncherOptions.StartUpShowPanel := cbShowStartup.Checked;
   LauncherOptions.StartUpShowMenu  := cbMenuStartup.Checked;
@@ -524,6 +526,7 @@ begin
   TranslateForm(LauncherOptions.LangName);
   PageControl1.TabIndex      := 0;
   //General
+  cbAutoOpClCat.Checked       :=  LauncherOptions.AutoOpClCategories;
   cbWindowsStartup.Checked   := LauncherOptions.WindowsStartup;
   cbShowStartup.Checked      := LauncherOptions.StartUpShowPanel;
   cbMenuStartup.Checked      := LauncherOptions.StartUpShowMenu;

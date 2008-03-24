@@ -1505,6 +1505,7 @@ begin
   with XMLNode do
   begin
     //StartUp
+    LauncherOptions.AutoOpClCategories   := ReadBooleanXML(ChildNodes['AutoOpClCategories'],false);
     LauncherOptions.WindowsStartup   := ReadBooleanXML(ChildNodes['StartOnWindowsStartup'],false);
     LauncherOptions.StartUpShowPanel := ReadBooleanXML(ChildNodes['StartUpShowPanel'],true);
     LauncherOptions.StartUpShowMenu  := ReadBooleanXML(ChildNodes['StartUpShowMenu'],false);
@@ -1646,6 +1647,7 @@ begin
   begin
     //General
     //Startup
+    AddChild('AutoOpClCategories').Text := BoolToStr(LauncherOptions.AutoOpClCategories);
     AddChild('StartOnWindowsStartup').Text := BoolToStr(LauncherOptions.WindowsStartup);
     AddChild('StartUpShowPanel').Text := BoolToStr(LauncherOptions.StartUpShowPanel);
     AddChild('StartUpShowMenu').Text  := BoolToStr(LauncherOptions.StartUpShowMenu);
