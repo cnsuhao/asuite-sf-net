@@ -237,6 +237,7 @@ type
 
   TOptions = record
     //General
+    AutoOpClCategories: Boolean; //  Automatic Opening/closing categories
     WindowsStartup   : Boolean;
     StartUpShowPanel : Boolean;
     StartUpShowMenu  : Boolean;
