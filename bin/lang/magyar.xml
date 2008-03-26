@@ -103,6 +103,7 @@
 	<!--Treeview-->
 	<GroupBoxTreeView>Fastruktúra-nézet</GroupBoxTreeView>
 	<ButtonFontSettings>Font settings...</ButtonFontSettings>
+	<CheckBoxAutoOpClCat>Automatic Opening/Closing Categories</CheckBoxAutoOpClCat>
 	<CheckBoxBackground>Aktív háttér</CheckBoxBackground>
 	<ButtonBrowseBackground>Keres</ButtonBrowseBackground>
 	<!--Tabs-->
@@ -133,6 +134,7 @@
 	<CheckBoxSaveSecurity>Biztonsági beállítások mentése</CheckBoxSaveSecurity>
 	<CheckBoxScheduler>Enable scheduler</CheckBoxScheduler>
 	<!--Clear elements-->
+	<GroupBoxClearElements>Clear elements</GroupBoxClearElements>
 	<LabelClearElements>Clear all MRU, backups and/or cache icons</LabelClearElements>
 	<ButtonClearElements>Clear elements...</ButtonClearElements>
 	<!--Various-->

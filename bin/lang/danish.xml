@@ -109,6 +109,7 @@ tastekombination</CheckBoxWindowHotkey>
        <GroupBoxTreeView>Strukturet</GroupBoxTreeView>
        <ButtonCustomTrayicon>Vælg ikon</ButtonCustomTrayicon>
        <ButtonFontSettings>Skrifttype...</ButtonFontSettings>
+	<CheckBoxAutoOpClCat>Automatic Opening/Closing Categories</CheckBoxAutoOpClCat>
        <CheckBoxBackground>Aktiv baggrund</CheckBoxBackground>
        <ButtonBrowseBackground>Gennemse</ButtonBrowseBackground>
        <!--Tabs-->
@@ -140,6 +141,7 @@ menu</CheckBoxSubMenuMRU>
        <CheckBoxSaveSecurity>Aktiver sikker gem</CheckBoxSaveSecurity>
        <CheckBoxScheduler>Aktiver planlægning</CheckBoxScheduler>
        <!--Clear elements-->
+	<GroupBoxClearElements>Clear elements</GroupBoxClearElements>
        <LabelClearElements>Clear all MRU, backups and/or cache icons</LabelClearElements>
        <ButtonClearElements>Clear elements...</ButtonClearElements>
        <!--Various-->

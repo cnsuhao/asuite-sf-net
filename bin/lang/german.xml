@@ -109,6 +109,7 @@
 		<!--Treeview-->
 		<GroupBoxTreeView>Baumansicht</GroupBoxTreeView>
 		<ButtonFontSettings>Schriftart...</ButtonFontSettings>
+	<CheckBoxAutoOpClCat>Automatic Opening/Closing Categories</CheckBoxAutoOpClCat>
 		<CheckBoxBackground>Aktiver Hintergrund</CheckBoxBackground>
 		<ButtonBrowseBackground>Suchen</ButtonBrowseBackground>
 		<!--Tabs-->
@@ -139,6 +140,7 @@
 		<CheckBoxSaveSecurity>Sicherer Modus</CheckBoxSaveSecurity>
 		<CheckBoxScheduler>Geplante Ausführung aktivieren</CheckBoxScheduler>
 		<!--Clear elements-->
+	<GroupBoxClearElements>Clear elements</GroupBoxClearElements>
 		<LabelClearElements>Clear all MRU, backups and/or cache icons</LabelClearElements>
 		<ButtonClearElements>Clear elements...</ButtonClearElements>
 		<!--Various-->

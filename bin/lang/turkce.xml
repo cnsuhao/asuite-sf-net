@@ -103,6 +103,7 @@
 	<!--Treeview-->
 	<GroupBoxTreeView>Liste Ekranı</GroupBoxTreeView>
 	<ButtonFontSettings>Yazıtipi Ayarları...</ButtonFontSettings>
+	<CheckBoxAutoOpClCat>Automatic Opening/Closing Categories</CheckBoxAutoOpClCat>
 	<CheckBoxBackground>Aktif Artalan</CheckBoxBackground>
 	<ButtonBrowseBackground>Gözat</ButtonBrowseBackground>
 	<!--Tabs-->
@@ -133,6 +134,7 @@
 	<CheckBoxSaveSecurity>Güvenli Kayıt Etkin</CheckBoxSaveSecurity>
 	<CheckBoxScheduler>Zamanlayıcı Etkinkıl</CheckBoxScheduler>
 	<!--Clear elements-->
+	<GroupBoxClearElements>Clear elements</GroupBoxClearElements>
 	<LabelClearElements>Clear all MRU, backups and/or cache icons</LabelClearElements>
 	<ButtonClearElements>Clear elements...</ButtonClearElements>
 	<!--Various-->
