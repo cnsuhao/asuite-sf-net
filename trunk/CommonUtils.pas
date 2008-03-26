@@ -1505,7 +1505,6 @@ begin
   with XMLNode do
   begin
     //StartUp
-    LauncherOptions.AutoOpClCategories   := ReadBooleanXML(ChildNodes['AutoOpClCategories'],false);
     LauncherOptions.WindowsStartup   := ReadBooleanXML(ChildNodes['StartOnWindowsStartup'],false);
     LauncherOptions.StartUpShowPanel := ReadBooleanXML(ChildNodes['StartUpShowPanel'],true);
     LauncherOptions.StartUpShowMenu  := ReadBooleanXML(ChildNodes['StartUpShowMenu'],false);
@@ -1537,7 +1536,8 @@ begin
     LauncherOptions.CustomTitle       := ReadBooleanXML(ChildNodes['CustomTitle'],false);
     LauncherOptions.CustomTitleString := ReadStringXML(ChildNodes['CustomTitleString'],'ASuite');
     LauncherOptions.HoldSize   := ReadBooleanXML(ChildNodes['HoldSize'],false);
-    //Background
+    //Background   
+    LauncherOptions.AutoOpClCats   := ReadBooleanXML(ChildNodes['AutoOpClCategories'],true);
     LauncherOptions.BackgroundPath := ReadStringXML(ChildNodes['BackgroundPath'],'');
     LauncherOptions.Background := ReadBooleanXML(ChildNodes['Background'],false);
     //frmMain's size
@@ -1647,7 +1647,7 @@ begin
   begin
     //General
     //Startup
-    AddChild('AutoOpClCategories').Text := BoolToStr(LauncherOptions.AutoOpClCategories);
+    AddChild('AutoOpClCategories').Text := BoolToStr(LauncherOptions.AutoOpClCats);
     AddChild('StartOnWindowsStartup').Text := BoolToStr(LauncherOptions.WindowsStartup);
     AddChild('StartUpShowPanel').Text := BoolToStr(LauncherOptions.StartUpShowPanel);
     AddChild('StartUpShowMenu').Text  := BoolToStr(LauncherOptions.StartUpShowMenu);
@@ -1878,6 +1878,11 @@ begin
     else
       vstList.TreeOptions.PaintOptions := vstList.TreeOptions.PaintOptions - [toShowBackground];
     SetDeleteASuiteWindowsStartup(LauncherOptions.WindowsStartup);
+    //Automatic Opening/Closing Categories
+    if LauncherOptions.AutoOpClCats then
+      vstList.TreeOptions.AutoOptions := vstList.TreeOptions.AutoOptions + [toAutoExpand]
+    else
+      vstList.TreeOptions.AutoOptions := vstList.TreeOptions.AutoOptions - [toAutoExpand];
     //Close (to avoid double sensors) and create FormSensors
     if Not(StartUpTime) then
     begin

@@ -103,6 +103,7 @@
 	<!--Treeview-->
 	<GroupBoxTreeView>Menu</GroupBoxTreeView>
 	<ButtonFontSettings>Fontes...</ButtonFontSettings>
+	<CheckBoxAutoOpClCat>Automatic Opening/Closing Categories</CheckBoxAutoOpClCat>
 	<CheckBoxBackground>Fundo ativo</CheckBoxBackground>
 	<ButtonBrowseBackground>Navegar</ButtonBrowseBackground>
 	<!--Tabs-->
@@ -133,6 +134,7 @@
 	<CheckBoxSaveSecurity>Habilitar salvamento de segurança</CheckBoxSaveSecurity>
 	<CheckBoxScheduler>Habilitar agendamento</CheckBoxScheduler>
 	<!--Clear elements-->
+	<GroupBoxClearElements>Clear elements</GroupBoxClearElements>
 	<LabelClearElements>Clear all MRU, backups and/or cache icons</LabelClearElements>
 	<ButtonClearElements>Clear elements...</ButtonClearElements>
 	<!--Various-->

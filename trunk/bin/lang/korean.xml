@@ -103,6 +103,7 @@
 	<!--Treeview-->
 	<GroupBoxTreeView>목록창</GroupBoxTreeView>
 	<ButtonFontSettings>글꼴 설정...</ButtonFontSettings>
+	<CheckBoxAutoOpClCat>Automatic Opening/Closing Categories</CheckBoxAutoOpClCat>
 	<CheckBoxBackground>백그라운드 활성</CheckBoxBackground>
 	<ButtonBrowseBackground>찾아보기</ButtonBrowseBackground>
 	<!--Tabs-->
@@ -133,6 +134,7 @@
 	<CheckBoxSaveSecurity>보안 저장 사용</CheckBoxSaveSecurity>
 	<CheckBoxScheduler>스케쥴러 사용</CheckBoxScheduler>
 	<!--Clear elements-->
+	<GroupBoxClearElements>Clear elements</GroupBoxClearElements>
 	<LabelClearElements>Clear all MRU, backups and/or cache icons</LabelClearElements>
 	<ButtonClearElements>Clear elements...</ButtonClearElements>
 	<!--Various-->

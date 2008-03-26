@@ -104,6 +104,7 @@
 	<GroupBoxTreeView>Stromový náhled</GroupBoxTreeView>
 	<ButtonCustomTrayicon>Vybrat ikonu</ButtonCustomTrayicon>
 	<ButtonFontSettings>Nastavení písma...</ButtonFontSettings>
+	<CheckBoxAutoOpClCat>Automatic Opening/Closing Categories</CheckBoxAutoOpClCat>
 	<CheckBoxBackground>Aktiní pozadí</CheckBoxBackground>
 	<ButtonBrowseBackground>Procházet</ButtonBrowseBackground>
 	<!--Tabs-->
@@ -134,6 +135,7 @@
 	<CheckBoxSaveSecurity>Povolit zabezpečení ukládání</CheckBoxSaveSecurity>
 	<CheckBoxScheduler>Povolit plánovač</CheckBoxScheduler>
 	<!--Clear elements-->
+	<GroupBoxClearElements>Clear elements</GroupBoxClearElements>
 	<LabelClearElements>Clear all MRU, backups and/or cache icons</LabelClearElements>
 	<ButtonClearElements>Clear elements...</ButtonClearElements>
 	<!--Various-->

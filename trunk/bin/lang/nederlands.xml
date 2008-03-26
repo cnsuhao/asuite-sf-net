@@ -103,6 +103,7 @@
 	<!--Treeview-->
 	<GroupBoxTreeView>Boomstructuur</GroupBoxTreeView>
 	<ButtonFontSettings>Font settings...</ButtonFontSettings>
+	<CheckBoxAutoOpClCat>Automatic Opening/Closing Categories</CheckBoxAutoOpClCat>
 	<CheckBoxBackground>Achtergrond inschakelen</CheckBoxBackground>
 	<ButtonBrowseBackground>Bladeren</ButtonBrowseBackground>
 	<!--Tabs-->
@@ -133,6 +134,7 @@
 	<CheckBoxSaveSecurity>Beveiligd opslaan inschakelen</CheckBoxSaveSecurity>
 	<CheckBoxScheduler>Enable scheduler</CheckBoxScheduler>
 	<!--Clear elements-->
+	<GroupBoxClearElements>Clear elements</GroupBoxClearElements>
 	<LabelClearElements>Clear all MRU, backups and/or cache icons</LabelClearElements>
 	<ButtonClearElements>Clear elements...</ButtonClearElements>
 	<!--Various-->

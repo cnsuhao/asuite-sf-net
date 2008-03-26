@@ -3,7 +3,7 @@ object frmOption: TfrmOption
   Top = 0
   BorderStyle = bsDialog
   Caption = 'Options'
-  ClientHeight = 547
+  ClientHeight = 550
   ClientWidth = 294
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -26,25 +26,23 @@ object frmOption: TfrmOption
     TabOrder = 0
     object TabSheet1: TTabSheet
       Caption = 'General'
-      ExplicitLeft = 0
-      ExplicitTop = 32
       object gbWindow: TGroupBox
         Left = 8
         Top = 88
         Width = 257
-        Height = 291
+        Height = 275
         Caption = 'Window'
         TabOrder = 1
         object lbLanguage: TLabel
           Left = 8
-          Top = 216
+          Top = 200
           Width = 47
           Height = 13
           Caption = 'Language'
         end
         object cxLanguage: TComboBox
           Left = 8
-          Top = 232
+          Top = 216
           Width = 153
           Height = 21
           Style = csDropDownList
@@ -53,7 +51,7 @@ object frmOption: TfrmOption
         end
         object cxWindowHotKeyCode: TComboBox
           Left = 167
-          Top = 100
+          Top = 84
           Width = 57
           Height = 21
           Style = csDropDownList
@@ -111,7 +109,7 @@ object frmOption: TfrmOption
         end
         object cxWindowHotKeyMod: TComboBox
           Left = 8
-          Top = 100
+          Top = 84
           Width = 153
           Height = 21
           Style = csDropDownList
@@ -136,7 +134,7 @@ object frmOption: TfrmOption
         end
         object cbWindowHotKey: TCheckBox
           Left = 8
-          Top = 80
+          Top = 64
           Width = 233
           Height = 17
           Caption = 'Show window when hotkey is pressed'
@@ -175,7 +173,7 @@ object frmOption: TfrmOption
         end
         object cbCustomTitle: TCheckBox
           Left = 8
-          Top = 172
+          Top = 156
           Width = 233
           Height = 17
           Caption = 'Custom window title'
@@ -184,7 +182,7 @@ object frmOption: TfrmOption
         end
         object edtCustomTitle: TEdit
           Left = 8
-          Top = 192
+          Top = 176
           Width = 153
           Height = 21
           TabOrder = 10
@@ -192,7 +190,7 @@ object frmOption: TfrmOption
         end
         object cbHideSearch: TCheckBox
           Left = 8
-          Top = 256
+          Top = 240
           Width = 233
           Height = 17
           Caption = 'Hide tab Search'
@@ -200,7 +198,7 @@ object frmOption: TfrmOption
         end
         object cbHideStats: TCheckBox
           Left = 8
-          Top = 272
+          Top = 256
           Width = 233
           Height = 17
           Caption = 'Hide tab Stats'
@@ -208,7 +206,7 @@ object frmOption: TfrmOption
         end
         object cbMenuHotKey: TCheckBox
           Left = 8
-          Top = 127
+          Top = 111
           Width = 241
           Height = 17
           Caption = 'Show trayicon menu when hotkey is pressed'
@@ -217,7 +215,7 @@ object frmOption: TfrmOption
         end
         object cxMenuHotKeyCode: TComboBox
           Left = 167
-          Top = 147
+          Top = 131
           Width = 57
           Height = 21
           Style = csDropDownList
@@ -275,7 +273,7 @@ object frmOption: TfrmOption
         end
         object cxMenuHotKeyMod: TComboBox
           Left = 8
-          Top = 147
+          Top = 131
           Width = 153
           Height = 21
           Style = csDropDownList
@@ -298,56 +296,56 @@ object frmOption: TfrmOption
             'WinKey + Shift + Crtl'
             'WinKey + Shift + Crtl + Alt')
         end
-        object cbAutoOpClCat: TCheckBox
-          Left = 8
-          Top = 64
-          Width = 216
-          Height = 17
-          Caption = 'Automatic Opening/Closing Categories'
-          TabOrder = 14
-        end
       end
       object gbTreeView: TGroupBox
-        Left = 3
-        Top = 385
+        Left = 8
+        Top = 370
         Width = 257
-        Height = 89
+        Height = 103
         Caption = 'Treeview'
         TabOrder = 2
         object cbBackground: TCheckBox
           Left = 8
-          Top = 13
+          Top = 32
           Width = 233
           Height = 17
           Caption = 'Active background'
-          TabOrder = 0
+          TabOrder = 1
           OnClick = cbBackgroundClick
         end
         object btnFontSettings: TButton
           Left = 72
-          Top = 64
+          Top = 80
           Width = 121
           Height = 17
           Caption = 'Font settings...'
-          TabOrder = 3
+          TabOrder = 4
           OnClick = btnFontSettingsClick
         end
         object edtBackground: TEdit
           Left = 8
-          Top = 36
+          Top = 52
           Width = 177
           Height = 21
-          TabOrder = 1
+          TabOrder = 2
           Text = '$ASuite\'
         end
         object btnBrowseBackground: TButton
           Left = 192
-          Top = 36
+          Top = 52
           Width = 57
           Height = 21
           Caption = 'Browse'
-          TabOrder = 2
+          TabOrder = 3
           OnClick = Browse
+        end
+        object cbAutoOpClCat: TCheckBox
+          Left = 8
+          Top = 16
+          Width = 241
+          Height = 17
+          Caption = 'Automatic Opening/Closing Categories'
+          TabOrder = 0
         end
       end
       object gbStartup: TGroupBox
@@ -394,7 +392,6 @@ object frmOption: TfrmOption
     object TabSheet2: TTabSheet
       Caption = 'Advanced'
       ImageIndex = 4
-      ExplicitHeight = 469
       object gbRecents: TGroupBox
         Left = 8
         Top = 16
@@ -445,7 +442,7 @@ object frmOption: TfrmOption
       end
       object gbBackup: TGroupBox
         Left = 8
-        Top = 120
+        Top = 112
         Width = 257
         Height = 65
         Caption = 'Backup'
@@ -485,18 +482,11 @@ object frmOption: TfrmOption
       end
       object gbOtherFunctions: TGroupBox
         Left = 8
-        Top = 296
+        Top = 368
         Width = 257
-        Height = 153
+        Height = 89
         Caption = 'Other functions'
-        TabOrder = 2
-        object lbClearElements: TLabel
-          Left = 8
-          Top = 88
-          Width = 202
-          Height = 13
-          Caption = 'Clear all MRU, backups and/or cache icons'
-        end
+        TabOrder = 4
         object cbSaveSecurity: TCheckBox
           Left = 8
           Top = 48
@@ -530,19 +520,10 @@ object frmOption: TfrmOption
           Caption = 'Enable scheduler'
           TabOrder = 3
         end
-        object btnClearElements: TButton
-          Left = 72
-          Top = 112
-          Width = 113
-          Height = 25
-          Caption = 'Clear elements...'
-          TabOrder = 4
-          OnClick = btnClearElementsClick
-        end
       end
       object gbCheckList: TGroupBox
         Left = 8
-        Top = 208
+        Top = 288
         Width = 257
         Height = 65
         Caption = 'Check list'
@@ -582,14 +563,37 @@ object frmOption: TfrmOption
           OnChange = tbCheckListChange
         end
       end
+      object gbClearElements: TGroupBox
+        Left = 8
+        Top = 192
+        Width = 257
+        Height = 81
+        Caption = 'Clear Elements'
+        TabOrder = 2
+        object lbClearElements: TLabel
+          Left = 8
+          Top = 24
+          Width = 202
+          Height = 13
+          Caption = 'Clear all MRU, backups and/or cache icons'
+        end
+        object btnClearElements: TButton
+          Left = 72
+          Top = 48
+          Width = 113
+          Height = 17
+          Caption = 'Clear elements...'
+          TabOrder = 0
+          OnClick = btnClearElementsClick
+        end
+      end
     end
     object TabSheet3: TTabSheet
       Caption = 'Various'
       ImageIndex = 2
-      ExplicitHeight = 469
       object gbExecution: TGroupBox
         Left = 8
-        Top = 0
+        Top = 8
         Width = 257
         Height = 81
         Caption = 'Execution'
@@ -621,7 +625,7 @@ object frmOption: TfrmOption
       end
       object gbTrayicon: TGroupBox
         Left = 8
-        Top = 96
+        Top = 104
         Width = 257
         Height = 200
         Caption = 'System Tray'
@@ -722,7 +726,7 @@ object frmOption: TfrmOption
       end
       object gbMouse: TGroupBox
         Left = 8
-        Top = 298
+        Top = 322
         Width = 257
         Height = 137
         Caption = 'Mouse sensors'
@@ -870,8 +874,8 @@ object frmOption: TfrmOption
     end
   end
   object btnOk: TButton
-    Left = 130
-    Top = 514
+    Left = 128
+    Top = 520
     Width = 75
     Height = 25
     Caption = 'Ok'
@@ -880,8 +884,8 @@ object frmOption: TfrmOption
     OnClick = btnOkClick
   end
   object btnCancel: TButton
-    Left = 215
-    Top = 514
+    Left = 216
+    Top = 520
     Width = 75
     Height = 25
     Caption = 'Cancel'

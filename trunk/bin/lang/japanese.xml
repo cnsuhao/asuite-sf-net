@@ -101,6 +101,7 @@
 	<!--Treeview-->
 	<GroupBoxTreeView>ツリービュー</GroupBoxTreeView>
 	<ButtonFontSettings>フォントの設定...</ButtonFontSettings>
+	<CheckBoxAutoOpClCat>Automatic Opening/Closing Categories</CheckBoxAutoOpClCat>
 	<CheckBoxBackground>背景をアクティブにする</CheckBoxBackground>
 	<ButtonBrowseBackground>参照</ButtonBrowseBackground>
 	<!--Tabs-->
@@ -131,6 +132,7 @@
 	<CheckBoxSaveSecurity>保存セキュリティを有効にする</CheckBoxSaveSecurity>
 	<CheckBoxScheduler>スケジューラを有効にする</CheckBoxScheduler>
 	<!--Clear elements-->
+	<GroupBoxClearElements>Clear elements</GroupBoxClearElements>
 	<LabelClearElements>MRU、バックアップおよびキャッシュ アイコンのクリア</LabelClearElements>
 	<ButtonClearElements>要素のクリア...</ButtonClearElements>
 	<!--Various-->

@@ -103,6 +103,7 @@
 	<!--Treeview-->
 	<GroupBoxTreeView>Treeview</GroupBoxTreeView>
 	<ButtonFontSettings>Opzioni Font...</ButtonFontSettings>
+	<CheckBoxAutoOpClCat>Apertura/chiusura automatica delle categorie</CheckBoxAutoOpClCat>
 	<CheckBoxBackground>Attiva sfondo</CheckBoxBackground>
 	<ButtonBrowseBackground>Sfoglia</ButtonBrowseBackground>
 	<!--Tabs-->
@@ -133,6 +134,7 @@
 	<CheckBoxSaveSecurity>Attiva salvataggio di sicurezza</CheckBoxSaveSecurity>
 	<CheckBoxScheduler>Attiva scheduler</CheckBoxScheduler>
 	<!--Clear elements-->
+	<GroupBoxClearElements>Svuota elementi</GroupBoxClearElements>
 	<LabelClearElements>Svuota i recenti, i backup e/o le icone cache</LabelClearElements>
 	<ButtonClearElements>Svuota elementi...</ButtonClearElements>
 	<!--Various-->

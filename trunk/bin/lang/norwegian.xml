@@ -106,6 +106,7 @@ use with portable applications.</LabelIntro>
        <GroupBoxTreeView>Strukturer</GroupBoxTreeView>
        <ButtonCustomTrayicon>Velg ikon</ButtonCustomTrayicon>
        <ButtonFontSettings>Skrifttype</ButtonFontSettings>
+	<CheckBoxAutoOpClCat>Automatic Opening/Closing Categories</CheckBoxAutoOpClCat>
        <CheckBoxBackground>Aktiver bakgrund</CheckBoxBackground>
        <ButtonBackground>Bakgrund</ButtonBackground>
        <!--Tabs-->
@@ -135,7 +136,8 @@ use with portable applications.</LabelIntro>
        <CheckBoxCache>Aktiver cache</CheckBoxCache>
        <CheckBoxSaveSecurity>Aktiver sikker lagring</CheckBoxSaveSecurity>
        <CheckBoxScheduler>Aktiver planlegging</CheckBoxScheduler>
-       <!--Clear elements-->       
+       <!--Clear elements-->
+	<GroupBoxClearElements>Clear elements</GroupBoxClearElements>       
        <LabelClearElements>Clear all MRU, backups and/or cache icons</LabelClearElements>
        <ButtonClearElements>Clear elements...</ButtonClearElements>
        <!--Various-->

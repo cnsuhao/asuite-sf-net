@@ -99,8 +99,6 @@ type
     btnBrowseBackground: TButton;
     cbCustomTitle: TCheckBox;
     edtCustomTitle: TEdit;
-    btnClearElements: TButton;
-    lbClearElements: TLabel;
     cbMenuFade: TCheckBox;
     lbMenuTheme: TLabel;
     cxTheme: TComboBox;
@@ -116,6 +114,9 @@ type
     cxMenuHotKeyMod: TComboBox;
     cbMenuStartup: TCheckBox;
     cbAutoOpClCat: TCheckBox;
+    gbClearElements: TGroupBox;
+    lbClearElements: TLabel;
+    btnClearElements: TButton;
     procedure btnOkClick(Sender: TObject);
     procedure btnCancelClick(Sender: TObject);
     procedure tbMRUChange(Sender: TObject);
@@ -179,6 +180,7 @@ begin
     cbHideStats.caption     := ChildNodes['CheckBoxHideStats'].Text;
     //Treeview
     gbTreeView.caption      := ChildNodes['GroupBoxTreeView'].Text;
+    cbAutoOpClCat.caption   := ChildNodes['CheckBoxAutoOpClCat'].Text;
     btnFontSettings.caption := ChildNodes['ButtonFontSettings'].Text;
     cbBackground.caption    := ChildNodes['CheckBoxBackground'].Text;
     btnBrowseBackground.caption := ChildNodes['ButtonBrowseBackground'].Text;
@@ -194,6 +196,10 @@ begin
     gbBackup.caption        := ChildNodes['GroupBoxBackup'].Text;
     cbBackup.caption        := ChildNodes['CheckBoxBackup'].Text;
     lbMaxBackup.caption     := ChildNodes['LabelBackupMax'].Text;
+    //Clear elements
+    gbClearElements.caption := ChildNodes['GroupBoxClearElements'].Text;
+    lbClearElements.caption := ChildNodes['LabelClearElements'].Text;
+    btnClearElements.caption := ChildNodes['ButtonClearElements'].Text;
     //Check list
     gbCheckList.caption     := ChildNodes['GroupBoxCheckList'].Text;
     cbCheckList.caption     := ChildNodes['CheckBoxCheckList'].Text;
@@ -204,9 +210,6 @@ begin
     cbCache.caption         := ChildNodes['CheckBoxCache'].Text;
     cbSaveSecurity.caption  := ChildNodes['CheckBoxSaveSecurity'].Text;
     cbScheduler.caption     := ChildNodes['CheckBoxScheduler'].Text;
-    //Clear elements
-    lbClearElements.caption := ChildNodes['LabelClearElements'].Text;
-    btnClearElements.caption := ChildNodes['ButtonClearElements'].Text;
 
     //Various
     TabSheet3.caption       := ChildNodes['TabVariousCaption'].Text;
@@ -314,7 +317,7 @@ var
   I            : Integer;
 begin
   //General
-  LauncherOptions.AutoOpClCategories   := cbAutoOpClCat.Checked;
+  LauncherOptions.AutoOpClCats     := cbAutoOpClCat.Checked;
   LauncherOptions.WindowsStartup   := cbWindowsStartup.Checked;
   LauncherOptions.StartUpShowPanel := cbShowStartup.Checked;
   LauncherOptions.StartUpShowMenu  := cbMenuStartup.Checked;
@@ -526,7 +529,7 @@ begin
   TranslateForm(LauncherOptions.LangName);
   PageControl1.TabIndex      := 0;
   //General
-  cbAutoOpClCat.Checked       :=  LauncherOptions.AutoOpClCategories;
+  cbAutoOpClCat.Checked      := LauncherOptions.AutoOpClCats;
   cbWindowsStartup.Checked   := LauncherOptions.WindowsStartup;
   cbShowStartup.Checked      := LauncherOptions.StartUpShowPanel;
   cbMenuStartup.Checked      := LauncherOptions.StartUpShowMenu;

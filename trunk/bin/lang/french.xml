@@ -1,5 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<ASuite>
+﻿<ASuite>
   <Info>
 	<PathReadme>docs\Lisez moi.rtf</PathReadme>
   </Info>
@@ -103,6 +102,7 @@
 	<!--Treeview-->
 	<GroupBoxTreeView>Arborescence</GroupBoxTreeView>
 	<ButtonFontSettings>Police...</ButtonFontSettings>
+	<CheckBoxAutoOpClCat>Automatic Opening/Closing Categories</CheckBoxAutoOpClCat><?xml version="1.0" encoding="UTF-8"?>
 	<CheckBoxBackground>Utiliser une image de fond</CheckBoxBackground>
 	<ButtonBrowseBackground>Parcourir</ButtonBrowseBackground>
 	<!--Tabs-->
@@ -133,6 +133,7 @@
 	<CheckBoxSaveSecurity>Activer les sauvegardes de sécurité</CheckBoxSaveSecurity>
 	<CheckBoxScheduler>Activer le planificateur</CheckBoxScheduler>
 	<!--Clear elements-->
+	<GroupBoxClearElements>Clear elements</GroupBoxClearElements>
 	<LabelClearElements>Purger les éléments stockés par ASuite :</LabelClearElements>
 	<ButtonClearElements>Choisir les éléments</ButtonClearElements>
 	<!--Various-->

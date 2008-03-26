@@ -103,6 +103,7 @@
 	<!--Treeview-->
 	<GroupBoxTreeView>Vedere tip arbore</GroupBoxTreeView>
 	<ButtonFontSettings>Setari font...</ButtonFontSettings>
+	<CheckBoxAutoOpClCat>Automatic Opening/Closing Categories</CheckBoxAutoOpClCat>
 	<CheckBoxBackground>Imagine fundal activa</CheckBoxBackground>
 	<ButtonBrowseBackground>Rasfoieste</ButtonBrowseBackground>
 	<!--Tabs-->
@@ -133,6 +134,7 @@
 	<CheckBoxSaveSecurity>Activeaza salvarea securitatii</CheckBoxSaveSecurity>
 	<CheckBoxScheduler>Activeaza orarul</CheckBoxScheduler>
 	<!--Clear elements-->
+	<GroupBoxClearElements>Clear elements</GroupBoxClearElements>
 	<LabelClearElements>Sterge toate MRU, copii rezerva si/sau colectarea iconitelor</LabelClearElements>
 	<ButtonClearElements>Sterge elementele...</ButtonClearElements>
 	<!--Various-->
