@@ -165,7 +165,7 @@ object frmMain: TfrmMain
     Top = 0
     Width = 194
     Height = 346
-    ActivePage = tbList
+    ActivePage = tbSearch
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -228,17 +228,13 @@ object frmMain: TfrmMain
         OnPaintText = vstListPaintText
         OnGetImageIndex = vstListGetImageIndex
         OnGetHint = vstListGetHint
-        OnKeyUp = vstListKeyUp
+        OnKeyPress = vstListKeyPress
         Columns = <>
       end
     end
     object tbSearch: TTabSheet
       Caption = 'Search'
       ImageIndex = 1
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       DesignSize = (
         186
         318)
@@ -279,7 +275,6 @@ object frmMain: TfrmMain
         OnGetText = vstSearchGetText
         OnGetImageIndex = vstSearchGetImageIndex
         OnHeaderClick = vstSearchHeaderClick
-        OnKeyUp = vstListKeyUp
         Columns = <
           item
             Position = 0
@@ -307,10 +302,6 @@ object frmMain: TfrmMain
     object tbStats: TTabSheet
       Caption = 'Stats'
       ImageIndex = 2
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       DesignSize = (
         186
         318)
