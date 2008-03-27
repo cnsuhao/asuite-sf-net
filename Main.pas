@@ -137,7 +137,6 @@ type
     procedure miWebSiteClick(Sender: TObject);
     procedure miScanExecutablesClick(Sender: TObject);
     procedure RunSingleClick(Sender: TObject);
-    procedure vstListKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure vstListFreeNode(Sender: TBaseVirtualTree; Node: PVirtualNode);
     procedure ShowCard(Sender: TBaseVirtualTree);
     procedure miAddGroupSw2Click(Sender: TObject);
@@ -171,6 +170,7 @@ type
     procedure miRunAsClick(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure CoolTrayIcon1DblClick(Sender: TObject);
+    procedure vstListKeyPress(Sender: TObject; var Key: Char);
   private
     { Private declarations }
     SessionEnding: boolean;
@@ -1111,22 +1111,31 @@ end;
 
 procedure TfrmMain.pcListChange(Sender: TObject);
 var
-  Enable : Boolean;
+  ActiveTab : Boolean;
 begin
-  if pcList.ActivePageIndex = 1 then
-    Enable := false
-  else
-    Enable := true;
-  if pcList.ActivePageIndex = 2 then
-    GetStats(false);
-  miEdit.visible         := Enable;
-  miSortItems.Visible    := Enable;
-  miAddCat2.visible      := Enable;
-  miAddSw2.visible       := Enable;
-  miAddFolder2.visible   := Enable;
-  miAddSeparator2.visible := Enable;
-  miAddGroupSw2.visible  := Enable;
-  miDelete2.visible      := Enable;
+  case pcList.ActivePageIndex of
+    //List
+    0: ActiveTab := True;
+    1: //Search
+    begin
+      ActiveTab := False;
+      FocusControl(edtSearch);
+    end;
+    2: //Stats
+    begin
+      ActiveTab := False;
+      GetStats(False);
+    end;
+  end;
+  //Set property Visible for some components
+  miEdit.Visible          := ActiveTab;
+  miSortItems.Visible     := ActiveTab;
+  miAddCat2.Visible       := ActiveTab;
+  miAddSw2.Visible        := ActiveTab;
+  miAddFolder2.Visible    := ActiveTab;
+  miAddSeparator2.Visible := ActiveTab;
+  miAddGroupSw2.Visible   := ActiveTab;
+  miDelete2.Visible       := ActiveTab;
 end;
 
 procedure TfrmMain.pmWindowPopup(Sender: TObject);
@@ -1299,11 +1308,10 @@ begin
     CellText := StringReplace(CellText, '-', '---------------------------------', [rfIgnoreCase,rfReplaceAll]);
 end;
 
-procedure TfrmMain.vstListKeyUp(Sender: TObject; var Key: Word;
-  Shift: TShiftState);
+procedure TfrmMain.vstListKeyPress(Sender: TObject; var Key: Char);
 begin
   ShowCard(Sender as TVirtualStringTree);
-  if Key = VK_RETURN then
+  if Ord(Key) = VK_RETURN then
     RunExe(Sender);
 end;
 
