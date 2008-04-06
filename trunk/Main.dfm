@@ -165,7 +165,7 @@ object frmMain: TfrmMain
     Top = 0
     Width = 194
     Height = 346
-    ActivePage = tbSearch
+    ActivePage = tbList
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -302,6 +302,10 @@ object frmMain: TfrmMain
     object tbStats: TTabSheet
       Caption = 'Stats'
       ImageIndex = 2
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       DesignSize = (
         186
         318)
