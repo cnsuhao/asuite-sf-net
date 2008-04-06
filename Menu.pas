@@ -169,14 +169,18 @@ begin
     RectDest.Bottom     := Dest.Height;
     //CopyRect in bmpTempImage and use it as background for Dest vst
     if (Source.Picture.graphic is TNGImage) then
-      bmpTempBG := (Source.Picture.Graphic as TNGImage).CopyBitmap
+    begin
+      //Free bmpTempBG to avoid memory leak
+      bmpTempBG.Free;
+      bmpTempBG := (Source.Picture.Graphic as TNGImage).CopyBitmap;
+    end
     else
       bmpTempBG.Assign(Source.Picture.Graphic);
     bmpTempImage.canvas.CopyRect(RectDest, bmpTempBG.Canvas, RectSource);
     Dest.Background.Bitmap := bmpTempImage;
     Dest.Background.Bitmap.Transparent := true;
   finally
-    bmpTempImage.Free;    
+    bmpTempImage.Free;
     bmpTempBG.Free;
   end;
 end;
