@@ -338,7 +338,7 @@ const
   PathIcons     = PathUser + 'icons\';
   PathTheme     = PathUser + 'MenuThemes\';
   ReleaseVersion    = '1.5.1';
-  PreReleaseVersion = ' Alpha'; //For Alpha and Beta version
+  PreReleaseVersion = ''; //For Alpha and Beta version
                                //(ReleaseVersion + PreReleaseVersion = Version)
   UpdateUrl     = 'http://www.salvadorsoftware.com/update/';
   UpdateName    = 'update.ini';

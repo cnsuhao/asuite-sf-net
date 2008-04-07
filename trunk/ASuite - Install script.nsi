@@ -2,7 +2,7 @@
 
 ; HM NIS Edit Wizard helper defines
 !define PRODUCT_NAME "ASuite"
-!define PRODUCT_VERSION "1.5"
+!define PRODUCT_VERSION "1.5.1"
 !define PRODUCT_PUBLISHER "SalvadorSoftware"
 !define PRODUCT_WEB_SITE "http://salvador.p2pforum.it/"
 !define PRODUCT_DIR_REGKEY "Software\Microsoft\Windows\CurrentVersion\App Paths\ASuite.exe"
@@ -39,7 +39,7 @@
 ; MUI end ------
 
 Name "${PRODUCT_NAME} ${PRODUCT_VERSION}"
-OutFile "ASuite15.exe"
+OutFile "ASuite151.exe"
 InstallDir "$PROGRAMFILES\ASuite"
 InstallDirRegKey HKLM "${PRODUCT_DIR_REGKEY}" ""
 ShowInstDetails show
@@ -118,8 +118,7 @@ Section "SezionePrincipale" SEC01
   File "release\MenuThemes\Default\IconTheme\search.ico"
   File "release\MenuThemes\Default\IconTheme\videos.ico"
   SetOutPath "$INSTDIR\MenuThemes\Default\Theme"
-  File "release\MenuThemes\Default\Theme\background.jpg"
-  File "release\MenuThemes\Default\Theme\background_top.bmp"
+  File "release\MenuThemes\Default\Theme\background.png"
   File "release\MenuThemes\Default\Theme\divider.jpg"
   File "release\MenuThemes\Default\Theme\drive_space_slider.bmp"
   SetOutPath "$INSTDIR\MenuThemes\Blacksuite"
@@ -138,7 +137,6 @@ Section "SezionePrincipale" SEC01
   File "release\MenuThemes\Blacksuite\IconTheme\videos.ico"
   SetOutPath "$INSTDIR\MenuThemes\Blacksuite\Theme"
   File "release\MenuThemes\Blacksuite\Theme\background.jpg"
-  File "release\MenuThemes\Blacksuite\Theme\background_top.bmp"
   File "release\MenuThemes\Blacksuite\Theme\divider.jpg"
   File "release\MenuThemes\Blacksuite\Theme\drive_space_slider.bmp"
 SectionEnd
@@ -229,8 +227,7 @@ Section Uninstall
   Delete "$INSTDIR\MenuThemes\Default\IconTheme\pictures.ico"
   Delete "$INSTDIR\MenuThemes\Default\IconTheme\search.ico"
   Delete "$INSTDIR\MenuThemes\Default\IconTheme\videos.ico"
-  Delete "$INSTDIR\MenuThemes\Default\Theme\background.jpg"
-  Delete "$INSTDIR\MenuThemes\Default\Theme\background_top.bmp"
+  Delete "$INSTDIR\MenuThemes\Default\Theme\background.png"
   Delete "$INSTDIR\MenuThemes\Default\Theme\divider.jpg"
   Delete "$INSTDIR\MenuThemes\Default\Theme\drive_space_slider.bmp"
   Delete "$INSTDIR\MenuThemes\Blacksuite\PersonalPicture.jpg"
@@ -246,7 +243,6 @@ Section Uninstall
   Delete "$INSTDIR\MenuThemes\Blacksuite\IconTheme\search.ico"
   Delete "$INSTDIR\MenuThemes\Blacksuite\IconTheme\videos.ico"
   Delete "$INSTDIR\MenuThemes\Blacksuite\Theme\background.jpg"
-  Delete "$INSTDIR\MenuThemes\Blacksuite\Theme\background_top.bmp"
   Delete "$INSTDIR\MenuThemes\Blacksuite\Theme\divider.jpg"
   Delete "$INSTDIR\MenuThemes\Blacksuite\Theme\drive_space_slider.bmp"
   Delete "$INSTDIR\ASuite.exe"

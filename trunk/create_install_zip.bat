@@ -112,7 +112,7 @@ copy ..\bin\MenuThemes\Blacksuite\Theme\background.jpg MenuThemes\Blacksuite\The
 copy ..\bin\MenuThemes\Blacksuite\Theme\divider.jpg MenuThemes\Blacksuite\Theme
 copy ..\bin\MenuThemes\Blacksuite\Theme\drive_space_slider.bmp MenuThemes\Blacksuite\Theme
 
-c:\programmi\7-zip\7z.exe a -tzip ..\asuite15.zip
+c:\programmi\7-zip\7z.exe a -tzip ..\asuite151.zip
 
 cd ..
 
