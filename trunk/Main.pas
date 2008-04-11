@@ -1551,7 +1551,7 @@ begin
   ShutdownTime := False;
   pcList.ActivePageIndex := 0;
   ApplicationPath := ExtractFileDir(Application.ExeName) + '\';
-  SetCurrentDir(ApplicationPath);     
+  SetCurrentDir(ApplicationPath);
   MenuList     := TNodeList.Create(-1);
   LauncherOptions.RefreshMenuTheme := True;
   //Create TNodeLists for autorun and set NodeDataSize

@@ -1947,7 +1947,8 @@ begin
     PathFile := StringReplace(PathFile, '%' + EnvVar + '%', GetEnvVarValue(
       EnvVar), [rfIgnoreCase]);
   end;
-  Result := PathFile;
+  //Expand relative path in absolute (to avoid the "..")
+  Result := ExpandFileName(PathFile);
 end;
 
 procedure StrToStrings(Str, Sep: string; const List: TStrings);
