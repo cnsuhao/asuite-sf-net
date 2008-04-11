@@ -16,6 +16,8 @@ mkdir MenuThemes\Blacksuite\
 mkdir MenuThemes\Blacksuite\IconTheme\
 mkdir MenuThemes\Blacksuite\Theme\
 
+copy ..\..\bin\libmng.dll
+
 copy ..\..\bin\Icons\asuite.cur Icons\
 copy ..\..\bin\Icons\asuite.ico Icons\
 copy ..\..\bin\Icons\1.ico Icons\

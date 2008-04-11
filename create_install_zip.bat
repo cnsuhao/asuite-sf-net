@@ -29,6 +29,7 @@ copy ..\bin\asuite.exe ..\bin\asuite.exe.old
 D:\desktop\Matteo\Programmi\UPX\upx.exe --best ..\bin\asuite.exe
 
 copy ..\bin\asuite.exe
+copy ..\bin\libmng.dll
 
 copy ..\bin\Icons\asuite.cur Icons\
 copy ..\bin\Icons\asuite.ico Icons\
