@@ -48,7 +48,7 @@ type
 
 var
   frmOrderSoftware : TfrmOrderSoftware;
-  StartupMode      : Boolean; //True Startup, False Shutdown
+  AutorunMode      : Boolean; //True Startup, False Shutdown
 
 implementation    
 
@@ -61,10 +61,10 @@ begin
   with frmMain.xmldTranslate.DocumentElement.ChildNodes['Form10'] do
   begin
     Caption            := ChildNodes['Form10Caption'].Text;  
-    if StartupMode then 
+    if AutorunMode then 
       lbInfoOrder.Caption := ChildNodes['LabelInfoStartupOrder'].Text 
     else
-      lbInfoOrder.Caption := ChildNodes['LabelInfoShutdownOrder'].Text;  
+      lbInfoOrder.Caption := ChildNodes['LabelInfoShutdownOrder'].Text;
     //Buttons
     btnOk.Caption      := ChildNodes['ButtonOk'].Text;
     btnCancel.Caption  := ChildNodes['ButtonCancel'].Text;
@@ -111,7 +111,7 @@ var
   I        : Integer;
   NodeData : PTreeData;
 begin
-  if StartupMode then
+  if AutorunMode then
   begin
     ASuiteStartupApp.Clear;
     for I := 0 to lxOrderSoftware.Count - 1 do
@@ -143,7 +143,7 @@ var
 begin
   lxOrderSoftware.Clear;
   lxOrderSoftware.Items.BeginUpdate;
-  if StartupMode then
+  if AutorunMode then
   begin  
     for I := 0 to ASuiteStartupApp.Count - 1 do
     begin

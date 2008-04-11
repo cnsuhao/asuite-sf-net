@@ -218,12 +218,13 @@ begin
   VNDataSoft.Autorun := cxAutoExecute.ItemIndex;
   AddAutorunInList(VNDataSoft);
   try
-    Application.CreateForm(TfrmOrderSoftware, frmOrderSoftware);
+    //Set AutorunMode
     if (VNDataSoft.Autorun = 1) or (VNDataSoft.Autorun = 2) then
-      OrderSoftware.StartupMode := True //Startup
+      OrderSoftware.AutorunMode := True //Startup
     else
       if (VNDataSoft.Autorun = 3) then
-        OrderSoftware.StartupMode := False; //Shutdown
+        OrderSoftware.AutorunMode := False; //Shutdown
+    Application.CreateForm(TfrmOrderSoftware, frmOrderSoftware);
     frmOrderSoftware.showmodal;
   finally
     frmOrderSoftware.Free;

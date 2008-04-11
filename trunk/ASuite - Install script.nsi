@@ -49,6 +49,7 @@ Section "SezionePrincipale" SEC01
   SetOutPath "$INSTDIR"
   SetOverwrite try
   File "release\ASuite.exe"
+  File "release\libmng.dll"
   IfSilent +6
     CreateDirectory "$SMPROGRAMS\ASuite"
     CreateShortCut "$SMPROGRAMS\ASuite\SalvadorSoftware Site.lnk" "$INSTDIR\SalvadorSoftware Site.url"
