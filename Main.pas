@@ -1702,13 +1702,7 @@ procedure TfrmMain.WMEndSession(var Msg : TWMEndSession);
 begin
   //Close ASuite on Windows shutdown
   if Msg.EndSession = True then
-  begin
-    Hide;
-    ShutdownTime := True;
-    if IsFormOpen('frmCard') then
-      frmCard.Close;
-    Close;
-  end;
+    miExitClick(self);
 end;   
 
 procedure TfrmMain.WMMoving(var Msg: TWMMoving);

@@ -374,6 +374,7 @@ begin
     begin
       //Hide frmMain
       frmMain.Hide;
+      frmMain.CoolTrayIcon1.HideTaskbarIcon;
       {$ifdef ASuite}
       if IsFormOpen('frmCard') then
         frmCard.Hide;
