@@ -40,7 +40,7 @@
 	<MenuEdit>Editar</MenuEdit>
 	<MenuSortCategoryItems>Ordenar elementos de la categoría</MenuSortCategoryItems>
 	<MenuRun>Ejecutar</MenuRun>
-	<MenuRunAs>Run as...</MenuRunAs>
+	<MenuRunAs>Ejecutar como...</MenuRunAs>
 	<MenuOpenFolder>Abrir carpeta del programa</MenuOpenFolder>
 	<MenuVisitWebSite>Visitar el sitio web</MenuVisitWebSite>
 	<MenuAddCat>Añadir categoría</MenuAddCat>
@@ -60,9 +60,9 @@
 	<TrayiconMRU>Recientes</TrayiconMRU>
 	<TrayiconExit>Salir</TrayiconExit>
 	<!--Trayicon Default Menu-->
-	<DefaultMenuButtonOptions>Options...</DefaultMenuButtonOptions>
-	<DefaultMenuButtonSearch>Search...</DefaultMenuButtonSearch>
-	<DefaultMenuButtonAbout>About ASuite</DefaultMenuButtonAbout>
+	<DefaultMenuButtonOptions>Opciones...</DefaultMenuButtonOptions>
+	<DefaultMenuButtonSearch>Buscar...</DefaultMenuButtonSearch>
+	<DefaultMenuButtonAbout>Acerca de...</DefaultMenuButtonAbout>
   </Form1>
   <Form2><!--Card-->
 	<!--ASuite's Page-->
@@ -89,21 +89,21 @@
 	<GroupBoxStartup>Inicio</GroupBoxStartup>
 	<CheckBoxWindowsStartup>Abrir ASuite al iniciar el sistema</CheckBoxWindowsStartup>
 	<CheckBoxStartUp>Mostrar ventana al iniciar</CheckBoxStartUp>
-	<CheckBoxMenuStartUp>Show trayicon menu on startup</CheckBoxMenuStartUp>
+	<CheckBoxMenuStartUp>Mostrar menú del sistema al iniciar</CheckBoxMenuStartUp>
 	<CheckBoxAutorun>Permitir el inicio automático</CheckBoxAutorun>
 	<!--Window-->
 	<GroupBoxWindow>Ventana</GroupBoxWindow>
 	<CheckBoxHoldSize>Conservar el tamaño de la ventana</CheckBoxHoldSize>
 	<CheckBoxFormCard>Mostrar información de la aplicación</CheckBoxFormCard>
 	<CheckBoxWindowOnTop>Siempre visible</CheckBoxWindowOnTop>
-	<CheckBoxWindowHotkey>Mostrar la ventana al pulsar la tecla rápida</CheckBoxWindowHotkey>
-	<CheckBoxMenuHotkey>Show trayicon menu when hotkey is pressed</CheckBoxMenuHotkey>
-	<CheckBoxCustomTitle>Custom window title</CheckBoxCustomTitle>
+	<CheckBoxWindowHotkey>Mostrar la ventana al pulsar tecla rápida</CheckBoxWindowHotkey>
+	<CheckBoxMenuHotkey>Mostrar menú del sistema con tecla rápida</CheckBoxMenuHotkey>
+	<CheckBoxCustomTitle>Título de ventana personalizado</CheckBoxCustomTitle>
 	<LabelLanguage>Idioma</LabelLanguage>
 	<!--Treeview-->
 	<GroupBoxTreeView>Vista de árbol</GroupBoxTreeView>
 	<ButtonFontSettings>Fuente...</ButtonFontSettings>
-	<CheckBoxAutoOpClCat>Automatic Opening/Closing Categories</CheckBoxAutoOpClCat>
+	<CheckBoxAutoOpClCat>Desplegar/plegar categorías automáticamente</CheckBoxAutoOpClCat>
 	<CheckBoxBackground>Fondo activo</CheckBoxBackground>
 	<ButtonBrowseBackground>Explorar</ButtonBrowseBackground>
 	<!--Tabs-->
@@ -134,9 +134,9 @@
 	<CheckBoxSaveSecurity>Permitir guardado de seguridad</CheckBoxSaveSecurity>
 	<CheckBoxScheduler>Permitir programador</CheckBoxScheduler>
 	<!--Clear elements-->
-	<GroupBoxClearElements>Clear elements</GroupBoxClearElements>
-	<LabelClearElements>Clear all MRU, backups and/or cache icons</LabelClearElements>
-	<ButtonClearElements>Clear elements...</ButtonClearElements>
+	<GroupBoxClearElements>Borrar elementos</GroupBoxClearElements>
+	<LabelClearElements>Borrar recientes, backups y/o iconos de caché</LabelClearElements>
+	<ButtonClearElements>Borrar elementos...</ButtonClearElements>
 	<!--Various-->
 	<TabVariousCaption>Varios</TabVariousCaption>
 	<!--Execution-->
@@ -153,11 +153,11 @@
 	<ListActionTrayicon1>Sin acciones</ListActionTrayicon1>
 	<ListActionTrayicon2>Mostrar ventana</ListActionTrayicon2>
 	<ListActionTrayicon3>Mostrar menú</ListActionTrayicon3>
-	<CheckBoxClassicMenu>Use classic menu</CheckBoxClassicMenu>
+	<CheckBoxClassicMenu>Utilizar el menú clásico</CheckBoxClassicMenu>
 	<!--Trayicon Default Menu-->
-	<LabelMenuTheme>Theme</LabelMenuTheme>
-	<ButtonMenuFolders>Menu folders</ButtonMenuFolders>
-	<CheckBoxMenuFade>Enable fade menu</CheckBoxMenuFade>
+	<LabelMenuTheme>Tema</LabelMenuTheme>
+	<ButtonMenuFolders>Carpetas menú</ButtonMenuFolders>
+	<CheckBoxMenuFade>Mostrar y ocultar menú con difuminado</CheckBoxMenuFade>
 	<!--Mouse-->
 	<GroupBoxMouse>Sensores del ratón</GroupBoxMouse>
 	<LabelSide>Lado</LabelSide>
@@ -169,8 +169,8 @@
 	<LabelRightClick>Clic derecho</LabelRightClick>
 	<ListActionMouse1>Desactivado</ListActionMouse1>
 	<ListActionMouse2>Mostrar ventana</ListActionMouse2>
-	<ListActionMouse3>Show default menu</ListActionMouse3>
-	<ListActionMouse4>Show classic menu</ListActionMouse4>
+	<ListActionMouse3>Ver menú por defecto</ListActionMouse3>
+	<ListActionMouse4>Ver menú clásico</ListActionMouse4>
 	<ButtonOk>Aceptar</ButtonOk>
 	<ButtonCancel>Cancelar</ButtonCancel>
   </Form3>
@@ -197,7 +197,7 @@
 	<ButtonBrowse>Explorar</ButtonBrowse>
 	<ButtonRetrieve>Obtener info del ejecutable</ButtonRetrieve>
 	<LabelAutoExecute>Autoejecutar</LabelAutoExecute>
-	<ButtonChangeOrder>Change order</ButtonChangeOrder>
+	<ButtonChangeOrder>Cambiar orden</ButtonChangeOrder>
 	<ComboBoxAutoExecute0>Nunca</ComboBoxAutoExecute0>
 	<ComboBoxAutoExecute1>Siempre al inicio</ComboBoxAutoExecute1>
 	<ComboBoxAutoExecute2A>Sólo si no hay otras instancias en ejecución</ComboBoxAutoExecute2A>
@@ -265,35 +265,35 @@
 	<ButtonCancel>Cancelar</ButtonCancel>
   </Form8>
   <Form9>
-	<Form9Caption>Clear elements</Form9Caption>
-	<LabelClearElements>Clear the following elements now:</LabelClearElements>
-	<CheckBoxMRU>MRU</CheckBoxMRU>
+	<Form9Caption>Borrar elementos</Form9Caption>
+	<LabelClearElements>Borrar los siguientes elementos ahora:</LabelClearElements>
+	<CheckBoxMRU>Recientes</CheckBoxMRU>
 	<CheckBoxBackup>Backups</CheckBoxBackup>
-	<CheckBoxCache>Cache icons</CheckBoxCache>
-	<ButtonClear>Clear</ButtonClear>
-	<ButtonCancel>Cancel</ButtonCancel>
+	<CheckBoxCache>Iconos de caché</CheckBoxCache>
+	<ButtonClear>Borrar</ButtonClear>
+	<ButtonCancel>Cancelar</ButtonCancel>
   </Form9>
   <Form10>
-	<Form10Caption>Software order</Form10Caption>
-	<LabelInfoStartupOrder>Order list of software in ASuite startup</LabelInfoStartupOrder>
-	<LabelInfoShutdownOrder>Order list of software in ASuite shutdown</LabelInfoShutdownOrder>
+	<Form10Caption>Orden de los programas</Form10Caption>
+	<LabelInfoStartupOrder>Ordenar lista de programas al iniciar ASuite</LabelInfoStartupOrder>
+	<LabelInfoShutdownOrder>Ordenar lista de programas al terminar ASuite</LabelInfoShutdownOrder>
 	<ButtonOk>Ok</ButtonOk>
-	<ButtonCancel>Cancel</ButtonCancel>
+	<ButtonCancel>Cancelar</ButtonCancel>
   </Form10>
   <Form11>
-	<Form11Caption>Run as</Form11Caption>
-	<LabelUsername>Username</LabelUsername>
-	<LabelPassword>Password</LabelPassword>
+	<Form11Caption>Ejecutar como</Form11Caption>
+	<LabelUsername>Nombre de usuario</LabelUsername>
+	<LabelPassword>Contraseña</LabelPassword>
 	<ButtonOk>Ok</ButtonOk>
-	<ButtonCancel>Cancel</ButtonCancel>
+	<ButtonCancel>Cancelar</ButtonCancel>
   </Form11>
   <Form12>
-	<Form12Caption>Change menu folders</Form12Caption>
-	<LabelFolderName>Folder name</LabelFolderName>
-	<LabelFolderPath>Folder path</LabelFolderPath>
-	<ButtonBrowse>Browse</ButtonBrowse>
+	<Form12Caption>Cambiar carpetas del menú</Form12Caption>
+	<LabelFolderName>Nombre de carpeta</LabelFolderName>
+	<LabelFolderPath>Ruta de la carpeta</LabelFolderPath>
+	<ButtonBrowse>Explorar</ButtonBrowse>
 	<ButtonOk>Ok</ButtonOk>
-	<ButtonCancel>Cancel</ButtonCancel>
+	<ButtonCancel>Cancelar</ButtonCancel>
   </Form12>
   <String>
 	<string01>Archivo no encontrado</string01>
@@ -306,7 +306,7 @@
 	<string08>¿Está seguro?</string08>
 	<string09>No se puede ejecutar %s</string09>
 	<string10>La carga del archivo xml no se ha completado debido a un error</string10>
-	<string11>%s error raised, with message: %s</string11>
+	<string11>%s error lanzado, con mensaje: %s</string11>
 	<string12>El campo del nombre de la aplicación está vacío</string12>
 	<string13>Ruta no válida para el ejecutable</string13>
 	<string14>Máximo 10 programas en el grupo de programas</string14>
