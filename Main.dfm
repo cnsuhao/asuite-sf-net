@@ -332,6 +332,7 @@ object frmMain: TfrmMain
           Top = 24
           Width = 83
           Height = 13
+          Margins.Bottom = 0
           Caption = 'Operating System'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
@@ -345,6 +346,7 @@ object frmMain: TfrmMain
           Top = 48
           Width = 80
           Height = 13
+          Margins.Bottom = 0
           Caption = 'Computer name: '
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
@@ -358,6 +360,7 @@ object frmMain: TfrmMain
           Top = 72
           Width = 63
           Height = 13
+          Margins.Bottom = 0
           Caption = 'Current user: '
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
@@ -386,6 +389,7 @@ object frmMain: TfrmMain
           Top = 24
           Width = 26
           Height = 13
+          Margins.Bottom = 0
           Caption = 'Size: '
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
@@ -399,6 +403,7 @@ object frmMain: TfrmMain
           Top = 48
           Width = 59
           Height = 13
+          Margins.Bottom = 0
           Caption = 'Free space: '
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
@@ -412,6 +417,7 @@ object frmMain: TfrmMain
           Top = 72
           Width = 63
           Height = 13
+          Margins.Bottom = 0
           Caption = 'Used space: '
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
@@ -440,6 +446,7 @@ object frmMain: TfrmMain
           Top = 24
           Width = 81
           Height = 13
+          Margins.Bottom = 0
           Caption = 'Software added: '
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
@@ -453,6 +460,7 @@ object frmMain: TfrmMain
           Top = 48
           Width = 89
           Height = 13
+          Margins.Bottom = 0
           Caption = 'Categories added: '
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
@@ -466,6 +474,7 @@ object frmMain: TfrmMain
           Top = 72
           Width = 30
           Height = 13
+          Margins.Bottom = 0
           Caption = 'Total: '
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText

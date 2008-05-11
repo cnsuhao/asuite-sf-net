@@ -31,6 +31,10 @@ object frmCard: TfrmCard
     object tbHome: TTabSheet
       Caption = 'tbHome'
       TabVisible = False
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object GroupBox3: TGroupBox
         Left = 0
         Top = 0
@@ -48,6 +52,7 @@ object frmCard: TfrmCard
           Width = 167
           Height = 13
           Cursor = crHandPoint
+          Margins.Bottom = 0
           Anchors = []
           Caption = 'http://www.salvadorsoftware.com'
           Font.Charset = DEFAULT_CHARSET
@@ -2188,6 +2193,7 @@ object frmCard: TfrmCard
           Top = 15
           Width = 83
           Height = 28
+          Margins.Bottom = 0
           Anchors = []
           Caption = 'ASuite'
           Font.Charset = DEFAULT_CHARSET
@@ -2204,6 +2210,7 @@ object frmCard: TfrmCard
           Top = 46
           Width = 63
           Height = 13
+          Margins.Bottom = 0
           Anchors = []
           Caption = 'Version x.y'
           Font.Charset = DEFAULT_CHARSET
@@ -2249,11 +2256,16 @@ object frmCard: TfrmCard
     object tbCard: TTabSheet
       Caption = 'tbCard'
       TabVisible = False
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object lbDesc: TLabel
         Left = 8
         Top = 64
         Width = 55
         Height = 13
+        Margins.Bottom = 0
         Caption = 'Descrizione'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
@@ -2267,6 +2279,7 @@ object frmCard: TfrmCard
         Top = 296
         Width = 23
         Height = 13
+        Margins.Bottom = 0
         Caption = 'Note'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
@@ -2280,6 +2293,7 @@ object frmCard: TfrmCard
         Top = 192
         Width = 31
         Height = 13
+        Margins.Bottom = 0
         Caption = 'Parere'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
@@ -2306,6 +2320,7 @@ object frmCard: TfrmCard
           Top = 38
           Width = 95
           Height = 13
+          Margins.Bottom = 0
           Caption = 'Software House '
           Constraints.MaxWidth = 97
           Font.Charset = DEFAULT_CHARSET
@@ -2321,6 +2336,7 @@ object frmCard: TfrmCard
           Width = 55
           Height = 13
           Cursor = crHandPoint
+          Margins.Bottom = 0
           Caption = 'Home page'
           Color = clBtnFace
           Font.Charset = DEFAULT_CHARSET
@@ -2337,6 +2353,7 @@ object frmCard: TfrmCard
           Top = 17
           Width = 37
           Height = 13
+          Margins.Bottom = 0
           Caption = 'Nome '
           Constraints.MaxWidth = 97
           Font.Charset = DEFAULT_CHARSET
@@ -2351,6 +2368,7 @@ object frmCard: TfrmCard
           Top = 16
           Width = 54
           Height = 13
+          Margins.Bottom = 0
           Caption = 'Versione '
           Constraints.MaxWidth = 80
           Font.Charset = DEFAULT_CHARSET
@@ -2365,6 +2383,7 @@ object frmCard: TfrmCard
           Top = 16
           Width = 26
           Height = 13
+          Margins.Bottom = 0
           Caption = 'name'
           Constraints.MaxWidth = 130
           Font.Charset = DEFAULT_CHARSET
@@ -2379,6 +2398,7 @@ object frmCard: TfrmCard
           Top = 38
           Width = 72
           Height = 13
+          Margins.Bottom = 0
           Caption = 'software house'
           Constraints.MaxWidth = 130
           Font.Charset = DEFAULT_CHARSET
@@ -2393,6 +2413,7 @@ object frmCard: TfrmCard
           Top = 16
           Width = 24
           Height = 13
+          Margins.Bottom = 0
           Caption = '0.1.2'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText

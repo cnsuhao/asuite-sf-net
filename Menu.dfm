@@ -940,6 +940,7 @@ object frmMenu: TfrmMenu
     Top = 549
     Width = 123
     Height = 13
+    Margins.Bottom = 0
     AutoSize = False
     BiDiMode = bdLeftToRight
     Caption = 'PortableApps.com (W:)'
@@ -995,6 +996,7 @@ object frmMenu: TfrmMenu
     Top = 546
     Width = 132
     Height = 19
+    Margins.Bottom = 0
     Alignment = taCenter
     AutoSize = False
     Caption = '132Mb / 2Gb (6.6%)'
