@@ -65,6 +65,8 @@ copy ..\bin\Lang\romana.xml Lang
 copy ..\bin\Lang\slovak.xml Lang
 copy ..\bin\Lang\norwegian.xml Lang
 copy ..\bin\Lang\japanese.xml Lang
+copy ..\bin\Lang\arabic.xml Lang
+copy ..\bin\Lang\brazilian_portuguese.xml Lang
 
 copy ..\bin\Docs\leggimi.rtf Docs
 copy ..\bin\Docs\license.txt Docs
