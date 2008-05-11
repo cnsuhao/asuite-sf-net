@@ -2,7 +2,7 @@
 
 ; HM NIS Edit Wizard helper defines
 !define PRODUCT_NAME "ASuite"
-!define PRODUCT_VERSION "1.5.1"
+!define PRODUCT_VERSION "1.5.1.1"
 !define PRODUCT_PUBLISHER "SalvadorSoftware"
 !define PRODUCT_WEB_SITE "http://salvador.p2pforum.it/"
 !define PRODUCT_DIR_REGKEY "Software\Microsoft\Windows\CurrentVersion\App Paths\ASuite.exe"
