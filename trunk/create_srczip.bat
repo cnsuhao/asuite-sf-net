@@ -151,7 +151,7 @@ copy ..\Update.pas
 copy ..\VirtualTreeHDrop.pas
 copy ..\webthread.pas
 
-c:\programmi\7-zip\7z.exe a -tzip ..\asuite151src.zip
+c:\programmi\7-zip\7z.exe a -tzip ..\asuite1511src.zip
 
 cd ..
 
