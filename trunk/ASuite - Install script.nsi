@@ -4,7 +4,7 @@
 !define PRODUCT_NAME "ASuite"
 !define PRODUCT_VERSION "1.5.1.1"
 !define PRODUCT_PUBLISHER "SalvadorSoftware"
-!define PRODUCT_WEB_SITE "http://salvador.p2pforum.it/"
+!define PRODUCT_WEB_SITE "http://www.salvadorsoftware.com/"
 !define PRODUCT_DIR_REGKEY "Software\Microsoft\Windows\CurrentVersion\App Paths\ASuite.exe"
 !define PRODUCT_UNINST_KEY "Software\Microsoft\Windows\CurrentVersion\Uninstall\${PRODUCT_NAME}"
 !define PRODUCT_UNINST_ROOT_KEY "HKLM"
@@ -39,7 +39,7 @@
 ; MUI end ------
 
 Name "${PRODUCT_NAME} ${PRODUCT_VERSION}"
-OutFile "ASuite151.exe"
+OutFile "ASuite1511.exe"
 InstallDir "$PROGRAMFILES\ASuite"
 InstallDirRegKey HKLM "${PRODUCT_DIR_REGKEY}" ""
 ShowInstDetails show
