@@ -337,7 +337,7 @@ const
   PathCache     = PathUser + 'cache\';
   PathIcons     = PathUser + 'icons\';
   PathTheme     = PathUser + 'MenuThemes\';
-  ReleaseVersion    = '1.5.1.1';
+  ReleaseVersion    = '1.5.2';
   PreReleaseVersion = ''; //For Alpha and Beta version
                                //(ReleaseVersion + PreReleaseVersion = Version)
   UpdateUrl     = 'http://www.salvadorsoftware.com/update/';

@@ -26,7 +26,7 @@ mkdir MenuThemes\Blacksuite\IconTheme\
 mkdir MenuThemes\Blacksuite\Theme\
 
 copy ..\bin\asuite.exe ..\bin\asuite.exe.old
-D:\desktop\Matteo\Programmi\UPX\upx.exe --best ..\bin\asuite.exe
+D:\Programmi\UPX\upx.exe --best ..\bin\asuite.exe
 
 copy ..\bin\asuite.exe
 copy ..\bin\libmng.dll
@@ -115,7 +115,7 @@ copy ..\bin\MenuThemes\Blacksuite\Theme\background.jpg MenuThemes\Blacksuite\The
 copy ..\bin\MenuThemes\Blacksuite\Theme\divider.jpg MenuThemes\Blacksuite\Theme
 copy ..\bin\MenuThemes\Blacksuite\Theme\drive_space_slider.bmp MenuThemes\Blacksuite\Theme
 
-c:\programmi\7-zip\7z.exe a -tzip ..\asuite1511.zip
+c:\programmi\7-zip\7z.exe a -tzip ..\asuite152.zip
 
 cd ..
 
