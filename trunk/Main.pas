@@ -1039,7 +1039,7 @@ end;
 
 procedure TfrmMain.miReadMeClick(Sender: TObject);
 begin
-  ShellExecute(GetDesktopWindow, 'open', PChar(LauncherOptions.PathReadme), nil, nil, SW_SHOWNORMAL);
+  ShellExecute(GetDesktopWindow, 'open', PChar(LauncherOptions.PathReadme), nil, nil, SW_SHOWDEFAULT);
 end;
 
 procedure TfrmMain.miRunSelectedSwClick(Sender: TObject);
@@ -1104,7 +1104,7 @@ begin
     else
       NodeData := NodeDataXToNodeDataList(Node);
     if NodeData.Tipo = 1 then
-      ShellExecute(GetDesktopWindow, 'open', PChar(String(NodeData.WebSite)), nil, nil, SW_SHOWNORMAL);
+      ShellExecute(GetDesktopWindow, 'open', PChar(String(NodeData.WebSite)), nil, nil, SW_SHOWDEFAULT);
     Node := TreeView.GetNextSelected(node);
   end;
 end;

@@ -453,7 +453,7 @@ begin
       1: WindowState := 7;
       2: WindowState := 3;
     else
-      WindowState := 1;
+      WindowState := 10;
     end;
     //Parameters
     if NodeData.Tipo = 2 then
@@ -514,7 +514,7 @@ begin
       1: WindowState := 7;
       2: WindowState := 3;
     else
-      WindowState := 1;
+      WindowState := 10;
     end;
     //Execution
     FillMemory(@StartupInfo, sizeof(StartupInfo), 0);

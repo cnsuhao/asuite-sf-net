@@ -502,7 +502,7 @@ procedure TfrmMenu.OpenFolder(FolderPath: String);
 var
   ErrorCode : Integer;
 begin
-  ErrorCode := ShellExecute(0,'open', PAnsiChar(RelativeToAbsolute(FolderPath)), Nil, Nil, SW_SHOW);
+  ErrorCode := ShellExecute(0,'open', PAnsiChar(RelativeToAbsolute(FolderPath)), Nil, Nil, SW_SHOWDEFAULT);
   if ErrorCode <= 32 then
     ShowMessageFmt(ArrayMessages[11],['',SysErrorMessage(ErrorCode)]);
 end;

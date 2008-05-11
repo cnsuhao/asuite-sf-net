@@ -147,7 +147,7 @@ end;
 
 procedure TfrmCard.lbASuiteWebSiteClick(Sender: TObject);
 begin
-  ShellExecute(GetDesktopWindow, 'open', PChar(lbASuiteWebSite.Caption), nil, nil, SW_SHOWNORMAL);
+  ShellExecute(GetDesktopWindow, 'open', PChar(lbASuiteWebSite.Caption), nil, nil, SW_SHOWDEFAULT);
 end;
 
 procedure TfrmCard.lbWebSiteClick(Sender: TObject);
@@ -161,7 +161,7 @@ begin
       NodeData := vstList.GetNodeData(vstList.FocusedNode);
       if NodeData.Tipo = 1 then
         ShellExecute(GetDesktopWindow, 'open', PChar(String(NodeData.WebSite)),
-                     nil, nil, SW_SHOWNORMAL);
+                     nil, nil, SW_SHOWDEFAULT);
     end;
   end;
 end;
