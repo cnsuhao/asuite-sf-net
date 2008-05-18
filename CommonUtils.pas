@@ -1936,8 +1936,9 @@ var
 begin
   //$ASuite = Launcher's path
   PathFile := StringReplace(PathFile, '$asuite', ExtractFileDir(Application.ExeName), [rfIgnoreCase,rfReplaceAll]);
-  //$Drive = Launcher's Drive (ex. ASuite in H:\Software\asuite.exe, $Drive is H: )
-  PathFile := StringReplace(PathFile, '$drive', ExtractFileDrive(Application.ExeName), [rfIgnoreCase,rfReplaceAll]);
+  //$Drive = Launcher's Drive (ex. ASuite in H:\Software\asuite.exe, $Drive is H: ) 
+  PathFile := StringReplace(PathFile, '$drive\', ExtractFileDrive(Application.ExeName) + '\', [rfIgnoreCase,rfReplaceAll]);
+  PathFile := StringReplace(PathFile, '$drive', ExtractFileDrive(Application.ExeName)  + '\', [rfIgnoreCase,rfReplaceAll]);
   //Replace environment variable
   if (pos('%',PathFile) <> 0) then
   begin
@@ -1948,7 +1949,10 @@ begin
       EnvVar), [rfIgnoreCase]);
   end;
   //Expand relative path in absolute (to avoid the "..")
-  Result := ExpandFileName(PathFile);
+  if FileExists(PathFile) or DirectoryExists(PathFile) then
+    Result := ExpandFileName(PathFile)
+  else
+    Result := PathFile;
 end;
 
 procedure StrToStrings(Str, Sep: string; const List: TStrings);
