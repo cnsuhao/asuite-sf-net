@@ -1937,8 +1937,7 @@ begin
   //$ASuite = Launcher's path
   PathFile := StringReplace(PathFile, '$asuite', ExtractFileDir(Application.ExeName), [rfIgnoreCase,rfReplaceAll]);
   //$Drive = Launcher's Drive (ex. ASuite in H:\Software\asuite.exe, $Drive is H: ) 
-  PathFile := StringReplace(PathFile, '$drive\', ExtractFileDrive(Application.ExeName) + '\', [rfIgnoreCase,rfReplaceAll]);
-  PathFile := StringReplace(PathFile, '$drive', ExtractFileDrive(Application.ExeName)  + '\', [rfIgnoreCase,rfReplaceAll]);
+  PathFile := StringReplace(PathFile, '$drive', ExtractFileDrive(Application.ExeName), [rfIgnoreCase,rfReplaceAll]);
   //Replace environment variable
   if (pos('%',PathFile) <> 0) then
   begin
@@ -1948,8 +1947,8 @@ begin
     PathFile := StringReplace(PathFile, '%' + EnvVar + '%', GetEnvVarValue(
       EnvVar), [rfIgnoreCase]);
   end;
-  //Expand relative path in absolute (to avoid the "..")
-  if FileExists(PathFile) or DirectoryExists(PathFile) then
+  //If PathFile exists, expand it in absolute path (to avoid the "..")
+  if (FileExists(PathFile) or DirectoryExists(PathFile)) and (Length(PathFile) <> 2) then
     Result := ExpandFileName(PathFile)
   else
     Result := PathFile;
