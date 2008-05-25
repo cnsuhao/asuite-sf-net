@@ -24,6 +24,9 @@ mkdir MenuThemes\Default\Theme\
 mkdir MenuThemes\Blacksuite\
 mkdir MenuThemes\Blacksuite\IconTheme\
 mkdir MenuThemes\Blacksuite\Theme\
+mkdir MenuThemes\g4xl\
+mkdir MenuThemes\g4xl\IconTheme\
+mkdir MenuThemes\g4xl\Theme\
 
 copy ..\bin\asuite.exe ..\bin\asuite.exe.old
 D:\Programmi\UPX\upx.exe --best ..\bin\asuite.exe
@@ -114,6 +117,20 @@ copy ..\bin\MenuThemes\Blacksuite\IconTheme\videos.ico MenuThemes\Blacksuite\Ico
 copy ..\bin\MenuThemes\Blacksuite\Theme\background.jpg MenuThemes\Blacksuite\Theme
 copy ..\bin\MenuThemes\Blacksuite\Theme\divider.jpg MenuThemes\Blacksuite\Theme
 copy ..\bin\MenuThemes\Blacksuite\Theme\drive_space_slider.bmp MenuThemes\Blacksuite\Theme
+
+copy ..\bin\MenuThemes\g4xl\IconTheme\asuite.ico MenuThemes\g4xl\IconTheme
+copy ..\bin\MenuThemes\g4xl\IconTheme\documents.ico MenuThemes\g4xl\IconTheme
+copy ..\bin\MenuThemes\g4xl\IconTheme\explore.ico MenuThemes\g4xl\IconTheme
+copy ..\bin\MenuThemes\g4xl\IconTheme\help.ico MenuThemes\g4xl\IconTheme
+copy ..\bin\MenuThemes\g4xl\IconTheme\music.ico MenuThemes\g4xl\IconTheme
+copy ..\bin\MenuThemes\g4xl\IconTheme\options.ico MenuThemes\g4xl\IconTheme
+copy ..\bin\MenuThemes\g4xl\IconTheme\pictures.ico MenuThemes\g4xl\IconTheme
+copy ..\bin\MenuThemes\g4xl\IconTheme\search.ico MenuThemes\g4xl\IconTheme
+copy ..\bin\MenuThemes\g4xl\IconTheme\videos.ico MenuThemes\g4xl\IconTheme
+
+copy ..\bin\MenuThemes\g4xl\Theme\background.png MenuThemes\g4xl\Theme
+copy ..\bin\MenuThemes\g4xl\Theme\divider.jpg MenuThemes\g4xl\Theme
+copy ..\bin\MenuThemes\g4xl\Theme\drive_space_slider.bmp MenuThemes\g4xl\Theme
 
 c:\programmi\7-zip\7z.exe a -tzip ..\asuite152.zip
 
