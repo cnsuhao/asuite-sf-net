@@ -23,7 +23,8 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Forms, Dialogs, Menus,
   ShellApi, VirtualTrees, ActiveX, ShlObj, TlHelp32, Registry, Controls, Consts,
-  CommCtrl, ComCtrls, XMLIntf, Main, XMLDoc, ComObj, jpeg, CommonClasses, Variants;
+  CommCtrl, ComCtrls, XMLIntf, Main, XMLDoc, ComObj, jpeg, CommonClasses, Variants,
+  CoolTrayIcon;
 
   Type
     TGetShortcutType = (gstPathExe,gstParameter,gstWorkingDir);
@@ -70,10 +71,12 @@ procedure CheckList(Sender: TBaseVirtualTree;ImageList: TImageList);
 function  ClickOnButtonTree(Sender: TBaseVirtualTree): Boolean;
 procedure DragDropFile(Sender: TBaseVirtualTree;ImageList: TImageList;
                        Node: pVirtualNode;PathTemp: string);
+procedure DragDropText(Sender: TBaseVirtualTree;DataObject: IDataObject;
+                       AttachMode: TVTNodeAttachMode);
 function  NodeDataXToNodeDataList(NodeX: PVirtualNode): PTreeData;
 function  GetNodeFromText(Tree: TBaseVirtualTree; Text: String; Cat: Boolean): PVirtualNode;
 procedure GetProperty(List,Search: TBaseVirtualTree;IsNodeList: Boolean);
-procedure RefreshList(Tree: TBaseVirtualTree;Menu: TPopUpMenu;Save: Boolean);
+procedure RefreshList(Tree: TBaseVirtualTree;Trayicon: TCoolTrayicon;Save: Boolean);
 procedure ShowTrayiconMenu(Tree: TBaseVirtualTree;Menu: TPopUpMenu);
 procedure UpdateClassicMenu(Tree: TBaseVirtualTree;Menu: TPopUpMenu);
 
@@ -82,7 +85,7 @@ function  SaveFileXML(Tree: TBaseVirtualTree;Filename: String): Boolean;
 //LoadFileXML is frmMain.FormCreate
 
 { MRU }
-procedure AddMRU(Sender: TBaseVirtualTree;PopupMenu: TPopupMenu;Software: PVirtualNode;
+procedure AddMRU(Sender: TBaseVirtualTree;Trayicon: TCoolTrayIcon;Software: PVirtualNode;
                  DontAdd: Boolean);
 procedure LoadMRUXML(XMLNode: IXMLNode;Tree: TBaseVirtualTree);
 procedure SaveMRUXML(XMLNode: IXMLNode;Tree: TBaseVirtualTree);
@@ -105,7 +108,6 @@ function  StringToWideString(Str: string): WideString;
 function  GetCurrentUserName: string;
 function  GetComputerName: string;
 function  DiskFloatToString(Number: double;Units: Boolean): string;
-procedure GetStats(GetSystem: boolean);
 function  GetWindowsLanguage(TypeLocalInfo: LCTYPE): string;
 function  GetWindowsVersion: string;
 function  DiskFreeString(Drive: Char;Units: Boolean): string;
@@ -171,6 +173,13 @@ type
     FileTypes        : TStringList;
     ExcludeFiles     : TStringList;
     RetrieveInfo     : Boolean;
+  end;  
+
+type
+  TListStats = record
+    SwCount      : Integer;
+    SwGroupCount : Integer;
+    CatCount     : Integer;
   end;
 
 type
@@ -184,16 +193,16 @@ type
 var
   NewNode : Boolean;
   VNDataCat, VNDataSoft, VNDataGroup : PTreeData;  //Property
-  SwCount, CatCount : Integer;     //Stats
-  ScanSettings      : TScanFolderSettings;
-  IterateSubtreeProcs : TIterateSubtreeProcs;
+  ScanSettings        : TScanFolderSettings;
+  IterateSubtreeProcs : TIterateSubtreeProcs;   
+  ListStats           : TListStats;     //Stats
 
 const
   MAX_PROFILE_PATH = 255;
 
 implementation
 
-uses Sensor, PropertySw, PropertyCat, PropertyGroup, Menu
+uses Sensor, PropertySw, PropertyCat, PropertyGroup, Menu, Stats
 {$ifdef ASuite}
 ,Card
 {$endif};
@@ -1071,7 +1080,7 @@ begin
     if Not(NewNode) then
       Sender.DeleteNode(ChildNode)
     else
-      RefreshList(Sender,frmMain.pmTrayicon, true);
+      RefreshList(Sender,frmMain.CoolTrayIcon1, true);
     EnableTimerCheckList(Sender);
   end;
   Result := ChildNodeData;
@@ -1159,6 +1168,55 @@ begin
   NodeData.Tipo       := 1;
   NodeData.ImageIndex := IconAdd(Sender, ImageList, Node);
   NodeData.pNode      := Node;
+end;   
+
+procedure DragDropText(Sender: TBaseVirtualTree;DataObject: IDataObject;
+                       AttachMode: TVTNodeAttachMode);
+var
+  Node     : PVirtualNode;
+  NodeData : PTreeData;
+  Medium   : TStgMedium;
+  PText    : PChar;
+
+function MakeFormatEtc(const Fmt: TClipFormat): TFormatEtc;
+begin
+  Result.cfFormat := Fmt;
+  Result.ptd := nil;
+  Result.dwAspect := DVASPECT_CONTENT;
+  Result.lindex := -1;
+  Result.tymed := TYMED_HGLOBAL;
+end;
+
+begin
+  if Assigned(Sender.DropTargetNode) then
+    Node := Sender.InsertNode(Sender.DropTargetNode, AttachMode)
+  else
+    Node := Sender.AddChild(nil);
+  NodeData := Sender.GetNodeData(Node);
+  with NodeData^ do
+  begin
+    pNode := Node;
+    Tipo  := 1;
+    Name  := 'Link';
+    //Get text from DataObject
+    if DataObject.GetData(MakeFormatEtc(CF_TEXT), Medium) = S_OK then
+    begin
+      Assert(Medium.tymed = MakeFormatEtc(CF_TEXT).tymed);
+      try
+        PText := GlobalLock(Medium.hGlobal);
+        try
+          PathExe[0] := PText;
+        finally
+          GlobalUnlock(Medium.hGlobal);
+        end;
+      finally
+        ReleaseStgMedium(Medium);
+      end;
+    end;
+    //Icon
+    PathIcon := 'icons\page_white_world.ico';
+    NodeData.ImageIndex := IconAdd(Sender, frmMain.ImageList1, Node);
+  end;
 end;
 
 function NodeDataXToNodeDataList(NodeX: PVirtualNode): PTreeData;
@@ -1263,10 +1321,30 @@ begin
   EnableTimerCheckList(List);
 end;
 
-procedure RefreshList(Tree: TBaseVirtualTree;Menu: TPopUpMenu;Save: Boolean);
+procedure RefreshList(Tree: TBaseVirtualTree;Trayicon: TCoolTrayicon;Save: Boolean);
+var
+  Drive : Char;
 begin
-  //Refresh Stats
-  GetStats(Not(Save));
+  Drive := StringReplace(ExtractFileDrive(ApplicationPath),':','',[])[1];
+  //Trayicon hint
+  {$IfDef ASuite}
+  Trayicon.Hint := Launcher + ' ' + ReleaseVersion + PreReleaseVersion + ' (' + ExtractFileDrive(ApplicationPath) + ')' + #13#10;
+  {$Else}
+  Trayicon.Hint  := Launcher + #13#10;
+  {$EndIf}
+  with TransCompName do
+  begin
+    with ListStats do
+    begin
+      SwCount      := 0;
+      SwGroupCount := 0;
+      CatCount     := 0;
+      frmMain.vstList.IterateSubtree(nil, IterateSubtreeProcs.UpdateListItemCount, nil, [], False);
+    end;
+    Trayicon.Hint  := Trayicon.Hint +
+                           LabelSoftware  + ' ' + IntToStr(ListStats.SwCount) + #13#10 +
+                           LabelSpaceFree + ' ' + Format('%.2f%%',[DiskFreePercentual(Drive) * 100]);
+  end;
   //Save security
   if (LauncherOptions.SaveSecurity) and (Save) then
     SaveFileXML(Tree, PathUser + Launcher + 'Temp.xml')
@@ -1422,13 +1500,13 @@ begin
   Result := True;
 end;
 
-procedure AddMRU(Sender: TBaseVirtualTree;PopupMenu: TPopupMenu;Software: PVirtualNode;
+procedure AddMRU(Sender: TBaseVirtualTree;TrayIcon: TCoolTrayIcon;Software: PVirtualNode;
                  DontAdd: Boolean);
 begin
   if (LauncherOptions.MRU) and Not(DontAdd) then
   begin
     MRUList.Insert(0, Software);
-    RefreshList(Sender, PopupMenu, true);
+    RefreshList(Sender, TrayIcon, true);
   end;
 end;
 
@@ -1564,7 +1642,6 @@ begin
     LauncherOptions.FontColor    := ReadIntegerXML(ChildNodes['TreeViewFontColor'],clWindowText);
     //Tabs
     LauncherOptions.HideSearch   := ReadBooleanXML(ChildNodes['HideSearch'],false);
-    LauncherOptions.HideStats    := ReadBooleanXML(ChildNodes['HideStats'],false);
     //MRU
     LauncherOptions.MRU := ReadBooleanXML(ChildNodes['ActiveMRU'],true);
     LauncherOptions.SubMenuMRU   := ReadBooleanXML(ChildNodes['ActiveSubMenuMRU'],false);
@@ -1706,7 +1783,6 @@ begin
     AddChild('TreeViewFontColor').Text := IntToStr(LauncherOptions.FontColor);
     //Tabs
     AddChild('HideSearch').Text       := BoolToStr(LauncherOptions.HideSearch);
-    AddChild('HideStats').Text        := BoolToStr(LauncherOptions.HideStats);
     //Recents
     AddChild('ActiveMRU').Text        := BoolToStr(LauncherOptions.MRU);
     AddChild('ActiveSubMenuMRU').Text := BoolToStr(LauncherOptions.SubMenuMRU);
@@ -1832,9 +1908,6 @@ begin
       frmMain.Caption := LauncherOptions.CustomTitleString
     else
       frmMain.Caption := Launcher;
-    //Stats
-    if Not(StartUpTime) then
-      GetStats(true);
     //Cache and save security
     if Not(LauncherOptions.Cache) then
     begin
@@ -1893,9 +1966,8 @@ begin
     vstList.Update;
     //Hide tabs
     tbSearch.TabVisible := Not(LauncherOptions.HideSearch);
-    tbStats.TabVisible  := Not(LauncherOptions.HideStats);
     {$IfDef ASuite}
-    tbList.TabVisible   := Not(LauncherOptions.HideSearch and LauncherOptions.HideStats);
+    tbList.TabVisible   := Not(LauncherOptions.HideSearch);
     {$EndIf}
     pcList.ActivePageIndex := 0;
     //Check list
@@ -2048,49 +2120,6 @@ begin
     Result := Result + TypeSpace;
 end;
 
-procedure GetStats(GetSystem: boolean);
-var
-  Drive : Char;
-  FreeSpacePercentual : Double;
-begin
-  with frmMain do
-  begin
-    //System
-    if GetSystem then
-    begin
-      lbOs.caption      := GetWindowsVersion;
-      lbNamePc.caption  := lbNamePc.caption + GetComputerName;
-      lbUtente.caption  := lbUtente.caption + GetCurrentUserName;
-    end;
-    //Drive
-    Drive               := StringReplace(ExtractFileDrive(ApplicationPath),':','',[])[1];
-    gbSupport.Caption   := Format(TransCompName.GroupBoxSupport,[Drive]);
-    with TransCompName do
-    begin
-      lbSize.caption      := LabelSize      + DiskSizeString(Drive,true);
-      lbSpaceFree.caption := LabelSpaceFree + DiskFreeString(Drive,true);
-      lbSpaceUsed.caption := LabelSpaceUsed + DiskUsedString(Drive,true);
-      //Launcher
-      SwCount  := 0;
-      CatCount := 0;
-      frmMain.vstList.IterateSubtree(nil, IterateSubtreeProcs.UpdateListItemCount, nil, [], False);
-      lbSoftware.caption  := LabelSoftware + IntToStr(SwCount);
-      lbCat.caption       := LabelCategory + IntToStr(CatCount);
-      lbTotal.caption     := LabelTotal    + IntToStr(SwCount + CatCount);
-    end;
-    FreeSpacePercentual := DiskFreePercentual(Drive);
-    {$IfDef ASuite}
-    CoolTrayIcon1.Hint  := Launcher + ' ' + ReleaseVersion + PreReleaseVersion + ' (' + ExtractFileDrive(ApplicationPath) + ')' + #13#10;
-    {$Else}
-    CoolTrayIcon1.Hint  := Launcher + #13#10;
-    {$EndIf}
-    with TransCompName do
-      CoolTrayIcon1.Hint  := CoolTrayIcon1.Hint +
-                             LabelSoftware  + IntToStr(SwCount) + #13#10 +
-                             LabelSpaceFree + Format('%.2f%%',[FreeSpacePercentual * 100]);
-  end;
-end;
-
 function GetWindowsLanguage(TypeLocalInfo: LCTYPE): string;
 var
   Buffer : PChar;
@@ -2128,7 +2157,8 @@ begin
       begin
         //Windows NT (2000/XP/2003/Vista)
         Reg.OpenKey('\SOFTWARE\Microsoft\Windows NT\CurrentVersion', False);
-        PlatformId  := Reg.ReadString('ProductName');
+//        PlatformId  := Reg.ReadString('ProductName');
+        PlatformId := StringReplace(Reg.ReadString('ProductName'),'Microsoft ','',[]);
         ServicePack := StringReplace(Reg.ReadString('CSDVersion'),'Service Pack','SP',[]);
       end;
   end;
@@ -2497,9 +2527,9 @@ begin
     NodeData := frmMain.vstList.GetNodeData(Node);
     //Count Softwares and Categories
     case NodeData.Tipo of
-      0 : Inc(CatCount);
-      1 : Inc(SwCount);
-      2 : Inc(SwCount);
+      0 : Inc(ListStats.CatCount);
+      1 : Inc(ListStats.SwCount);
+      2 : Inc(ListStats.SwGroupCount);
     end;
   end;
 end;

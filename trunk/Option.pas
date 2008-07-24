@@ -104,7 +104,6 @@ type
     cxTheme: TComboBox;
     cbTrayicon: TCheckBox;
     cbHideSearch: TCheckBox;
-    cbHideStats: TCheckBox;
     cbClassicMenu: TCheckBox;
     btnMenuFolders: TButton;
     cxRightClick: TComboBox;
@@ -177,7 +176,6 @@ begin
     cbCustomTitle.caption   := ChildNodes['CheckBoxCustomTitle'].Text;
     lbLanguage.caption      := ChildNodes['LabelLanguage'].Text;
     cbHideSearch.caption    := ChildNodes['CheckBoxHideSearch'].Text;
-    cbHideStats.caption     := ChildNodes['CheckBoxHideStats'].Text;
     //Treeview
     gbTreeView.caption      := ChildNodes['GroupBoxTreeView'].Text;
     cbAutoOpClCat.caption   := ChildNodes['CheckBoxAutoOpClCat'].Text;
@@ -373,7 +371,6 @@ begin
   LauncherOptions.LangName         := cxLanguage.Items[cxLanguage.ItemIndex];
   //Hide tabs
   LauncherOptions.HideSearch  := cbHideSearch.Checked;
-  LauncherOptions.HideStats   := cbHideStats.Checked;
   //Treeview Font
   with FontDialog1.Font do
   begin
@@ -585,7 +582,6 @@ begin
   cxLanguage.ItemIndex   := cxLanguage.Items.IndexOf(LauncherOptions.LangName);
   //Hide tabs
   cbHideSearch.Checked   := LauncherOptions.HideSearch;
-  cbHideStats.Checked    := LauncherOptions.HideStats;
   //Treeview Font
   with FontDialog1.Font do
   begin

@@ -92,7 +92,7 @@ begin
       if (NodeDataList.Tipo = 1) or (NodeDataList.Tipo = 2) then
       begin
         RunProcessAsUser(frmMain.vstList,NodeDataList,edtUsername.Text,edtPassword.Text);
-        AddMRU(frmMain.vstList,frmMain.pmTrayicon,NodeDataList.pNode,NodeDataList.DontInsertMRU);
+        AddMRU(frmMain.vstList,frmMain.CoolTrayIcon1,NodeDataList.pNode,NodeDataList.DontInsertMRU);
         RunActionOnExe(NodeDataList);
       end;
     end;

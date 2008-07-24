@@ -23,7 +23,8 @@ uses
   OrderSoftware in 'OrderSoftware.pas' {frmOrderSoftware},
   RunAs in 'RunAs.pas' {frmRunAs},
   Menu in 'Menu.pas' {frmMenu},
-  MenuFolders in 'MenuFolders.pas' {frmMenuFolders};
+  MenuFolders in 'MenuFolders.pas' {frmMenuFolders},
+  Stats in 'Stats.pas' {frmStats};
 
 {$R *.res}
 
@@ -33,8 +34,8 @@ begin
     Application.Initialize;
     Application.Title := 'ASuite';
     Application.CreateForm(TfrmMain, frmMain);
-    Application.CreateForm(TfrmMenu, frmMenu);
-    Application.ShowMainForm := false;
+  Application.CreateForm(TfrmMenu, frmMenu);
+  Application.ShowMainForm := false;
     CreateFormSensors;
     if (not(LauncherOptions.StartUpShowPanel)) then
       frmMain.close

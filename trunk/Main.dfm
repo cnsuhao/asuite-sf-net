@@ -4,7 +4,7 @@ object frmMain: TfrmMain
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
   Caption = 'ASuite'
-  ClientHeight = 346
+  ClientHeight = 365
   ClientWidth = 194
   Color = clBtnFace
   Constraints.MinHeight = 370
@@ -164,7 +164,7 @@ object frmMain: TfrmMain
     Left = 0
     Top = 0
     Width = 194
-    Height = 346
+    Height = 365
     ActivePage = tbList
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
@@ -182,7 +182,7 @@ object frmMain: TfrmMain
         Left = 0
         Top = 0
         Width = 186
-        Height = 318
+        Height = 337
         Align = alClient
         ClipboardFormats.Strings = (
           'CSV'
@@ -192,7 +192,6 @@ object frmMain: TfrmMain
           'Rich Text Format Without Objects'
           'Unicode text'
           'Virtual Tree Data')
-        DefaultPasteMode = amInsertAfter
         DragMode = dmAutomatic
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
@@ -216,6 +215,7 @@ object frmMain: TfrmMain
         TabOrder = 0
         TextMargin = 2
         TreeOptions.AutoOptions = [toAutoDropExpand, toAutoExpand, toAutoScroll, toAutoScrollOnExpand, toAutoTristateTracking]
+        TreeOptions.MiscOptions = [toAcceptOLEDrop, toEditable, toFullRepaintOnResize, toInitOnSave, toToggleOnDblClick, toWheelPanning]
         TreeOptions.PaintOptions = [toShowBackground, toShowButtons, toShowDropmark, toShowRoot, toShowTreeLines, toThemeAware, toUseBlendedImages]
         TreeOptions.SelectionOptions = [toFullRowSelect, toMultiSelect, toRightClickSelect]
         OnClick = RunSingleClick
@@ -229,19 +229,16 @@ object frmMain: TfrmMain
         OnGetImageIndex = vstListGetImageIndex
         OnGetHint = vstListGetHint
         OnKeyPress = vstListKeyPress
+        OnNewText = vstListNewText
         Columns = <>
       end
     end
     object tbSearch: TTabSheet
       Caption = 'Search'
       ImageIndex = 1
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       DesignSize = (
         186
-        318)
+        337)
       object edtSearch: TEdit
         Left = 0
         Top = 0
@@ -254,7 +251,7 @@ object frmMain: TfrmMain
         Left = 0
         Top = 24
         Width = 186
-        Height = 294
+        Height = 313
         Align = alBottom
         Anchors = [akLeft, akTop, akRight, akBottom]
         AnimationDuration = 0
@@ -301,188 +298,6 @@ object frmMain: TfrmMain
         Default = True
         TabOrder = 1
         OnClick = btnSearchClick
-      end
-    end
-    object tbStats: TTabSheet
-      Caption = 'Stats'
-      ImageIndex = 2
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
-      DesignSize = (
-        186
-        318)
-      object gbSystem: TGroupBox
-        Left = 0
-        Top = 4
-        Width = 187
-        Height = 97
-        Anchors = [akLeft, akRight]
-        Caption = 'System'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -11
-        Font.Name = 'MS Sans Serif'
-        Font.Style = [fsBold]
-        ParentFont = False
-        TabOrder = 0
-        object lbOs: TLabel
-          Left = 8
-          Top = 24
-          Width = 83
-          Height = 13
-          Margins.Bottom = 0
-          Caption = 'Operating System'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -11
-          Font.Name = 'MS Sans Serif'
-          Font.Style = []
-          ParentFont = False
-        end
-        object lbNamePc: TLabel
-          Left = 8
-          Top = 48
-          Width = 80
-          Height = 13
-          Margins.Bottom = 0
-          Caption = 'Computer name: '
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -11
-          Font.Name = 'MS Sans Serif'
-          Font.Style = []
-          ParentFont = False
-        end
-        object lbUtente: TLabel
-          Left = 8
-          Top = 72
-          Width = 63
-          Height = 13
-          Margins.Bottom = 0
-          Caption = 'Current user: '
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -11
-          Font.Name = 'MS Sans Serif'
-          Font.Style = []
-          ParentFont = False
-        end
-      end
-      object gbSupport: TGroupBox
-        Left = 0
-        Top = 107
-        Width = 187
-        Height = 97
-        Anchors = [akLeft, akRight]
-        Caption = 'Drive X:'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -11
-        Font.Name = 'MS Sans Serif'
-        Font.Style = [fsBold]
-        ParentFont = False
-        TabOrder = 1
-        object lbSize: TLabel
-          Left = 8
-          Top = 24
-          Width = 26
-          Height = 13
-          Margins.Bottom = 0
-          Caption = 'Size: '
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -11
-          Font.Name = 'MS Sans Serif'
-          Font.Style = []
-          ParentFont = False
-        end
-        object lbSpaceUsed: TLabel
-          Left = 8
-          Top = 48
-          Width = 59
-          Height = 13
-          Margins.Bottom = 0
-          Caption = 'Free space: '
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -11
-          Font.Name = 'MS Sans Serif'
-          Font.Style = []
-          ParentFont = False
-        end
-        object lbSpaceFree: TLabel
-          Left = 8
-          Top = 72
-          Width = 63
-          Height = 13
-          Margins.Bottom = 0
-          Caption = 'Used space: '
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -11
-          Font.Name = 'MS Sans Serif'
-          Font.Style = []
-          ParentFont = False
-        end
-      end
-      object gbASuite: TGroupBox
-        Left = 0
-        Top = 217
-        Width = 187
-        Height = 97
-        Anchors = [akLeft, akRight]
-        Caption = 'ASuite'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -11
-        Font.Name = 'MS Sans Serif'
-        Font.Style = [fsBold]
-        ParentFont = False
-        TabOrder = 2
-        object lbSoftware: TLabel
-          Left = 8
-          Top = 24
-          Width = 81
-          Height = 13
-          Margins.Bottom = 0
-          Caption = 'Software added: '
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -11
-          Font.Name = 'MS Sans Serif'
-          Font.Style = []
-          ParentFont = False
-        end
-        object lbCat: TLabel
-          Left = 8
-          Top = 48
-          Width = 89
-          Height = 13
-          Margins.Bottom = 0
-          Caption = 'Categories added: '
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -11
-          Font.Name = 'MS Sans Serif'
-          Font.Style = []
-          ParentFont = False
-        end
-        object lbTotal: TLabel
-          Left = 8
-          Top = 72
-          Width = 30
-          Height = 13
-          Margins.Bottom = 0
-          Caption = 'Total: '
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -11
-          Font.Name = 'MS Sans Serif'
-          Font.Style = []
-          ParentFont = False
-        end
       end
     end
   end
@@ -755,6 +570,21 @@ object frmMain: TfrmMain
         Caption = 'Add separator'
         OnClick = miAddSeparator2Click
       end
+      object miN11: TMenuItem
+        Caption = '-'
+      end
+      object miCut1: TMenuItem
+        Caption = 'Cut'
+        ImageIndex = 15
+      end
+      object miCopy1: TMenuItem
+        Caption = 'Copy'
+        ImageIndex = 16
+      end
+      object miPaste1: TMenuItem
+        Caption = 'Paste'
+        ImageIndex = 17
+      end
       object miDelete1: TMenuItem
         Caption = 'Delete'
         ImageIndex = 7
@@ -778,9 +608,9 @@ object frmMain: TfrmMain
       object N7: TMenuItem
         Caption = '-'
       end
-      object miReadMe: TMenuItem
-        Caption = 'Read me'
-        OnClick = miReadMeClick
+      object miStats: TMenuItem
+        Caption = 'Stats...'
+        OnClick = miStatsClick
       end
       object miInfoASuite: TMenuItem
         Caption = 'About ASuite'
@@ -853,6 +683,27 @@ object frmMain: TfrmMain
     object miAddSeparator2: TMenuItem
       Caption = 'Add separator'
       OnClick = miAddSeparator2Click
+    end
+    object N10: TMenuItem
+      Caption = '-'
+    end
+    object miCut2: TMenuItem
+      Caption = 'Cut'
+      ImageIndex = 15
+      ShortCut = 16472
+      OnClick = miCut2Click
+    end
+    object miCopy2: TMenuItem
+      Caption = 'Copy'
+      ImageIndex = 16
+      ShortCut = 16451
+      OnClick = miCopy2Click
+    end
+    object miPaste2: TMenuItem
+      Caption = 'Paste'
+      ImageIndex = 17
+      ShortCut = 16470
+      OnClick = miPaste2Click
     end
     object miDelete2: TMenuItem
       Caption = 'Delete'
