@@ -3,7 +3,7 @@ object frmOption: TfrmOption
   Top = 0
   BorderStyle = bsDialog
   Caption = 'Options'
-  ClientHeight = 550
+  ClientHeight = 546
   ClientWidth = 294
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -21,16 +21,17 @@ object frmOption: TfrmOption
     Left = 8
     Top = 8
     Width = 281
-    Height = 505
+    Height = 497
     ActivePage = TabSheet1
     TabOrder = 0
     object TabSheet1: TTabSheet
       Caption = 'General'
+      ExplicitHeight = 477
       object gbWindow: TGroupBox
         Left = 8
         Top = 88
         Width = 257
-        Height = 275
+        Height = 265
         Caption = 'Window'
         TabOrder = 1
         object lbLanguage: TLabel
@@ -38,6 +39,7 @@ object frmOption: TfrmOption
           Top = 200
           Width = 47
           Height = 13
+          Margins.Bottom = 0
           Caption = 'Language'
         end
         object cxLanguage: TComboBox
@@ -196,14 +198,6 @@ object frmOption: TfrmOption
           Caption = 'Hide tab Search'
           TabOrder = 12
         end
-        object cbHideStats: TCheckBox
-          Left = 8
-          Top = 256
-          Width = 233
-          Height = 17
-          Caption = 'Hide tab Stats'
-          TabOrder = 13
-        end
         object cbMenuHotKey: TCheckBox
           Left = 8
           Top = 111
@@ -299,7 +293,7 @@ object frmOption: TfrmOption
       end
       object gbTreeView: TGroupBox
         Left = 8
-        Top = 370
+        Top = 362
         Width = 257
         Height = 103
         Caption = 'Treeview'
@@ -392,6 +386,7 @@ object frmOption: TfrmOption
     object TabSheet2: TTabSheet
       Caption = 'Advanced'
       ImageIndex = 4
+      ExplicitHeight = 477
       object gbRecents: TGroupBox
         Left = 8
         Top = 16
@@ -404,6 +399,7 @@ object frmOption: TfrmOption
           Top = 51
           Width = 84
           Height = 13
+          Margins.Bottom = 0
           Caption = 'Max number MRU'
         end
         object lbNumbMRU: TLabel
@@ -411,6 +407,7 @@ object frmOption: TfrmOption
           Top = 51
           Width = 12
           Height = 13
+          Margins.Bottom = 0
           Caption = '10'
         end
         object cbMRU: TCheckBox
@@ -452,6 +449,7 @@ object frmOption: TfrmOption
           Top = 35
           Width = 96
           Height = 13
+          Margins.Bottom = 0
           Caption = 'Max number Backup'
         end
         object lbNumbBackup: TLabel
@@ -459,6 +457,7 @@ object frmOption: TfrmOption
           Top = 35
           Width = 12
           Height = 13
+          Margins.Bottom = 0
           Caption = '10'
         end
         object cbBackup: TCheckBox
@@ -533,6 +532,7 @@ object frmOption: TfrmOption
           Top = 35
           Width = 61
           Height = 13
+          Margins.Bottom = 0
           Caption = 'Time interval'
         end
         object lbNumbCheckList: TLabel
@@ -540,6 +540,7 @@ object frmOption: TfrmOption
           Top = 35
           Width = 12
           Height = 13
+          Margins.Bottom = 0
           Caption = '60'
         end
         object cbCheckList: TCheckBox
@@ -575,6 +576,7 @@ object frmOption: TfrmOption
           Top = 24
           Width = 202
           Height = 13
+          Margins.Bottom = 0
           Caption = 'Clear all MRU, backups and/or cache icons'
         end
         object btnClearElements: TButton
@@ -591,6 +593,7 @@ object frmOption: TfrmOption
     object TabSheet3: TTabSheet
       Caption = 'Various'
       ImageIndex = 2
+      ExplicitHeight = 477
       object gbExecution: TGroupBox
         Left = 8
         Top = 8
@@ -603,6 +606,7 @@ object frmOption: TfrmOption
           Top = 36
           Width = 64
           Height = 13
+          Margins.Bottom = 0
           Caption = 'On execution'
         end
         object cbRunSingleClick: TCheckBox
@@ -635,6 +639,7 @@ object frmOption: TfrmOption
           Top = 56
           Width = 41
           Height = 13
+          Margins.Bottom = 0
           Caption = 'Left click'
         end
         object lbMenuTheme: TLabel
@@ -642,6 +647,7 @@ object frmOption: TfrmOption
           Top = 134
           Width = 32
           Height = 13
+          Margins.Bottom = 0
           Caption = 'Theme'
         end
         object lbTrayRightClick: TLabel
@@ -649,6 +655,7 @@ object frmOption: TfrmOption
           Top = 96
           Width = 47
           Height = 13
+          Margins.Bottom = 0
           Caption = 'Right click'
         end
         object cxLeftClick: TComboBox
@@ -736,6 +743,7 @@ object frmOption: TfrmOption
           Top = 16
           Width = 24
           Height = 13
+          Margins.Bottom = 0
           Caption = 'Side'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
@@ -749,6 +757,7 @@ object frmOption: TfrmOption
           Top = 16
           Width = 50
           Height = 13
+          Margins.Bottom = 0
           Caption = 'Left click'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
@@ -762,6 +771,7 @@ object frmOption: TfrmOption
           Top = 16
           Width = 58
           Height = 13
+          Margins.Bottom = 0
           Caption = 'Right click'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
@@ -775,6 +785,7 @@ object frmOption: TfrmOption
           Top = 36
           Width = 18
           Height = 13
+          Margins.Bottom = 0
           Caption = 'Top'
         end
         object lbLeft: TLabel
@@ -782,6 +793,7 @@ object frmOption: TfrmOption
           Top = 60
           Width = 19
           Height = 13
+          Margins.Bottom = 0
           Caption = 'Left'
         end
         object lbRight: TLabel
@@ -789,6 +801,7 @@ object frmOption: TfrmOption
           Top = 84
           Width = 25
           Height = 13
+          Margins.Bottom = 0
           Caption = 'Right'
         end
         object lbBottom: TLabel
@@ -796,6 +809,7 @@ object frmOption: TfrmOption
           Top = 108
           Width = 34
           Height = 13
+          Margins.Bottom = 0
           Caption = 'Bottom'
         end
         object cxLCTop: TComboBox
@@ -875,7 +889,7 @@ object frmOption: TfrmOption
   end
   object btnOk: TButton
     Left = 128
-    Top = 520
+    Top = 512
     Width = 75
     Height = 25
     Caption = 'Ok'
@@ -885,7 +899,7 @@ object frmOption: TfrmOption
   end
   object btnCancel: TButton
     Left = 216
-    Top = 520
+    Top = 512
     Width = 75
     Height = 25
     Caption = 'Cancel'

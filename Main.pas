@@ -23,7 +23,7 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, Menus, ComCtrls, ShellApi, StdCtrls, CoolTrayIcon, VirtualTrees,
-  ActiveX, xmldom, msxmldom, XMLDoc, ImgList, XMLIntf, ExtCtrls, Sensor, ShlObj, CommonClasses;
+  ActiveX, xmldom, msxmldom, XMLDoc, ImgList, XMLIntf, ExtCtrls, Sensor, ShlObj, CommonClasses, Clipbrd;
 
 type
   TfrmMain = class(TForm)
@@ -44,7 +44,6 @@ type
     miOptions1: TMenuItem;
     miImportList: TMenuItem;
     miExit1: TMenuItem;
-    miReadMe: TMenuItem;
     miInfoASuite: TMenuItem;
     miEdit: TMenuItem;
     miAddCat1: TMenuItem;
@@ -65,19 +64,6 @@ type
     miRunSelectedSw: TMenuItem;
     miOpenFolderSw: TMenuItem;
     miWebSite: TMenuItem;
-    tbStats: TTabSheet;
-    lbOs: TLabel;
-    lbNamePc: TLabel;
-    lbUtente: TLabel;
-    lbSize: TLabel;
-    lbSpaceUsed: TLabel;
-    lbSpaceFree: TLabel;
-    lbSoftware: TLabel;
-    lbCat: TLabel;
-    lbTotal: TLabel;
-    gbSystem: TGroupBox;
-    gbSupport: TGroupBox;
-    gbASuite: TGroupBox;
     N9: TMenuItem;
     miScanExecutables: TMenuItem;
     miAddGroupSw2: TMenuItem;
@@ -97,6 +83,15 @@ type
     miCheckUpdates: TMenuItem;
     N7: TMenuItem;
     miRunAs: TMenuItem;
+    miCopy2: TMenuItem;
+    miCut2: TMenuItem;
+    miPaste2: TMenuItem;
+    N10: TMenuItem;
+    miN11: TMenuItem;
+    miCut1: TMenuItem;
+    miCopy1: TMenuItem;
+    miPaste1: TMenuItem;
+    miStats: TMenuItem;
     procedure CoolTrayIcon1MouseDown(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Integer);
     procedure miOptionsClick(Sender: TObject);
@@ -126,7 +121,6 @@ type
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure miExitClick(Sender: TObject);
-    procedure miReadMeClick(Sender: TObject);
     procedure miInfoASuiteClick(Sender: TObject);
     procedure ShowMainForm(Sender: TObject);
     procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
@@ -171,6 +165,13 @@ type
     procedure FormActivate(Sender: TObject);
     procedure CoolTrayIcon1DblClick(Sender: TObject);
     procedure vstListKeyPress(Sender: TObject; var Key: Char);
+    procedure vstListNewText(Sender: TBaseVirtualTree; Node: PVirtualNode;
+      Column: TColumnIndex; NewText: WideString);
+    procedure miCopy2Click(Sender: TObject);
+    procedure miPaste2Click(Sender: TObject);
+    procedure miCut2Click(Sender: TObject);
+    procedure miStatsClick(Sender: TObject);
+    procedure CoolTrayIcon1BalloonHintShow(Sender: TObject);
   private
     { Private declarations }
     SessionEnding: boolean;
@@ -266,7 +267,6 @@ type
     BackgroundPath   : String;
     //Tabs
     HideSearch       : Boolean;
-    HideStats        : Boolean;
     //MRU
     MRU              : Boolean;
     SubMenuMRU       : Boolean; //For only classic menu
@@ -303,28 +303,18 @@ type
     SensorRightClick : Array[0..3] of Integer;
     //Misc
     ReadOnlyMode     : Boolean;
-    PathReadme       : String;
   end;
 
   TTransCompName = record
-    //Card
-    LabelTitoloSw       : String;
-    LabelTitoloSHouse   : String;
-    LabelTitoloVersione : String;
+    //Trayicon hint
+    LabelSpaceFree  : String;
+    LabelSoftware   : String;
     //Menu
     MenuShowWindow  : String;
     MenuSave        : String;
     MenuOption      : String;
     MenuExit        : String;
     MenuMRU         : String;
-    //Stats
-    LabelSize       : String;
-    LabelSpaceFree  : String;
-    LabelSpaceUsed  : String;
-    GroupBoxSupport : String;
-    LabelSoftware   : String;
-    LabelCategory   : String;
-    LabelTotal      : String;
     //Caption for frmCard
     Card            : String;
     About           : String;
@@ -358,14 +348,15 @@ var
   HotKeyApp,
   SchedulerApp        : TNodeArray;
   LauncherOptions     : TOptions;
-  TransCompName       : TTransCompName; 
+  TransCompName       : TTransCompName;
   LauncherFileNameXML : String;  
   OldPoint : TPoint;
+  CopiedNode : PVirtualNode;
 
 implementation
 
 uses Option, PropertySw, PropertyCat, PropertyGroup, ImportList, VirtualTreeHDrop, Card,
-     CommonUtils, ScanFolder, Update, RunAs, Menu;
+     CommonUtils, ScanFolder, Update, RunAs, Menu, Stats;
 
 {$R *.dfm}
 
@@ -400,6 +391,11 @@ begin
     vstList.IterateSubtree(nil, FindNode, NodeData, [], True);
     Dispose(NodeData);
   end;
+end;
+
+procedure TfrmMain.CoolTrayIcon1BalloonHintShow(Sender: TObject);
+begin
+ShowMessage('asd');
 end;
 
 procedure TfrmMain.CoolTrayIcon1DblClick(Sender: TObject);
@@ -459,7 +455,7 @@ begin
       vstList.DeleteNode(Node);
       Node := vstList.GetNextSelected(Node);
     end;
-    RefreshList(vstList,pmTrayicon, true);
+    RefreshList(vstList,CoolTrayIcon1, true);
   end;
 end;
 
@@ -517,7 +513,7 @@ begin
           if (NodeData.Tipo <> 0) then
           begin
             RunProcess(vstList, NodeData,false);
-            AddMRU(vstList,pmTrayicon,NodeData.pNode,NodeData.DontInsertMRU);
+            AddMRU(vstList,CoolTrayIcon1,NodeData.pNode,NodeData.DontInsertMRU);
             RunActionOnExe(NodeData);
           end;
       end;
@@ -535,45 +531,23 @@ begin
   else
     xmldTranslate.FileName := Lingua;
   xmldTranslate.Active := true;
-  with xmldTranslate.DocumentElement.ChildNodes['Info'] do
-    LauncherOptions.PathReadme := ChildNodes['PathReadme'].Text;
+  //TrayIcon hint
+  with xmldTranslate.DocumentElement.ChildNodes['Form13'] do
+  begin
+    TransCompName.LabelSpaceFree := ChildNodes['LabelFreeSpace'].Text;
+    TransCompName.LabelSoftware  := ChildNodes['LabelSwInserted'].Text;
+  end;
   with xmldTranslate.DocumentElement.ChildNodes['Form1'] do
   begin
     //Section:Form1
     tbList.Caption      := ChildNodes['TabListCaption'].Text;
     tbSearch.Caption    := ChildNodes['TabSearchCaption'].Text;
-    tbStats.Caption     := ChildNodes['TabStatsCaption'].Text;
     //tbSearch
     btnSearch.Caption   := ChildNodes['ButtonSearch'].Text;
     with vstSearch.Header do
     begin
       Columns[0].Text   := ChildNodes['ColumnName'].Text;
       Columns[1].Text   := ChildNodes['ColumnCategory'].Text;
-    end;
-    //Stats
-    //System
-    gbSystem.caption    := ChildNodes['GroupBoxSystem'].Text;
-    lbNamePc.caption    := ChildNodes['LabelPcName'].Text;
-    lbUtente.caption    := ChildNodes['LabelCurrentUser'].Text;
-    with TransCompName do
-    begin
-      //Drive
-      LabelSize           := ChildNodes['LabelSize'].Text;
-      LabelSpaceFree      := ChildNodes['LabelFreeSpace'].Text;
-      LabelSpaceUsed      := ChildNodes['LabelUsedSpace'].Text;
-      GroupBoxSupport     := ChildNodes['GroupBoxDrive'].Text;
-      gbSupport.Caption   := GroupBoxSupport;
-      lbSize.caption      := LabelSize;
-      lbSpaceFree.caption := LabelSpaceFree;
-      lbSpaceUsed.caption := LabelSpaceUsed;
-      //Launcher
-      LabelSoftware       := ChildNodes['LabelSwInserted'].Text;
-      LabelCategory       := ChildNodes['LabelCatInserted'].Text;
-      LabelTotal          := ChildNodes['LabelTotal'].Text;
-      gbASuite.caption    := ChildNodes['GroupBoxASuite'].Text;
-      lbSoftware.caption  := LabelSoftware;
-      lbCat.caption       := LabelCategory;
-      lbTotal.caption     := LabelTotal;
     end;
     //Menu
     //File
@@ -593,12 +567,15 @@ begin
     miAddGroupSw1.Caption   := ChildNodes['MenuAddGroupSw'].Text;
     miAddFolder1.Caption    := ChildNodes['MenuAddFolder'].Text;
     miAddSeparator1.Caption := ChildNodes['MenuAddSeparator'].Text;
+    miCut1.Caption          := ChildNodes['MenuCut'].Text;
+    miCopy1.Caption         := ChildNodes['MenuCopy'].Text;
+    miPaste1.Caption        := ChildNodes['MenuPaste'].Text;
     miDelete1.Caption       := ChildNodes['MenuDelete'].Text;
     miProperty1.Caption     := ChildNodes['MenuProperty'].Text;
     //Help
-    miCheckUpdates.Caption     := ChildNodes['MenuCheckUpdates'].Text;
+    miCheckUpdates.Caption  := ChildNodes['MenuCheckUpdates'].Text;
     miHelp.Caption          := ChildNodes['MenuHelp'].Text;
-    miReadMe.Caption        := ChildNodes['MenuReadme'].Text;
+    miStats.Caption         := ChildNodes['MenuStats'].Text;
     miInfoASuite.Caption    := ChildNodes['MenuASuiteInfo'].Text;
     //PopUpMenu
     miRunSelectedSw.Caption := ChildNodes['MenuRun'].Text;
@@ -610,6 +587,9 @@ begin
     miAddGroupSw2.Caption   := miAddGroupSw1.Caption;
     miAddFolder2.Caption    := miAddFolder1.Caption;
     miAddSeparator2.Caption := miAddSeparator1.Caption;
+    miCut2.Caption          := miCut1.Caption;
+    miCopy2.Caption         := miCopy1.Caption;
+    miPaste2.Caption        := miPaste1.Caption;
     miDelete2.Caption       := miDelete1.Caption;
     miProperty2.Caption     := miProperty1.Caption;
     //Trayicon menu
@@ -888,7 +868,7 @@ begin
     frmScanFolder.showmodal;
   finally
     frmScanFolder.Free;
-    RefreshList(vstList, pmTrayicon, true);
+    RefreshList(vstList, CoolTrayIcon1, true);
   end;
   EnableTimerCheckList(Sender);
 end;
@@ -930,6 +910,16 @@ begin
   EnableTimerCheckList(Sender);
 end;
 
+procedure TfrmMain.miCopy2Click(Sender: TObject);
+begin
+  vstList.CopyToClipBoard;
+end;
+
+procedure TfrmMain.miCut2Click(Sender: TObject);
+begin
+  vstList.CutToClipBoard;
+end;
+
 procedure TfrmMain.OpenFolderSw(Sender: TObject);
 var
   NodeData : PTreeData;
@@ -961,7 +951,7 @@ begin
   finally
     frmRunAs.Free;
   end;
-  RefreshList(vstList, pmTrayicon, true);
+  RefreshList(vstList, CoolTrayIcon1, true);
 end;
 
 procedure TfrmMain.RunExe(Sender: TObject);
@@ -987,7 +977,7 @@ begin
         if (NodeDataList.Tipo = 1) or (NodeDataList.Tipo = 2) then
         begin
           RunProcess(vstList,NodeDataList,false);
-          AddMRU(vstList,pmTrayicon,NodeDataList.pNode,NodeDataList.DontInsertMRU);
+          AddMRU(vstList,CoolTrayIcon1,NodeDataList.pNode,NodeDataList.DontInsertMRU);
           RunActionOnExe(NodeDataList);
         end;
       end;
@@ -1005,7 +995,7 @@ begin
       begin
         //Run file
         RunProcess(vstList,NodeDataList,false);
-        AddMRU(vstList,pmTrayicon,NodeDataList.pNode,NodeDataList.DontInsertMRU);
+        AddMRU(vstList,CoolTrayIcon1,NodeDataList.pNode,NodeDataList.DontInsertMRU);
         RunActionOnExe(NodeDataList);
       end
       else begin
@@ -1023,7 +1013,7 @@ begin
     frmImportList.showmodal;
   finally
     frmImportList.Free;
-    RefreshList(vstList, pmTrayicon, true);
+    RefreshList(vstList, CoolTrayIcon1, true);
   end;
   EnableTimerCheckList(Sender);
 end;
@@ -1035,11 +1025,6 @@ begin
   frmCard.show;
   frmCard.pcCard.ActivePageIndex := 0;
   frmCard.Caption := TransCompName.About;
-end;
-
-procedure TfrmMain.miReadMeClick(Sender: TObject);
-begin
-  ShellExecute(GetDesktopWindow, 'open', PChar(LauncherOptions.PathReadme), nil, nil, SW_SHOWDEFAULT);
 end;
 
 procedure TfrmMain.miRunSelectedSwClick(Sender: TObject);
@@ -1066,7 +1051,13 @@ begin
   if IsFormOpen('frmCard') then
     frmCard.TranslateForm(LauncherOptions.LangName);
   EnableTimerCheckList(Sender);
-  RefreshList(vstList, pmTrayicon, true);
+  RefreshList(vstList, CoolTrayIcon1, true);
+end;
+
+procedure TfrmMain.miPaste2Click(Sender: TObject);
+begin
+  vstList.PasteFromClipboard;
+  RefreshList(vstList,CoolTrayIcon1,true);
 end;
 
 procedure TfrmMain.ShowMainForm(Sender: TObject);
@@ -1084,6 +1075,16 @@ end;
 procedure TfrmMain.miSortListClick(Sender: TObject);
 begin
   vstList.SortTree(0,sdAscending,True);
+end;
+
+procedure TfrmMain.miStatsClick(Sender: TObject);
+begin
+  try
+    Application.CreateForm(TfrmStats, frmStats);
+    frmStats.showmodal;
+  finally
+    frmStats.Free;
+  end;
 end;
 
 procedure TfrmMain.miWebSiteClick(Sender: TObject);
@@ -1120,11 +1121,6 @@ begin
     begin
       ActiveTab := False;
       FocusControl(edtSearch);
-    end;
-    2: //Stats
-    begin
-      ActiveTab := False;
-      GetStats(False);
     end;
   end;
   //Set property Visible for some components
@@ -1315,6 +1311,16 @@ begin
     RunExe(Sender);
 end;
 
+procedure TfrmMain.vstListNewText(Sender: TBaseVirtualTree; Node: PVirtualNode;
+  Column: TColumnIndex; NewText: WideString); 
+var
+  NodeData : PTreeData;
+begin
+  NodeData := Sender.GetNodeData(Node);
+  if Assigned(NodeData) then
+    NodeData.Name := NewText;
+end;
+
 procedure TfrmMain.vstListPaintText(Sender: TBaseVirtualTree;
   const TargetCanvas: TCanvas; Node: PVirtualNode; Column: TColumnIndex;
   TextType: TVSTTextType);
@@ -1419,14 +1425,20 @@ begin
       if NodeData.tipo = 0 then
         for I := 0 to High(Formats) do
           if Formats[I] = CF_VIRTUALTREE then
-            Sender.ProcessDrop(DataObject, Sender.DropTargetNode, Effect, AttachMode);
+            Sender.ProcessDrop(DataObject, Sender.DropTargetNode, Effect, AttachMode)
+          else
+            if Formats[I] = CF_TEXT then
+              DragDropText(Sender,DataObject, AttachMode);
     end
     else begin
       for I := 0 to High(Formats) do
         if Formats[I] = CF_VIRTUALTREE then
-          Sender.ProcessDrop(DataObject, Sender.DropTargetNode, Effect, AttachMode);
+          Sender.ProcessDrop(DataObject, Sender.DropTargetNode, Effect, AttachMode)
+        else
+          if Formats[I] = CF_TEXT then
+            DragDropText(Sender,DataObject, AttachMode);
     end;
-    RefreshList(vstList,pmTrayicon, true);
+    RefreshList(vstList,CoolTrayIcon1, true);
   end;
   EnableTimerCheckList(Sender);
 end;
@@ -1472,7 +1484,7 @@ begin
       GetProperty(vstList,vstSearch,false);
       ShowCard(vstSearch);
     end;
-  RefreshList(vstList,pmTrayicon, true);
+  RefreshList(vstList,CoolTrayIcon1, true);
 end;
 
 procedure TfrmMain.miExitClick(Sender: TObject);
@@ -1605,7 +1617,7 @@ begin
   //Fix Icon32Bit
   ConvertTo32BitImageList(ImageList1);
   //Loading icons
-  for I := 1 to 14 do
+  for I := 1 to 17 do
     try
       Icon := TIcon.Create;
       Icon.LoadFromFile(PathIcons + IntToStr(I) + '.ico');
@@ -1658,7 +1670,7 @@ begin
   end;
   //Load MRU
   LoadMRUXML(XMLLoad.DocumentElement.ChildNodes['MRU'],vstList);
-  RefreshList(vstList, pmTrayicon, false);
+  RefreshList(vstList, CoolTrayIcon1, false);
   XMLLoad.Active := false;
   XMLLoad.Free;
   //Timers
@@ -1771,7 +1783,7 @@ begin
           if (NodeData.Tipo <> 0) then
           begin
             RunProcess(vstList, NodeData,false);
-            AddMRU(vstList,pmTrayicon,NodeData.pNode,NodeData.DontInsertMRU);
+            AddMRU(vstList,CoolTrayIcon1,NodeData.pNode,NodeData.DontInsertMRU);
             RunActionOnExe(NodeData);
           end;
         end

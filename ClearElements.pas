@@ -85,7 +85,7 @@ begin
   //Clear Cache
   if cbCache.Checked then
     frmMain.vstList.IterateSubtree(nil, ClearCache, nil, [], True);
-  RefreshList(frmMain.vstList, frmMain.pmTrayicon, true);
+  RefreshList(frmMain.vstList, frmMain.CoolTrayIcon1, true);
   Close;
 end;
 

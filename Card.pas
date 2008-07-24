@@ -179,15 +179,9 @@ begin
     memIntro.Text           := StringReplace(ChildNodes['LabelIntro'].Text,'[br]',#13#10,[rfReplaceAll]);
     //tbCard
     gbSoftware.Caption    := ChildNodes['GroupBoxSoftware'].Text;
-    with TransCompName do
-    begin
-      LabelTitoloSw       := ChildNodes['LabelNameSw'].Text;
-      LabelTitoloSHouse   := ChildNodes['LabelDeveloper'].Text;
-      LabelTitoloVersione := ChildNodes['LabelVersion'].Text;
-      lbxName.Caption     := LabelTitoloSw;
-      lbxSHouse.Caption   := LabelTitoloSHouse;
-      lbxVersion.Caption  := LabelTitoloVersione;
-    end;
+    lbxName.Caption    := ChildNodes['LabelNameSw'].Text;
+    lbxSHouse.Caption  := ChildNodes['LabelDeveloper'].Text;
+    lbxVersion.Caption := ChildNodes['LabelVersion'].Text;
     lbWebSite.Caption   := ChildNodes['LabelWebSite'].Text;
     lbDesc.Caption      := ChildNodes['LabelDescription'].Text;
     lbNotes.Caption     := ChildNodes['LabelNote'].Text;

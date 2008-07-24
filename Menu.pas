@@ -459,7 +459,7 @@ begin
         if (NodeDataList.Tipo = 1) or (NodeDataList.Tipo = 2) then
         begin
           RunProcess(frmMain.vstList,NodeDataList,false);
-          AddMRU(frmMain.vstList,frmMain.pmTrayicon,NodeDataList.pNode,NodeDataList.DontInsertMRU);
+          AddMRU(frmMain.vstList,frmMain.CoolTrayIcon1,NodeDataList.pNode,NodeDataList.DontInsertMRU);
           RunActionOnExe(NodeDataList);
           CloseMenu;
         end
