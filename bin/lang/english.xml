@@ -7,25 +7,9 @@
 	<!--Software's Menu-->
 	<TabListCaption>List</TabListCaption>
 	<TabSearchCaption>Search</TabSearchCaption>
-	<TabStatsCaption>Stats</TabStatsCaption>
 	<ButtonSearch>Search</ButtonSearch>
 	<ColumnName>Name</ColumnName>
 	<ColumnCategory>Category</ColumnCategory>
-	<!--Stats-->
-	<!--System-->
-	<GroupBoxSystem>System</GroupBoxSystem>
-	<LabelPcName>Computer name: </LabelPcName>
-	<LabelCurrentUser>Current user: </LabelCurrentUser>
-	<!--Drive-->
-	<GroupBoxDrive>Drive %s:</GroupBoxDrive>
-	<LabelSize>Size: </LabelSize>
-	<LabelFreeSpace>Free space: </LabelFreeSpace>
-	<LabelUsedSpace>Used space: </LabelUsedSpace>
-	<!--Launcher-->
-	<GroupBoxASuite>ASuite</GroupBoxASuite>
-	<LabelSwInserted>Software added: </LabelSwInserted>
-	<LabelCatInserted>Categories added: </LabelCatInserted>
-	<LabelTotal>Total: </LabelTotal>
 	<!--ASuite's Menu-->
 	<!--File Menu-->
 	<MenuFile>File</MenuFile>
@@ -48,12 +32,15 @@
 	<MenuAddGroupSw>Add software group</MenuAddGroupSw>
 	<MenuAddFolder>Add folder</MenuAddFolder>
 	<MenuAddSeparator>Add separator</MenuAddSeparator>
+	<MenuCut>Cut</MenuCut>
+	<MenuCopy>Copy</MenuCopy>
+	<MenuPaste>Paste</MenuPaste>
 	<MenuDelete>Delete</MenuDelete>
 	<MenuProperty>Properties</MenuProperty>
 	<!--Help Menu-->
 	<MenuCheckUpdates>Check updates</MenuCheckUpdates>
 	<MenuHelp>Help</MenuHelp>
-	<MenuReadme>Read me</MenuReadme>
+	<MenuStats>Stats</MenuStats>
 	<MenuASuiteInfo>About ASuite</MenuASuiteInfo>
 	<!--Trayicon Menu-->
 	<TrayiconShowASuite>Show ASuite</TrayiconShowASuite>
@@ -295,6 +282,25 @@
 	<ButtonOk>Ok</ButtonOk>
 	<ButtonCancel>Cancel</ButtonCancel>
   </Form12>
+  <Form13>
+	<Form13Caption>Stats</Form13Caption>
+	<!--System-->
+	<GroupBoxSystem>System</GroupBoxSystem>
+	<LabelOperatingSystem>Operating system</LabelOperatingSystem>
+	<LabelPcName>Computer name</LabelPcName>
+	<LabelCurrentUser>Current user</LabelCurrentUser>
+	<!--Drive-->
+	<GroupBoxDrive>Drive %s:</GroupBoxDrive>
+	<LabelSize>Size</LabelSize>
+	<LabelFreeSpace>Free space</LabelFreeSpace>
+	<LabelUsedSpace>Used space</LabelUsedSpace>
+	<!--Launcher-->
+	<GroupBoxASuite>ASuite</GroupBoxASuite>
+	<LabelSwInserted>Software added</LabelSwInserted>
+	<LabelSwGroupInserted>Software group added</LabelSwGroupInserted>
+	<LabelCatInserted>Categories added</LabelCatInserted>
+	<LabelTotal>Total</LabelTotal>
+  </Form13>
   <String>
 	<string01>File not found</string01>
 	<string02>Error in the category's name: %s</string02>

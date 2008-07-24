@@ -7,25 +7,9 @@
 	<!--Software's Menu-->
 	<TabListCaption>Seznam</TabListCaption>
 	<TabSearchCaption>Najít</TabSearchCaption>
-	<TabStatsCaption>Statistika</TabStatsCaption>
 	<ButtonSearch>Najít</ButtonSearch>
 	<ColumnName>Název</ColumnName>
 	<ColumnCategory>Kategorie</ColumnCategory>
-	<!--Stats-->
-	<!--System-->
-	<GroupBoxSystem>Systém</GroupBoxSystem>
-	<LabelPcName>Název počítače: </LabelPcName>
-	<LabelCurrentUser>Aktuální uživatel: </LabelCurrentUser>
-	<!--Drive-->
-	<GroupBoxDrive>Jednotka %s:</GroupBoxDrive>
-	<LabelSize>Velikost: </LabelSize>
-	<LabelFreeSpace>Volný prostor: </LabelFreeSpace>
-	<LabelUsedSpace>Obsazený prostor: </LabelUsedSpace>
-	<!--Launcher-->
-	<GroupBoxASuite>ASuite</GroupBoxASuite>
-	<LabelSwInserted>Přidaných programů: </LabelSwInserted>
-	<LabelCatInserted>Přidaných kategorií: </LabelCatInserted>
-	<LabelTotal>Celkem: </LabelTotal>
 	<!--ASuite's Menu-->
 	<!--File Menu-->
 	<MenuFile>Soubor</MenuFile>
@@ -48,12 +32,15 @@
 	<MenuAddGroupSw>Přidat skupinu programů</MenuAddGroupSw>
 	<MenuAddFolder>Přidat složku</MenuAddFolder>
 	<MenuAddSeparator>Přidat oddělovač</MenuAddSeparator>
+	<MenuCut>Cut</MenuCut>
+	<MenuCopy>Copy</MenuCopy>
+	<MenuPaste>Paste</MenuPaste>
 	<MenuDelete>Smazat</MenuDelete>
 	<MenuProperty>Vlastnosti</MenuProperty>
 	<!--Help Menu-->
 	<MenuCheckUpdates>Ověřit aktualizace</MenuCheckUpdates>
 	<MenuHelp>Nápověda</MenuHelp>
-	<MenuReadme>Nápověda</MenuReadme>
+	<MenuStats>Statistika</MenuStats>
 	<MenuASuiteInfo>O programu ASuite</MenuASuiteInfo>
 	<!--Trayicon Menu-->
 	<TrayiconShowASuite>Zobrazit ASuite</TrayiconShowASuite>
@@ -295,6 +282,25 @@
 	<ButtonOk>Ok</ButtonOk>
 	<ButtonCancel>Cancel</ButtonCancel>
   </Form12>
+  <Form13>
+	<Form13Caption>Stats</Form13Caption>
+	<!--System-->
+	<GroupBoxSystem>Systém</GroupBoxSystem>
+	<LabelOperatingSystem>Operating system</LabelOperatingSystem>
+	<LabelPcName>Název počítače: </LabelPcName>
+	<LabelCurrentUser>Aktuální uživatel: </LabelCurrentUser>
+	<!--Drive-->
+	<GroupBoxDrive>Jednotka %s:</GroupBoxDrive>
+	<LabelSize>Velikost: </LabelSize>
+	<LabelFreeSpace>Volný prostor: </LabelFreeSpace>
+	<LabelUsedSpace>Obsazený prostor: </LabelUsedSpace>
+	<!--Launcher-->
+	<GroupBoxASuite>ASuite</GroupBoxASuite>
+	<LabelSwInserted>Přidaných programů: </LabelSwInserted>
+	<LabelSwGroupInserted>Software group added</LabelSwGroupInserted>
+	<LabelCatInserted>Přidaných kategorií: </LabelCatInserted>
+	<LabelTotal>Celkem: </LabelTotal>
+  </Form13>
   <String>
 	<string01>Soubor nenalezen</string01>
 	<string02>Chyba v názvu kategorie: %s</string02>

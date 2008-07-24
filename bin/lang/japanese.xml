@@ -7,25 +7,9 @@
 	<!--Software's Menu-->
 	<TabListCaption>一覧</TabListCaption>
 	<TabSearchCaption>検索</TabSearchCaption>
-	<TabStatsCaption>統計</TabStatsCaption>
 	<ButtonSearch>検索</ButtonSearch>
 	<ColumnName>名前</ColumnName>
 	<ColumnCategory>カテゴリ</ColumnCategory>
-	<!--Stats-->
-	<!--System-->
-	<GroupBoxSystem>システム</GroupBoxSystem>
-	<LabelPcName>コンピュータ名: </LabelPcName>
-	<LabelCurrentUser>現在のユーザー: </LabelCurrentUser>
-	<!--Drive-->
-	<GroupBoxDrive>ドライブ %s:</GroupBoxDrive>
-	<LabelSize>サイズ: </LabelSize>
-	<LabelFreeSpace>空き領域: </LabelFreeSpace>
-	<LabelUsedSpace>使用済み領域: </LabelUsedSpace>
-	<!--Launcher-->
-	<GroupBoxASuite>ASuite</GroupBoxASuite>
-	<LabelSwInserted>追加済みソフトウェア: </LabelSwInserted>
-	<LabelCatInserted>追加済みカテゴリ: </LabelCatInserted>
-	<LabelTotal>全体: </LabelTotal>
 	<!--ASuite's Menu-->
 	<!--File Menu-->
 	<MenuFile>ファイル</MenuFile>
@@ -48,12 +32,15 @@
 	<MenuAddGroupSw>ソフトウェア グループの追加</MenuAddGroupSw>
 	<MenuAddFolder>フォルダの追加</MenuAddFolder>
 	<MenuAddSeparator>区切りの追加</MenuAddSeparator>
+	<MenuCut>Cut</MenuCut>
+	<MenuCopy>Copy</MenuCopy>
+	<MenuPaste>Paste</MenuPaste>
 	<MenuDelete>削除</MenuDelete>
 	<MenuProperty>プロパティ</MenuProperty>
 	<!--Help Menu-->
 	<MenuCheckUpdates>更新のチェック</MenuCheckUpdates>
 	<MenuHelp>ヘルプ</MenuHelp>
-	<MenuReadme>Read me</MenuReadme>
+	<MenuStats>統計</MenuStats>
 	<MenuASuiteInfo>ASuite のバージョン情報</MenuASuiteInfo>
 	<!--Trayicon Menu-->
 	<TrayiconShowASuite>ASuite の表示</TrayiconShowASuite>
@@ -294,6 +281,25 @@
 	<ButtonOk>Ok</ButtonOk>
 	<ButtonCancel>キャンセル</ButtonCancel>
   </Form12>
+  <Form13>
+	<Form13Caption>Stats</Form13Caption>
+	<!--System-->
+	<GroupBoxSystem>システム</GroupBoxSystem>
+	<LabelOperatingSystem>Operating system</LabelOperatingSystem>
+	<LabelPcName>コンピュータ名</LabelPcName>
+	<LabelCurrentUser>現在のユーザー</LabelCurrentUser>
+	<!--Drive-->
+	<GroupBoxDrive>ドライブ %s:</GroupBoxDrive>
+	<LabelSize>サイズ</LabelSize>
+	<LabelFreeSpace>空き領域</LabelFreeSpace>
+	<LabelUsedSpace>使用済み領域</LabelUsedSpace>
+	<!--Launcher-->
+	<GroupBoxASuite>ASuite</GroupBoxASuite>
+	<LabelSwInserted>追加済みソフトウェア</LabelSwInserted>
+	<LabelSwGroupInserted>Software group added</LabelSwGroupInserted>
+	<LabelCatInserted>追加済みカテゴリ</LabelCatInserted>
+	<LabelTotal>全体</LabelTotal>
+  </Form13>
   <String>
 	<string01>ファイルが見つかりません</string01>
 	<string02>カテゴリの名前でのエラーです: %s</string02>

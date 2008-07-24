@@ -7,25 +7,9 @@
    <!--Software's Menu-->
    <TabListCaption>List</TabListCaption>
    <TabSearchCaption>Søg</TabSearchCaption>
-       <TabStatsCaption>Stat</TabStatsCaption>
    <ButtonSearch>Søg</ButtonSearch>
    <ColumnName>Navn</ColumnName>
    <ColumnCategory>Katagori</ColumnCategory>
-       <!--Stats-->
-       <!--System-->
-   <GroupBoxSystem>System</GroupBoxSystem>
-   <LabelPcName>Computer navn: </LabelPcName>
-   <LabelCurrentUser>Bruger: </LabelCurrentUser>
-       <!--Drive-->
-       <GroupBoxDrive>Drev %s:</GroupBoxDrive>
-   <LabelSize>Størrelse: </LabelSize>
-   <LabelFreeSpace>Fri: </LabelFreeSpace>
-       <LabelUsedSpace>Brugt: </LabelUsedSpace>
-       <!--Launcher-->
-       <GroupBoxASuite>ASuite</GroupBoxASuite>
-       <LabelSwInserted>Software tilføjet: </LabelSwInserted>>
-       <LabelCatInserted>Katagori tilføjet: </LabelCatInserted>
-       <LabelTotal>Total: </LabelTotal>
    <!--ASuite's Menu-->
    <!--File Menu-->
    <MenuFile>Fil</MenuFile>
@@ -48,12 +32,15 @@
        <MenuAddGroupSw>Tilføj software gruppe</MenuAddGroupSw>
    <MenuAddFolder>Tilføj mappe</MenuAddFolder>
        <MenuAddSeparator>Tilføj separator</MenuAddSeparator>
+	<MenuCut>Cut</MenuCut>
+	<MenuCopy>Copy</MenuCopy>
+	<MenuPaste>Paste</MenuPaste>
    <MenuDelete>Slet</MenuDelete>
    <MenuProperty>Egenskaber</MenuProperty>
    <!--Help Menu-->
        <MenuCheckUpdates>Check for opdateringer</MenuCheckUpdates>
    <MenuHelp>Hjælp</MenuHelp>
-   <MenuReadme>Read me</MenuReadme>
+   <MenuStats>Stat</MenuStats>
    <MenuASuiteInfo>Om ASuite</MenuASuiteInfo>
    <!--Trayicon Menu-->
    <TrayiconShowASuite>Vis ASuite</TrayiconShowASuite>
@@ -311,6 +298,25 @@ menuen</LabelHideSoftwareMenuB>
 	<ButtonOk>Ok</ButtonOk>
 	<ButtonCancel>Cancel</ButtonCancel>
   </Form12>
+  <Form13>
+	<Form13Caption>Stats</Form13Caption>
+       <!--System-->
+   <GroupBoxSystem>System</GroupBoxSystem>
+	<LabelOperatingSystem>Operating system</LabelOperatingSystem>
+   <LabelPcName>Computer navn: </LabelPcName>
+   <LabelCurrentUser>Bruger: </LabelCurrentUser>
+       <!--Drive-->
+       <GroupBoxDrive>Drev %s:</GroupBoxDrive>
+   <LabelSize>Størrelse: </LabelSize>
+   <LabelFreeSpace>Fri: </LabelFreeSpace>
+       <LabelUsedSpace>Brugt: </LabelUsedSpace>
+       <!--Launcher-->
+       <GroupBoxASuite>ASuite</GroupBoxASuite>
+       <LabelSwInserted>Software tilføjet: </LabelSwInserted>>
+	<LabelSwGroupInserted>Software group added</LabelSwGroupInserted>
+       <LabelCatInserted>Katagori tilføjet: </LabelCatInserted>
+       <LabelTotal>Total: </LabelTotal>
+  </Form13>
  <String>
    <string01>Fil ikke fundet</string01>
    <string02>Fejl i katagorinavn: %s</string02>

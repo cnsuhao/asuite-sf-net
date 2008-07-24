@@ -7,25 +7,9 @@
 	<!--Software's Menu-->
 	<TabListCaption>Lista</TabListCaption>
 	<TabSearchCaption>Cerca</TabSearchCaption>
-	<TabStatsCaption>Statistiche</TabStatsCaption>
 	<ButtonSearch>Cerca</ButtonSearch>
 	<ColumnName>Nome</ColumnName>
 	<ColumnCategory>Categoria</ColumnCategory>
-	<!--Stats-->
-	<!--System-->
-	<GroupBoxSystem>Sistema</GroupBoxSystem>
-	<LabelPcName>Nome computer: </LabelPcName>
-	<LabelCurrentUser>Utente corrente: </LabelCurrentUser>
-	<!--Drive-->
-	<GroupBoxDrive>Supporto %s:</GroupBoxDrive>
-	<LabelSize>Capienza: </LabelSize>
-	<LabelFreeSpace>Spazio libero: </LabelFreeSpace>
-	<LabelUsedSpace>Spazio utilizzato: </LabelUsedSpace>
-	<!--Launcher-->
-	<GroupBoxASuite>ASuite</GroupBoxASuite>
-	<LabelSwInserted>Programmi inseriti: </LabelSwInserted>
-	<LabelCatInserted>Categorie inserite: </LabelCatInserted>
-	<LabelTotal>Totale: </LabelTotal>
 	<!--ASuite's Menu-->
 	<!--File Menu-->
 	<MenuFile>File</MenuFile>
@@ -48,12 +32,15 @@
 	<MenuAddGroupSw>Aggiungi gruppo di programmi</MenuAddGroupSw>
 	<MenuAddFolder>Aggiungi cartella</MenuAddFolder>
 	<MenuAddSeparator>Aggiungi separatore</MenuAddSeparator>
+	<MenuCut>Taglia</MenuCut>
+	<MenuCopy>Copia</MenuCopy>
+	<MenuPaste>Incolla</MenuPaste>
 	<MenuDelete>Elimina</MenuDelete>
 	<MenuProperty>Proprietà</MenuProperty>
 	<!--Help Menu-->
 	<MenuCheckUpdates>Controlla gli aggiornamenti</MenuCheckUpdates>
 	<MenuHelp>Aiuto</MenuHelp>
-	<MenuReadme>Leggimi</MenuReadme>
+	<MenuStats>Statistiche</MenuStats>
 	<MenuASuiteInfo>Info ASuite</MenuASuiteInfo>
 	<!--Trayicon Menu-->
 	<TrayiconShowASuite>Visualizza ASuite</TrayiconShowASuite>
@@ -109,7 +96,6 @@
 	<!--Tabs-->
 	<GroupBoxTabs>Linguette</GroupBoxTabs> 
 	<CheckBoxHideSearch>Nascondi la linguetta ricerca</CheckBoxHideSearch>
-	<CheckBoxHideStats>Nascondi la linguetta statistiche</CheckBoxHideStats>
 	<!--Advanced-->
 	<TabAdvancedCaption>Avanzate</TabAdvancedCaption>
 	<!--MRU-->
@@ -295,6 +281,25 @@
 	<ButtonOk>Ok</ButtonOk>
 	<ButtonCancel>Annulla</ButtonCancel>
   </Form12>
+  <Form13>
+	<Form13Caption>Statistiche</Form13Caption>
+	<!--System-->
+	<GroupBoxSystem>Sistema</GroupBoxSystem>
+	<LabelOperatingSystem>Sistema operativo</LabelOperatingSystem>
+	<LabelPcName>Nome computer</LabelPcName>
+	<LabelCurrentUser>Utente corrente</LabelCurrentUser>
+	<!--Drive-->
+	<GroupBoxDrive>Supporto %s</GroupBoxDrive>
+	<LabelSize>Capienza</LabelSize>
+	<LabelFreeSpace>Spazio libero</LabelFreeSpace>
+	<LabelUsedSpace>Spazio utilizzato</LabelUsedSpace>
+	<!--Launcher-->
+	<GroupBoxASuite>ASuite</GroupBoxASuite>
+	<LabelSwInserted>Programmi inseriti</LabelSwInserted>
+	<LabelSwGroupInserted>Gruppi di software inseriti</LabelSwGroupInserted>
+	<LabelCatInserted>Categorie inserite</LabelCatInserted>
+	<LabelTotal>Totale: </LabelTotal>
+  </Form13>
   <String>
 	<string01>File non trovato</string01>
 	<string02>Errore nel nome della categoria: %s</string02>

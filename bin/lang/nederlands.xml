@@ -7,25 +7,9 @@
 	<!--Software's Menu-->
 	<TabListCaption>Lijst</TabListCaption>
 	<TabSearchCaption>Zoeken</TabSearchCaption>
-	<TabStatsCaption>Statistieken</TabStatsCaption>
 	<ButtonSearch>Zoeken</ButtonSearch>
 	<ColumnName>Naam</ColumnName>
 	<ColumnCategory>Categorie</ColumnCategory>
-	<!--Stats-->
-	<!--System-->
-	<GroupBoxSystem>Systeem</GroupBoxSystem>
-	<LabelPcName>Computernaam: </LabelPcName>
-	<LabelCurrentUser>Huidige gebruiker: </LabelCurrentUser>
-	<!--Drive-->
-	<GroupBoxDrive>Station %s:</GroupBoxDrive>
-	<LabelSize>Grootte: </LabelSize>
-	<LabelFreeSpace>Vrije ruimte: </LabelFreeSpace>
-	<LabelUsedSpace>Gebruikte ruimte: </LabelUsedSpace>
-	<!--Launcher-->
-	<GroupBoxASuite>ASuite</GroupBoxASuite>
-	<LabelSwInserted>Toegevoegde software: </LabelSwInserted>
-	<LabelCatInserted>Toegevoegde categorieën: </LabelCatInserted>
-	<LabelTotal>Totaal: </LabelTotal>
 	<!--ASuite's Menu-->
 	<!--File Menu-->
 	<MenuFile>Bestand</MenuFile>
@@ -48,12 +32,15 @@
 	<MenuAddGroupSw>Softwaregroep toevoegen</MenuAddGroupSw>
 	<MenuAddFolder>Map toevoegen</MenuAddFolder>
 	<MenuAddSeparator>Scheidingsteken toevoegen</MenuAddSeparator>
+	<MenuCut>Cut</MenuCut>
+	<MenuCopy>Copy</MenuCopy>
+	<MenuPaste>Paste</MenuPaste>
 	<MenuDelete>Verwijderen</MenuDelete>
 	<MenuProperty>Eigenschappen</MenuProperty>
 	<!--Help Menu-->
 	<MenuCheckUpdates>Check updates</MenuCheckUpdates>
 	<MenuHelp>Help</MenuHelp>
-	<MenuReadme>Leesmij</MenuReadme>
+	<MenuStats>Statistieken</MenuStats>
 	<MenuASuiteInfo>ASuite info</MenuASuiteInfo>
 	<!--Trayicon Menu-->
 	<TrayiconShowASuite>Laat ASuite zien</TrayiconShowASuite>
@@ -295,6 +282,25 @@
 	<ButtonOk>Ok</ButtonOk>
 	<ButtonCancel>Cancel</ButtonCancel>
   </Form12>
+  <Form13>
+	<Form13Caption>Stats</Form13Caption>
+	<!--System-->
+	<GroupBoxSystem>Systeem</GroupBoxSystem>
+	<LabelOperatingSystem>Operating system</LabelOperatingSystem>
+	<LabelPcName>Computernaam</LabelPcName>
+	<LabelCurrentUser>Huidige gebruiker</LabelCurrentUser>
+	<!--Drive-->
+	<GroupBoxDrive>Station %s:</GroupBoxDrive>
+	<LabelSize>Grootte</LabelSize>
+	<LabelFreeSpace>Vrije ruimte</LabelFreeSpace>
+	<LabelUsedSpace>Gebruikte ruimte</LabelUsedSpace>
+	<!--Launcher-->
+	<GroupBoxASuite>ASuite</GroupBoxASuite>
+	<LabelSwInserted>Toegevoegde software</LabelSwInserted>
+	<LabelSwGroupInserted>Software group added</LabelSwGroupInserted>
+	<LabelCatInserted>Toegevoegde categorieën</LabelCatInserted>
+	<LabelTotal>Totaal</LabelTotal>
+  </Form13>
   <String>
 	<string01>Bestand niet gevonden</string01>
 	<string02>Fout in de categorie naam: %s</string02>

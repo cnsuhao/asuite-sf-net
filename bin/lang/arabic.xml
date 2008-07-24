@@ -7,25 +7,9 @@
 	<!--Software's Menu-->
 	<TabListCaption>الفائمة</TabListCaption>
 	<TabSearchCaption>بحث</TabSearchCaption>
-	<TabStatsCaption>إحصائيات</TabStatsCaption>
 	<ButtonSearch>بحث</ButtonSearch>
 	<ColumnName>الاسم</ColumnName>
 	<ColumnCategory>التصنيف</ColumnCategory>
-	<!--Stats-->
-	<!--System-->
-	<GroupBoxSystem>النظام</GroupBoxSystem>
-	<LabelPcName>اسم الكمبيوتر: </LabelPcName>
-	<LabelCurrentUser>المستخدم الحالي: </LabelCurrentUser>
-	<!--Drive-->
-	<GroupBoxDrive>القرص %s:</GroupBoxDrive>
-	<LabelSize>الحجم: </LabelSize>
-	<LabelFreeSpace>المساحة المتبقية : </LabelFreeSpace>
-	<LabelUsedSpace>المساحة المستخدمة : </LabelUsedSpace>
-	<!--Launcher-->
-	<GroupBoxASuite>ASuite</GroupBoxASuite>
-	<LabelSwInserted>البرامج المضافة : </LabelSwInserted>
-	<LabelCatInserted>التصنيفات المضافة: </LabelCatInserted>
-	<LabelTotal>المجموع : </LabelTotal>
 	<!--ASuite's Menu-->
 	<!--File Menu-->
 	<MenuFile>ملف</MenuFile>
@@ -48,12 +32,15 @@
 	<MenuAddGroupSw>إضافة مجموعة برامج</MenuAddGroupSw>
 	<MenuAddFolder>إضافة مجلد</MenuAddFolder>
 	<MenuAddSeparator>إضافة فاصلة</MenuAddSeparator>
+	<MenuCut>Cut</MenuCut>
+	<MenuCopy>Copy</MenuCopy>
+	<MenuPaste>Paste</MenuPaste>
 	<MenuDelete>حذف</MenuDelete>
 	<MenuProperty>خصائص</MenuProperty>
 	<!--Help Menu-->
 	<MenuCheckUpdates>بحث عن تحديثات</MenuCheckUpdates>
 	<MenuHelp>مساعدة</MenuHelp>
-	<MenuReadme>إقرأني</MenuReadme>
+	<MenuStats>إحصائيات</MenuStats>
 	<MenuASuiteInfo>حول ASuite</MenuASuiteInfo>
 	<!--Trayicon Menu-->
 	<TrayiconShowASuite>مشاهدة ASuite</TrayiconShowASuite>
@@ -295,6 +282,25 @@
 	<ButtonOk>موافق</ButtonOk>
 	<ButtonCancel>إلغاء</ButtonCancel>
   </Form12>
+  <Form13>
+	<Form13Caption>Stats</Form13Caption>
+	<!--System-->
+	<GroupBoxSystem>النظام</GroupBoxSystem>
+	<LabelOperatingSystem>Operating system</LabelOperatingSystem>
+	<LabelPcName>اسم الكمبيوتر</LabelPcName>
+	<LabelCurrentUser>المستخدم الحالي</LabelCurrentUser>
+	<!--Drive-->
+	<GroupBoxDrive>القرص %s:</GroupBoxDrive>
+	<LabelSize>الحجم: </LabelSize>
+	<LabelFreeSpace>المساحة المتبقية </LabelFreeSpace>
+	<LabelUsedSpace>المساحة المستخدمة </LabelUsedSpace>
+	<!--Launcher-->
+	<GroupBoxASuite>ASuite</GroupBoxASuite>
+	<LabelSwInserted>البرامج المضافة </LabelSwInserted>
+	<LabelSwGroupInserted>Software group added</LabelSwGroupInserted>
+	<LabelCatInserted>التصنيفات المضافة</LabelCatInserted>
+	<LabelTotal>المجموع </LabelTotal>
+  </Form13>
   <String>
 	<string01>الملف غير موجودد</string01>
 	<string02>خطأ في اسم التصنيف : %s</string02>
