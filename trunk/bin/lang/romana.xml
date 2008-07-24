@@ -7,25 +7,9 @@
 	<!--Software's Menu-->
 	<TabListCaption>Lista</TabListCaption>
 	<TabSearchCaption>Caută</TabSearchCaption>
-	<TabStatsCaption>Statistici</TabStatsCaption>
 	<ButtonSearch>Caută</ButtonSearch>
 	<ColumnName>Nume</ColumnName>
 	<ColumnCategory>Categorie</ColumnCategory>
-	<!--Stats-->
-	<!--System-->
-	<GroupBoxSystem>Sistem</GroupBoxSystem>
-	<LabelPcName>Nume computer: </LabelPcName>
-	<LabelCurrentUser>Utilizator curent: </LabelCurrentUser>
-	<!--Drive-->
-	<GroupBoxDrive>Disc %s:</GroupBoxDrive>
-	<LabelSize>Mărime: </LabelSize>
-	<LabelFreeSpace>Spaţiu liber: </LabelFreeSpace>
-	<LabelUsedSpace>Spaţiu ocupat: </LabelUsedSpace>
-	<!--Launcher-->
-	<GroupBoxASuite>ASuite</GroupBoxASuite>
-	<LabelSwInserted>Softuri adăugate: </LabelSwInserted>
-	<LabelCatInserted>Categorii adăugate: </LabelCatInserted>
-	<LabelTotal>Total: </LabelTotal>
 	<!--ASuite's Menu-->
 	<!--File Menu-->
 	<MenuFile>Fişier</MenuFile>
@@ -48,12 +32,15 @@
 	<MenuAddGroupSw>Adaugă grup de aplicaţii</MenuAddGroupSw>
 	<MenuAddFolder>Adaugă dosar</MenuAddFolder>
 	<MenuAddSeparator>Adaugă separator</MenuAddSeparator>
+	<MenuCut>Cut</MenuCut>
+	<MenuCopy>Copy</MenuCopy>
+	<MenuPaste>Paste</MenuPaste>
 	<MenuDelete>Şterge</MenuDelete>
 	<MenuProperty>Proprietăţi</MenuProperty>
 	<!--Help Menu-->
 	<MenuCheckUpdates>Verifică actualizări</MenuCheckUpdates>
 	<MenuHelp>Ajutor</MenuHelp>
-	<MenuReadme>Citeşte-mă</MenuReadme>
+	<MenuStats>Statistici</MenuStats>
 	<MenuASuiteInfo>Despre ASuite</MenuASuiteInfo>
 	<!--Trayicon Menu-->
 	<TrayiconShowASuite>Arată ASuite</TrayiconShowASuite>
@@ -295,6 +282,25 @@
 	<ButtonOk>OK</ButtonOk>
 	<ButtonCancel>Anulează</ButtonCancel>
   </Form12>
+  <Form13>
+	<Form13Caption>Stats</Form13Caption>
+	<!--System-->
+	<GroupBoxSystem>Sistem</GroupBoxSystem>
+	<LabelOperatingSystem>Operating system</LabelOperatingSystem>
+	<LabelPcName>Nume computer</LabelPcName>
+	<LabelCurrentUser>Utilizator curent</LabelCurrentUser>
+	<!--Drive-->
+	<GroupBoxDrive>Disc %s:</GroupBoxDrive>
+	<LabelSize>Mărime</LabelSize>
+	<LabelFreeSpace>Spaţiu liber</LabelFreeSpace>
+	<LabelUsedSpace>Spaţiu ocupat</LabelUsedSpace>
+	<!--Launcher-->
+	<GroupBoxASuite>ASuite</GroupBoxASuite>
+	<LabelSwInserted>Softuri adăugate</LabelSwInserted>
+	<LabelSwGroupInserted>Software group added</LabelSwGroupInserted>
+	<LabelCatInserted>Categorii adăugate</LabelCatInserted>
+	<LabelTotal>Total</LabelTotal>
+  </Form13>
   <String>
 	<string01>Fişier negăsit</string01>
 	<string02>Eroare în numele categoriei: %s</string02>

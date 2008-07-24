@@ -7,25 +7,9 @@
 	<!--Software's Menu-->
 	<TabListCaption>Liste</TabListCaption>
 	<TabSearchCaption>Ara</TabSearchCaption>
-	<TabStatsCaption>Bilgi</TabStatsCaption>
 	<ButtonSearch>Ara</ButtonSearch>
 	<ColumnName>İsim</ColumnName>
 	<ColumnCategory>Kategori</ColumnCategory>
-	<!--Stats-->
-	<!--System-->
-	<GroupBoxSystem>Sistem</GroupBoxSystem>
-	<LabelPcName>Bilgisayar Adı: </LabelPcName>
-	<LabelCurrentUser>Kullanıcı: </LabelCurrentUser>
-	<!--Drive-->
-	<GroupBoxDrive>%s Sürücüsü</GroupBoxDrive>
-	<LabelSize>Boyut: </LabelSize>
-	<LabelFreeSpace>Boş Alan: </LabelFreeSpace>
-	<LabelUsedSpace>Kullanılan: </LabelUsedSpace>
-	<!--Launcher-->
-	<GroupBoxASuite>ASuite</GroupBoxASuite>
-	<LabelSwInserted>Eklenmiş Yazılım: </LabelSwInserted>
-	<LabelCatInserted>Eklenmiş Kategori: </LabelCatInserted>
-	<LabelTotal>Toplam: </LabelTotal>
 	<!--ASuite's Menu-->
 	<!--File Menu-->
 	<MenuFile>Dosya</MenuFile>
@@ -48,12 +32,15 @@
 	<MenuAddGroupSw>Yazılım Grubu Ekle</MenuAddGroupSw>
 	<MenuAddFolder>Dizin Ekle</MenuAddFolder>
 	<MenuAddSeparator>Ayıraç Ekle</MenuAddSeparator>
+	<MenuCut>Cut</MenuCut>
+	<MenuCopy>Copy</MenuCopy>
+	<MenuPaste>Paste</MenuPaste>
 	<MenuDelete>Sil</MenuDelete>
 	<MenuProperty>Özellikler</MenuProperty>
 	<!--Help Menu-->
 	<MenuCheckUpdates>Yenilikleri Kontrol et</MenuCheckUpdates>
 	<MenuHelp>Yardım</MenuHelp>
-	<MenuReadme>Beni Oku</MenuReadme>
+	<MenuStats>Bilgi</MenuStats>
 	<MenuASuiteInfo>ASuite Hakkında</MenuASuiteInfo>
 	<!--Trayicon Menu-->
 	<TrayiconShowASuite>ASuite Göster</TrayiconShowASuite>
@@ -295,6 +282,25 @@
 	<ButtonOk>Ok</ButtonOk>
 	<ButtonCancel>Cancel</ButtonCancel>
   </Form12>
+  <Form13>
+	<Form13Caption>Stats</Form13Caption>
+	<!--System-->
+	<GroupBoxSystem>Sistem</GroupBoxSystem>
+	<LabelOperatingSystem>Operating system</LabelOperatingSystem>
+	<LabelPcName>Bilgisayar Adı</LabelPcName>
+	<LabelCurrentUser>Kullanıcı</LabelCurrentUser>
+	<!--Drive-->
+	<GroupBoxDrive>%s Sürücüsü</GroupBoxDrive>
+	<LabelSize>Boyut</LabelSize>
+	<LabelFreeSpace>Boş Alan</LabelFreeSpace>
+	<LabelUsedSpace>Kullanılan</LabelUsedSpace>
+	<!--Launcher-->
+	<GroupBoxASuite>ASuite</GroupBoxASuite>
+	<LabelSwInserted>Eklenmiş Yazılım</LabelSwInserted>
+	<LabelSwGroupInserted>Software group added</LabelSwGroupInserted>
+	<LabelCatInserted>Eklenmiş Kategori</LabelCatInserted>
+	<LabelTotal>Toplam</LabelTotal>
+  </Form13>
   <String>
 	<string01>Dosya Bulunamadı</string01>
 	<string02>Kategori isminde Hata var: %s</string02>

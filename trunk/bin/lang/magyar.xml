@@ -7,25 +7,9 @@
 	<!--Software's Menu-->
 	<TabListCaption>Lista</TabListCaption>
 	<TabSearchCaption>Keresés</TabSearchCaption>
-	<TabStatsCaption>Státusz</TabStatsCaption>
 	<ButtonSearch>Keres</ButtonSearch>
 	<ColumnName>Név</ColumnName>
 	<ColumnCategory>Kategória</ColumnCategory>
-	<!--Stats-->
-	<!--System-->
-	<GroupBoxSystem> Rendszer </GroupBoxSystem>
-	<LabelPcName>Számítógép: </LabelPcName>
-	<LabelCurrentUser>Jelen felhasználó: </LabelCurrentUser>
-	<!--Drive-->
-	<GroupBoxDrive> %s: meghajtó </GroupBoxDrive>
-	<LabelSize> Kapacitás: </LabelSize>
-	<LabelFreeSpace> Szabad még: </LabelFreeSpace>
-	<LabelUsedSpace> Felhasznált: </LabelUsedSpace>
-	<!--Launcher-->
-	<GroupBoxASuite> ASuite statisztika </GroupBoxASuite>
-	<LabelSwInserted>Szoftver hozzáadva: </LabelSwInserted>
-	<LabelCatInserted>Kategóriák hozzáadva: </LabelCatInserted>
-	<LabelTotal>Összesen: </LabelTotal>
 	<!--ASuite's Menu-->
 	<!--File Menu-->
 	<MenuFile>Fájl</MenuFile>
@@ -48,12 +32,15 @@
 	<MenuAddGroupSw>Szoftvercsoport hozzáadása</MenuAddGroupSw>
 	<MenuAddFolder>Mappa hozzáadása</MenuAddFolder>
 	<MenuAddSeparator>Elválasztó hozzáadása</MenuAddSeparator>
+	<MenuCut>Cut</MenuCut>
+	<MenuCopy>Copy</MenuCopy>
+	<MenuPaste>Paste</MenuPaste>
 	<MenuDelete>Törlés</MenuDelete>
 	<MenuProperty>Tulajdonságok</MenuProperty>
 	<!--Help Menu-->
 	<MenuCheckUpdates>Check updates</MenuCheckUpdates>
 	<MenuHelp>Segítség</MenuHelp>
-	<MenuReadme>Olvass-el!</MenuReadme>
+	<MenuStats>Státusz</MenuStats>
 	<MenuASuiteInfo>Az ASuite-ról</MenuASuiteInfo>
 	<!--Trayicon Menu-->
 	<TrayiconShowASuite>ASuite menü</TrayiconShowASuite>
@@ -295,6 +282,25 @@
 	<ButtonOk>Ok</ButtonOk>
 	<ButtonCancel>Cancel</ButtonCancel>
   </Form12>
+  <Form13>
+	<Form13Caption>Stats</Form13Caption>
+	<!--System-->
+	<GroupBoxSystem> Rendszer </GroupBoxSystem>
+	<LabelOperatingSystem>Operating system</LabelOperatingSystem>
+	<LabelPcName>Számítógép</LabelPcName>
+	<LabelCurrentUser>Jelen felhasználó</LabelCurrentUser>
+	<!--Drive-->
+	<GroupBoxDrive> %s: meghajtó </GroupBoxDrive>
+	<LabelSize> Kapacitás</LabelSize>
+	<LabelFreeSpace> Szabad még</LabelFreeSpace>
+	<LabelUsedSpace> Felhasznált</LabelUsedSpace>
+	<!--Launcher-->
+	<GroupBoxASuite> ASuite statisztika </GroupBoxASuite>
+	<LabelSwInserted>Szoftver hozzáadva</LabelSwInserted>
+	<LabelSwGroupInserted>Software group added</LabelSwGroupInserted>
+	<LabelCatInserted>Kategóriák hozzáadva</LabelCatInserted>
+	<LabelTotal>Összesen</LabelTotal>
+  </Form13>
   <String>
 	<string01>Fájl nem található</string01>
 	<string02>Hiba a kategória nevében: %s</string02>

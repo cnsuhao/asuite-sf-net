@@ -7,25 +7,9 @@
 	<!--Software's Menu-->
 	<TabListCaption>Lista</TabListCaption>
 	<TabSearchCaption>Busca</TabSearchCaption>
-	<TabStatsCaption>Estatísticas</TabStatsCaption>
 	<ButtonSearch>Busca</ButtonSearch>
 	<ColumnName>Nome</ColumnName>
 	<ColumnCategory>Categoria</ColumnCategory>
-	<!--Stats-->
-	<!--System-->
-	<GroupBoxSystem>Sistema</GroupBoxSystem>
-	<LabelPcName>Nome do computador: </LabelPcName>
-	<LabelCurrentUser>Usuário atual: </LabelCurrentUser>
-	<!--Drive-->
-	<GroupBoxDrive>Unidade %s:</GroupBoxDrive>
-	<LabelSize>Tamanho: </LabelSize>
-	<LabelFreeSpace>Espaço livre: </LabelFreeSpace>
-	<LabelUsedSpace>Espaço utilizado: </LabelUsedSpace>
-	<!--Launcher-->
-	<GroupBoxASuite>ASuite</GroupBoxASuite>
-	<LabelSwInserted>Software adicionado: </LabelSwInserted>
-	<LabelCatInserted>Categorias adicionadas: </LabelCatInserted>
-	<LabelTotal>Total: </LabelTotal>
 	<!--ASuite's Menu-->
 	<!--File Menu-->
 	<MenuFile>Arquivo</MenuFile>
@@ -48,12 +32,15 @@
 	<MenuAddGroupSw>Adicionar grupo de software</MenuAddGroupSw>
 	<MenuAddFolder>Adicionar pasta</MenuAddFolder>
 	<MenuAddSeparator>Adicionar separador</MenuAddSeparator>
+	<MenuCut>Cut</MenuCut>
+	<MenuCopy>Copy</MenuCopy>
+	<MenuPaste>Paste</MenuPaste>
 	<MenuDelete>Deletar</MenuDelete>
 	<MenuProperty>Propriedades</MenuProperty>
 	<!--Help Menu-->
 	<MenuCheckUpdates>Verificar Atualizações</MenuCheckUpdates>
 	<MenuHelp>Ajuda</MenuHelp>
-	<MenuReadme>Leia me</MenuReadme>
+	<MenuStats>Estatísticas</MenuStats>
 	<MenuASuiteInfo>Sobre ASuite</MenuASuiteInfo>
 	<!--Trayicon Menu-->
 	<TrayiconShowASuite>Mostrar ASuite</TrayiconShowASuite>
@@ -295,6 +282,25 @@
 	<ButtonOk>Ok</ButtonOk>
 	<ButtonCancel>Cancel</ButtonCancel>
   </Form12>
+  <Form13>
+	<Form13Caption>Stats</Form13Caption>
+	<!--System-->
+	<GroupBoxSystem>Sistema</GroupBoxSystem>
+	<LabelOperatingSystem>Operating system</LabelOperatingSystem>
+	<LabelPcName>Nome do computador</LabelPcName>
+	<LabelCurrentUser>Usuário atual</LabelCurrentUser>
+	<!--Drive-->
+	<GroupBoxDrive>Unidade %s:</GroupBoxDrive>
+	<LabelSize>Tamanho</LabelSize>
+	<LabelFreeSpace>Espaço livre</LabelFreeSpace>
+	<LabelUsedSpace>Espaço utilizado</LabelUsedSpace>
+	<!--Launcher-->
+	<GroupBoxASuite>ASuite</GroupBoxASuite>
+	<LabelSwInserted>Software adicionado</LabelSwInserted>
+	<LabelSwGroupInserted>Software group added</LabelSwGroupInserted>
+	<LabelCatInserted>Categorias adicionadas</LabelCatInserted>
+	<LabelTotal>Total</LabelTotal>
+  </Form13>
   <String>
 	<string01>Arquivo não encontrado</string01>
 	<string02>Erro no nome da categoria: %s</string02>

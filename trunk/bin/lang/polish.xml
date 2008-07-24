@@ -7,25 +7,9 @@
 	<!--Software's Menu-->
 	<TabListCaption>List</TabListCaption>
 	<TabSearchCaption>Szukaj</TabSearchCaption>
-	<TabStatsCaption>Statystyki</TabStatsCaption>
 	<ButtonSearch>Szukaj</ButtonSearch>
 	<ColumnName>Nazwa</ColumnName>
 	<ColumnCategory>Kategoria</ColumnCategory>
-	<!--Stats-->
-	<!--System-->
-	<GroupBoxSystem>System</GroupBoxSystem>
-	<LabelPcName>Nazwa komputera: </LabelPcName>
-	<LabelCurrentUser>Uzytkownik: </LabelCurrentUser>
-	<!--Drive-->
-	<GroupBoxDrive>Napęd %s:</GroupBoxDrive>
-	<LabelSize>Rozmiar: </LabelSize>
-	<LabelFreeSpace>Wolna przestrzeń: </LabelFreeSpace>
-	<LabelUsedSpace>Zużyta przestrzeń: </LabelUsedSpace>
-	<!--Launcher-->
-	<GroupBoxASuite>ASuite</GroupBoxASuite>
-	<LabelSwInserted>Dodane aplikacje: </LabelSwInserted>
-	<LabelCatInserted>Dodane kategorie: </LabelCatInserted>
-	<LabelTotal>Suma: </LabelTotal>
 	<!--ASuite's Menu-->
 	<!--File Menu-->
 	<MenuFile>Plik</MenuFile>
@@ -48,12 +32,15 @@
 	<MenuAddGroupSw>Dodaj grupę aplikacji</MenuAddGroupSw>
 	<MenuAddFolder>Dodaj folder</MenuAddFolder>
 	<MenuAddSeparator>Dodaj separator</MenuAddSeparator>
+	<MenuCut>Cut</MenuCut>
+	<MenuCopy>Copy</MenuCopy>
+	<MenuPaste>Paste</MenuPaste>
 	<MenuDelete>Usuń</MenuDelete>
 	<MenuProperty>Właściwości</MenuProperty>
 	<!--Help Menu-->
 	<MenuCheckUpdates>Check updates</MenuCheckUpdates>
 	<MenuHelp>Pomoc</MenuHelp>
-	<MenuReadme>Czytaj to</MenuReadme>
+	<MenuStats>Statystyki</MenuStats>
 	<MenuASuiteInfo>Informacje o ASuite</MenuASuiteInfo>
 	<!--Trayicon Menu-->
 	<TrayiconShowASuite>Pokaż ASuite</TrayiconShowASuite>
@@ -295,6 +282,25 @@
 	<ButtonOk>Ok</ButtonOk>
 	<ButtonCancel>Cancel</ButtonCancel>
   </Form12>
+  <Form13>
+	<Form13Caption>Stats</Form13Caption>
+	<!--System-->
+	<GroupBoxSystem>System</GroupBoxSystem>
+	<LabelOperatingSystem>Operating system</LabelOperatingSystem>
+	<LabelPcName>Nazwa komputera: </LabelPcName>
+	<LabelCurrentUser>Uzytkownik: </LabelCurrentUser>
+	<!--Drive-->
+	<GroupBoxDrive>Napęd %s:</GroupBoxDrive>
+	<LabelSize>Rozmiar</LabelSize>
+	<LabelFreeSpace>Wolna przestrzeń</LabelFreeSpace>
+	<LabelUsedSpace>Zużyta przestrzeń</LabelUsedSpace>
+	<!--Launcher-->
+	<GroupBoxASuite>ASuite</GroupBoxASuite>
+	<LabelSwInserted>Dodane aplikacje</LabelSwInserted>
+	<LabelSwGroupInserted>Software group added</LabelSwGroupInserted>
+	<LabelCatInserted>Dodane kategorie</LabelCatInserted>
+	<LabelTotal>Suma</LabelTotal>
+  </Form13>
   <String>
 	<string01>Nie znaleziono pliku</string01>
 	<string02>Błędna nazwa kategorii: %s</string02>

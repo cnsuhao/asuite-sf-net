@@ -7,25 +7,9 @@
 	<!--Software's Menu-->
 	<TabListCaption>목록</TabListCaption>
 	<TabSearchCaption>검색</TabSearchCaption>
-	<TabStatsCaption>통계</TabStatsCaption>
 	<ButtonSearch>검색</ButtonSearch>
 	<ColumnName>이름</ColumnName>
 	<ColumnCategory>카테고리</ColumnCategory>
-	<!--Stats-->
-	<!--System-->
-	<GroupBoxSystem>시스템</GroupBoxSystem>
-	<LabelPcName>컴퓨터 이름: </LabelPcName>
-	<LabelCurrentUser>현재 사용자: </LabelCurrentUser>
-	<!--Drive-->
-	<GroupBoxDrive>%s 드라이브</GroupBoxDrive>
-	<LabelSize>크기: </LabelSize>
-	<LabelFreeSpace>남은 공간: </LabelFreeSpace>
-	<LabelUsedSpace>사용 공간: </LabelUsedSpace>
-	<!--Launcher-->
-	<GroupBoxASuite>ASuite</GroupBoxASuite>
-	<LabelSwInserted>추가된 소프트웨어: </LabelSwInserted>
-	<LabelCatInserted>추가된 카테고리: </LabelCatInserted>
-	<LabelTotal>전체: </LabelTotal>
 	<!--ASuite's Menu-->
 	<!--File Menu-->
 	<MenuFile>파일</MenuFile>
@@ -48,12 +32,15 @@
 	<MenuAddGroupSw>소프트웨어 그룹 추가</MenuAddGroupSw>
 	<MenuAddFolder>폴더 추가</MenuAddFolder>
 	<MenuAddSeparator>분리자 추가</MenuAddSeparator>
+	<MenuCut>Cut</MenuCut>
+	<MenuCopy>Copy</MenuCopy>
+	<MenuPaste>Paste</MenuPaste>
 	<MenuDelete>삭제</MenuDelete>
 	<MenuProperty>속성</MenuProperty>
 	<!--Help Menu-->
 	<MenuCheckUpdates>업데이트 확인</MenuCheckUpdates>
 	<MenuHelp>도움말</MenuHelp>
-	<MenuReadme>읽어보십시오</MenuReadme>
+	<MenuStats>통계</MenuStats>
 	<MenuASuiteInfo>ASuite 정보</MenuASuiteInfo>
 	<!--Trayicon Menu-->
 	<TrayiconShowASuite>ASuite 보이기</TrayiconShowASuite>
@@ -295,6 +282,25 @@
 	<ButtonOk>Ok</ButtonOk>
 	<ButtonCancel>Cancel</ButtonCancel>
   </Form12>
+  <Form13>
+	<Form13Caption>Stats</Form13Caption>
+	<!--System-->
+	<GroupBoxSystem>시스템</GroupBoxSystem>
+	<LabelOperatingSystem>Operating system</LabelOperatingSystem>
+	<LabelPcName>컴퓨터 이름</LabelPcName>
+	<LabelCurrentUser>현재 사용자</LabelCurrentUser>
+	<!--Drive-->
+	<GroupBoxDrive>%s 드라이브</GroupBoxDrive>
+	<LabelSize>크기</LabelSize>
+	<LabelFreeSpace>남은 공간</LabelFreeSpace>
+	<LabelUsedSpace>사용 공간</LabelUsedSpace>
+	<!--Launcher-->
+	<GroupBoxASuite>ASuite</GroupBoxASuite>
+	<LabelSwInserted>추가된 소프트웨어</LabelSwInserted>
+	<LabelSwGroupInserted>Software group added</LabelSwGroupInserted>
+	<LabelCatInserted>추가된 카테고리</LabelCatInserted>
+	<LabelTotal>전체</LabelTotal>
+  </Form13>
   <String>
 	<string01>파일을 찾을 수 없습니다.</string01>
 	<string02>카테고리명 오류: %s</string02>

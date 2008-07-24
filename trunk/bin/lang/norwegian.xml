@@ -7,25 +7,9 @@
    <!--Software's Menu-->
    <TabListCaption>Liste</TabListCaption>
    <TabSearchCaption>Søk</TabSearchCaption>
-       <TabStatsCaption>Informasjon</TabStatsCaption>
    <ButtonSearch>Søk</ButtonSearch>
    <ColumnName>Navn</ColumnName>
    <ColumnCategory>Kategori</ColumnCategory>
-       <!--Stats-->
-       <!--System-->
-   <GroupBoxSystem>System</GroupBoxSystem>
-   <LabelPcName>Datamaskin navn: </LabelPcName>
-   <LabelCurrentUser>Bruker: </LabelCurrentUser>
-       <!--Drive-->
-       <GroupBoxDrive>Disk %s:</GroupBoxDrive>
-   <LabelSize>Størrelse: </LabelSize>
-   <LabelFreeSpace>Ledig: </LabelFreeSpace>
-       <LabelUsedSpace>Brukt: </LabelUsedSpace>
-       <!--Launcher-->
-       <GroupBoxASuite>ASuite</GroupBoxASuite>
-       <LabelSwInserted>Programmer lagt til: </LabelSwInserted>>
-       <LabelCatInserted>Kategorier lagt til: </LabelCatInserted>
-       <LabelTotal>Totalt: </LabelTotal>
    <!--ASuite's Menu-->
    <!--File Menu-->
    <MenuFile>Fil</MenuFile>
@@ -48,12 +32,15 @@
        <MenuAddGroupSw>Legg til program gruppe</MenuAddGroupSw>
    <MenuAddFolder>Legg til mappe</MenuAddFolder>
        <MenuAddSeparator>Legg til separator</MenuAddSeparator>
+	<MenuCut>Cut</MenuCut>
+	<MenuCopy>Copy</MenuCopy>
+	<MenuPaste>Paste</MenuPaste>
    <MenuDelete>Slett</MenuDelete>
    <MenuProperty>Egenskaper</MenuProperty>
    <!--Help Menu-->
        <MenuCheckUpdates>Se etter opdateringer</MenuCheckUpdates>
    <MenuHelp>Hjelp</MenuHelp>
-   <MenuReadme>Les meg</MenuReadme>
+   <MenuStats>Informasjon</MenuStats>
    <MenuASuiteInfo>Om ASuite</MenuASuiteInfo>
    <!--Trayicon Menu-->
    <TrayiconShowASuite>Vis ASuite</TrayiconShowASuite>
@@ -296,6 +283,25 @@ use with portable applications.</LabelIntro>
 	<ButtonOk>Ok</ButtonOk>
 	<ButtonCancel>Cancel</ButtonCancel>
   </Form12>
+  <Form13>
+	<Form13Caption>Stats</Form13Caption>
+       <!--System-->
+   <GroupBoxSystem>System</GroupBoxSystem>
+	<LabelOperatingSystem>Operating system</LabelOperatingSystem>
+   <LabelPcName>Datamaskin navn</LabelPcName>
+   <LabelCurrentUser>Bruker</LabelCurrentUser>
+       <!--Drive-->
+       <GroupBoxDrive>Disk %s:</GroupBoxDrive>
+   <LabelSize>Størrelse</LabelSize>
+   <LabelFreeSpace>Ledig</LabelFreeSpace>
+       <LabelUsedSpace>Brukt</LabelUsedSpace>
+       <!--Launcher-->
+       <GroupBoxASuite>ASuite</GroupBoxASuite>
+       <LabelSwInserted>Programmer lagt til</LabelSwInserted>
+	<LabelSwGroupInserted>Software group added</LabelSwGroupInserted>
+       <LabelCatInserted>Kategorier lagt til</LabelCatInserted>
+       <LabelTotal>Totalt</LabelTotal>
+  </Form13>
  <String>
    <string01>Fil ikke funnet</string01>
    <string02>Feil i kategorinavn: %s</string02>
