@@ -185,12 +185,6 @@ object frmMain: TfrmMain
         Height = 337
         Align = alClient
         ClipboardFormats.Strings = (
-          'CSV'
-          'HTML Format'
-          'Plain text'
-          'Rich Text Format'
-          'Rich Text Format Without Objects'
-          'Unicode text'
           'Virtual Tree Data')
         DragMode = dmAutomatic
         Font.Charset = DEFAULT_CHARSET
