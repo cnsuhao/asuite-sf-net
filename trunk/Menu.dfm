@@ -2210,6 +2210,15 @@ object frmMenu: TfrmMenu
       FEFEFEFEFEFEFEFEFEFEFEFEFEFEFEFEFEFEFEFEFEFEFEE8E9EDBBBCC6030303
       FEFF}
   end
+  object imgEject: TImage
+    Left = 255
+    Top = 544
+    Width = 70
+    Height = 19
+    Proportional = True
+    Stretch = True
+    OnClick = imgEjectClick
+  end
   object vstMenu: TVirtualStringTree
     Left = 15
     Top = 85

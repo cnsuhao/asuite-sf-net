@@ -1005,7 +1005,7 @@ begin
       Sender.Expanded[Sender.FocusedNode] := true;
     end
     else
-      ChildNode  := Sender.AddChild(Sender.NodeParent[Sender.FocusedNode]);
+      ChildNode  := Sender.InsertNode(Sender.FocusedNode,amInsertAfter);
   end
   else
     ChildNode := Sender.AddChild(nil);
@@ -1427,7 +1427,7 @@ begin
   frmMain.vstList.IterateSubtree(nil, IterateSubtreeProcs.PopulateClassicTrayMenu, nil, [], False);
   //Create menu items and set its properties
   //MRU items and Exit
-  for I := 0 to 1 do
+  for I := 0 to 2 do
   begin
     MenuItem := TMenuItem.Create(Application.MainForm);
     Menu.Items.Add(MenuItem);
@@ -1451,6 +1451,11 @@ begin
       1:
       begin
         Menu.Items.InsertNewLineBefore(MenuItem);
+        MenuItem.Caption := TransCompName.MenuEject;
+        MenuItem.OnClick := frmMain.EjectDialog;
+      end;
+      2:
+      begin
         MenuItem.Caption    := TransCompName.MenuExit;
         MenuItem.OnClick    := frmMain.miExitClick;
         {$IfDef winPenPack}

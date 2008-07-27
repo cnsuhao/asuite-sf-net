@@ -212,6 +212,7 @@ object frmMain: TfrmMain
         TreeOptions.MiscOptions = [toAcceptOLEDrop, toEditable, toFullRepaintOnResize, toInitOnSave, toToggleOnDblClick, toWheelPanning]
         TreeOptions.PaintOptions = [toShowBackground, toShowButtons, toShowDropmark, toShowRoot, toShowTreeLines, toThemeAware, toUseBlendedImages]
         TreeOptions.SelectionOptions = [toFullRowSelect, toMultiSelect, toRightClickSelect]
+        TreeOptions.StringOptions = [toAutoAcceptEditChange]
         OnClick = RunSingleClick
         OnCompareNodes = vstListCompareNodes
         OnDblClick = RunExe
@@ -223,13 +224,19 @@ object frmMain: TfrmMain
         OnGetImageIndex = vstListGetImageIndex
         OnGetHint = vstListGetHint
         OnKeyPress = vstListKeyPress
+        OnLoadNode = vstListLoadNode
         OnNewText = vstListNewText
+        OnSaveNode = vstListSaveNode
         Columns = <>
       end
     end
     object tbSearch: TTabSheet
       Caption = 'Search'
       ImageIndex = 1
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       DesignSize = (
         186
         337)

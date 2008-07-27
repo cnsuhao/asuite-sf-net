@@ -123,6 +123,7 @@ type
     procedure miExitClick(Sender: TObject);
     procedure miInfoASuiteClick(Sender: TObject);
     procedure ShowMainForm(Sender: TObject);
+    procedure EjectDialog(Sender: TObject);
     procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
     procedure TranslateForm(Lingua:string);
     procedure LoadListXML(Tree: TBaseVirtualTree;XMLNode: IXMLNode);
@@ -172,6 +173,10 @@ type
     procedure miCut2Click(Sender: TObject);
     procedure miStatsClick(Sender: TObject);
     procedure CoolTrayIcon1BalloonHintShow(Sender: TObject);
+    procedure vstListSaveNode(Sender: TBaseVirtualTree; Node: PVirtualNode;
+      Stream: TStream);
+    procedure vstListLoadNode(Sender: TBaseVirtualTree; Node: PVirtualNode;
+      Stream: TStream);
   private
     { Private declarations }
     SessionEnding: boolean;
@@ -314,6 +319,7 @@ type
     MenuSave        : String;
     MenuOption      : String;
     MenuExit        : String;
+    MenuEject       : String;
     MenuMRU         : String;
     //Caption for frmCard
     Card            : String;
@@ -328,7 +334,7 @@ const
   PathIcons     = PathUser + 'icons\';
   PathTheme     = PathUser + 'MenuThemes\';
   ReleaseVersion    = '1.5.2';
-  PreReleaseVersion = ''; //For Alpha and Beta version
+  PreReleaseVersion = ' Beta'; //For Alpha and Beta version
                                //(ReleaseVersion + PreReleaseVersion = Version)
   UpdateUrl     = 'http://www.salvadorsoftware.com/update/';
   UpdateName    = 'update.ini';
@@ -350,8 +356,7 @@ var
   LauncherOptions     : TOptions;
   TransCompName       : TTransCompName;
   LauncherFileNameXML : String;  
-  OldPoint : TPoint;
-  CopiedNode : PVirtualNode;
+  OldPoint            : TPoint;
 
 implementation
 
@@ -598,6 +603,7 @@ begin
       MenuShowWindow := ChildNodes['TrayiconShowASuite'].Text;
       MenuOption     := ChildNodes['MenuOption'].Text;
       MenuSave       := ChildNodes['MenuSave'].Text;
+      MenuEject      := ChildNodes['TrayiconEject'].Text;;
       MenuExit       := ChildNodes['TrayiconExit'].Text;
       MenuMRU        := ChildNodes['TrayiconMRU'].Text;
     end;
@@ -1055,8 +1061,21 @@ begin
 end;
 
 procedure TfrmMain.miPaste2Click(Sender: TObject);
+var
+  NodeData : PTreeData;
 begin
-  vstList.PasteFromClipboard;
+  NodeData := vstList.GetNodeData(vstList.FocusedNode);
+  if Assigned(NodeData) then
+  begin
+    if NodeData.Tipo = 0 then
+      vstList.DefaultPasteMode := amAddChildLast
+    else
+      vstList.DefaultPasteMode := amInsertAfter;
+    end
+  else
+    vstList.DefaultPasteMode := amAddChildLast;
+  vstList.PasteFromClipboard;         
+  vstList.Expanded[vstList.FocusedNode] := True;
   RefreshList(vstList,CoolTrayIcon1,true);
 end;
 
@@ -1064,6 +1083,23 @@ procedure TfrmMain.ShowMainForm(Sender: TObject);
 begin
   CoolTrayIcon1.ShowMainForm;
   ShowWindow(Application.Handle, SW_RESTORE);
+end;
+
+procedure TfrmMain.EjectDialog(Sender: TObject);
+var
+  WindowsPath : string;
+begin
+  //Call "Safe Remove hardware" Dialog
+  WindowsPath := GetEnvironmentVariable('WinDir');
+  if FileExists(PChar(WindowsPath + '\System32\Rundll32.exe')) then
+  begin
+	   ShellExecute(0,'open',
+                 PChar(WindowsPath + '\System32\Rundll32.exe'),
+                 PChar('Shell32,Control_RunDLL hotplug.dll'),
+                 PChar(WindowsPath + '\System32'),SW_SHOWNORMAL);
+  end;
+  //Close ASuite
+  miExitClick(Sender);
 end;
 
 procedure TfrmMain.miSortItemsClick(Sender: TObject);
@@ -1311,6 +1347,44 @@ begin
     RunExe(Sender);
 end;
 
+procedure TfrmMain.vstListLoadNode(Sender: TBaseVirtualTree; Node: PVirtualNode;
+  Stream: TStream);
+var
+  NodeData,DataSource: PTreeData;
+begin
+  NodeData := vstList.GetNodeData(Node);
+  //Create a new PTreeData as source
+  New(DataSource);
+  Stream.ReadBuffer(DataSource^,SizeOf(TTreeData));
+  //Copy DataSource^ in NodeData^
+  NodeData^ := DataSource^;
+  //Set some personal record fields
+  NodeData.pNode      := Node;
+  NodeData.Name       := 'Copy_' + NodeData.Name;
+  //Icon
+  NodeData.PathCache  := '';
+  NodeData.ImageIndex := -1;
+  NodeData.ImageIndex := IconAdd(vstList, ImageList1, Node);
+  //Menu and MRU
+  NodeData.Tag        := -1;
+  NodeData.MRUItem    := nil;
+  NodeData.MenuNode   := nil;
+  NodeData.MenuItem   := nil;
+  //Some advanced functions
+  AddAutorunInList(NodeData);
+  NodeData.HotKey     := false;
+  //Add software in SchedulerApp
+  if NodeData.SchMode <> 0 then
+  begin
+    SetLength(SchedulerApp,Length(SchedulerApp) + 1);
+    SchedulerApp[Length(SchedulerApp) - 1] := Node;
+  end;
+  //Create shortcut on desktop
+  if (NodeData.ShortcutDesktop) then
+    CreateShortcutOnDesktop('\' + NodeData.Name + '.lnk', NodeData.PathExe[0],NodeData.Parameters,NodeData.WorkingDir);
+  FreeMem(DataSource);
+end;
+
 procedure TfrmMain.vstListNewText(Sender: TBaseVirtualTree; Node: PVirtualNode;
   Column: TColumnIndex; NewText: WideString); 
 var
@@ -1339,6 +1413,15 @@ begin
     if Not(Sender.Selected[Node]) then
       Font.Color := LauncherOptions.FontColor;
   end;
+end;
+
+procedure TfrmMain.vstListSaveNode(Sender: TBaseVirtualTree; Node: PVirtualNode;
+  Stream: TStream);
+var
+  Data: PTreeData;
+begin
+  Data := vstList.GetNodeData(Node);
+  Stream.WriteBuffer(Data^,SizeOf(TTreeData));
 end;
 
 procedure TfrmMain.RunSingleClick(Sender: TObject);

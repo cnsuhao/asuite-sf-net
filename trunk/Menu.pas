@@ -63,6 +63,7 @@ type
     ApplicationEvents1: TApplicationEvents;
     tmrWatchFocus: TTimer;
     imgDividerLong: TImage;
+    imgEject: TImage;
     procedure imgPersonalPictureClick(Sender: TObject);
     procedure imgDragSpaceHiddenMouseDown(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Integer);
@@ -93,6 +94,7 @@ type
     procedure vstMenuGetHint(Sender: TBaseVirtualTree; Node: PVirtualNode;
       Column: TColumnIndex; var LineBreakStyle: TVTTooltipLineBreakStyle;
       var HintText: WideString);
+    procedure imgEjectClick(Sender: TObject);
 	protected
 		procedure CreateParams(var Params: TCreateParams); override;
 	private    
@@ -381,6 +383,11 @@ begin
     ReleaseCapture;
     Perform(WM_SYSCOMMAND, SC_DRAGMOVE, 0);
   end;
+end;
+
+procedure TfrmMenu.imgEjectClick(Sender: TObject);
+begin
+  frmMain.EjectDialog(Sender);
 end;
 
 procedure TfrmMenu.imgPersonalPictureClick(Sender: TObject);

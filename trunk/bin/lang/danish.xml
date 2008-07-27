@@ -45,6 +45,7 @@
    <!--Trayicon Menu-->
    <TrayiconShowASuite>Vis ASuite</TrayiconShowASuite>
        <TrayiconMRU>Sidst brugt</TrayiconMRU>
+	<TrayiconEject>Safely remove hardware</TrayiconEject>
    <TrayiconExit>Luk</TrayiconExit>
 	<!--Trayicon Default Menu-->
 	<DefaultMenuButtonOptions>Options...</DefaultMenuButtonOptions>
