@@ -45,6 +45,7 @@
 	<!--Trayicon Menu-->
 	<TrayiconShowASuite>Zobraziť ASuite</TrayiconShowASuite>
 	<TrayiconMRU>Posledné</TrayiconMRU>
+	<TrayiconEject>Safely remove hardware</TrayiconEject>
 	<TrayiconExit>Koniec</TrayiconExit>
 	<!--Trayicon Default Menu-->
 	<DefaultMenuButtonOptions>Options...</DefaultMenuButtonOptions>

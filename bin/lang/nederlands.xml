@@ -45,6 +45,7 @@
 	<!--Trayicon Menu-->
 	<TrayiconShowASuite>Laat ASuite zien</TrayiconShowASuite>
 	<TrayiconMRU>Recent</TrayiconMRU>
+	<TrayiconEject>Safely remove hardware</TrayiconEject>
 	<TrayiconExit>Afsluiten</TrayiconExit>
 	<!--Trayicon Default Menu-->
 	<DefaultMenuButtonOptions>Options...</DefaultMenuButtonOptions>

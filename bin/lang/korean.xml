@@ -45,6 +45,7 @@
 	<!--Trayicon Menu-->
 	<TrayiconShowASuite>ASuite 보이기</TrayiconShowASuite>
 	<TrayiconMRU>최근 파일</TrayiconMRU>
+	<TrayiconEject>Safely remove hardware</TrayiconEject>
 	<TrayiconExit>종료</TrayiconExit>
 	<!--Trayicon Default Menu-->
 	<DefaultMenuButtonOptions>Options...</DefaultMenuButtonOptions>

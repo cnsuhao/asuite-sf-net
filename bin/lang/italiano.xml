@@ -45,6 +45,7 @@
 	<!--Trayicon Menu-->
 	<TrayiconShowASuite>Visualizza ASuite</TrayiconShowASuite>
 	<TrayiconMRU>Recenti</TrayiconMRU>
+	<TrayiconEject>Rimozione sicura hardware</TrayiconEject>
 	<TrayiconExit>Esci</TrayiconExit>
 	<!--Trayicon Default Menu-->
 	<DefaultMenuButtonOptions>Opzioni...</DefaultMenuButtonOptions>
