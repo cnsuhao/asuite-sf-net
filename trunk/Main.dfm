@@ -539,6 +539,7 @@ object frmMain: TfrmMain
     end
     object miEdit: TMenuItem
       Caption = 'Edit'
+      OnClick = miEditClick
       object miSortList: TMenuItem
         Caption = 'Sort list'
         OnClick = miSortListClick
