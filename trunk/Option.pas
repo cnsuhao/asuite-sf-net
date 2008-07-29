@@ -105,7 +105,7 @@ type
     cbTrayicon: TCheckBox;
     cbHideSearch: TCheckBox;
     cbClassicMenu: TCheckBox;
-    btnMenuFolders: TButton;
+    btnMenuButtons: TButton;
     cxRightClick: TComboBox;
     lbTrayRightClick: TLabel;
     cbMenuHotKey: TCheckBox;
@@ -134,7 +134,7 @@ type
     procedure FormActivate(Sender: TObject);
     procedure cbClassicMenuClick(Sender: TObject);
     procedure cxThemeExit(Sender: TObject);
-    procedure btnMenuFoldersClick(Sender: TObject);
+    procedure btnMenuButtonsClick(Sender: TObject);
     procedure cbMenuHotKeyClick(Sender: TObject);
   private
     { Private declarations }
@@ -147,7 +147,7 @@ var
 
 implementation
 
-uses CommonUtils, ClearElements, Menu, MenuFolders;
+uses CommonUtils, ClearElements, Menu, MenuButtons;
 
 {$R *.dfm}
 
@@ -235,7 +235,7 @@ begin
     //Only default menu
     lbMenuTheme.Caption    := ChildNodes['LabelMenuTheme'].Text;
     cbMenuFade.Caption     := ChildNodes['CheckBoxMenuFade'].Text;
-    btnMenuFolders.Caption := ChildNodes['ButtonMenuFolders'].Text;
+    btnMenuButtons.Caption := ChildNodes['ButtonMenuButtons'].Text;
     //Mouse
     gbMouse.caption      := ChildNodes['GroupBoxMouse'].Text;
     //Side
@@ -298,13 +298,13 @@ begin
   close;
 end;
 
-procedure TfrmOption.btnMenuFoldersClick(Sender: TObject);
+procedure TfrmOption.btnMenuButtonsClick(Sender: TObject);
 begin
   try
-    Application.CreateForm(TfrmMenuFolders, frmMenuFolders);
-    frmMenuFolders.showmodal;
+    Application.CreateForm(TfrmMenuButtons, frmMenuButtons);
+    frmMenuButtons.showmodal;
   finally
-    frmMenuFolders.Free;
+    frmMenuButtons.Free;
   end;
 end;
 
@@ -457,7 +457,7 @@ begin
     cbMenuStartup.Checked := Not(cbClassicMenu.Checked);
   cbMenuStartup.Enabled  := Not(cbClassicMenu.Checked);
   cxTheme.Enabled        := Not(cbClassicMenu.Checked);
-  btnMenuFolders.Enabled := Not(cbClassicMenu.Checked);
+  btnMenuButtons.Enabled := Not(cbClassicMenu.Checked);
   cbMenuFade.Enabled     := Not(cbClassicMenu.Checked);
   cbSubMenuMRU.Enabled   := cbClassicMenu.Checked;
   if Not(cbClassicMenu.Checked) then

@@ -23,7 +23,7 @@ uses
   OrderSoftware in 'OrderSoftware.pas' {frmOrderSoftware},
   RunAs in 'RunAs.pas' {frmRunAs},
   Menu in 'Menu.pas' {frmMenu},
-  MenuFolders in 'MenuFolders.pas' {frmMenuFolders},
+  MenuButtons in 'MenuButtons.pas' {frmMenuButtons},
   Stats in 'Stats.pas' {frmStats};
 
 {$R *.res}

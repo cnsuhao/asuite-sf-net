@@ -26,7 +26,6 @@ object frmOption: TfrmOption
     TabOrder = 0
     object TabSheet1: TTabSheet
       Caption = 'General'
-      ExplicitHeight = 477
       object gbWindow: TGroupBox
         Left = 8
         Top = 88
@@ -386,6 +385,9 @@ object frmOption: TfrmOption
     object TabSheet2: TTabSheet
       Caption = 'Advanced'
       ImageIndex = 4
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
       ExplicitHeight = 477
       object gbRecents: TGroupBox
         Left = 8
@@ -593,7 +595,6 @@ object frmOption: TfrmOption
     object TabSheet3: TTabSheet
       Caption = 'Various'
       ImageIndex = 2
-      ExplicitHeight = 477
       object gbExecution: TGroupBox
         Left = 8
         Top = 8
@@ -712,14 +713,14 @@ object frmOption: TfrmOption
           TabOrder = 1
           OnClick = cbClassicMenuClick
         end
-        object btnMenuFolders: TButton
+        object btnMenuButtons: TButton
           Left = 160
           Top = 150
           Width = 89
           Height = 21
-          Caption = 'Menu folders...'
+          Caption = 'Menu buttons...'
           TabOrder = 6
-          OnClick = btnMenuFoldersClick
+          OnClick = btnMenuButtonsClick
         end
         object cxRightClick: TComboBox
           Left = 8
