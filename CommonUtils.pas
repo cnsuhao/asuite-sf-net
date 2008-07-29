@@ -24,7 +24,7 @@ uses
   Windows, Messages, SysUtils, Classes, Graphics, Forms, Dialogs, Menus,
   ShellApi, VirtualTrees, ActiveX, ShlObj, TlHelp32, Registry, Controls, Consts,
   CommCtrl, ComCtrls, XMLIntf, Main, XMLDoc, ComObj, jpeg, CommonClasses, Variants,
-  CoolTrayIcon;
+  CoolTrayIcon, Clipbrd;
 
   Type
     TGetShortcutType = (gstPathExe,gstParameter,gstWorkingDir);
@@ -138,7 +138,8 @@ procedure EnableTimerCheckList(Sender: TObject);
 function  ExtractDirectoryName(const Filename: string): string;
 function  GetDateTime: String;
 function  GetEnvVarValue(VarName: string): string;
-function  GetFirstFreeIndex(ArrayWString: Array of WideString): Integer;
+function  GetFirstFreeIndex(ArrayWString: Array of WideString): Integer; 
+function  IsFormatInClipBoard(format: Word): Boolean;
 
 { Windows Api }
 function CreateProcessWithLogonW(
@@ -2459,6 +2460,27 @@ begin
   Result := 0;
   while (ArrayWString[Result] <> '') do
     Inc(Result);
+end;
+
+
+function IsFormatInClipBoard(format: Word): Boolean;
+var
+  buf : array [0..60] of Char;
+  n   : Integer;
+  fmt : Word;
+begin
+  //Get clipboard format
+  Result := False;
+  for n := 0 to Clipboard.FormatCount - 1 do
+  begin
+    fmt := Clipboard.Formats[n];
+    GetClipboardFormatName(fmt, buf, Pred(SizeOf(buf)));
+    if fmt = format then
+    begin
+      Result := True;
+      Break;
+    end;
+  end;
 end;
 
 //------------------------------------------------------------------------------

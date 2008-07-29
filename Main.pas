@@ -177,6 +177,7 @@ type
       Stream: TStream);
     procedure vstListLoadNode(Sender: TBaseVirtualTree; Node: PVirtualNode;
       Stream: TStream);
+    procedure miEditClick(Sender: TObject);
   private
     { Private declarations }
     SessionEnding: boolean;
@@ -1174,7 +1175,7 @@ procedure TfrmMain.pmWindowPopup(Sender: TObject);
 var
   NodeData: PTreeData;
   Point   : TPoint;
-  HitInfo : ThitInfo;
+  HitInfo : ThitInfo; 
 begin
   GetCursorPos(Point);
   Point    := vstList.ScreenToClient(Point);
@@ -1236,6 +1237,7 @@ begin
     miWebSite.Enabled       := false;
     miProperty2.Enabled     := false;
   end;
+  miPaste2.Enabled := IsFormatInClipBoard(CF_VIRTUALTREE);
 end;
 
 procedure TfrmMain.vstSearchCompareNodes(Sender: TBaseVirtualTree; Node1,
@@ -1568,6 +1570,11 @@ begin
       ShowCard(vstSearch);
     end;
   RefreshList(vstList,CoolTrayIcon1, true);
+end;
+
+procedure TfrmMain.miEditClick(Sender: TObject);
+begin
+  miPaste1.Enabled := IsFormatInClipBoard(CF_VIRTUALTREE);
 end;
 
 procedure TfrmMain.miExitClick(Sender: TObject);
