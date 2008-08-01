@@ -3,8 +3,8 @@ object frmMenuButtons: TfrmMenuButtons
   Top = 0
   BorderStyle = bsDialog
   Caption = 'Change menu buttons'
-  ClientHeight = 217
-  ClientWidth = 393
+  ClientHeight = 203
+  ClientWidth = 498
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -17,8 +17,8 @@ object frmMenuButtons: TfrmMenuButtons
   PixelsPerInch = 96
   TextHeight = 13
   object btnOk: TButton
-    Left = 224
-    Top = 184
+    Left = 328
+    Top = 168
     Width = 75
     Height = 25
     Caption = 'Ok'
@@ -27,590 +27,121 @@ object frmMenuButtons: TfrmMenuButtons
     OnClick = btnOkClick
   end
   object btnCancel: TButton
-    Left = 310
-    Top = 184
+    Left = 414
+    Top = 168
     Width = 75
     Height = 25
     Caption = 'Cancel'
     TabOrder = 1
     OnClick = btnCancelClick
   end
-  object pgcMenuFolders: TPageControl
+  object tv1: TTreeView
     Left = 8
     Top = 8
-    Width = 377
-    Height = 169
-    ActivePage = tsButton7
+    Width = 97
+    Height = 153
+    Indent = 19
     TabOrder = 2
-    object tsButton1: TTabSheet
-      Caption = 'Button1'
-      object lbName1: TLabel
-        Left = 8
-        Top = 0
-        Width = 27
-        Height = 13
-        Margins.Bottom = 0
-        Caption = 'Name'
-      end
-      object lbPathExe: TLabel
-        Left = 8
-        Top = 40
-        Width = 161
-        Height = 13
-        Margins.Bottom = 0
-        Caption = 'Executable/folder/web page path'
-      end
-      object lbPathIcon1: TLabel
-        Left = 8
-        Top = 80
-        Width = 132
-        Height = 13
-        Margins.Bottom = 0
-        Caption = 'Custom icon path (optional)'
-      end
-      object edtName1: TEdit
-        Left = 8
-        Top = 16
-        Width = 145
-        Height = 21
-        MaxLength = 12
-        TabOrder = 0
-        Text = 'Documents'
-      end
-      object edtPathExe1: TEdit
-        Left = 8
-        Top = 56
-        Width = 289
-        Height = 21
-        TabOrder = 1
-        Text = '$Drive\Documents'
-      end
-      object edtPathIcon1: TEdit
-        Left = 8
-        Top = 96
-        Width = 289
-        Height = 21
-        ParentShowHint = False
-        ShowHint = True
-        TabOrder = 3
-        Text = '$ASuite\'
-      end
-      object btnBrowseB1: TButton
-        Left = 304
-        Top = 96
-        Width = 57
-        Height = 21
-        Caption = 'Browse'
-        TabOrder = 4
-        OnClick = Browse
-      end
-      object btnBrowseA1: TButton
-        Left = 304
-        Top = 56
-        Width = 57
-        Height = 21
-        Caption = 'Browse'
-        TabOrder = 2
-        OnClick = Browse
-      end
-      object cbActiveButton1: TCheckBox
-        Left = 8
-        Top = 120
-        Width = 225
-        Height = 17
-        Caption = 'Active this button'
-        TabOrder = 5
-      end
+    Items.NodeData = {
+      0108000000270000000000000000000000FFFFFFFFFFFFFFFF00000000000000
+      000742007500740074006F006E003100270000000000000000000000FFFFFFFF
+      FFFFFFFF00000000000000000742007500740074006F006E0032002700000000
+      00000000000000FFFFFFFFFFFFFFFF0000000000000000074200750074007400
+      6F006E003300270000000000000000000000FFFFFFFFFFFFFFFF000000000000
+      00000742007500740074006F006E003400270000000000000000000000FFFFFF
+      FFFFFFFFFF00000000000000000742007500740074006F006E00350027000000
+      0000000000000000FFFFFFFFFFFFFFFF00000000000000000742007500740074
+      006F006E003600270000000000000000000000FFFFFFFFFFFFFFFF0000000000
+      0000000742007500740074006F006E003700270000000000000000000000FFFF
+      FFFFFFFFFFFF00000000000000000742007500740074006F006E003800}
+  end
+  object pnl1: TPanel
+    Left = 112
+    Top = 8
+    Width = 377
+    Height = 153
+    Caption = 'pnl1'
+    TabOrder = 3
+    object lbPathIcon1: TLabel
+      Left = 8
+      Top = 88
+      Width = 132
+      Height = 13
+      Margins.Bottom = 0
+      Caption = 'Custom icon path (optional)'
     end
-    object tsButton2: TTabSheet
-      Caption = 'Button2'
-      ImageIndex = 1
-      object lbName2: TLabel
-        Left = 8
-        Top = 0
-        Width = 27
-        Height = 13
-        Margins.Bottom = 0
-        Caption = 'Name'
-      end
-      object lbPathExe2: TLabel
-        Left = 8
-        Top = 40
-        Width = 161
-        Height = 13
-        Margins.Bottom = 0
-        Caption = 'Executable/folder/web page path'
-      end
-      object lbPathIcon2: TLabel
-        Left = 8
-        Top = 80
-        Width = 132
-        Height = 13
-        Margins.Bottom = 0
-        Caption = 'Custom icon path (optional)'
-      end
-      object edtName2: TEdit
-        Left = 8
-        Top = 16
-        Width = 145
-        Height = 21
-        MaxLength = 12
-        TabOrder = 0
-        Text = 'Documents'
-      end
-      object edtPathExe2: TEdit
-        Left = 8
-        Top = 56
-        Width = 289
-        Height = 21
-        TabOrder = 1
-        Text = '$Drive\Documents'
-      end
-      object btnBrowseA2: TButton
-        Left = 304
-        Top = 56
-        Width = 57
-        Height = 21
-        Caption = 'Browse'
-        TabOrder = 2
-        OnClick = Browse
-      end
-      object edtPathIcon2: TEdit
-        Left = 8
-        Top = 96
-        Width = 289
-        Height = 21
-        ParentShowHint = False
-        ShowHint = True
-        TabOrder = 3
-        Text = '$ASuite\'
-      end
-      object cbActiveButton2: TCheckBox
-        Left = 8
-        Top = 120
-        Width = 225
-        Height = 17
-        Caption = 'Active this button'
-        TabOrder = 5
-      end
-      object btnBrowseB2: TButton
-        Left = 304
-        Top = 96
-        Width = 57
-        Height = 21
-        Caption = 'Browse'
-        TabOrder = 4
-        OnClick = Browse
-      end
+    object lbPathExe: TLabel
+      Left = 8
+      Top = 48
+      Width = 161
+      Height = 13
+      Margins.Bottom = 0
+      Caption = 'Executable/folder/web page path'
     end
-    object tsButton3: TTabSheet
-      Caption = 'Button3'
-      ImageIndex = 2
-      object lbName3: TLabel
-        Left = 8
-        Top = 0
-        Width = 27
-        Height = 13
-        Margins.Bottom = 0
-        Caption = 'Name'
-      end
-      object lbPathExe3: TLabel
-        Left = 8
-        Top = 40
-        Width = 161
-        Height = 13
-        Margins.Bottom = 0
-        Caption = 'Executable/folder/web page path'
-      end
-      object lbPathIcon3: TLabel
-        Left = 8
-        Top = 80
-        Width = 132
-        Height = 13
-        Margins.Bottom = 0
-        Caption = 'Custom icon path (optional)'
-      end
-      object edtName3: TEdit
-        Left = 8
-        Top = 16
-        Width = 145
-        Height = 21
-        MaxLength = 12
-        TabOrder = 0
-        Text = 'Documents'
-      end
-      object edtPathExe3: TEdit
-        Left = 8
-        Top = 56
-        Width = 289
-        Height = 21
-        TabOrder = 1
-        Text = '$Drive\Documents'
-      end
-      object btnBrowseA3: TButton
-        Left = 304
-        Top = 56
-        Width = 57
-        Height = 21
-        Caption = 'Browse'
-        TabOrder = 2
-        OnClick = Browse
-      end
-      object edtPathIcon3: TEdit
-        Left = 8
-        Top = 96
-        Width = 289
-        Height = 21
-        ParentShowHint = False
-        ShowHint = True
-        TabOrder = 3
-        Text = '$ASuite\'
-      end
-      object cbActiveButton3: TCheckBox
-        Left = 8
-        Top = 120
-        Width = 225
-        Height = 17
-        Caption = 'Active this button'
-        TabOrder = 5
-      end
-      object btnBrowseB3: TButton
-        Left = 304
-        Top = 96
-        Width = 57
-        Height = 21
-        Caption = 'Browse'
-        TabOrder = 4
-        OnClick = Browse
-      end
+    object lbName1: TLabel
+      Left = 8
+      Top = 8
+      Width = 27
+      Height = 13
+      Margins.Bottom = 0
+      Caption = 'Name'
     end
-    object tsButton4: TTabSheet
-      Caption = 'Button4'
-      ImageIndex = 3
-      object lbName4: TLabel
-        Left = 8
-        Top = 0
-        Width = 27
-        Height = 13
-        Margins.Bottom = 0
-        Caption = 'Name'
-      end
-      object lbPathExe4: TLabel
-        Left = 8
-        Top = 40
-        Width = 161
-        Height = 13
-        Margins.Bottom = 0
-        Caption = 'Executable/folder/web page path'
-      end
-      object lbPathIcon4: TLabel
-        Left = 8
-        Top = 80
-        Width = 132
-        Height = 13
-        Margins.Bottom = 0
-        Caption = 'Custom icon path (optional)'
-      end
-      object edtName4: TEdit
-        Left = 8
-        Top = 16
-        Width = 145
-        Height = 21
-        MaxLength = 12
-        TabOrder = 0
-        Text = 'Documents'
-      end
-      object edtPathExe4: TEdit
-        Left = 8
-        Top = 56
-        Width = 289
-        Height = 21
-        TabOrder = 1
-        Text = '$Drive\Documents'
-      end
-      object btnBrowseA4: TButton
-        Left = 304
-        Top = 56
-        Width = 57
-        Height = 21
-        Caption = 'Browse'
-        TabOrder = 2
-        OnClick = Browse
-      end
-      object edtPathIcon4: TEdit
-        Left = 8
-        Top = 96
-        Width = 289
-        Height = 21
-        ParentShowHint = False
-        ShowHint = True
-        TabOrder = 3
-        Text = '$ASuite\'
-      end
-      object cbActiveButton4: TCheckBox
-        Left = 8
-        Top = 120
-        Width = 225
-        Height = 17
-        Caption = 'Active this button'
-        TabOrder = 5
-      end
-      object btnBrowseB4: TButton
-        Left = 304
-        Top = 96
-        Width = 57
-        Height = 21
-        Caption = 'Browse'
-        TabOrder = 4
-        OnClick = Browse
-      end
+    object cbActiveButton1: TCheckBox
+      Left = 8
+      Top = 128
+      Width = 225
+      Height = 17
+      Caption = 'Active this button'
+      TabOrder = 0
     end
-    object tsButton5: TTabSheet
-      Caption = 'Button5'
-      ImageIndex = 4
-      object lbName5: TLabel
-        Left = 8
-        Top = 0
-        Width = 27
-        Height = 13
-        Margins.Bottom = 0
-        Caption = 'Name'
-      end
-      object lbPathExe5: TLabel
-        Left = 8
-        Top = 40
-        Width = 161
-        Height = 13
-        Margins.Bottom = 0
-        Caption = 'Executable/folder/web page path'
-      end
-      object lbPathIcon5: TLabel
-        Left = 8
-        Top = 80
-        Width = 132
-        Height = 13
-        Margins.Bottom = 0
-        Caption = 'Custom icon path (optional)'
-      end
-      object edtName5: TEdit
-        Left = 8
-        Top = 16
-        Width = 145
-        Height = 21
-        MaxLength = 12
-        TabOrder = 0
-        Text = 'Documents'
-      end
-      object edtPathExe5: TEdit
-        Left = 8
-        Top = 56
-        Width = 289
-        Height = 21
-        TabOrder = 1
-        Text = '$Drive\Documents'
-      end
-      object btnBrowseA5: TButton
-        Left = 304
-        Top = 56
-        Width = 57
-        Height = 21
-        Caption = 'Browse'
-        TabOrder = 2
-        OnClick = Browse
-      end
-      object edtPathIcon5: TEdit
-        Left = 8
-        Top = 96
-        Width = 289
-        Height = 21
-        ParentShowHint = False
-        ShowHint = True
-        TabOrder = 3
-        Text = '$ASuite\'
-      end
-      object cbActiveButton5: TCheckBox
-        Left = 8
-        Top = 120
-        Width = 225
-        Height = 17
-        Caption = 'Active this button'
-        TabOrder = 5
-      end
-      object btnBrowseB5: TButton
-        Left = 304
-        Top = 96
-        Width = 57
-        Height = 21
-        Caption = 'Browse'
-        TabOrder = 4
-        OnClick = Browse
-      end
+    object edtPathIcon1: TEdit
+      Left = 8
+      Top = 104
+      Width = 289
+      Height = 21
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 1
+      Text = '$ASuite\'
     end
-    object tsButton6: TTabSheet
-      Caption = 'Button6'
-      ImageIndex = 5
-      object lbName6: TLabel
-        Left = 8
-        Top = 0
-        Width = 27
-        Height = 13
-        Margins.Bottom = 0
-        Caption = 'Name'
-      end
-      object lbPathExe6: TLabel
-        Left = 8
-        Top = 40
-        Width = 161
-        Height = 13
-        Margins.Bottom = 0
-        Caption = 'Executable/folder/web page path'
-      end
-      object lbPathIcon6: TLabel
-        Left = 8
-        Top = 80
-        Width = 132
-        Height = 13
-        Margins.Bottom = 0
-        Caption = 'Custom icon path (optional)'
-      end
-      object edtName6: TEdit
-        Left = 8
-        Top = 16
-        Width = 145
-        Height = 21
-        MaxLength = 12
-        TabOrder = 0
-        Text = 'Documents'
-      end
-      object edtPathExe6: TEdit
-        Left = 8
-        Top = 56
-        Width = 289
-        Height = 21
-        TabOrder = 1
-        Text = '$Drive\Documents'
-      end
-      object btnBrowseA6: TButton
-        Left = 304
-        Top = 56
-        Width = 57
-        Height = 21
-        Caption = 'Browse'
-        TabOrder = 2
-        OnClick = Browse
-      end
-      object edtPathIcon6: TEdit
-        Left = 8
-        Top = 96
-        Width = 289
-        Height = 21
-        ParentShowHint = False
-        ShowHint = True
-        TabOrder = 3
-        Text = '$ASuite\'
-      end
-      object cbActiveButton6: TCheckBox
-        Left = 8
-        Top = 120
-        Width = 225
-        Height = 17
-        Caption = 'Active this button'
-        TabOrder = 5
-      end
-      object btnBrowseB6: TButton
-        Left = 304
-        Top = 96
-        Width = 57
-        Height = 21
-        Caption = 'Browse'
-        TabOrder = 4
-        OnClick = Browse
-      end
+    object edtPathExe1: TEdit
+      Left = 8
+      Top = 64
+      Width = 289
+      Height = 21
+      TabOrder = 2
+      Text = '$Drive\Documents'
     end
-    object tsButton7: TTabSheet
-      Caption = 'Button7'
-      ImageIndex = 6
-      object lbName7: TLabel
-        Left = 8
-        Top = 0
-        Width = 27
-        Height = 13
-        Margins.Bottom = 0
-        Caption = 'Name'
-      end
-      object lbPathExe7: TLabel
-        Left = 8
-        Top = 40
-        Width = 161
-        Height = 13
-        Margins.Bottom = 0
-        Caption = 'Executable/folder/web page path'
-      end
-      object lbPathIcon7: TLabel
-        Left = 8
-        Top = 80
-        Width = 132
-        Height = 13
-        Margins.Bottom = 0
-        Caption = 'Custom icon path (optional)'
-      end
-      object edtName7: TEdit
-        Left = 8
-        Top = 16
-        Width = 145
-        Height = 21
-        MaxLength = 12
-        TabOrder = 0
-        Text = 'Documents'
-      end
-      object edtPathExe7: TEdit
-        Left = 8
-        Top = 56
-        Width = 289
-        Height = 21
-        TabOrder = 1
-        Text = '$Drive\Documents'
-      end
-      object btnBrowseA7: TButton
-        Left = 304
-        Top = 56
-        Width = 57
-        Height = 21
-        Caption = 'Browse'
-        TabOrder = 2
-        OnClick = Browse
-      end
-      object edtPathIcon7: TEdit
-        Left = 8
-        Top = 96
-        Width = 289
-        Height = 21
-        ParentShowHint = False
-        ShowHint = True
-        TabOrder = 3
-        Text = '$ASuite\'
-      end
-      object cbActiveButton7: TCheckBox
-        Left = 8
-        Top = 120
-        Width = 225
-        Height = 17
-        Caption = 'Active this button'
-        TabOrder = 5
-      end
-      object btnBrowseB7: TButton
-        Left = 304
-        Top = 96
-        Width = 57
-        Height = 21
-        Caption = 'Browse'
-        TabOrder = 4
-        OnClick = Browse
-      end
+    object edtName1: TEdit
+      Left = 8
+      Top = 24
+      Width = 145
+      Height = 21
+      MaxLength = 12
+      TabOrder = 3
+      Text = 'Documents'
+    end
+    object btnBrowseA1: TButton
+      Left = 304
+      Top = 64
+      Width = 57
+      Height = 21
+      Caption = 'Browse'
+      TabOrder = 4
+      OnClick = Browse
+    end
+    object btnBrowseB1: TButton
+      Left = 304
+      Top = 104
+      Width = 57
+      Height = 21
+      Caption = 'Browse'
+      TabOrder = 5
+      OnClick = Browse
     end
   end
   object OpenDialog1: TOpenDialog
     Left = 8
-    Top = 184
+    Top = 168
   end
 end
