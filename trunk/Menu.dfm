@@ -903,38 +903,6 @@ object frmMenu: TfrmMenu
     Stretch = True
     OnClick = imgCloseClick
   end
-  object imgDocuments: TImage
-    Left = 272
-    Top = 154
-    Width = 24
-    Height = 24
-    Enabled = False
-    Transparent = True
-  end
-  object imgMusic: TImage
-    Left = 272
-    Top = 186
-    Width = 24
-    Height = 24
-    Enabled = False
-    Transparent = True
-  end
-  object imgPictures: TImage
-    Left = 272
-    Top = 218
-    Width = 24
-    Height = 24
-    Enabled = False
-    Transparent = True
-  end
-  object imgVideos: TImage
-    Left = 272
-    Top = 250
-    Width = 24
-    Height = 24
-    Enabled = False
-    Transparent = True
-  end
   object lblDriveName: TLabel
     Left = 8
     Top = 549
@@ -953,7 +921,7 @@ object frmMenu: TfrmMenu
     ParentFont = False
     Transparent = True
   end
-  object imgHelp: TImage
+  object imgAbout: TImage
     Left = 272
     Top = 350
     Width = 24
@@ -1010,14 +978,6 @@ object frmMenu: TfrmMenu
     ParentFont = False
     Transparent = True
     Layout = tlCenter
-  end
-  object imgExplore: TImage
-    Left = 272
-    Top = 282
-    Width = 24
-    Height = 24
-    Enabled = False
-    Transparent = True
   end
   object imgASuite: TImage
     Left = 272
@@ -1176,109 +1136,6 @@ object frmMenu: TfrmMenu
     Margin = 33
     ParentFont = False
     OnClick = sbtnASuiteClick
-  end
-  object sbtnExplore: TClassicSpeedButton
-    Left = 269
-    Top = 278
-    Width = 120
-    Height = 30
-    Margins.Left = 2
-    Margins.Top = 2
-    Margins.Right = 2
-    Margins.Bottom = 2
-    Caption = '&Explore'
-    Flat = True
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWhite
-    Font.Height = -11
-    Font.Name = 'Tahoma'
-    Font.Style = [fsBold]
-    Margin = 33
-    ParentFont = False
-    OnClick = sbtnExploreClick
-  end
-  object sbtnFolder3: TClassicSpeedButton
-    Tag = 3
-    Left = 269
-    Top = 246
-    Width = 120
-    Height = 30
-    Margins.Left = 2
-    Margins.Top = 2
-    Margins.Right = 2
-    Margins.Bottom = 2
-    Caption = '&Videos'
-    Flat = True
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWhite
-    Font.Height = -11
-    Font.Name = 'Tahoma'
-    Font.Style = [fsBold]
-    Margin = 33
-    ParentFont = False
-    OnClick = ButtonFolder
-  end
-  object sbtnFolder2: TClassicSpeedButton
-    Tag = 2
-    Left = 269
-    Top = 214
-    Width = 120
-    Height = 30
-    Margins.Left = 2
-    Margins.Top = 2
-    Margins.Right = 2
-    Margins.Bottom = 2
-    Caption = '&Pictures'
-    Flat = True
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWhite
-    Font.Height = -11
-    Font.Name = 'Tahoma'
-    Font.Style = [fsBold]
-    Margin = 33
-    ParentFont = False
-    OnClick = ButtonFolder
-  end
-  object sbtnFolder1: TClassicSpeedButton
-    Tag = 1
-    Left = 269
-    Top = 182
-    Width = 120
-    Height = 30
-    Margins.Left = 2
-    Margins.Top = 2
-    Margins.Right = 2
-    Margins.Bottom = 2
-    Caption = '&Music'
-    Flat = True
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWhite
-    Font.Height = -11
-    Font.Name = 'Tahoma'
-    Font.Style = [fsBold]
-    Margin = 33
-    ParentFont = False
-    OnClick = ButtonFolder
-  end
-  object sbtnFolder0: TClassicSpeedButton
-    Left = 269
-    Top = 150
-    Width = 120
-    Height = 30
-    Margins.Left = 2
-    Margins.Top = 2
-    Margins.Right = 2
-    Margins.Bottom = 2
-    Caption = '&Documents'
-    Flat = True
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWhite
-    Font.Height = -11
-    Font.Name = 'Tahoma'
-    Font.Style = [fsBold]
-    Margin = 33
-    ParentFont = False
-    OnClick = ButtonFolder
   end
   object imgDragSpaceHidden: TImage
     Left = 0
@@ -2233,6 +2090,7 @@ object frmMenu: TfrmMenu
     Header.Font.Style = []
     Header.MainColumn = -1
     Header.Options = [hoColumnResize, hoDrag]
+    HintMode = hmHint
     ScrollBarOptions.ScrollBars = ssNone
     TabOrder = 0
     TreeOptions.PaintOptions = [toHideFocusRect, toShowBackground, toShowDropmark, toShowTreeLines, toThemeAware, toUseBlendedImages]

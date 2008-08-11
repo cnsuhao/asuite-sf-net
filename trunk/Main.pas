@@ -23,7 +23,8 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, Menus, ComCtrls, ShellApi, StdCtrls, CoolTrayIcon, VirtualTrees,
-  ActiveX, xmldom, msxmldom, XMLDoc, ImgList, XMLIntf, ExtCtrls, Sensor, ShlObj, CommonClasses, Clipbrd;
+  ActiveX, xmldom, msxmldom, XMLDoc, ImgList, XMLIntf, ExtCtrls, Sensor, ShlObj,
+  CommonClasses, MenuButtons;
 
 type
   TfrmMain = class(TForm)
@@ -301,8 +302,7 @@ type
     MenuTheme        : String;  //Only default menu
     RefreshMenuTheme : Boolean; //Only default menu
     MenuFade         : Boolean; //Only default menu
-    MenuFolderName : Array[0..3] of String; //Only default menu //0 Documents, 1 Music
-    MenuFolderPath : Array[0..3] of String; //Only default menu //2 Pictures, 3 Video
+    TrayMenuButtons  : Array[0..7] of TMenuButtons;
     MenuPersonalPicture : String;
     //Sensors
     SensorLeftClick  : Array[0..3] of Integer; //0 Top, 1 Left, 2 Right, 3 Bottom
@@ -1151,6 +1151,7 @@ procedure TfrmMain.pcListChange(Sender: TObject);
 var
   ActiveTab : Boolean;
 begin
+  ActiveTab := False;
   case pcList.ActivePageIndex of
     //List
     0: ActiveTab := True;

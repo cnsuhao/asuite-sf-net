@@ -1585,7 +1585,11 @@ end;
 
 procedure LoadOptionsXML(XMLNode: IXMLNode);
 var
-  I: Integer;
+  I : Integer;
+  DefaultButtonName, DefaultButtonPathExe,
+  DefaultButtonPathIcon : string;
+  DefaultButtonEnable   : boolean;
+  ButtonNode            : IXMLNode;
 begin
   with XMLNode do
   begin
@@ -1677,13 +1681,84 @@ begin
     LauncherOptions.MenuPersonalPicture := ReadStringXML(ChildNodes['MenuPersonalPicture'],'Default');
     LauncherOptions.ActionOnExe  := ReadIntegerXML(ChildNodes['ActionOnExe'],0);
     LauncherOptions.RunSingleClick := ReadBooleanXML(ChildNodes['RunSingleClick'],false);
-    for I := 0 to 3 do
+    if XMLNode.ChildNodes['MenuFolders'].HasChildNodes then
+    begin   
+      //Old MenuFolders
       with XMLNode.ChildNodes['MenuFolders'] do
       begin
-        if ChildNodes['Folder' + IntToStr(I)].Attributes['name'] <> null then
-          LauncherOptions.MenuFolderName[I] := ChildNodes['Folder' + IntToStr(I)].Attributes['name'];
-        LauncherOptions.MenuFolderPath[I] := ReadStringXML(ChildNodes['Folder' + IntToStr(I)],'');
+        for I := 0 to 3 do
+        begin
+          if ChildNodes['Folder' + IntToStr(I)].Attributes['name'] <> null then
+            LauncherOptions.TrayMenuButtons[I].Name  := ChildNodes['Folder' + IntToStr(I)].Attributes['name'];
+          LauncherOptions.TrayMenuButtons[I].PathExe := ReadStringXML(ChildNodes['Folder' + IntToStr(I)],'');
+        LauncherOptions.TrayMenuButtons[I].Enable    := True;
+        end;
       end;
+    end
+    else begin
+      //New MenuButtons
+      DefaultButtonEnable  := False;
+      for I := 0 to 7 do
+      begin
+        //Default TrayiconMenu Buttons
+        ButtonNode := XMLNode.ChildNodes['MenuButtons'].ChildNodes['Button' + IntToStr(I)];
+        case I of
+        0:
+          begin
+            DefaultButtonName     := 'Documents';
+            DefaultButtonPathExe  := '$Drive\Documents';
+            DefaultButtonPathIcon := PathTheme + LauncherOptions.MenuTheme + '\IconTheme\documents.ico';
+            DefaultButtonEnable   := True;
+          end;
+        1:
+          begin
+            DefaultButtonName     := 'Music';
+            DefaultButtonPathExe  := '$Drive\Documents\Music';
+            DefaultButtonPathIcon := PathTheme + LauncherOptions.MenuTheme + '\IconTheme\music.ico';
+            DefaultButtonEnable   := True;
+          end;
+        2:
+          begin
+            DefaultButtonName     := 'Pictures';
+            DefaultButtonPathExe  := '$Drive\Documents\Pictures';
+            DefaultButtonPathIcon := PathTheme + LauncherOptions.MenuTheme + '\IconTheme\pictures.ico';
+            DefaultButtonEnable   := True;
+          end;
+        3:
+          begin
+            DefaultButtonName     := 'Video';
+            DefaultButtonPathExe  := '$Drive\Documents\Video';
+            DefaultButtonPathIcon := PathTheme + LauncherOptions.MenuTheme + '\IconTheme\videos.ico';
+            DefaultButtonEnable   := True;
+          end;
+        4:
+          begin
+            DefaultButtonName     := 'Explore';
+            DefaultButtonPathExe  := '$Drive';
+            DefaultButtonPathIcon := PathTheme + LauncherOptions.MenuTheme + '\IconTheme\explore.ico';
+            DefaultButtonEnable   := True;
+          end;
+        5..7:
+          begin
+            DefaultButtonName     := 'Button' + IntToStr(I);
+            DefaultButtonPathExe  := '';
+            DefaultButtonPathIcon := '';
+            DefaultButtonEnable   := False;
+          end;
+        end;
+        //Load MenuButton's settings
+        with LauncherOptions.TrayMenuButtons[I] do
+        begin
+          if ButtonNode.Attributes['name'] <> null then
+            Name   := ButtonNode.Attributes['name']
+          else
+            Name   := DefaultButtonName;
+          PathExe  := ReadStringXML(ButtonNode.ChildNodes['PathExe'],DefaultButtonPathExe);
+          PathIcon := ReadStringXML(ButtonNode.ChildNodes['PathIcon'],DefaultButtonPathIcon);
+          Enable   := ReadBooleanXML(ButtonNode.ChildNodes['Enable'],DefaultButtonEnable);
+        end;
+      end;
+    end;
     {$IfDef ASuite}
     //FrmMain's position
     if (LauncherOptions.ActiveFormCard) and Not(FileExists(LauncherFileNameXML)) then
@@ -1725,7 +1800,8 @@ end;
 
 procedure SaveOptionsXML(XMLNode: IXMLNode);
 var
-  I: Integer;
+  I : Integer;
+  MenuButtonsNode, ButtonNode : IXMLNode;
 begin
   with XMLNode do
   begin
@@ -1814,12 +1890,16 @@ begin
     //Only default menu
     AddChild('MenuTheme').Text  := LauncherOptions.MenuTheme;
     AddChild('MenuFade').Text   := BoolToStr(LauncherOptions.MenuFade);
-    for I := 0 to 3 do
-      with XMLNode.ChildNodes['MenuFolders'] do
-      begin
-        AddChild('Folder' + IntToStr(I)).Text := LauncherOptions.MenuFolderPath[I];
-        ChildNodes['Folder' + IntToStr(I)].Attributes['name'] := LauncherOptions.MenuFolderName[I];
-      end;
+    //MenuButtons
+    MenuButtonsNode := AddChild('MenuButtons'); 
+    for I := 0 to 7 do
+    begin
+      ButtonNode := MenuButtonsNode.AddChild('Button' + IntToStr(I));
+      ButtonNode.Attributes['name'] := LauncherOptions.TrayMenuButtons[I].Name;
+      ButtonNode.AddChild('PathExe').Text  := LauncherOptions.TrayMenuButtons[I].PathExe;
+      ButtonNode.AddChild('PathIcon').Text := LauncherOptions.TrayMenuButtons[I].PathIcon;
+      ButtonNode.AddChild('Enable').Text   := BoolToStr(LauncherOptions.TrayMenuButtons[I].Enable);
+    end;
     AddChild('MenuPersonalPicture').Text := LauncherOptions.MenuPersonalPicture;
     AddChild('ActionOnExe').Text      := IntToStr(LauncherOptions.ActionOnExe);
     AddChild('RunSingleClick').Text   := BoolToStr(LauncherOptions.RunSingleClick);
@@ -1840,7 +1920,6 @@ procedure UpdateOptions;
 var
   BackgroundBMP  : TBitmap;
   BackgroundJPEG : TJPEGImage;
-  I : Integer;
 begin
   with frmMain do
   begin
@@ -1871,35 +1950,6 @@ begin
         {$else}
         Icon.LoadFromFile(RelativeToAbsolute(PathUser + 'icons\0.ico'))
         {$endif}
-      end;
-    end;
-    //Default menu folders
-    for I := 0 to 3 do
-    begin
-      if LauncherOptions.MenuFolderPath[I] = '' then
-      begin
-        case I of
-          0:
-          begin
-            LauncherOptions.MenuFolderName[I] := 'Documents';
-            LauncherOptions.MenuFolderPath[I] := '$Drive\Documents';
-          end;
-          1:
-          begin
-            LauncherOptions.MenuFolderName[I] := 'Music';
-            LauncherOptions.MenuFolderPath[I] := '$Drive\Documents\Music';
-          end;
-          2:
-          begin
-            LauncherOptions.MenuFolderName[I] := 'Pictures';
-            LauncherOptions.MenuFolderPath[I] := '$Drive\Documents\Pictures';
-          end;
-          3:
-          begin
-            LauncherOptions.MenuFolderName[I] := 'Video';
-            LauncherOptions.MenuFolderPath[I] := '$Drive\Documents\Video';
-          end;
-        end;
       end;
     end;
     //frmMain on top

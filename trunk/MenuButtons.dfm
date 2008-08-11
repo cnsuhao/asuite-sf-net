@@ -35,13 +35,14 @@ object frmMenuButtons: TfrmMenuButtons
     TabOrder = 1
     OnClick = btnCancelClick
   end
-  object tv1: TTreeView
+  object tvMenuButtons: TTreeView
     Left = 8
     Top = 8
     Width = 97
     Height = 153
     Indent = 19
     TabOrder = 2
+    OnClick = tvMenuButtonsClick
     Items.NodeData = {
       0108000000270000000000000000000000FFFFFFFFFFFFFFFF00000000000000
       000742007500740074006F006E003100270000000000000000000000FFFFFFFF
@@ -55,14 +56,13 @@ object frmMenuButtons: TfrmMenuButtons
       0000000742007500740074006F006E003700270000000000000000000000FFFF
       FFFFFFFFFFFF00000000000000000742007500740074006F006E003800}
   end
-  object pnl1: TPanel
+  object pnlSettings: TPanel
     Left = 112
     Top = 8
     Width = 377
     Height = 153
-    Caption = 'pnl1'
     TabOrder = 3
-    object lbPathIcon1: TLabel
+    object lbPathIcon: TLabel
       Left = 8
       Top = 88
       Width = 132
@@ -78,7 +78,7 @@ object frmMenuButtons: TfrmMenuButtons
       Margins.Bottom = 0
       Caption = 'Executable/folder/web page path'
     end
-    object lbName1: TLabel
+    object lbName: TLabel
       Left = 8
       Top = 8
       Width = 27
@@ -86,57 +86,54 @@ object frmMenuButtons: TfrmMenuButtons
       Margins.Bottom = 0
       Caption = 'Name'
     end
-    object cbActiveButton1: TCheckBox
+    object cbActiveButton: TCheckBox
       Left = 8
       Top = 128
       Width = 225
       Height = 17
       Caption = 'Active this button'
-      TabOrder = 0
+      TabOrder = 5
     end
-    object edtPathIcon1: TEdit
+    object edtPathIcon: TEdit
       Left = 8
       Top = 104
       Width = 289
       Height = 21
       ParentShowHint = False
       ShowHint = True
-      TabOrder = 1
-      Text = '$ASuite\'
+      TabOrder = 3
     end
-    object edtPathExe1: TEdit
+    object edtPathExe: TEdit
       Left = 8
       Top = 64
       Width = 289
       Height = 21
-      TabOrder = 2
-      Text = '$Drive\Documents'
+      TabOrder = 1
     end
-    object edtName1: TEdit
+    object edtName: TEdit
       Left = 8
       Top = 24
       Width = 145
       Height = 21
       MaxLength = 12
-      TabOrder = 3
-      Text = 'Documents'
+      TabOrder = 0
     end
-    object btnBrowseA1: TButton
+    object btnBrowseExe: TButton
       Left = 304
       Top = 64
       Width = 57
       Height = 21
       Caption = 'Browse'
-      TabOrder = 4
+      TabOrder = 2
       OnClick = Browse
     end
-    object btnBrowseB1: TButton
+    object btnBrowseIcon: TButton
       Left = 304
       Top = 104
       Width = 57
       Height = 21
       Caption = 'Browse'
-      TabOrder = 5
+      TabOrder = 4
       OnClick = Browse
     end
   end
