@@ -144,7 +144,7 @@
 	<CheckBoxClassicMenu>Utilizar el menú clásico</CheckBoxClassicMenu>
 	<!--Trayicon Default Menu-->
 	<LabelMenuTheme>Tema</LabelMenuTheme>
-	<ButtonMenuFolders>Carpetas menú</ButtonMenuFolders>
+	<ButtonMenuButtons>Carpetas menú</ButtonMenuButtons>
 	<CheckBoxMenuFade>Mostrar y ocultar menú con difuminado</CheckBoxMenuFade>
 	<!--Mouse-->
 	<GroupBoxMouse>Sensores del ratón</GroupBoxMouse>
@@ -275,13 +275,15 @@
 	<ButtonOk>Ok</ButtonOk>
 	<ButtonCancel>Cancelar</ButtonCancel>
   </Form11>
-  <Form12>
-	<Form12Caption>Cambiar carpetas del menú</Form12Caption>
-	<LabelFolderName>Nombre de carpeta</LabelFolderName>
-	<LabelFolderPath>Ruta de la carpeta</LabelFolderPath>
-	<ButtonBrowse>Explorar</ButtonBrowse>
+  <Form12>	
+	<Form12Caption>Change menu buttons</Form12Caption>
+	<LabelName>Name</LabelName>
+	<LabelPathExe>Executable/folder/web page path</LabelPathExe>
+	<LabelPathIcon>Custom icon path (optional)</LabelPathIcon>
+	<CheckBoxActiveButton>Active this button</CheckBoxActiveButton>
+	<ButtonBrowse>Browse</ButtonBrowse>
 	<ButtonOk>Ok</ButtonOk>
-	<ButtonCancel>Cancelar</ButtonCancel>
+	<ButtonCancel>Cancel</ButtonCancel>
   </Form12>
   <Form13>
 	<Form13Caption>Stats</Form13Caption>

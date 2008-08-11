@@ -143,7 +143,7 @@
 	<CheckBoxClassicMenu>クラシック メニューを使用する</CheckBoxClassicMenu>
 	<!--Trayicon Default Menu-->
 	<LabelMenuTheme>テーマ</LabelMenuTheme>
-	<ButtonMenuFolders>メニュー フォルダ</ButtonMenuFolders>
+	<ButtonMenuButtons>メニュー フォルダ</ButtonMenuButtons>
 	<CheckBoxMenuFade>フェード メニューを使用する</CheckBoxMenuFade>
 	<!--Mouse-->
 	<GroupBoxMouse>マウス センサー</GroupBoxMouse>
@@ -274,13 +274,15 @@
 	<ButtonOk>Ok</ButtonOk>
 	<ButtonCancel>キャンセル</ButtonCancel>
   </Form11>
-  <Form12>
-	<Form12Caption>メニュー フォルダの変更</Form12Caption>
-	<LabelFolderName>フォルダ名</LabelFolderName>
-	<LabelFolderPath>フォルダ パス</LabelFolderPath>
-	<ButtonBrowse>参照</ButtonBrowse>
+  <Form12>	
+	<Form12Caption>Change menu buttons</Form12Caption>
+	<LabelName>Name</LabelName>
+	<LabelPathExe>Executable/folder/web page path</LabelPathExe>
+	<LabelPathIcon>Custom icon path (optional)</LabelPathIcon>
+	<CheckBoxActiveButton>Active this button</CheckBoxActiveButton>
+	<ButtonBrowse>Browse</ButtonBrowse>
 	<ButtonOk>Ok</ButtonOk>
-	<ButtonCancel>キャンセル</ButtonCancel>
+	<ButtonCancel>Cancel</ButtonCancel>
   </Form12>
   <Form13>
 	<Form13Caption>Stats</Form13Caption>

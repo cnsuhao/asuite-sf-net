@@ -144,7 +144,7 @@
 	<CheckBoxClassicMenu>Use classic menu</CheckBoxClassicMenu>
 	<!--Trayicon Default Menu-->
 	<LabelMenuTheme>Theme</LabelMenuTheme>
-	<ButtonMenuFolders>Menu folders</ButtonMenuFolders>
+	<ButtonMenuButtons>Menu folders</ButtonMenuButtons>
 	<CheckBoxMenuFade>Enable fade menu</CheckBoxMenuFade>
 	<!--Mouse-->
 	<GroupBoxMouse>Muissensors</GroupBoxMouse>
@@ -275,10 +275,12 @@
 	<ButtonOk>Ok</ButtonOk>
 	<ButtonCancel>Cancel</ButtonCancel>
   </Form11>
-  <Form12>
-	<Form12Caption>Change menu folders</Form12Caption>
-	<LabelFolderName>Folder name</LabelFolderName>
-	<LabelFolderPath>Folder path</LabelFolderPath>
+  <Form12>	
+	<Form12Caption>Change menu buttons</Form12Caption>
+	<LabelName>Name</LabelName>
+	<LabelPathExe>Executable/folder/web page path</LabelPathExe>
+	<LabelPathIcon>Custom icon path (optional)</LabelPathIcon>
+	<CheckBoxActiveButton>Active this button</CheckBoxActiveButton>
 	<ButtonBrowse>Browse</ButtonBrowse>
 	<ButtonOk>Ok</ButtonOk>
 	<ButtonCancel>Cancel</ButtonCancel>
