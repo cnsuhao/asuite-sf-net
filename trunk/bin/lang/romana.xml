@@ -144,7 +144,7 @@
 	<CheckBoxClassicMenu>Foloseşte meniul clasic</CheckBoxClassicMenu>
 	<!--Trayicon Default Menu-->
 	<LabelMenuTheme>Tema</LabelMenuTheme>
-	<ButtonMenuFolders>Meniu dosare</ButtonMenuFolders>
+	<ButtonMenuButtons>Meniu dosare</ButtonMenuButtons>
 	<CheckBoxMenuFade>Activează închiderea lentă a meniului</CheckBoxMenuFade>
 	<!--Mouse-->
 	<GroupBoxMouse>Senzori maus</GroupBoxMouse>
@@ -275,13 +275,15 @@
 	<ButtonOk>OK</ButtonOk>
 	<ButtonCancel>Anulează</ButtonCancel>
   </Form11>
-  <Form12>
-	<Form12Caption>Schimbă dosarele meniului</Form12Caption>
-	<LabelFolderName>Nume dosar</LabelFolderName>
-	<LabelFolderPath>Cale dosar</LabelFolderPath>
-	<ButtonBrowse>Răsfoieşte</ButtonBrowse>
-	<ButtonOk>OK</ButtonOk>
-	<ButtonCancel>Anulează</ButtonCancel>
+  <Form12>	
+	<Form12Caption>Change menu buttons</Form12Caption>
+	<LabelName>Name</LabelName>
+	<LabelPathExe>Executable/folder/web page path</LabelPathExe>
+	<LabelPathIcon>Custom icon path (optional)</LabelPathIcon>
+	<CheckBoxActiveButton>Active this button</CheckBoxActiveButton>
+	<ButtonBrowse>Browse</ButtonBrowse>
+	<ButtonOk>Ok</ButtonOk>
+	<ButtonCancel>Cancel</ButtonCancel>
   </Form12>
   <Form13>
 	<Form13Caption>Stats</Form13Caption>

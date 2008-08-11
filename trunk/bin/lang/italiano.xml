@@ -145,7 +145,7 @@
 	<CheckBoxClassicMenu>Utilizza il menu classico</CheckBoxClassicMenu>
 	<!--Trayicon Default Menu-->
 	<LabelMenuTheme>Tema</LabelMenuTheme>
-	<ButtonMenuFolders>Cartelle menu</ButtonMenuFolders>
+	<ButtonMenuButtons>Bottoni menu</ButtonMenuButtons>
 	<CheckBoxMenuFade>Attiva dissolvenza del menu</CheckBoxMenuFade>
 	<!--Mouse-->
 	<GroupBoxMouse>Sensori mouse</GroupBoxMouse>
@@ -275,9 +275,11 @@
 	<ButtonCancel>Annulla</ButtonCancel>
   </Form11>
   <Form12>
-	<Form12Caption>Cambia cartelle del menu</Form12Caption>
-	<LabelFolderName>Nome cartella</LabelFolderName>
-	<LabelFolderPath>Percorso cartella</LabelFolderPath>
+	<Form12Caption>Cambia bottoni del menu</Form12Caption>
+	<LabelName>Nome</LabelName>
+	<LabelPathExe>Percorso eseguibile/cartella/pagina web</LabelPathExe>
+	<LabelPathIcon>Icona personalizzata (facoltativo)</LabelPathIcon>
+	<CheckBoxActiveButton>Attiva questo bottone</CheckBoxActiveButton>
 	<ButtonBrowse>Sfoglia</ButtonBrowse>
 	<ButtonOk>Ok</ButtonOk>
 	<ButtonCancel>Annulla</ButtonCancel>

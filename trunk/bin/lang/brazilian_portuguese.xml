@@ -144,7 +144,7 @@
 	<CheckBoxClassicMenu>Usar menu clássico</CheckBoxClassicMenu>
 	<!--Trayicon Default Menu-->
 	<LabelMenuTheme>Tema</LabelMenuTheme>
-	<ButtonMenuFolders>Pastas do menu</ButtonMenuFolders>
+	<ButtonMenuButtons>Pastas do menu</ButtonMenuButtons>
 	<CheckBoxMenuFade>Ativar esmaecimento</CheckBoxMenuFade>
 	<!--Mouse-->
 	<GroupBoxMouse>Sensores do mouse</GroupBoxMouse>
@@ -275,13 +275,15 @@
 	<ButtonOk>Ok</ButtonOk>
 	<ButtonCancel>Cancel</ButtonCancel>
   </Form11>
-  <Form12>
-	<Form12Caption>Alterar pastas do menu</Form12Caption>
-	<LabelFolderName>Nome da pasta</LabelFolderName>
-	<LabelFolderPath>Caminho</LabelFolderPath>
-	<ButtonBrowse>Procurar</ButtonBrowse>
+  <Form12>	
+	<Form12Caption>Change menu buttons</Form12Caption>
+	<LabelName>Name</LabelName>
+	<LabelPathExe>Executable/folder/web page path</LabelPathExe>
+	<LabelPathIcon>Custom icon path (optional)</LabelPathIcon>
+	<CheckBoxActiveButton>Active this button</CheckBoxActiveButton>
+	<ButtonBrowse>Browse</ButtonBrowse>
 	<ButtonOk>Ok</ButtonOk>
-	<ButtonCancel>Cancelar</ButtonCancel>
+	<ButtonCancel>Cancel</ButtonCancel>
   </Form12>
   <Form13>
 	<Form13Caption>Stats</Form13Caption>

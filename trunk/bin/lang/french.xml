@@ -145,7 +145,7 @@
 	<CheckBoxClassicMenu>Utiliser le menu classique</CheckBoxClassicMenu>
 	<!--Trayicon Default Menu-->
 	<LabelMenuTheme>Thèmes de ASuite</LabelMenuTheme>
-	<ButtonMenuFolders>Racc. dossiers</ButtonMenuFolders>
+	<ButtonMenuButtons>Racc. dossiers</ButtonMenuButtons>
 	<CheckBoxMenuFade>Activer le fondu du menu</CheckBoxMenuFade>
 	<!--Mouse-->
 	<GroupBoxMouse>Souris</GroupBoxMouse>
@@ -276,13 +276,15 @@
 	<ButtonOk>Ok</ButtonOk>
 	<ButtonCancel>Annuler</ButtonCancel>
   </Form11>
-  <Form12>
-	<Form12Caption>Changement des raccourcis des dossiers du menu</Form12Caption>
-	<LabelFolderName>Nom du dossier</LabelFolderName>
-	<LabelFolderPath>Chemin vers le dossier</LabelFolderPath>
-	<ButtonBrowse>Parcourir</ButtonBrowse>
+  <Form12>	
+	<Form12Caption>Change menu buttons</Form12Caption>
+	<LabelName>Name</LabelName>
+	<LabelPathExe>Executable/folder/web page path</LabelPathExe>
+	<LabelPathIcon>Custom icon path (optional)</LabelPathIcon>
+	<CheckBoxActiveButton>Active this button</CheckBoxActiveButton>
+	<ButtonBrowse>Browse</ButtonBrowse>
 	<ButtonOk>Ok</ButtonOk>
-	<ButtonCancel>Annuler</ButtonCancel>
+	<ButtonCancel>Cancel</ButtonCancel>
   </Form12>
   <Form13>
 	<Form13Caption>Stats</Form13Caption>

@@ -144,7 +144,7 @@
 	<CheckBoxClassicMenu>استعمل القائمة العادية</CheckBoxClassicMenu>
 	<!--Trayicon Default Menu-->
 	<LabelMenuTheme>الشكل</LabelMenuTheme>
-	<ButtonMenuFolders>قائمة المجلدات</ButtonMenuFolders>
+	<ButtonMenuButtons>قائمة المجلدات</ButtonMenuButtons>
 	<CheckBoxMenuFade>تمكين القائمة </CheckBoxMenuFade>
 	<!--Mouse-->
 	<GroupBoxMouse>محسسات الفأرة</GroupBoxMouse>
@@ -275,13 +275,15 @@
 	<ButtonOk>موافق</ButtonOk>
 	<ButtonCancel>إلغاء</ButtonCancel>
   </Form11>
-  <Form12>
-	<Form12Caption>تغيير قائمة المجلدات</Form12Caption>
-	<LabelFolderName>اسم المجلد</LabelFolderName>
-	<LabelFolderPath>طريقة المجلد</LabelFolderPath>
-	<ButtonBrowse>استعراض</ButtonBrowse>
-	<ButtonOk>موافق</ButtonOk>
-	<ButtonCancel>إلغاء</ButtonCancel>
+  <Form12>	
+	<Form12Caption>Change menu buttons</Form12Caption>
+	<LabelName>Name</LabelName>
+	<LabelPathExe>Executable/folder/web page path</LabelPathExe>
+	<LabelPathIcon>Custom icon path (optional)</LabelPathIcon>
+	<CheckBoxActiveButton>Active this button</CheckBoxActiveButton>
+	<ButtonBrowse>Browse</ButtonBrowse>
+	<ButtonOk>Ok</ButtonOk>
+	<ButtonCancel>Cancel</ButtonCancel>
   </Form12>
   <Form13>
 	<Form13Caption>Stats</Form13Caption>
