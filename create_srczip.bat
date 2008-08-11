@@ -18,6 +18,9 @@ mkdir MenuThemes\Blacksuite\Theme\
 mkdir MenuThemes\g4xl\
 mkdir MenuThemes\g4xl\IconTheme\
 mkdir MenuThemes\g4xl\Theme\
+mkdir MenuThemes\loveliness\
+mkdir MenuThemes\loveliness\IconTheme\
+mkdir MenuThemes\loveliness\Theme\
 
 copy ..\..\bin\libmng.dll
 
@@ -118,6 +121,20 @@ copy ..\..\bin\MenuThemes\g4xl\IconTheme\videos.ico MenuThemes\g4xl\IconTheme
 copy ..\..\bin\MenuThemes\g4xl\Theme\background.png MenuThemes\g4xl\Theme
 copy ..\..\bin\MenuThemes\g4xl\Theme\divider.jpg MenuThemes\g4xl\Theme
 copy ..\..\bin\MenuThemes\g4xl\Theme\drive_space_slider.bmp MenuThemes\g4xl\Theme
+
+copy ..\..\bin\MenuThemes\loveliness\IconTheme\asuite.ico MenuThemes\loveliness\IconTheme
+copy ..\..\bin\MenuThemes\loveliness\IconTheme\documents.ico MenuThemes\loveliness\IconTheme
+copy ..\..\bin\MenuThemes\loveliness\IconTheme\explore.ico MenuThemes\loveliness\IconTheme
+copy ..\..\bin\MenuThemes\loveliness\IconTheme\help.ico MenuThemes\loveliness\IconTheme
+copy ..\..\bin\MenuThemes\loveliness\IconTheme\music.ico MenuThemes\loveliness\IconTheme
+copy ..\..\bin\MenuThemes\loveliness\IconTheme\options.ico MenuThemes\loveliness\IconTheme
+copy ..\..\bin\MenuThemes\loveliness\IconTheme\pictures.ico MenuThemes\loveliness\IconTheme
+copy ..\..\bin\MenuThemes\loveliness\IconTheme\search.ico MenuThemes\loveliness\IconTheme
+copy ..\..\bin\MenuThemes\loveliness\IconTheme\videos.ico MenuThemes\loveliness\IconTheme
+
+copy ..\..\bin\MenuThemes\loveliness\Theme\background.jpg MenuThemes\loveliness\Theme
+copy ..\..\bin\MenuThemes\loveliness\Theme\divider.jpg MenuThemes\loveliness\Theme
+copy ..\..\bin\MenuThemes\loveliness\Theme\drive_space_slider.bmp MenuThemes\loveliness\Theme
 
 cd ..
 cd Update\
