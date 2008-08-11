@@ -29,30 +29,42 @@ type
     btnOk: TButton;
     btnCancel: TButton;
     OpenDialog1: TOpenDialog;
-    tv1: TTreeView;
-    pnl1: TPanel;
-    cbActiveButton1: TCheckBox;
-    edtPathIcon1: TEdit;
-    lbPathIcon1: TLabel;
-    edtPathExe1: TEdit;
+    tvMenuButtons: TTreeView;
+    pnlSettings: TPanel;
+    cbActiveButton: TCheckBox;
+    edtPathIcon: TEdit;
+    lbPathIcon: TLabel;
+    edtPathExe: TEdit;
     lbPathExe: TLabel;
-    edtName1: TEdit;
-    lbName1: TLabel;
-    btnBrowseA1: TButton;
-    btnBrowseB1: TButton;
+    edtName: TEdit;
+    lbName: TLabel;
+    btnBrowseExe: TButton;
+    btnBrowseIcon: TButton;
     procedure btnOkClick(Sender: TObject);
     procedure btnCancelClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure Browse(Sender: TObject);
+    procedure tvMenuButtonsClick(Sender: TObject);
   private
+    procedure PopulateSettingsComponents;
     procedure TranslateForm(Lingua:string);
+    procedure SaveActualButtonSettings;
     { Private declarations }
   public
     { Public declarations }
+  end; 
+
+  TMenuButtons = record
+    Name     : string;
+    PathExe  : string;
+    PathIcon : string;
+    Enable   : Boolean;
   end;
 
 var
-  frmMenuButtons: TfrmMenuButtons;
+  frmMenuButtons : TfrmMenuButtons;
+  varMenuButtons : array[0..7] of TMenuButtons;
+  ButtonIndex    : Integer;
 
 implementation
 
@@ -61,20 +73,78 @@ uses Main, CommonUtils;
 {$R *.dfm} 
 
 procedure TfrmMenuButtons.TranslateForm(Lingua:string);
-var
-  TempString : String;
 begin
   with frmMain.xmldTranslate.DocumentElement.ChildNodes['Form12'] do
   begin
-    //ToDo
+    Caption                := ChildNodes['Form12Caption'].Text;
+    lbName.Caption         := ChildNodes['LabelName'].Text;
+    lbPathExe.Caption      := ChildNodes['LabelPathExe'].Text;
+    lbPathIcon.Caption     := ChildNodes['LabelPathIcon'].Text;
+    cbActiveButton.Caption := ChildNodes['CheckBoxActiveButton'].Text;
+    btnBrowseExe.Caption   := ChildNodes['ButtonBrowse'].Text;
+    btnBrowseIcon.Caption  := ChildNodes['ButtonBrowse'].Text;
+    btnCancel.Caption      := ChildNodes['ButtonCancel'].Text;
+    btnOk.Caption          := ChildNodes['ButtonOk'].Text;
   end;
+end;
+
+procedure TfrmMenuButtons.PopulateSettingsComponents;
+begin
+  edtName.Text     := varMenuButtons[ButtonIndex].Name;
+  edtPathExe.Text  := varMenuButtons[ButtonIndex].PathExe;
+  edtPathIcon.Text := varMenuButtons[ButtonIndex].PathIcon;
+  cbActiveButton.Checked := varMenuButtons[ButtonIndex].Enable;
+end;
+
+procedure TfrmMenuButtons.SaveActualButtonSettings;
+begin
+  //Save actual button's settings
+  varMenuButtons[ButtonIndex].Name     := edtName.Text;
+  varMenuButtons[ButtonIndex].PathExe  := edtPathExe.Text;
+  varMenuButtons[ButtonIndex].PathIcon := edtPathIcon.Text;
+  varMenuButtons[ButtonIndex].Enable   := cbActiveButton.Checked;
+end;
+
+procedure TfrmMenuButtons.tvMenuButtonsClick(Sender: TObject);
+var
+  I : Integer;
+begin
+  //Save actual button's settings
+  SaveActualButtonSettings;
+  //Set new ButtonIndex and populate settings
+  ButtonIndex := tvMenuButtons.Selected.Index;
+  PopulateSettingsComponents;  
+  for I := 0 to Length(varMenuButtons) - 1 do
+    tvMenuButtons.Items[I].Text := varMenuButtons[I].Name;
 end;
 
 procedure TfrmMenuButtons.Browse(Sender: TObject);
 var
   PathTemp : String;
 begin
-  //ToDo
+  if (sender = btnBrowseExe) then
+  begin
+    OpenDialog1.Filter     := 'Executables (*.exe)|*.exe|All files|*.*';
+    OpenDialog1.InitialDir := ExtractFileDir(RelativeToAbsolute(edtPathExe.Text));
+  end;
+  if (sender = btnBrowseIcon) then
+  begin
+    OpenDialog1.Filter     := 'Files supported (*.ico)|*.ico|All files|*.*';
+    OpenDialog1.InitialDir := ExtractFileDir(RelativeToAbsolute(edtPathIcon.Text));
+  end;
+  if (sender = btnBrowseExe) or
+     (sender = btnBrowseIcon) then
+  begin
+    if (OpenDialog1.Execute) then
+    begin
+      PathTemp := AbsoluteToRelative(OpenDialog1.FileName);
+      if (sender = btnBrowseExe) then
+        edtPathExe.text    := PathTemp;
+      if (sender = btnBrowseIcon) then
+        edtPathIcon.text   := PathTemp;
+    end;
+  end;
+  SetCurrentDir(ApplicationPath);
 end;
 
 procedure TfrmMenuButtons.btnCancelClick(Sender: TObject);
@@ -83,8 +153,13 @@ begin
 end;
 
 procedure TfrmMenuButtons.btnOkClick(Sender: TObject);
-begin   
-  //ToDo
+var
+  I : Integer;
+begin
+  SaveActualButtonSettings;
+  for I := 0 to 7 do
+    LauncherOptions.TrayMenuButtons[I] := varMenuButtons[I];
+  Close;
 end;
 
 procedure TfrmMenuButtons.FormCreate(Sender: TObject);
@@ -92,7 +167,13 @@ var
   I : Integer;
 begin
   TranslateForm(LauncherOptions.LangName);
-  //ToDo
+  for I := 0 to Length(LauncherOptions.TrayMenuButtons) - 1 do
+  begin
+    varMenuButtons[I] := LauncherOptions.TrayMenuButtons[I];
+    tvMenuButtons.Items[I].Text := varMenuButtons[I].Name;
+  end;
+  ButtonIndex := 0;
+  PopulateSettingsComponents;
 end;
 
 end.

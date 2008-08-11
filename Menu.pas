@@ -29,16 +29,6 @@ type
   	imgBackground: TImage;
   	imgClose: TImage;
   	imgDriveSpace: TImage;
-    sbtnFolder0: TClassicSpeedButton;
-  	imgDocuments: TImage;
-    sbtnFolder1: TClassicSpeedButton;
-  	imgMusic: TImage;
-    sbtnFolder2: TClassicSpeedButton;
-  	imgPictures: TImage;
-    sbtnFolder3: TClassicSpeedButton;
-	  imgVideos: TImage;
-    sbtnExplore: TClassicSpeedButton;
-  	imgExplore: TImage;
     sbtnASuite: TClassicSpeedButton;
     imgASuite: TImage;
 	  sbtnOptions: TClassicSpeedButton;
@@ -47,7 +37,7 @@ type
 	  sbtnSearch: TClassicSpeedButton;
 	  imgSearch: TImage;
     sbtnAbout: TClassicSpeedButton;
-	  imgHelp: TImage;
+    imgAbout: TImage;
   	lblDriveName: TLabel;
   	lblDriveSpace: TLabel;
   	sbtnScrollUp: TClassicSpeedButton;
@@ -68,8 +58,6 @@ type
     procedure imgDragSpaceHiddenMouseDown(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Integer);
   	procedure FormCreate(Sender: TObject);
-  	procedure ButtonFolder(Sender: TObject);
-  	procedure sbtnExploreClick(Sender: TObject);
   	procedure imgCloseClick(Sender: TObject);
   	procedure OpenMenu;
   	procedure CloseMenu;
@@ -103,7 +91,10 @@ type
     procedure CopyImageInVst(Source:TImage;Dest:TVirtualStringTree);
     procedure PopulateMenuTree(Sender: TBaseVirtualTree; Node: PVirtualNode;
                                Data: Pointer; var Abort: Boolean);
-    procedure OpenFolder(FolderPath: String);
+    procedure OpenFolder(FolderPath: String); 
+  	procedure MenuButtonClick(Sender: TObject);
+    procedure CreateMenuButton(ButtonIndex, InitialTop : Integer);
+    procedure DeleteAllMenuButtons;
 	public
     { Public declarations }
   end;
@@ -218,6 +209,7 @@ var
   dblDriveSize : Double;
   dblDriveUsed : Double;
   NGImage      : TNGImage;
+  ButtonsCount : Integer;
 begin
   TranslateForm(LauncherOptions.LangName);
   if LauncherOptions.RefreshMenuTheme then
@@ -252,22 +244,28 @@ begin
    	//Load Icons
     if FileExists(PathTheme + LauncherOptions.MenuTheme + '\IconTheme\ASuite.ico') then
       imgASuite.Picture.Icon.LoadFromFile(PathTheme + LauncherOptions.MenuTheme + '\IconTheme\ASuite.ico');
-  	imgDocuments.Picture.Icon.LoadFromFile(PathTheme + LauncherOptions.MenuTheme + '\IconTheme\documents.ico');
-  	imgExplore.Picture.Icon.LoadFromFile(PathTheme + LauncherOptions.MenuTheme + '\IconTheme\explore.ico');
-  	imgHelp.Picture.Icon.LoadFromFile(PathTheme + LauncherOptions.MenuTheme + '\IconTheme\help.ico');
-  	imgMusic.Picture.Icon.LoadFromFile(PathTheme + LauncherOptions.MenuTheme + '\IconTheme\music.ico');
+  	imgAbout.Picture.Icon.LoadFromFile(PathTheme + LauncherOptions.MenuTheme + '\IconTheme\help.ico');
   	imgOptions.Picture.Icon.LoadFromFile(PathTheme + LauncherOptions.MenuTheme + '\IconTheme\options.ico');
-  	imgPictures.Picture.Icon.LoadFromFile(PathTheme + LauncherOptions.MenuTheme + '\IconTheme\pictures.ico');
   	imgSearch.Picture.Icon.LoadFromFile(PathTheme + LauncherOptions.MenuTheme + '\IconTheme\search.ico');
-  	imgVideos.Picture.Icon.LoadFromFile(PathTheme + LauncherOptions.MenuTheme + '\IconTheme\videos.ico');
     LauncherOptions.RefreshMenuTheme := False;
   end;
   lblDriveName.Caption := ExtractFileDrive(ApplicationPath);
-  //Update menu folders
-  sbtnFolder0.Caption := LauncherOptions.MenuFolderName[0];
-  sbtnFolder1.Caption := LauncherOptions.MenuFolderName[1];
-  sbtnFolder2.Caption := LauncherOptions.MenuFolderName[2];
-  sbtnFolder3.Caption := LauncherOptions.MenuFolderName[3];
+  ButtonsCount := 0;
+  DeleteAllMenuButtons;
+  for I := 0 to Length(LauncherOptions.TrayMenuButtons) - 1 do
+  begin
+    if LauncherOptions.TrayMenuButtons[I].Enable then
+    begin
+      CreateMenuButton(I,148 + (ButtonsCount * 30) + ((ButtonsCount + 1) * 2)); //30 is Button's height, 2 is the interval between buttons
+      Inc(ButtonsCount);
+    end;
+  end;
+  //Other Buttons (search and help) positions
+  imgDivider2.Top := (148 + (ButtonsCount * 30) + ((ButtonsCount) * 2)) + 2;
+  sbtnSearch.Top  := imgDivider2.Top + imgDivider2.Height + 2;
+  imgSearch.Top   := imgDivider2.Top + imgDivider2.Height + 6;
+  sbtnAbout.Top   := sbtnSearch.Top + sbtnSearch.Height + 2;
+  imgAbout.Top    := sbtnSearch.Top + sbtnSearch.Height + 6;
   //Clear virtualtrees
   vstMenu.Clear;
   vstRecents.Clear;
@@ -322,20 +320,80 @@ begin
   frmMain.SetFocus;
 end;
 
-procedure TfrmMenu.ButtonFolder(Sender: TObject);
+procedure TfrmMenu.MenuButtonClick(Sender: TObject);
 begin
-  OpenFolder(LauncherOptions.MenuFolderPath[(Sender as TClassicSpeedButton).Tag]);
+  OpenFolder(LauncherOptions.TrayMenuButtons[(Sender as TClassicSpeedButton).Tag].PathExe);
+end; 
+
+procedure TfrmMenu.DeleteAllMenuButtons;
+var
+  SpeedButton : TComponent;
+  ButtonIcon  : TComponent;
+  I           : Integer;
+begin
+  for I := 0 to 7 do
+  begin
+    SpeedButton := FindComponent('sbtnButton' + IntToStr(I));
+    if (SpeedButton is TClassicSpeedButton) then
+      SpeedButton.Free;
+    ButtonIcon := FindComponent('imgButton' + IntToStr(I));
+    if (ButtonIcon is TImage) then
+      ButtonIcon.Free;
+  end;
+end;
+
+procedure TfrmMenu.CreateMenuButton(ButtonIndex, InitialTop : Integer);
+var
+  SpeedButton : TClassicSpeedButton;
+  ButtonIcon  : TImage;
+  TempPath    : string;
+begin
+  //Create ButtonIcon and set some properties
+  ButtonIcon := TImage.Create(Self);
+  with ButtonIcon do
+  begin
+    Name    := 'imgButton' + IntToStr(ButtonIndex);
+    //Coordinates and sizes
+    Height  := 24;
+    Width   := 24;
+    Left    := 272;
+    Top     := InitialTop + 4;
+    Parent  := Self;
+    //ToDo - Load custom icon or default icon (from theme)
+    TempPath := RelativeToAbsolute(LauncherOptions.TrayMenuButtons[ButtonIndex].PathIcon);
+    //If PathIcon exists load it else load asuite.ico from theme folders
+    if FileExists(TempPath) then
+      Picture.Icon.LoadFromFile(TempPath)
+    else
+      Picture.Icon.LoadFromFile(PathTheme + LauncherOptions.MenuTheme + '\IconTheme\asuite.ico');
+  end;
+  //Create SpeedButton and set some properties
+  SpeedButton := TClassicSpeedButton.Create(Self);
+  with SpeedButton do
+  begin
+    Name    := 'sbtnButton' + IntToStr(ButtonIndex);
+    //Coordinates and sizes
+    Height  := 30;
+    Width   := 120;
+    Left    := 269;
+    Top     := InitialTop;
+    Parent  := Self;
+    //Graphic
+    Flat    := True;
+    Margin  := 33;
+    ParentFont := False;
+    Font.Color := clWhite;
+    Font.Style := [fsBold];
+    Caption := LauncherOptions.TrayMenuButtons[ButtonIndex].Name;
+    //Properties to execute
+    Tag     := ButtonIndex;
+    OnClick := MenuButtonClick;
+  end;
 end;
 
 procedure TfrmMenu.sbtnOptionsClick(Sender: TObject);
 begin
   frmMain.miOptionsClick(Sender);
-end;
-
-procedure TfrmMenu.sbtnExploreClick(Sender: TObject);
-begin
-  //Root
-  OpenFolder('$Drive');
 end;
 
 procedure TfrmMenu.sbtnAboutClick(Sender: TObject);
@@ -415,6 +473,8 @@ begin
   NodeData := Sender.GetNodeData(Node);
   if NodeData.PathExeError then
     HintText := ArrayMessages[1]
+  else
+    HintText := NodeData.Desc;
 end;
 
 procedure TfrmMenu.vstMenuMouseMove(Sender: TObject;
@@ -509,7 +569,9 @@ procedure TfrmMenu.OpenFolder(FolderPath: String);
 var
   ErrorCode : Integer;
 begin
-  ErrorCode := ShellExecute(0,'open', PAnsiChar(RelativeToAbsolute(FolderPath)), Nil, Nil, SW_SHOWDEFAULT);
+  ErrorCode := ShellExecute(GetDesktopWindow, 'open', PChar(RelativeToAbsolute(FolderPath)),
+                            PChar(''),
+                            PChar(ExtractFilePath(RelativeToAbsolute(FolderPath))), SW_SHOWDEFAULT);
   if ErrorCode <= 32 then
     ShowMessageFmt(ArrayMessages[11],['',SysErrorMessage(ErrorCode)]);
 end;
