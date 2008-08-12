@@ -470,7 +470,7 @@ procedure TfrmMenu.vstMenuGetHint(Sender: TBaseVirtualTree; Node: PVirtualNode;
 var
   NodeData: PTreeData;
 begin
-  NodeData := Sender.GetNodeData(Node);
+  NodeData := NodeDataXToNodeDataList(Node);
   if NodeData.PathExeError then
     HintText := ArrayMessages[1]
   else

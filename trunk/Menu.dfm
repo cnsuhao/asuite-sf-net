@@ -2091,7 +2091,9 @@ object frmMenu: TfrmMenu
     Header.MainColumn = -1
     Header.Options = [hoColumnResize, hoDrag]
     HintMode = hmHint
+    ParentShowHint = False
     ScrollBarOptions.ScrollBars = ssNone
+    ShowHint = True
     TabOrder = 0
     TreeOptions.PaintOptions = [toHideFocusRect, toShowBackground, toShowDropmark, toShowTreeLines, toThemeAware, toUseBlendedImages]
     TreeOptions.SelectionOptions = [toDisableDrawSelection, toFullRowSelect]
