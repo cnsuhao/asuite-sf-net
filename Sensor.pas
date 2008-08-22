@@ -106,7 +106,7 @@ procedure TfrmSensor.CreateParams(var Params: TCreateParams);
 begin
   inherited;
   //Transparent and sensor (form) topmost
-  Params.ExStyle   := WS_EX_TRANSPARENT or WS_EX_TOOLWINDOW or WS_EX_TOPMOST;
+  Params.ExStyle   := WS_EX_TOOLWINDOW or WS_EX_TOPMOST;
   Params.WndParent := GetDesktopWindow;
 end;
 

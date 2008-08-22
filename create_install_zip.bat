@@ -45,6 +45,9 @@ copy ..\bin\Icons\11.ico Icons\
 copy ..\bin\Icons\12.ico Icons\
 copy ..\bin\Icons\13.ico Icons\
 copy ..\bin\Icons\14.ico Icons\
+copy ..\bin\Icons\15.ico Icons\
+copy ..\bin\Icons\16.ico Icons\
+copy ..\bin\Icons\17.ico Icons\
 copy ..\bin\Icons\2.ico Icons\
 copy ..\bin\Icons\3.ico Icons\
 copy ..\bin\Icons\4.ico Icons\

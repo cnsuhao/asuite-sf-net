@@ -233,6 +233,10 @@ object frmMain: TfrmMain
     object tbSearch: TTabSheet
       Caption = 'Search'
       ImageIndex = 1
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       DesignSize = (
         186
         337)
@@ -518,7 +522,7 @@ object frmMain: TfrmMain
       end
       object miImportList: TMenuItem
         Caption = 'Import list...'
-        ShortCut = 113
+        ShortCut = 116
         OnClick = miImportListClick
       end
       object miExportList: TMenuItem
@@ -715,7 +719,7 @@ object frmMain: TfrmMain
     object miProperty2: TMenuItem
       Caption = 'Properties'
       ImageIndex = 8
-      ShortCut = 116
+      ShortCut = 113
       OnClick = ShowProperty
     end
   end

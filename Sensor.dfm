@@ -6,7 +6,9 @@ object frmSensor: TfrmSensor
   Caption = 'frmSensor'
   ClientHeight = 10
   ClientWidth = 10
-  Color = clBtnFace
+  Color = clFuchsia
+  TransparentColor = True
+  TransparentColorValue = clFuchsia
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
