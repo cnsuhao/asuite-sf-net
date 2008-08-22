@@ -1952,6 +1952,7 @@ begin
         {$endif}
       end;
     end;
+    frmMain.Icon := CoolTrayIcon1.Icon;
     //frmMain on top
     if LauncherOptions.MainOnTop then
       SetWindowPos(Handle,HWND_TOPMOST,Left,Top,Width,Height,SWP_NOACTIVATE or SWP_NOMOVE or SWP_NOSIZE)

@@ -8,29 +8,35 @@
   resources were bound to the produced executable.
 */
 
-#define JConsts_sJPEGError 65216
-#define JConsts_sJPEGImageFile 65217
-#define NGConst_SCClipboardNotSupported 65218
-#define NGConst_SCNGImageException 65219
-#define NGConst_SCNGVersionError 65220
-#define NGConst_SCDLLNotLoaded 65221
-#define NGConst_SCFuncUnknown 65222
+#define XMLConst_SLine 65216
+#define xdom_SOddSizeInvalid 65217
+#define xdom_SNegativeSizeInvalid 65218
+#define xdom_SCapacityLessSize 65219
+#define xdom_STargetNil 65220
+#define JConsts_sChangeJPGSize 65221
+#define JConsts_sJPEGError 65222
+#define JConsts_sJPEGImageFile 65223
+#define NGConst_SCClipboardNotSupported 65224
+#define NGConst_SCNGImageException 65225
+#define NGConst_SCNGVersionError 65226
+#define NGConst_SCDLLNotLoaded 65227
+#define NGConst_SCFuncUnknown 65228
 #define XMLConst_SDOMNotSupported 65232
 #define XMLConst_SNodeExpected 65233
 #define XMLConst_SMSDOMNotInstalled 65234
-#define XMLConst_SNotActive 65235
-#define XMLConst_SNodeNotFound 65236
-#define XMLConst_SMissingNode 65237
-#define XMLConst_SNoAttributes 65238
-#define XMLConst_SInvalidNodeType 65239
-#define XMLConst_SMismatchedRegItems 65240
-#define XMLConst_SNotSingleTextNode 65241
-#define XMLConst_SNoDOMParseOptions 65242
-#define XMLConst_SNodeReadOnly 65243
-#define XMLConst_SNoRefresh 65244
-#define XMLConst_SMissingFileName 65245
-#define XMLConst_SLine 65246
-#define JConsts_sChangeJPGSize 65247
+#define XMLConst_SErrorDownloadingURL 65235
+#define XMLConst_SUrlMonDllMissing 65236
+#define XMLConst_SNotActive 65237
+#define XMLConst_SNodeNotFound 65238
+#define XMLConst_SMissingNode 65239
+#define XMLConst_SNoAttributes 65240
+#define XMLConst_SInvalidNodeType 65241
+#define XMLConst_SMismatchedRegItems 65242
+#define XMLConst_SNotSingleTextNode 65243
+#define XMLConst_SNoDOMParseOptions 65244
+#define XMLConst_SNodeReadOnly 65245
+#define XMLConst_SNoRefresh 65246
+#define XMLConst_SMissingFileName 65247
 #define ComConst_SOleError 65248
 #define ComConst_SNoMethod 65249
 #define ComConst_SVarNotObject 65250
@@ -321,6 +327,12 @@
 #define SysConst_SDiskFull 65535
 STRINGTABLE
 BEGIN
+	XMLConst_SLine,	"Line"
+	xdom_SOddSizeInvalid,	"Odd size not valid for WideString"
+	xdom_SNegativeSizeInvalid,	"Negative stream size invalid"
+	xdom_SCapacityLessSize,	"Capacity cannot be less than size"
+	xdom_STargetNil,	"Must have a target stream"
+	JConsts_sChangeJPGSize,	"Cannot change the size of a JPEG image"
 	JConsts_sJPEGError,	"JPEG error #%d"
 	JConsts_sJPEGImageFile,	"JPEG Image File"
 	NGConst_SCClipboardNotSupported,	"PNG/JNG/MNG clipboard not yet supported"
@@ -331,6 +343,8 @@ BEGIN
 	XMLConst_SDOMNotSupported,	"Property or Method \"%s\" is not supported by DOM Vendor \"%s\""
 	XMLConst_SNodeExpected,	"Node cannot be null"
 	XMLConst_SMSDOMNotInstalled,	"Microsoft MSXML is not installed"
+	XMLConst_SErrorDownloadingURL,	"Error downloading URL: %s"
+	XMLConst_SUrlMonDllMissing,	"Unable to load %s"
 	XMLConst_SNotActive,	"No active document"
 	XMLConst_SNodeNotFound,	"Node \"%s\" not found"
 	XMLConst_SMissingNode,	"IDOMNode required"
@@ -342,8 +356,6 @@ BEGIN
 	XMLConst_SNodeReadOnly,	"Node is readonly"
 	XMLConst_SNoRefresh,	"Refresh is only supported if the FileName or XML properties are set"
 	XMLConst_SMissingFileName,	"FileName cannot be blank"
-	XMLConst_SLine,	"Line"
-	JConsts_sChangeJPGSize,	"Cannot change the size of a JPEG image"
 	ComConst_SOleError,	"OLE error %.8x"
 	ComConst_SNoMethod,	"Method '%s' not supported by automation object"
 	ComConst_SVarNotObject,	"Variant does not reference an automation object"
@@ -646,13 +658,13 @@ END
 /* D:\Matteo\Progetti\Delphi\In corso\ASuite 1.5.2\menu.dfm */
 /* D:\Matteo\Progetti\Delphi\In corso\ASuite 1.5.2\Stats.dfm */
 /* D:\Matteo\Progetti\Delphi\In corso\ASuite 1.5.2\ClearElements.dfm */
-/* D:\Matteo\Progetti\Delphi\In corso\ASuite 1.5.2\MenuButtons.dfm */
 /* D:\Matteo\Progetti\Delphi\In corso\ASuite 1.5.2\Option.dfm */
 /* D:\Matteo\Progetti\Delphi\In corso\ASuite 1.5.2\ImportList.dfm */
 /* D:\Matteo\Progetti\Delphi\In corso\ASuite 1.5.2\ScanFolder.dfm */
 /* D:\Matteo\Progetti\Delphi\In corso\ASuite 1.5.2\Update.dfm */
 /* D:\Matteo\Progetti\Delphi\In corso\ASuite 1.5.2\RunAs.dfm */
 /* D:\Matteo\Progetti\Delphi\In corso\ASuite 1.5.2\Main.dfm */
+/* D:\Matteo\Progetti\Delphi\In corso\ASuite 1.5.2\MenuButtons.dfm */
 /* D:\Matteo\Progetti\Delphi\In corso\ASuite 1.5.2\Sensor.dfm */
 /* D:\Matteo\Progetti\Delphi\In corso\ASuite 1.5.2\ASuite.res */
 /* D:\Matteo\Progetti\Delphi\In corso\ASuite 1.5.2\ASuite.drf */
