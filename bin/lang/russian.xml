@@ -1,0 +1,364 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ASuite>
+  <Info>
+        <PathReadme>docs\readme.rtf</PathReadme>
+  </Info>
+  <Form1><!--List-->
+        <!--Software's Menu-->
+        <TabListCaption>Список</TabListCaption>
+        <TabSearchCaption>Поиск</TabSearchCaption>
+        <TabStatsCaption>Статистика</TabStatsCaption>
+        <ButtonSearch>Поиск</ButtonSearch>
+        <ColumnName>Название</ColumnName>
+        <ColumnCategory>Категория</ColumnCategory>
+        <!--Stats-->
+        <!--System-->
+        <GroupBoxSystem>Система</GroupBoxSystem>
+        <LabelPcName>Имя компьютера: </LabelPcName>
+        <LabelCurrentUser>Текущий пользователь: </LabelCurrentUser>
+        <!--Drive-->
+        <GroupBoxDrive>Диск %s:</GroupBoxDrive>
+        <LabelSize>Размер: </LabelSize>
+        <LabelFreeSpace>Свободно: </LabelFreeSpace>
+        <LabelUsedSpace>Занято: </LabelUsedSpace>
+        <!--Launcher-->
+        <GroupBoxASuite>ASuite</GroupBoxASuite>
+        <LabelSwInserted>Программ в списке: </LabelSwInserted>
+        <LabelCatInserted>Категорий в списке: </LabelCatInserted>
+        <LabelTotal>Всего: </LabelTotal>
+        <!--ASuite's Menu-->
+        <!--File Menu-->
+        <MenuFile>Файл</MenuFile>
+        <MenuOption>Опции</MenuOption>
+        <MenuSave>Сохранить список</MenuSave>
+        <MenuImportList>Импорт списка...</MenuImportList>
+        <MenuExportList>Экспорт списка...</MenuExportList>
+        <MenuScanExecutables>Поиск файлов программ...</MenuScanExecutables>
+        <MenuExit>Выход</MenuExit>
+        <!--Edit List Menu/PopUp Menu-->
+        <MenuSortList>Сортировать список</MenuSortList>
+        <MenuEdit>Правка</MenuEdit>
+        <MenuSortCategoryItems>Сортировать категорию</MenuSortCategoryItems>
+        <MenuRun>Запустить</MenuRun>
+        <MenuRunAs>Запустить от имени...</MenuRunAs>
+        <MenuOpenFolder>Открыть папку программы</MenuOpenFolder>
+        <MenuVisitWebSite>Открыть домашнюю страницу программы</MenuVisitWebSite>
+        <MenuAddCat>Добавить категорию</MenuAddCat>
+        <MenuAddSw>Добавить программу</MenuAddSw>
+        <MenuAddGroupSw>Добавить группу программ</MenuAddGroupSw>
+        <MenuAddFolder>Добавить папку</MenuAddFolder>
+        <MenuAddSeparator>Вставить разделитель</MenuAddSeparator>
+        <MenuDelete>Удалить</MenuDelete>
+        <MenuProperty>Свойства</MenuProperty>
+        <MenuCut>Вырезать</MenuCut>
+        <MenuCopy>Скопировать</MenuCopy>
+        <MenuPaste>Вставить</MenuPaste>
+        <MenuDelete>Удалить</MenuDelete>
+        <!--Help Menu-->
+        <MenuCheckUpdates>Проверка обновлений</MenuCheckUpdates>
+        <MenuHelp>Справка</MenuHelp>
+        <MenuStats>Статистика</MenuStats>
+        <MenuReadme>Справка "Прочти меня"</MenuReadme>
+        <MenuASuiteInfo>О программе ASuite</MenuASuiteInfo>
+        <!--Trayicon Menu-->
+        <TrayiconShowASuite>Показать окно ASuite</TrayiconShowASuite>
+        <TrayiconMRU>Последние программы</TrayiconMRU>
+        <TrayiconEject>Безопасное извлечение устройства</TrayiconEject>
+        <TrayiconExit>Выход</TrayiconExit>
+        <!--Trayicon Default Menu-->
+        <DefaultMenuButtonOptions>Опции...</DefaultMenuButtonOptions>
+        <DefaultMenuButtonSearch>Поиск...</DefaultMenuButtonSearch>
+        <DefaultMenuButtonAbout>О программе ASuite</DefaultMenuButtonAbout>
+  </Form1>
+  <Form2><!--Card-->
+        <!--ASuite's Page-->
+        <FormCaptionAbout>О программе</FormCaptionAbout>
+        <LabelASVersion>Версия </LabelASVersion>
+        <LabelIntro>ASuite - это средство запуска приложений, позволяющее создать список быстрого запуска из неограниченного числа файлов, папок и веб-страниц. Программа рассчитана на запуск со съемных носителей, таких как USB-флэшки, жесткие диски, iPod и т.п. etc.[br]Поскольку ASuite использует относительные пути к файлам, он прекрасно подходит для запуска портативных приложений.</LabelIntro>
+        <LabelInfo>Для получения допольнительой информации посетите</LabelInfo>
+        <!--Software's Page-->
+        <FormCaptionCard>Сведения</FormCaptionCard>
+        <GroupBoxSoftware>Программа</GroupBoxSoftware>
+        <LabelNameSw>Название</LabelNameSw>
+        <LabelDeveloper>Разработчик</LabelDeveloper>
+        <LabelVersion>Версия</LabelVersion>
+        <LabelWebSite>Домашняя страница</LabelWebSite>
+        <LabelDescription>Описание</LabelDescription>
+        <LabelNote>Примечения</LabelNote>
+        <LabelOpinion>Рейтинг</LabelOpinion>
+  </Form2>
+  <Form3><!--Option-->
+        <Form3Caption>Опции</Form3Caption>
+        <!--General-->
+        <TabGeneralCaption>Общие</TabGeneralCaption>
+        <!--Startup-->
+        <GroupBoxStartup>Запуск</GroupBoxStartup>
+        <CheckBoxWindowsStartup>Запускать ASuite при загрузке системы</CheckBoxWindowsStartup>
+        <CheckBoxStartUp>Показывать окно ASuite при запуске</CheckBoxStartUp>
+        <CheckBoxMenuStartUp>Показывать меню в системной панели при запуске</CheckBoxMenuStartUp>
+        <CheckBoxAutorun>Включить автозапуск</CheckBoxAutorun>
+        <!--Window-->
+        <GroupBoxWindow>Окно</GroupBoxWindow>
+        <CheckBoxHoldSize>Зафиксировать размер окна</CheckBoxHoldSize>
+        <CheckBoxFormCard>Показывать сведения о программах</CheckBoxFormCard>
+        <CheckBoxWindowOnTop>Окно Asuite поверх других окон</CheckBoxWindowOnTop>
+        <CheckBoxWindowHotkey>Вызов окна Asuite по горячей клавише</CheckBoxWindowHotkey>
+        <CheckBoxMenuHotkey>Вызов меню в сис. панели по горячей клавише</CheckBoxMenuHotkey>
+        <CheckBoxCustomTitle>Задать заголовок окна</CheckBoxCustomTitle>
+        <LabelLanguage>Язык интерфейса</LabelLanguage>
+        <!--Treeview-->
+        <GroupBoxTreeView>Древовидный список</GroupBoxTreeView>
+        <ButtonFontSettings>Настройка шрифта...</ButtonFontSettings>
+        <CheckBoxAutoOpClCat>Открывать/закрывать категории автоматически</CheckBoxAutoOpClCat>
+        <CheckBoxBackground>Активный фон</CheckBoxBackground>
+        <ButtonBrowseBackground>Обзор</ButtonBrowseBackground>
+        <!--Tabs-->
+        <GroupBoxTabs>Вкладки</GroupBoxTabs>
+        <CheckBoxHideSearch>Скрыть вкладку "Поиск"</CheckBoxHideSearch>
+        <CheckBoxHideStats>Скрыть вкладку "Статистика"</CheckBoxHideStats>
+        <!--Advanced-->
+        <TabAdvancedCaption>Дополнительно</TabAdvancedCaption>
+        <!--MRU-->
+        <GroupBoxMRU>Часто используемые программы (MRU)</GroupBoxMRU>
+        <CheckBoxMRU>Включить список MRU</CheckBoxMRU>
+        <CheckBoxSubMenuMRU>Показывать MRU в подменю системной панели</CheckBoxSubMenuMRU>
+        <LabelMRUMax>Максимальное число MRU</LabelMRUMax>
+        <ButtonClearMRU>Удалить все MRU</ButtonClearMRU>
+        <!--Backup-->
+        <GroupBoxBackup>Резервное копирование списка</GroupBoxBackup>
+        <CheckBoxBackup>Включить резервирование списка</CheckBoxBackup>
+        <LabelBackupMax>Макс. резервных копий</LabelBackupMax>
+        <ButtonClearBackup>Удалить все резервные копии</ButtonClearBackup>
+        <!--Check list-->
+        <GroupBoxCheckList>Проверка списка программ</GroupBoxCheckList>
+        <CheckBoxCheckList>Включить проверку списка</CheckBoxCheckList>
+        <LabelCheckListTime>Временной интервал</LabelCheckListTime>
+        <!--Other functions-->
+        <GroupBoxOtherFunctions>Другие функции</GroupBoxOtherFunctions>
+        <CheckBoxHotKey>Включить горячие клавиши</CheckBoxHotKey>
+        <CheckBoxCache>Включить кэширование</CheckBoxCache>
+        <CheckBoxSaveSecurity>Включить безопасное сохранение списка</CheckBoxSaveSecurity>
+        <CheckBoxScheduler>Включить планировщик</CheckBoxScheduler>
+        <!--Clear elements-->
+        <GroupBoxClearElements>Очистка</GroupBoxClearElements>
+        <LabelClearElements>Стереть все MRU, резервные копии и/или кэш</LabelClearElements>
+        <ButtonClearElements>Очистка...</ButtonClearElements>
+        <!--Various-->
+        <TabVariousCaption>Разное</TabVariousCaption>
+        <!--Execution-->
+        <GroupBoxExecution>Запуск программ</GroupBoxExecution>
+        <CheckBoxSingleClick>Запуск программ одним щелчком</CheckBoxSingleClick>
+        <LabelActionOnExe>При запуске программы</LabelActionOnExe>
+        <ListActionOnExe1>Просто запустить файл</ListActionOnExe1>
+        <ListActionOnExe2>Запустить и скрыть окно ASuite</ListActionOnExe2>
+        <ListActionOnExe3>Запустить и закрыть ASuite</ListActionOnExe3>
+        <!--System Tray-->
+        <GroupBoxTrayicon>Значок в системной панели</GroupBoxTrayicon>
+        <ButtonCustomTrayicon>Выбрать значок</ButtonCustomTrayicon>
+        <CheckBoxTrayicon>Отображать значок в системной панели</CheckBoxTrayicon>
+        <ListActionTrayicon1>Ничего не делать</ListActionTrayicon1>
+        <ListActionTrayicon2>Открыть окно программы</ListActionTrayicon2>
+        <ListActionTrayicon3>Открыть меню</ListActionTrayicon3>
+        <CheckBoxClassicMenu>Использовать классическое меню</CheckBoxClassicMenu>
+        <!--Trayicon Default Menu-->
+        <LabelMenuTheme>Тема</LabelMenuTheme>
+        <ButtonMenuFolders>Кнопки меню</ButtonMenuFolders>
+        <CheckBoxMenuFade>Плавное затухание меню</CheckBoxMenuFade>
+        <!--Mouse-->
+        <GroupBoxMouse>Отслеживание мыши</GroupBoxMouse>
+        <LabelSide>Сторона</LabelSide>
+        <LabelTop>Верх</LabelTop>
+        <LabelLeft>Левая</LabelLeft>
+        <LabelRight>Правая</LabelRight>
+        <LabelBottom>Низ</LabelBottom>
+        <LabelLeftClick>Левый клик</LabelLeftClick>
+        <LabelRightClick>Правый клик</LabelRightClick>
+        <ListActionMouse1>Отключено</ListActionMouse1>
+        <ListActionMouse2>Открыть окно</ListActionMouse2>
+        <ListActionMouse3>Стандарт. меню</ListActionMouse3>
+        <ListActionMouse4>Классич. меню</ListActionMouse4>
+        <ButtonOk>Ok</ButtonOk>
+        <ButtonCancel>Отмена</ButtonCancel>
+  </Form3>
+  <Form45><!--Property Sw/Cat-->
+        <Form45Caption>Свойства</Form45Caption>
+        <TabGeneralCaption>Общие</TabGeneralCaption>
+        <TabAdvancedCaption>Расширенные</TabAdvancedCaption>
+        <TabInfoCaption>Сведения</TabInfoCaption>
+        <LabelName>Название программы</LabelName>
+        <LabelVersion>Версия</LabelVersion>
+        <LabelDeveloper>Разрабочик</LabelDeveloper>
+        <LabelWebSite>Домашняя страница</LabelWebSite>
+        <LabelPathExeA>Путь к исполняемому файлу/папке/веб-странице</LabelPathExeA>
+        <LabelPathExeB>Пути к исполняемым файлам/папкам/веб-страницам</LabelPathExeB>
+        <LabelParameters>Параметры (необязательно)</LabelParameters>
+        <LabelWorkingDir>Рабочий каталог (необязательно)</LabelWorkingDir>
+        <LabelPathIcon>Путь к значку (необязательно)</LabelPathIcon>
+        <HideWindow>Скрыть окно Asute при запуске программы</HideWindow>
+        <LabelDescription>Описание</LabelDescription>
+        <LabelOpinion>Рейтинг</LabelOpinion>
+        <LabelNote>Примечания</LabelNote>
+        <LabelInformation1>В данном диалоговом окне необходимо ввести сведения о текущей программе. Поле "Название программы" обязательно для заполнения.</LabelInformation1>
+        <LabelInformation3>Примечание: Вы можете использовать ASuite для запуска программы даже если она расположена в одной папке с ним.</LabelInformation3>
+        <ButtonBrowse>Обзор</ButtonBrowse>
+        <ButtonRetrieve>Извлечь из exe</ButtonRetrieve>
+        <LabelAutoExecute>Автозапуск</LabelAutoExecute>
+        <ButtonChangeOrder>Порядок запуска</ButtonChangeOrder>
+        <ComboBoxAutoExecute0>Никогда</ComboBoxAutoExecute0>
+        <ComboBoxAutoExecute1>Всегда при запуске Asuite</ComboBoxAutoExecute1>
+        <ComboBoxAutoExecute2A>Только если запущ. ранее копии не выполняются</ComboBoxAutoExecute2A>
+        <ComboBoxAutoExecute2B>Только если запущ. ранее копии не выполняются</ComboBoxAutoExecute2B>
+        <ComboBoxAutoExecute3>Всегда при завершении работы</ComboBoxAutoExecute3>
+        <LabelOnExecution>При запуске</LabelOnExecution>
+        <ComboBoxActionOnExe0>По умолчанию (см. настройки)</ComboBoxActionOnExe0>
+        <ComboBoxActionOnExe1A>Просто запустить файл</ComboBoxActionOnExe1A>
+        <ComboBoxActionOnExe1B>Просто запустить файлы</ComboBoxActionOnExe1B>
+        <ComboBoxActionOnExe2>Запустить и скрыть окно ASuite</ComboBoxActionOnExe2>
+        <ComboBoxActionOnExe3>Запустить и закрыть ASuite</ComboBoxActionOnExe3>
+        <CheckBoxHotKey>Включить горячую клавишу</CheckBoxHotKey>
+        <LabelWindowState>Вид окна</LabelWindowState>
+        <ComboBoxWSNormal>Обычный</ComboBoxWSNormal>
+        <ComboBoxWSMinimized>Свернутый</ComboBoxWSMinimized>
+        <ComboBoxWSMaximized>На весь экран</ComboBoxWSMaximized>
+        <LabelDontInsertMRUA>Не включать данную программу в MRU</LabelDontInsertMRUA>
+        <LabelDontInsertMRUB>Не включать данную группу программ в MRU</LabelDontInsertMRUB>
+        <LabelShortcutDesktop>Создать ярлык на рабочем столе при работе ASuite</LabelShortcutDesktop>
+        <LabelHideSoftwareMenuA>Скрыть данную программу из меню</LabelHideSoftwareMenuA>
+        <LabelHideSoftwareMenuB>Скрыть данную группу программ из меню</LabelHideSoftwareMenuB>
+        <LabelScheduler>Планировщик</LabelScheduler>
+        <ComboBoxSchedulerMode0>Отключено</ComboBoxSchedulerMode0>
+        <ComboBoxSchedulerMode1>Один раз</ComboBoxSchedulerMode1>
+        <ComboBoxSchedulerMode2>Каждый час</ComboBoxSchedulerMode2>
+        <ComboBoxSchedulerMode3>Каждый день</ComboBoxSchedulerMode3>
+        <ButtonAddPath>Добавить</ButtonAddPath>
+        <ButtonReplacePath>Заменить</ButtonReplacePath>
+        <ButtonDeletePath>Удалить</ButtonDeletePath>
+        <ButtonOk>Ok</ButtonOk>
+        <ButtonCancel>Отмена</ButtonCancel>
+  </Form45>
+  <Form6><!--Import List-->
+        <Form6Caption>Импортировать список</Form6Caption>
+        <LabelPathList>Путь к списку</LabelPathList>
+        <LabelList>Выбрать импортируемые программы</LabelList>
+        <ButtonSelectAll>Выбрать все</ButtonSelectAll>
+        <ButtonDeSelectAll>Снять выделение</ButtonDeSelectAll>
+        <ButtonBrowse>Обзор</ButtonBrowse>
+        <ButtonOk>Ok</ButtonOk>
+        <ButtonCancel>Отмена</ButtonCancel>
+  </Form6>
+  <Form7>
+        <Form7Caption>Сканировать папку</Form7Caption>
+        <LabelFolderPath>Путь к паке</LabelFolderPath>
+        <ButtonBrowse>Обзор</ButtonBrowse>
+        <CheckboxSubFolders>Сканировать подпапки</CheckboxSubFolders>
+        <LabelTypes>Типы файлов</LabelTypes>
+        <LabelExclude>Выполнить файл</LabelExclude>
+        <ButtonAdd>Добавить</ButtonAdd>
+        <ButtonReplace>Заменить</ButtonReplace>
+        <ButtonDelete>Удалить</ButtonDelete>
+        <CheckboxRetrieveInfo>Извлекать информацию из выполняемых файлов</CheckboxRetrieveInfo>
+        <ButtonScan>Сканировать</ButtonScan>
+        <ButtonCancel>Отмена</ButtonCancel>
+  </Form7>
+  <Form8>
+        <GroupboxCurrentTask>Текущее задание</GroupboxCurrentTask>
+        <MessageDownload>Загружено %s</MessageDownload>
+        <GroupboxDownloadInfo>Сведения о загрузке</GroupboxDownloadInfo>
+        <LabelFileName>Имя файла</LabelFileName>
+        <LabelSpeed>Скорость</LabelSpeed>
+        <LabelTotalSize>Общий объем</LabelTotalSize>
+        <LabelBytesReceived>Байт получено</LabelBytesReceived>
+        <ButtonCancel>Отмена</ButtonCancel>
+  </Form8>
+  <Form9>
+        <Form9Caption>Удалить элементы</Form9Caption>
+        <LabelClearElements>Удалить сейчас следующие элементы:</LabelClearElements>
+        <CheckBoxMRU>MRU</CheckBoxMRU>
+        <CheckBoxBackup>Резервные копии</CheckBoxBackup>
+        <CheckBoxCache>Кэшировать значки</CheckBoxCache>
+        <ButtonClear>Очистить</ButtonClear>
+        <ButtonCancel>Отмена</ButtonCancel>
+  </Form9>
+  <Form10>
+        <Form10Caption>Сортировка автозапуска программ</Form10Caption>
+        <LabelInfoStartupOrder>Порядок автозапуска программ при старте Asuite</LabelInfoStartupOrder>
+        <LabelInfoShutdownOrder>Порядок автозапуска программ при закрытии ASuite</LabelInfoShutdownOrder>
+        <ButtonOk>Ok</ButtonOk>
+        <ButtonCancel>Отмена</ButtonCancel>
+  </Form10>
+  <Form11>
+        <Form11Caption>Запуск от имени</Form11Caption>
+        <LabelUsername>Имя пользователя</LabelUsername>
+        <LabelPassword>Пароль</LabelPassword>
+        <ButtonOk>Ok</ButtonOk>
+        <ButtonCancel>Отмена</ButtonCancel>
+  </Form11>
+  <Form12>
+        <Form12Caption>Изменить кнопки меню</Form12Caption>
+        <LabelName>Название кнопки</LabelName>
+        <LabelPathExe>Путь к программе/папке/веб-странице</LabelPathExe>
+        <LabelPathIcon>Путь к значку (необязательно)</LabelPathIcon>
+        <CheckBoxActiveButton>Данная кнопка активна</CheckBoxActiveButton>
+        <ButtonBrowse>Обзор</ButtonBrowse>
+        <ButtonOk>Ok</ButtonOk>
+        <ButtonCancel>Отмена</ButtonCancel>
+  </Form12>
+  <Form13>
+        <Form13Caption>Статистика</Form13Caption>
+        <!--System-->
+        <GroupBoxSystem>Система</GroupBoxSystem>
+        <LabelOperatingSystem>ОС</LabelOperatingSystem>
+        <LabelPcName>Пользователь</LabelPcName>
+        <LabelCurrentUser>Имя компьютера</LabelCurrentUser>
+        <!--Drive-->
+        <GroupBoxDrive>Диск %s:</GroupBoxDrive>
+        <LabelSize>Общий объем</LabelSize>
+        <LabelFreeSpace>Свободно</LabelFreeSpace>
+        <LabelUsedSpace>Занято</LabelUsedSpace>
+        <!--Launcher-->
+        <GroupBoxASuite>ASuite</GroupBoxASuite>
+        <LabelSwInserted>Программ</LabelSwInserted>
+        <LabelSwGroupInserted>Групп программ</LabelSwGroupInserted>
+        <LabelCatInserted>Категорий</LabelCatInserted>
+        <LabelTotal>Всего</LabelTotal>
+  </Form13>
+  <String>
+        <string01>Файл не найден</string01>
+        <string02>Ошибка в названии категории: %s</string02>
+        <string03>Ошибка в названии программы: %s</string03>
+        <string04>Без имени</string04>
+        <string05>Без описания</string05>
+        <string06>Без рейтинга</string06>
+        <string07>Без примечаний</string07>
+        <string08>Вы уверены?</string08>
+        <string09>Невозможно запустить %s</string09>
+        <string10>Загрузка файла xml не была завершена из-за ошибки</string10>
+        <string11>%s ошибок возникло, с сообщением: %s</string11>
+        <string12>Поле "Название программы" не заполнено</string12>
+        <string13>Неверный путь к исполняемому файлу</string13>
+        <string14>Не более 10 программ в группе</string14>
+        <string15>Невозможно использовать значок %s</string15>
+        <string16>Не удалось найти значок %s</string16>
+        <string17>Сохранено</string17>
+        <string18>Сохранение не было выполнено из-за ошибки</string18>
+        <string19>Выполняется импорт...</string19>
+        <string20>Не удалось выполнить импорт из-за ошибки</string20>
+        <string21>Работа ASuite была звершена некорректно. Восстановить последнюю сессию?</string21>
+        <string22>Не удалось зарегистрировать данную горячую клавишу</string22>
+        <string23>Выполняется сканирование...</string23>
+        <string24>Доступна новая версия ASuite. Хотите загрузить и установить ее?</string24>
+        <string25>Новых версий нет</string25>
+  </String>
+</ASuite>
+
+
+
+
+
+
+
+
+
+
+
+

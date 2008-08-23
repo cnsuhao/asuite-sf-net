@@ -32,9 +32,9 @@
 	<MenuAddGroupSw>Ajouter un groupe de logiciels</MenuAddGroupSw>
 	<MenuAddFolder>Ajouter un dossier</MenuAddFolder>
 	<MenuAddSeparator>Ajouter un séparateur</MenuAddSeparator>
-	<MenuCut>Cut</MenuCut>
-	<MenuCopy>Copy</MenuCopy>
-	<MenuPaste>Paste</MenuPaste>
+	<MenuCut>Couper</MenuCut>
+	<MenuCopy>Copier</MenuCopy>
+	<MenuPaste>Coller</MenuPaste>
 	<MenuDelete>Supprimer</MenuDelete>
 	<MenuProperty>Propriétés</MenuProperty>
 	<!--Help Menu-->
@@ -45,7 +45,7 @@
 	<!--Trayicon Menu-->
 	<TrayiconShowASuite>Afficher ASuite</TrayiconShowASuite>
 	<TrayiconMRU>Récents</TrayiconMRU>
-	<TrayiconEject>Safely remove hardware</TrayiconEject>
+	<TrayiconEject>Retirer le media amovible</TrayiconEject>
     <TrayiconExit>Quitter</TrayiconExit>
 	<!--Trayicon Default Menu-->
 	<DefaultMenuButtonOptions>Options...</DefaultMenuButtonOptions>
@@ -278,19 +278,19 @@
   </Form11>
   <Form12>	
 	<Form12Caption>Change menu buttons</Form12Caption>
-	<LabelName>Name</LabelName>
-	<LabelPathExe>Executable/folder/web page path</LabelPathExe>
-	<LabelPathIcon>Custom icon path (optional)</LabelPathIcon>
-	<CheckBoxActiveButton>Active this button</CheckBoxActiveButton>
-	<ButtonBrowse>Browse</ButtonBrowse>
+	<LabelName>Nom</LabelName>
+	<LabelPathExe>Chemin du dossier/fichier/page web</LabelPathExe>
+	<LabelPathIcon>Icône personnalisée (facultatif)</LabelPathIcon>
+	<CheckBoxActiveButton>Activer ce bouton</CheckBoxActiveButton>
+	<ButtonBrowse>Parcourir</ButtonBrowse>
 	<ButtonOk>Ok</ButtonOk>
-	<ButtonCancel>Cancel</ButtonCancel>
+	<ButtonCancel>Annuler</ButtonCancel>
   </Form12>
   <Form13>
 	<Form13Caption>Stats</Form13Caption>
 	<!--System-->
 	<GroupBoxSystem>Système</GroupBoxSystem>
-	<LabelOperatingSystem>Operating system</LabelOperatingSystem>
+	<LabelOperatingSystem>Système d'exploitation</LabelOperatingSystem>
 	<LabelPcName>Nom de l'ordinateur</LabelPcName>
 	<LabelCurrentUser>Utilisateur actuel</LabelCurrentUser>
 	<!--Drive-->
@@ -301,7 +301,7 @@
 	<!--Launcher-->
 	<GroupBoxASuite>ASuite</GroupBoxASuite>
 	<LabelSwInserted>Logiciels ajoutés</LabelSwInserted>
-	<LabelSwGroupInserted>Software group added</LabelSwGroupInserted>
+	<LabelSwGroupInserted>Groupe de logiciels ajoutés</LabelSwGroupInserted>
 	<LabelCatInserted>Catégories ajoutées</LabelCatInserted>
 	<LabelTotal>Total</LabelTotal>
   </Form13>
@@ -334,9 +334,9 @@
   </String>
   <Translater>
     <Info>
-      <Name>machenzy</Name>
-      <DateYYYYMMDD>2008/03/03</DateYYYYMMDD>
-      <DateJJMMAAAA>03/03/2008</DateJJMMAAAA>
+      <Name>machenzy + pyg</Name>
+      <DateYYYYMMDD>2008/08/21</DateYYYYMMDD>
+      <DateJJMMAAAA>21/08/2008</DateJJMMAAAA>
       <InLanguage>English</InLanguage>
       <OutLanguage>French</OutLanguage>
       <LangueDEntree>Anglais</LangueDEntree>
