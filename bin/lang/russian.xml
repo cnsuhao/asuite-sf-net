@@ -162,7 +162,7 @@
         <CheckBoxClassicMenu>Использовать классическое меню</CheckBoxClassicMenu>
         <!--Trayicon Default Menu-->
         <LabelMenuTheme>Тема</LabelMenuTheme>
-        <ButtonMenuFolders>Кнопки меню</ButtonMenuFolders>
+        <ButtonMenuButtons>Кнопки меню</ButtonMenuButtons>
         <CheckBoxMenuFade>Плавное затухание меню</CheckBoxMenuFade>
         <!--Mouse-->
         <GroupBoxMouse>Отслеживание мыши</GroupBoxMouse>
@@ -350,6 +350,7 @@
         <string25>Новых версий нет</string25>
   </String>
 </ASuite>
+
 
 
 
