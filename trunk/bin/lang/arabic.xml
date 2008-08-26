@@ -15,42 +15,42 @@
 	<MenuFile>ملف</MenuFile>
 	<MenuOption>إعدادت</MenuOption>
 	<MenuSave>حفظ القائمة</MenuSave>
-	<MenuImportList>استيراد القائمة...</MenuImportList>
-	<MenuExportList>تصدير القائمة...</MenuExportList>
-	<MenuScanExecutables>البحث عن الملفات...</MenuScanExecutables>
+	<MenuImportList>استيراد القائمة</MenuImportList>
+	<MenuExportList>تصدير القائمة</MenuExportList>
+	<MenuScanExecutables>البحث عن الملفات</MenuScanExecutables>
 	<MenuExit>خروج</MenuExit>
 	<!--Edit List Menu/PopUp Menu-->
 	<MenuSortList>نوع القائمة</MenuSortList>
 	<MenuEdit>تحرير</MenuEdit>
 	<MenuSortCategoryItems>تصنيف أنواع المواد</MenuSortCategoryItems>
 	<MenuRun>تشغيل</MenuRun>
-	<MenuRunAs>تشغيل بواسطة...</MenuRunAs>
-	<MenuOpenFolder>مشاهدة مجلد البرامج</MenuOpenFolder>
+	<MenuRunAs>تشغيل بواسطة</MenuRunAs>
+	<MenuOpenFolder>فتح موقع الملف</MenuOpenFolder>
 	<MenuVisitWebSite>زيارة الصفحة</MenuVisitWebSite>
 	<MenuAddCat>إضافة تصنيف</MenuAddCat>
 	<MenuAddSw>إضافة برنامج</MenuAddSw>
 	<MenuAddGroupSw>إضافة مجموعة برامج</MenuAddGroupSw>
 	<MenuAddFolder>إضافة مجلد</MenuAddFolder>
 	<MenuAddSeparator>إضافة فاصلة</MenuAddSeparator>
-	<MenuCut>Cut</MenuCut>
-	<MenuCopy>Copy</MenuCopy>
-	<MenuPaste>Paste</MenuPaste>
+	<MenuCut>قص</MenuCut>
+	<MenuCopy>نسخ</MenuCopy>
+	<MenuPaste>لصق</MenuPaste>
 	<MenuDelete>حذف</MenuDelete>
 	<MenuProperty>خصائص</MenuProperty>
 	<!--Help Menu-->
-	<MenuCheckUpdates>بحث عن تحديثات</MenuCheckUpdates>
+	<MenuCheckUpdates>البحث عن تحديثات</MenuCheckUpdates>
 	<MenuHelp>مساعدة</MenuHelp>
 	<MenuStats>إحصائيات</MenuStats>
-	<MenuASuiteInfo>حول ASuite</MenuASuiteInfo>
+	<MenuASuiteInfo>حول أي سايت</MenuASuiteInfo>
 	<!--Trayicon Menu-->
-	<TrayiconShowASuite>مشاهدة ASuite</TrayiconShowASuite>
-	<TrayiconMRU>Recents</TrayiconMRU>
-	<TrayiconEject>Safely remove hardware</TrayiconEject>
+	<TrayiconShowASuite>مشاهدة أي سايت</TrayiconShowASuite>
+	<TrayiconMRU>العناصر الحديثة</TrayiconMRU>
+	<TrayiconEject>ازالة الاجهزه بأمان</TrayiconEject>
 	<TrayiconExit>خروج</TrayiconExit>
 	<!--Trayicon Default Menu-->
 	<DefaultMenuButtonOptions>خيارات</DefaultMenuButtonOptions>
 	<DefaultMenuButtonSearch>بحث</DefaultMenuButtonSearch>
-	<DefaultMenuButtonAbout>حول ASuite</DefaultMenuButtonAbout>
+	<DefaultMenuButtonAbout>حول أي سايت</DefaultMenuButtonAbout>
   </Form1>
   <Form2><!--Card-->
 	<!--ASuite's Page-->
@@ -66,7 +66,7 @@
 	<LabelVersion>الاصدار</LabelVersion>
 	<LabelWebSite>الصفحة</LabelWebSite>
 	<LabelDescription>الوصف</LabelDescription>
-	<LabelNote>ملاحظات</LabelNote>
+	<LabelNote>الملاحظات</LabelNote>
 	<LabelOpinion>التقييم</LabelOpinion> 
   </Form2>
   <Form3><!--Option-->
@@ -75,16 +75,16 @@
 	<TabGeneralCaption>عام</TabGeneralCaption>
 	<!--Startup-->
 	<GroupBoxStartup>البدء</GroupBoxStartup>
-	<CheckBoxWindowsStartup>بدء تشغيل البرنامج مع بدء تشغيل النظام</CheckBoxWindowsStartup>
-	<CheckBoxStartUp>مشاهدة النافذة مع بدء تشغيل البرنامج</CheckBoxStartUp>
+	<CheckBoxWindowsStartup>بدء تشغيل أي سايت مع بدء تشغيل النظام</CheckBoxWindowsStartup>
+	<CheckBoxStartUp>مشاهدة النافذة مع بدء تشغيل أي سايت</CheckBoxStartUp>
 	<CheckBoxMenuStartUp>مشاهدة الأيقونة في صينية النظام</CheckBoxMenuStartUp>
 	<CheckBoxAutorun>تمكين التشغيل الآلي</CheckBoxAutorun>
 	<!--Window-->
 	<GroupBoxWindow>النافذة</GroupBoxWindow>
-	<CheckBoxHoldSize>حجم نافذة البرنامج</CheckBoxHoldSize>
-	<CheckBoxFormCard>مشاهدة معلومات البرنامج</CheckBoxFormCard>
+	<CheckBoxHoldSize>حجم نافذة الملف</CheckBoxHoldSize>
+	<CheckBoxFormCard>مشاهدة معلومات الملف</CheckBoxFormCard>
 	<CheckBoxWindowOnTop>جعل النافذة الأعلى</CheckBoxWindowOnTop>
-	<CheckBoxWindowHotkey>مشاهدة نافذة البرنامج عند الضغط على المفتاح</CheckBoxWindowHotkey>
+	<CheckBoxWindowHotkey>مشاهدة نافذة الملف عند الضغط على المفتاح</CheckBoxWindowHotkey>
 	<CheckBoxMenuHotkey>مشاهدة القائمة عند الضغط على المفتاح</CheckBoxMenuHotkey>
 	<CheckBoxCustomTitle>عنوان النافذة</CheckBoxCustomTitle>
 	<LabelLanguage>اللغة</LabelLanguage>
@@ -101,15 +101,15 @@
 	<!--Advanced-->
 	<TabAdvancedCaption>متقدم</TabAdvancedCaption>
 	<!--MRU-->
-	<GroupBoxMRU>Recents</GroupBoxMRU>
-	<CheckBoxMRU>تنشيط MRU</CheckBoxMRU>
-	<CheckBoxSubMenuMRU>MRU on trayicon submenu</CheckBoxSubMenuMRU>
-	<LabelMRUMax>أقصى عدد MRU</LabelMRUMax>
-	<ButtonClearMRU>حذف كل MRU</ButtonClearMRU>
+	<GroupBoxMRU>العناصر الحديثة</GroupBoxMRU>
+	<CheckBoxMRU>تنشيط العناصر الحديثة</CheckBoxMRU>
+	<CheckBoxSubMenuMRU>جعل العناصر الحديثة في قائمة</CheckBoxSubMenuMRU>
+	<LabelMRUMax>عدد العناصر الحديثة</LabelMRUMax>
+	<ButtonClearMRU>حذف كل العناصر الحديثة</ButtonClearMRU>
 	<!--Backup-->
 	<GroupBoxBackup>نسخة احتياطية</GroupBoxBackup>
 	<CheckBoxBackup>تنشيط النسخ الاحتياطي</CheckBoxBackup>
-	<LabelBackupMax>أقصى عدد للنسخ الاحتياطية</LabelBackupMax>
+	<LabelBackupMax>أقصى عدد للنسخ الاحتياطي</LabelBackupMax>
 	<ButtonClearBackup>مسح كل النسخ الاحتياطية</ButtonClearBackup>
 	<!--Check list-->
 	<GroupBoxCheckList>فحص القائمة</GroupBoxCheckList>
@@ -122,9 +122,9 @@
 	<CheckBoxSaveSecurity>تميكن الأمان</CheckBoxSaveSecurity>
 	<CheckBoxScheduler>تميكن الملحقات</CheckBoxScheduler>
 	<!--Clear elements-->
-	<GroupBoxClearElements>العناصر الواضحة</GroupBoxClearElements>
-	<LabelClearElements>وضح كل من MRU و النسخة الاحتياطية والأيقونات و </LabelClearElements>
-	<ButtonClearElements>العناصر الواضحة ...</ButtonClearElements>
+	<GroupBoxClearElements>مخلفات العناصر</GroupBoxClearElements>
+	<LabelClearElements>النسخ الاحتياطية و العناصر الحديثة والأيقونات</LabelClearElements>
+	<ButtonClearElements>مخلفات العناصر</ButtonClearElements>
 	<!--Various-->
 	<TabVariousCaption>أخرى</TabVariousCaption>
 	<!--Execution-->
@@ -132,8 +132,8 @@
 	<CheckBoxSingleClick>التنفيذ عند النقر </CheckBoxSingleClick>
 	<LabelActionOnExe>إعمال التنفيذ</LabelActionOnExe>
 	<ListActionOnExe1>تشغيل الملف فقط</ListActionOnExe1>
-	<ListActionOnExe2>تشغيل وإخفاء البرنامج ASuite </ListActionOnExe2>
-	<ListActionOnExe3>تشغيل وإغلاق البرنامج ASuite</ListActionOnExe3>
+	<ListActionOnExe2>تشغيل وإخفاء البرنامج</ListActionOnExe2>
+	<ListActionOnExe3>تشغيل وإغلاق البرنامج</ListActionOnExe3>
 	<!--System Tray-->
 	<GroupBoxTrayicon>صينية النظام</GroupBoxTrayicon>
 	<ButtonCustomTrayicon>اختر الأيقونة</ButtonCustomTrayicon>
@@ -171,11 +171,11 @@
 	<LabelVersion>الاصدار</LabelVersion>
 	<LabelDeveloper>المبرمج</LabelDeveloper>
 	<LabelWebSite>الصفحة</LabelWebSite>
-	<LabelPathExeA>Executable/folder/web page path</LabelPathExeA>
-	<LabelPathExeB>Executables/folders/web pages paths</LabelPathExeB>
-	<LabelParameters>Parameters (خيارات)</LabelParameters>
-	<LabelWorkingDir> مسار المجلد (خيارات)</LabelWorkingDir>
-	<LabelPathIcon>مسار الأيقونة (خيارات)</LabelPathIcon>
+	<LabelPathExeA>ملف تنفيذي أو مجلد أو صفحة ويب</LabelPathExeA>
+	<LabelPathExeB>ملف تنفيذي أو مجلد أو صفحة ويب</LabelPathExeB>
+	<LabelParameters>Parameters _ خيارات</LabelParameters>
+	<LabelWorkingDir> مسار المجلد _ خيارات</LabelWorkingDir>
+	<LabelPathIcon>مسار الأيقونة _ خيارات</LabelPathIcon>
 	<HideWindow>تنفيذ إخفاء النافذة</HideWindow>
 	<LabelDescription>الوصف</LabelDescription>
 	<LabelOpinion>التقييم</LabelOpinion>
@@ -188,23 +188,23 @@
 	<ButtonChangeOrder>طلب تغيير</ButtonChangeOrder>
 	<ComboBoxAutoExecute0>أبداً</ComboBoxAutoExecute0>
 	<ComboBoxAutoExecute1>البدء دوماً</ComboBoxAutoExecute1>
-	<ComboBoxAutoExecute2A>Only if no previous instances are running</ComboBoxAutoExecute2A>
-	<ComboBoxAutoExecute2B>Only if no previous instances are running</ComboBoxAutoExecute2B>
+	<ComboBoxAutoExecute2A>الا اذا لم يتشغل سابقاً</ComboBoxAutoExecute2A>
+	<ComboBoxAutoExecute2B>الا اذا لم يتشغل سابقاً</ComboBoxAutoExecute2B>
 	<ComboBoxAutoExecute3>الإغلاق دوماً</ComboBoxAutoExecute3>
-	<LabelOnExecution>On execution</LabelOnExecution>
+	<LabelOnExecution>تنفيذ</LabelOnExecution>
 	<ComboBoxActionOnExe0>الخيارات الافتراضية</ComboBoxActionOnExe0>
 	<ComboBoxActionOnExe1A>تشغيل الملف فقط</ComboBoxActionOnExe1A>
 	<ComboBoxActionOnExe1B>تشغيل الملفات فقط</ComboBoxActionOnExe1B>
-	<ComboBoxActionOnExe2>تشغيل وإخفاء الـASuite</ComboBoxActionOnExe2>
-	<ComboBoxActionOnExe3>تشغيل وإغلاق الـASuite</ComboBoxActionOnExe3>
+	<ComboBoxActionOnExe2>تشغيل وإخفاء البرنامج</ComboBoxActionOnExe2>
+	<ComboBoxActionOnExe3>تشغيل وإغلاق البرنامج</ComboBoxActionOnExe3>
 	<CheckBoxHotKey>تمكين المفتاح</CheckBoxHotKey>
 	<LabelWindowState>نافذة الاحصائيات</LabelWindowState>
 	<ComboBoxWSNormal>عادي</ComboBoxWSNormal>
 	<ComboBoxWSMinimized>أقل</ComboBoxWSMinimized>
 	<ComboBoxWSMaximized>أكثر</ComboBoxWSMaximized>
-	<LabelDontInsertMRUA>لا تدخل هذه البرامج في MRU</LabelDontInsertMRUA>
-	<LabelDontInsertMRUB>لا تدخل مجموعة البرامج في MRU</LabelDontInsertMRUB>
-	<LabelShortcutDesktop>إنشاء اختصار عند تشغيل البرنامج Asuite</LabelShortcutDesktop>
+	<LabelDontInsertMRUA>لا تدخل هذه البرامج في العناصر الحديثة</LabelDontInsertMRUA>
+	<LabelDontInsertMRUB>لا تدخل مجموعة البرامج في العناصر الحديثة</LabelDontInsertMRUB>
+	<LabelShortcutDesktop>إنشاء اختصار عند تشغيل البرنامج</LabelShortcutDesktop>
 	<LabelHideSoftwareMenuA>إخفاء البرنامج من القائمة</LabelHideSoftwareMenuA>
 	<LabelHideSoftwareMenuB>إخفاء مجموعة البرامج من القائمة</LabelHideSoftwareMenuB>
 	<LabelScheduler>الملحقات</LabelScheduler>
@@ -254,17 +254,17 @@
   </Form8>
   <Form9>
 	<Form9Caption>تنظيف العناصر</Form9Caption>
-	<LabelClearElements>تنظيف العناصر التالية الآن :</LabelClearElements>
-	<CheckBoxMRU>MRU</CheckBoxMRU>
+	<LabelClearElements>تنظيف العناصر التالية</LabelClearElements>
+	<CheckBoxMRU>العناصر الحديثة</CheckBoxMRU>
 	<CheckBoxBackup>النسخ احتياطية</CheckBoxBackup>
-	<CheckBoxCache>ذاكرة الأيقونات</CheckBoxCache>
+	<CheckBoxCache>بقاياالأيقونات</CheckBoxCache>
 	<ButtonClear>تنظيف</ButtonClear>
 	<ButtonCancel>إلغاء</ButtonCancel>
   </Form9>
   <Form10>
 	<Form10Caption>طلب برنامج</Form10Caption>
-	<LabelInfoStartupOrder>طلب قائمة البرامج مع بدء البرنامج ASuite</LabelInfoStartupOrder>
-	<LabelInfoShutdownOrder>طلب قائمة البرامج مع إغلاق البرنامج ASuite</LabelInfoShutdownOrder>
+	<LabelInfoStartupOrder>طلب قائمة البرامج مع بدء البرنامج _أي سايت</LabelInfoStartupOrder>
+	<LabelInfoShutdownOrder>طلب قائمة البرامج مع إغلاق البرنامج _أي سايت</LabelInfoShutdownOrder>
 	<ButtonOk>موافق</ButtonOk>
 	<ButtonCancel>إلغاء</ButtonCancel>
   </Form10>
@@ -276,33 +276,33 @@
 	<ButtonCancel>إلغاء</ButtonCancel>
   </Form11>
   <Form12>	
-	<Form12Caption>Change menu buttons</Form12Caption>
-	<LabelName>Name</LabelName>
-	<LabelPathExe>Executable/folder/web page path</LabelPathExe>
-	<LabelPathIcon>Custom icon path (optional)</LabelPathIcon>
-	<CheckBoxActiveButton>Active this button</CheckBoxActiveButton>
-	<ButtonBrowse>Browse</ButtonBrowse>
-	<ButtonOk>Ok</ButtonOk>
-	<ButtonCancel>Cancel</ButtonCancel>
+	<Form12Caption>تغيير قائمة الأزرار</Form12Caption>
+	<LabelName>الاسم</LabelName>
+	<LabelPathExe>ملف تنفيذي أو مجلد أو صفحة ويب</LabelPathExe>
+	<LabelPathIcon>اختيار الأيقونة _ اختياري</LabelPathIcon>
+	<CheckBoxActiveButton>تنشيط هذا الزر</CheckBoxActiveButton>
+	<ButtonBrowse>استعراض</ButtonBrowse>
+	<ButtonOk>موافق</ButtonOk>
+	<ButtonCancel>إلغاء الأمر</ButtonCancel>
   </Form12>
   <Form13>
-	<Form13Caption>Stats</Form13Caption>
+	<Form13Caption>احصائيات</Form13Caption>
 	<!--System-->
 	<GroupBoxSystem>النظام</GroupBoxSystem>
-	<LabelOperatingSystem>Operating system</LabelOperatingSystem>
+	<LabelOperatingSystem>نظام التشغيل</LabelOperatingSystem>
 	<LabelPcName>اسم الكمبيوتر</LabelPcName>
 	<LabelCurrentUser>المستخدم الحالي</LabelCurrentUser>
 	<!--Drive-->
-	<GroupBoxDrive>القرص %s:</GroupBoxDrive>
-	<LabelSize>الحجم: </LabelSize>
-	<LabelFreeSpace>المساحة المتبقية </LabelFreeSpace>
-	<LabelUsedSpace>المساحة المستخدمة </LabelUsedSpace>
+	<GroupBoxDrive>القرص %s</GroupBoxDrive>
+	<LabelSize>الحجم = </LabelSize>
+	<LabelFreeSpace>المساحة المتبقية = </LabelFreeSpace>
+	<LabelUsedSpace>المساحة المستخدمة = </LabelUsedSpace>
 	<!--Launcher-->
-	<GroupBoxASuite>ASuite</GroupBoxASuite>
-	<LabelSwInserted>البرامج المضافة </LabelSwInserted>
-	<LabelSwGroupInserted>Software group added</LabelSwGroupInserted>
-	<LabelCatInserted>التصنيفات المضافة</LabelCatInserted>
-	<LabelTotal>المجموع </LabelTotal>
+	<GroupBoxASuite>أي سايت</GroupBoxASuite>
+	<LabelSwInserted>البرامج المضافة = </LabelSwInserted>
+	<LabelSwGroupInserted>المجموعات المضافة = </LabelSwGroupInserted>
+	<LabelCatInserted>التصنيفات المضافة = </LabelCatInserted>
+	<LabelTotal>المجموع = </LabelTotal>
   </Form13>
   <String>
 	<string01>الملف غير موجودد</string01>
@@ -325,10 +325,10 @@
 	<string18>فشل الحفظ .. بسبب خطأ</string18>
 	<string19>الاستيراد مستمر ...</string19>
 	<string20>فشل الاستيراد .. بسبب خطأ</string20>
-	<string21>البرنامج ASuite أغلق بشكل غير صحيح .. أعد الجلسة الأخيرة ؟</string21>
+	<string21>البرنامج أي سايت أغلق بشكل غير صحيح .. أعد الجلسة الأخيرة ؟</string21>
 	<string22>لا يمكن تسجيل المفتاح</string22>
 	<string23>بحث مستمر ...</string23>
-	<string24>يوجد نسخة حديثة للبرنامج Asuite هل تريد تتنزيلها ؟</string24>
+	<string24>يوجد نسخة حديثة للبرنامج أي سايت  هل تريد تتنزيلها ؟</string24>
 	<string25>لا يوجد إصدار حديث</string25>
   </String>
 </ASuite>
