@@ -30,6 +30,9 @@ mkdir MenuThemes\g4xl\Theme\
 mkdir MenuThemes\loveliness\
 mkdir MenuThemes\loveliness\IconTheme\
 mkdir MenuThemes\loveliness\Theme\
+mkdir MenuThemes\vector\
+mkdir MenuThemes\vector\IconTheme\
+mkdir MenuThemes\vector\Theme\
 
 copy ..\bin\asuite.exe ..\bin\asuite.exe.old
 D:\Programmi\UPX\upx.exe --best ..\bin\asuite.exe
@@ -151,6 +154,25 @@ copy ..\bin\MenuThemes\loveliness\IconTheme\videos.ico MenuThemes\loveliness\Ico
 copy ..\bin\MenuThemes\loveliness\Theme\background.jpg MenuThemes\loveliness\Theme
 copy ..\bin\MenuThemes\loveliness\Theme\divider.jpg MenuThemes\loveliness\Theme
 copy ..\bin\MenuThemes\loveliness\Theme\drive_space_slider.bmp MenuThemes\loveliness\Theme
+
+copy ..\bin\MenuThemes\vector\Picture.jpg MenuThemes\vector
+copy ..\bin\MenuThemes\vector\Picture1.jpg MenuThemes\vector
+copy ..\bin\MenuThemes\vector\Picture2.jpg MenuThemes\vector
+copy ..\bin\MenuThemes\vector\Picture3.jpg MenuThemes\vector
+
+copy ..\bin\MenuThemes\vector\IconTheme\asuite.ico MenuThemes\vector\IconTheme
+copy ..\bin\MenuThemes\vector\IconTheme\documents.ico MenuThemes\vector\IconTheme
+copy ..\bin\MenuThemes\vector\IconTheme\explore.ico MenuThemes\vector\IconTheme
+copy ..\bin\MenuThemes\vector\IconTheme\help.ico MenuThemes\vector\IconTheme
+copy ..\bin\MenuThemes\vector\IconTheme\music.ico MenuThemes\vector\IconTheme
+copy ..\bin\MenuThemes\vector\IconTheme\options.ico MenuThemes\vector\IconTheme
+copy ..\bin\MenuThemes\vector\IconTheme\pictures.ico MenuThemes\vector\IconTheme
+copy ..\bin\MenuThemes\vector\IconTheme\search.ico MenuThemes\vector\IconTheme
+copy ..\bin\MenuThemes\vector\IconTheme\videos.ico MenuThemes\vector\IconTheme
+
+copy ..\bin\MenuThemes\vector\Theme\background.png MenuThemes\vector\Theme
+copy ..\bin\MenuThemes\vector\Theme\divider.jpg MenuThemes\vector\Theme
+copy ..\bin\MenuThemes\vector\Theme\drive_space_slider.bmp MenuThemes\vector\Theme
 
 c:\programmi\7-zip\7z.exe a -tzip ..\asuite152.zip
 
