@@ -2,6 +2,7 @@ program ASuite;
 
 uses
   FastMM4,
+  ContextMenuBugFix,
   Forms,
   SysUtils,
   Main in 'Main.pas' {frmMain},
