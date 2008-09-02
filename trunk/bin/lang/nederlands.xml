@@ -16,15 +16,15 @@
 	<MenuOption>Opties</MenuOption>
 	<MenuSave>Lijst opslaan</MenuSave>
 	<MenuImportList>Importeer lijst...</MenuImportList>
-	<MenuExportList>Export list...</MenuExportList>
-	<MenuScanExecutables>Scan for files...</MenuScanExecutables>
+	<MenuExportList>Export lijst...</MenuExportList>
+	<MenuScanExecutables>Scan naar bestanden...</MenuScanExecutables>
 	<MenuExit>Afsluiten</MenuExit>
 	<!--Edit List Menu/PopUp Menu-->
-	<MenuSortList>Sort list</MenuSortList>
+	<MenuSortList>Sorteer lijst</MenuSortList>
 	<MenuEdit>Bewerken</MenuEdit>
-	<MenuSortCategoryItems>Sort category's items</MenuSortCategoryItems>
+	<MenuSortCategoryItems>Sorteer categorie items</MenuSortCategoryItems>
 	<MenuRun>Start</MenuRun>
-	<MenuRunAs>Run as...</MenuRunAs>
+	<MenuRunAs>Start als...</MenuRunAs>
 	<MenuOpenFolder>Applicatiemap openen</MenuOpenFolder>
 	<MenuVisitWebSite>Website bezoeken</MenuVisitWebSite>
 	<MenuAddCat>Categorie toevoegen</MenuAddCat>
@@ -32,31 +32,31 @@
 	<MenuAddGroupSw>Softwaregroep toevoegen</MenuAddGroupSw>
 	<MenuAddFolder>Map toevoegen</MenuAddFolder>
 	<MenuAddSeparator>Scheidingsteken toevoegen</MenuAddSeparator>
-	<MenuCut>Cut</MenuCut>
-	<MenuCopy>Copy</MenuCopy>
-	<MenuPaste>Paste</MenuPaste>
+	<MenuCut>Knippen</MenuCut>
+	<MenuCopy>Kopieëren</MenuCopy>
+	<MenuPaste>Plakken</MenuPaste>
 	<MenuDelete>Verwijderen</MenuDelete>
 	<MenuProperty>Eigenschappen</MenuProperty>
 	<!--Help Menu-->
-	<MenuCheckUpdates>Check updates</MenuCheckUpdates>
+	<MenuCheckUpdates>Controleer updates</MenuCheckUpdates>
 	<MenuHelp>Help</MenuHelp>
 	<MenuStats>Statistieken</MenuStats>
 	<MenuASuiteInfo>ASuite info</MenuASuiteInfo>
 	<!--Trayicon Menu-->
 	<TrayiconShowASuite>Laat ASuite zien</TrayiconShowASuite>
 	<TrayiconMRU>Recent</TrayiconMRU>
-	<TrayiconEject>Safely remove hardware</TrayiconEject>
+	<TrayiconEject>Veilig hardware verwijderen</TrayiconEject>
 	<TrayiconExit>Afsluiten</TrayiconExit>
 	<!--Trayicon Default Menu-->
-	<DefaultMenuButtonOptions>Options...</DefaultMenuButtonOptions>
-	<DefaultMenuButtonSearch>Search...</DefaultMenuButtonSearch>
-	<DefaultMenuButtonAbout>About ASuite</DefaultMenuButtonAbout>
+	<DefaultMenuButtonOptions>Opties...</DefaultMenuButtonOptions>
+	<DefaultMenuButtonSearch>Zoeken...</DefaultMenuButtonSearch>
+	<DefaultMenuButtonAbout>Over ASuite</DefaultMenuButtonAbout>
   </Form1>
   <Form2><!--Card-->
 	<!--ASuite's Page-->
 	<FormCaptionAbout>Info</FormCaptionAbout>
 	<LabelASVersion>Versie </LabelASVersion>
-	<LabelIntro>ASuite is een applicatie-starter. Het is ontworpen om te werken met USB-sticks, flash geheugen, harde schijven, iPods, etc.[br][br]Omdat ASuite relatieve paden gebruikt, is het zeer geschikt om te gebruiken met 'portable' applicaties.</LabelIntro>
+	<LabelIntro>ASuite is een applicatie-starter. Die is ontworpen om te werken met USB-sticks, flash geheugen, harde schijven, iPods, etc.[br][br]Omdat ASuite relatieve paden gebruikt, is het zeer geschikt om te gebruiken met 'portable' programma's.</LabelIntro>
 	<LabelInfo>Bezoek voor meer informatie</LabelInfo>
 	<!--Software's Page-->
 	<FormCaptionCard>Info</FormCaptionCard>
@@ -77,27 +77,27 @@
 	<GroupBoxStartup>Opstarten</GroupBoxStartup>
 	<CheckBoxWindowsStartup>Start ASuite bij systeemstart</CheckBoxWindowsStartup>
 	<CheckBoxStartUp>Laat venster zien bij opstarten</CheckBoxStartUp>
-	<CheckBoxMenuStartUp>Show trayicon menu on startup</CheckBoxMenuStartUp>
+	<CheckBoxMenuStartUp>Toon trayicon menu bij het opstarten</CheckBoxMenuStartUp>
 	<CheckBoxAutorun>Autostart inschakelen</CheckBoxAutorun>
 	<!--Window-->
 	<GroupBoxWindow>Venster</GroupBoxWindow>
 	<CheckBoxHoldSize>Venstergrootte vasthouden</CheckBoxHoldSize>
 	<CheckBoxFormCard>Applicatie-info tonen</CheckBoxFormCard>
 	<CheckBoxWindowOnTop>Venster op de voorgrond</CheckBoxWindowOnTop>
-	<CheckBoxWindowHotkey>Venster tonen na indrukken hotkey</CheckBoxWindowHotkey>
-	<CheckBoxMenuHotkey>Show trayicon menu when hotkey is pressed</CheckBoxMenuHotkey>
-	<CheckBoxCustomTitle>Custom window title</CheckBoxCustomTitle>
+	<CheckBoxWindowHotkey>Venster tonen na indrukken sneltoets</CheckBoxWindowHotkey>
+	<CheckBoxMenuHotkey>Toon trayicon menu bij indrukken sneltoets</CheckBoxMenuHotkey>
+	<CheckBoxCustomTitle>Eigen title</CheckBoxCustomTitle>
 	<LabelLanguage>Taal</LabelLanguage>
 	<!--Treeview-->
 	<GroupBoxTreeView>Boomstructuur</GroupBoxTreeView>
-	<ButtonFontSettings>Font settings...</ButtonFontSettings>
-	<CheckBoxAutoOpClCat>Automatic Opening/Closing Categories</CheckBoxAutoOpClCat>
+	<ButtonFontSettings>Letter type...</ButtonFontSettings>
+	<CheckBoxAutoOpClCat>Open/Sluit Categorie automatisch</CheckBoxAutoOpClCat>
 	<CheckBoxBackground>Achtergrond inschakelen</CheckBoxBackground>
 	<ButtonBrowseBackground>Bladeren</ButtonBrowseBackground>
 	<!--Tabs-->
 	<GroupBoxTabs>Tabs</GroupBoxTabs> 
-	<CheckBoxHideSearch>Hide tab search</CheckBoxHideSearch>
-	<CheckBoxHideStats>Hide tab stats</CheckBoxHideStats>
+	<CheckBoxHideSearch>Verberg tab zoeken</CheckBoxHideSearch>
+	<CheckBoxHideStats>Verberg tab statistieken</CheckBoxHideStats>
 	<!--Advanced-->
 	<TabAdvancedCaption>Geavanceerd</TabAdvancedCaption>
 	<!--MRU-->
@@ -113,39 +113,39 @@
 	<ButtonClearBackup>Verwijder alle backups</ButtonClearBackup>
 	<!--Check list-->
 	<GroupBoxCheckList>Check list</GroupBoxCheckList>
-	<CheckBoxCheckList>Enable check list</CheckBoxCheckList>
-	<LabelCheckListTime>Time interval</LabelCheckListTime>
+	<CheckBoxCheckList>Check list inschakelen</CheckBoxCheckList>
+	<LabelCheckListTime>Tijd interval</LabelCheckListTime>
 	<!--Other functions-->
 	<GroupBoxOtherFunctions>Andere functies</GroupBoxOtherFunctions>
-	<CheckBoxHotKey>Hotkey inschakelen</CheckBoxHotKey>
+	<CheckBoxHotKey>Sneltoetsen inschakelen</CheckBoxHotKey>
 	<CheckBoxCache>Cache inschakelen</CheckBoxCache>
 	<CheckBoxSaveSecurity>Beveiligd opslaan inschakelen</CheckBoxSaveSecurity>
-	<CheckBoxScheduler>Enable scheduler</CheckBoxScheduler>
+	<CheckBoxScheduler>Scheduler inschakelen</CheckBoxScheduler>
 	<!--Clear elements-->
-	<GroupBoxClearElements>Clear elements</GroupBoxClearElements>
-	<LabelClearElements>Clear all MRU, backups and/or cache icons</LabelClearElements>
-	<ButtonClearElements>Clear elements...</ButtonClearElements>
+	<GroupBoxClearElements>Verwijder elementen</GroupBoxClearElements>
+	<LabelClearElements>Verwijder alle MRU, backups en/of cache icons</LabelClearElements>
+	<ButtonClearElements>Verwijder...</ButtonClearElements>
 	<!--Various-->
-	<TabVariousCaption>Verscheidene</TabVariousCaption>
+	<TabVariousCaption>Extra</TabVariousCaption>
 	<!--Execution-->
 	<GroupBoxExecution>Uitvoeren</GroupBoxExecution>
 	<CheckBoxSingleClick>Met een enkele klik uitvoeren</CheckBoxSingleClick>
 	<LabelActionOnExe>Bij uitvoering</LabelActionOnExe>
 	<ListActionOnExe1>Alleen bestand uitvoeren</ListActionOnExe1>
-	<ListActionOnExe2>Uitvoeren en ASuite verbergen</ListActionOnExe2>
-	<ListActionOnExe3>Uitvoeren en ASuite afsluiten</ListActionOnExe3>
+	<ListActionOnExe2>Voer uit en verberg ASuite</ListActionOnExe2>
+	<ListActionOnExe3>Voer uit en sluit ASuite</ListActionOnExe3>
 	<!--System Tray-->
 	<GroupBoxTrayicon>System Tray</GroupBoxTrayicon>
-	<ButtonCustomTrayicon>Choose icon</ButtonCustomTrayicon>
+	<ButtonCustomTrayicon>Kies icon</ButtonCustomTrayicon>
 	<CheckBoxTrayicon>Pictogram in system tray inschakelen</CheckBoxTrayicon>
 	<ListActionTrayicon1>Geen actie</ListActionTrayicon1>
 	<ListActionTrayicon2>Laat venster zien</ListActionTrayicon2>
 	<ListActionTrayicon3>Laat menu zien</ListActionTrayicon3>
-	<CheckBoxClassicMenu>Use classic menu</CheckBoxClassicMenu>
+	<CheckBoxClassicMenu>Gebruik klassiek menu</CheckBoxClassicMenu>
 	<!--Trayicon Default Menu-->
-	<LabelMenuTheme>Theme</LabelMenuTheme>
-	<ButtonMenuButtons>Menu folders</ButtonMenuButtons>
-	<CheckBoxMenuFade>Enable fade menu</CheckBoxMenuFade>
+	<LabelMenuTheme>Thema</LabelMenuTheme>
+	<ButtonMenuButtons>Menu knoppen</ButtonMenuButtons>
+	<CheckBoxMenuFade>Fade menu inschakelen</CheckBoxMenuFade>
 	<!--Mouse-->
 	<GroupBoxMouse>Muissensors</GroupBoxMouse>
 	<LabelSide>Kant</LabelSide>
@@ -157,8 +157,8 @@
 	<LabelRightClick>Rechter knop</LabelRightClick>
 	<ListActionMouse1>Uitgeschakeld</ListActionMouse1>
 	<ListActionMouse2>Venster tonen</ListActionMouse2>
-	<ListActionMouse3>Show default menu</ListActionMouse3>
-	<ListActionMouse4>Show classic menu</ListActionMouse4>
+	<ListActionMouse3>Toon standart menu</ListActionMouse3>
+	<ListActionMouse4>Toon klassiek menu</ListActionMouse4>
 	<ButtonOk>Ok</ButtonOk>
 	<ButtonCancel>Annuleren</ButtonCancel>
   </Form3>
@@ -185,7 +185,7 @@
 	<ButtonBrowse>Bladeren</ButtonBrowse>
 	<ButtonRetrieve>Ophalen</ButtonRetrieve>
 	<LabelAutoExecute>Automatisch uitvoeren</LabelAutoExecute>
-	<ButtonChangeOrder>Change order</ButtonChangeOrder>
+	<ButtonChangeOrder>Verander volgorde</ButtonChangeOrder>
 	<ComboBoxAutoExecute0>Nooit</ComboBoxAutoExecute0>
 	<ComboBoxAutoExecute1>Altijd bij opstarten</ComboBoxAutoExecute1>
 	<ComboBoxAutoExecute2A>Alleen als er geen vorige sessie's lopen</ComboBoxAutoExecute2A>
@@ -195,9 +195,9 @@
 	<ComboBoxActionOnExe0>Standaard (opties)</ComboBoxActionOnExe0>
 	<ComboBoxActionOnExe1A>Alleen bestand uitvoeren</ComboBoxActionOnExe1A>
 	<ComboBoxActionOnExe1B>Alleen bestanden uitvoeren</ComboBoxActionOnExe1B>
-	<ComboBoxActionOnExe2>Uitvoeren en ASuite verbergen</ComboBoxActionOnExe2>
-	<ComboBoxActionOnExe3>Uitvoeren en ASuite afsluiten</ComboBoxActionOnExe3>
-	<CheckBoxHotKey>Hotkey inschakelen</CheckBoxHotKey>
+	<ComboBoxActionOnExe2>Voer uit en verberg ASuite</ComboBoxActionOnExe2>
+	<ComboBoxActionOnExe3>Voer uit en sluit ASuite</ComboBoxActionOnExe3>
+	<CheckBoxHotKey>Sneltoesten inschakelen</CheckBoxHotKey>
 	<LabelWindowState>Vensterstatus</LabelWindowState>
 	<ComboBoxWSNormal>Normaal</ComboBoxWSNormal>
 	<ComboBoxWSMinimized>Geminimaliseerd</ComboBoxWSMinimized>
@@ -205,13 +205,13 @@
 	<LabelDontInsertMRUA>Deze software niet toevoegen aan de MRU</LabelDontInsertMRUA>
 	<LabelDontInsertMRUB>Deze softwaregroep niet toevoegen aan de MRU</LabelDontInsertMRUB>
 	<LabelShortcutDesktop>Snelkoppeling op bureaublad creëren als ASuite geactiveerd is</LabelShortcutDesktop>
-	<LabelHideSoftwareMenuA>Hide this software from menu</LabelHideSoftwareMenuA>
-	<LabelHideSoftwareMenuB>Hide this software group from menu</LabelHideSoftwareMenuB>
+	<LabelHideSoftwareMenuA>Verberg deze software in het menu</LabelHideSoftwareMenuA>
+	<LabelHideSoftwareMenuB>Verberg deze softwaregroep in het menu</LabelHideSoftwareMenuB>
 	<LabelScheduler>Scheduler</LabelScheduler>
-	<ComboBoxSchedulerMode0>Disabled</ComboBoxSchedulerMode0>
-	<ComboBoxSchedulerMode1>Once</ComboBoxSchedulerMode1>
-	<ComboBoxSchedulerMode2>Hourly</ComboBoxSchedulerMode2>
-	<ComboBoxSchedulerMode3>Daily</ComboBoxSchedulerMode3>
+	<ComboBoxSchedulerMode0>Uitgeschakeld</ComboBoxSchedulerMode0>
+	<ComboBoxSchedulerMode1>1 keer</ComboBoxSchedulerMode1>
+	<ComboBoxSchedulerMode2>Ieder uur</ComboBoxSchedulerMode2>
+	<ComboBoxSchedulerMode3>Iedere dag</ComboBoxSchedulerMode3>
 	<ButtonAddPath>Toevoegen</ButtonAddPath>
 	<ButtonReplacePath>Vervangen</ButtonReplacePath>
 	<ButtonDeletePath>Verwijderen</ButtonDeletePath>
@@ -229,61 +229,61 @@
 	<ButtonCancel>Annuleren</ButtonCancel>
   </Form6>
   <Form7>
-	<Form7Caption>Scan folder</Form7Caption>
-	<LabelFolderPath>Folder path</LabelFolderPath>
-	<ButtonBrowse>Browse</ButtonBrowse>
-	<CheckboxSubFolders>Scan subfolders</CheckboxSubFolders>
-	<LabelTypes>File types</LabelTypes>
-	<LabelExclude>Exclude file</LabelExclude>
-	<ButtonAdd>Add</ButtonAdd>
-	<ButtonReplace>Replace</ButtonReplace>
-	<ButtonDelete>Delete</ButtonDelete>
-	<CheckboxRetrieveInfo>Retrieve informations from executables</CheckboxRetrieveInfo>
-	<ButtonScan>Scan</ButtonScan>
-	<ButtonCancel>Cancel</ButtonCancel>
+	<Form7Caption>Scan map</Form7Caption>
+	<LabelFolderPath>Map path</LabelFolderPath>
+	<ButtonBrowse>Bladeren</ButtonBrowse>
+	<CheckboxSubFolders>Doorzoek submappen</CheckboxSubFolders>
+	<LabelTypes>Bestands types</LabelTypes>
+	<LabelExclude>Excl. bestand</LabelExclude>
+	<ButtonAdd>Toevoegen</ButtonAdd>
+	<ButtonReplace>Herplaats</ButtonReplace>
+	<ButtonDelete>Verwijder</ButtonDelete>
+	<CheckboxRetrieveInfo>Haal informatie uit toepassing(en)</CheckboxRetrieveInfo>
+	<ButtonScan>Zoek</ButtonScan>
+	<ButtonCancel>Annuleren</ButtonCancel>
   </Form7>
   <Form8>
-	<GroupboxCurrentTask>Current task</GroupboxCurrentTask>
-	<MessageDownload>Downloading %s</MessageDownload>
+	<GroupboxCurrentTask>Huidige taak</GroupboxCurrentTask>
+	<MessageDownload>Downloaden %s</MessageDownload>
 	<GroupboxDownloadInfo>Download info</GroupboxDownloadInfo>
-	<LabelFileName>File name</LabelFileName>
-	<LabelSpeed>Speed</LabelSpeed>
-	<LabelTotalSize>Total size</LabelTotalSize>
-	<LabelBytesReceived>Bytes received</LabelBytesReceived>
-	<ButtonCancel>Cancel</ButtonCancel>
+	<LabelFileName>Bestands naam</LabelFileName>
+	<LabelSpeed>Snelheid</LabelSpeed>
+	<LabelTotalSize>Totale grote</LabelTotalSize>
+	<LabelBytesReceived>Bytes binnengehaald</LabelBytesReceived>
+	<ButtonCancel>Annuleren</ButtonCancel>
   </Form8>
   <Form9>
-	<Form9Caption>Clear elements</Form9Caption>
-	<LabelClearElements>Clear the following elements now:</LabelClearElements>
+	<Form9Caption>Verwijder elementen</Form9Caption>
+	<LabelClearElements>Verwijder de volgende elementen:</LabelClearElements>
 	<CheckBoxMRU>MRU</CheckBoxMRU>
 	<CheckBoxBackup>Backups</CheckBoxBackup>
 	<CheckBoxCache>Cache icons</CheckBoxCache>
-	<ButtonClear>Clear</ButtonClear>
-	<ButtonCancel>Cancel</ButtonCancel>
+	<ButtonClear>Verwijder</ButtonClear>
+	<ButtonCancel>Annuleren</ButtonCancel>
   </Form9>
   <Form10>
-	<Form10Caption>Software order</Form10Caption>
-	<LabelInfoStartupOrder>Order list of software in ASuite startup</LabelInfoStartupOrder>
-	<LabelInfoShutdownOrder>Order list of software in ASuite shutdown</LabelInfoShutdownOrder>
+	<Form10Caption>Software volgorde</Form10Caption>
+	<LabelInfoStartupOrder>Lijst volgorde van software bij ASuite start</LabelInfoStartupOrder>
+	<LabelInfoShutdownOrder>Lijst volgorde van software bij afsluiten</LabelInfoShutdownOrder>
 	<ButtonOk>Ok</ButtonOk>
-	<ButtonCancel>Cancel</ButtonCancel>
+	<ButtonCancel>Anuleren</ButtonCancel>
   </Form10>
   <Form11>
-	<Form11Caption>Run as</Form11Caption>
-	<LabelUsername>Username</LabelUsername>
+	<Form11Caption>Start als</Form11Caption>
+	<LabelUsername>Gebruikersnaam</LabelUsername>
 	<LabelPassword>Password</LabelPassword>
 	<ButtonOk>Ok</ButtonOk>
-	<ButtonCancel>Cancel</ButtonCancel>
+	<ButtonCancel>Annuleren</ButtonCancel>
   </Form11>
   <Form12>	
-	<Form12Caption>Change menu buttons</Form12Caption>
-	<LabelName>Name</LabelName>
-	<LabelPathExe>Executable/folder/web page path</LabelPathExe>
-	<LabelPathIcon>Custom icon path (optional)</LabelPathIcon>
-	<CheckBoxActiveButton>Active this button</CheckBoxActiveButton>
-	<ButtonBrowse>Browse</ButtonBrowse>
+	<Form12Caption>Menu knoppen aanpassen</Form12Caption>
+	<LabelName>Naam</LabelName>
+	<LabelPathExe>Toepassing/map/web page path</LabelPathExe>
+	<LabelPathIcon>Eigen pictogram (optional)</LabelPathIcon>
+	<CheckBoxActiveButton>Deze knop activeren</CheckBoxActiveButton>
+	<ButtonBrowse>Bladeren</ButtonBrowse>
 	<ButtonOk>Ok</ButtonOk>
-	<ButtonCancel>Cancel</ButtonCancel>
+	<ButtonCancel>Annuleren</ButtonCancel>
   </Form12>
   <Form13>
 	<Form13Caption>Stats</Form13Caption>
@@ -310,25 +310,25 @@
 	<string03>Fout in de applicatie naam: %s</string03>
 	<string04>Geen naam</string04>
 	<string05>Geen beschrijving</string05>  
-	<string06>No rating</string06>   
-	<string07>No notes</string07>
+	<string06>Geen beoordeling</string06>   
+	<string07>Geen notitie</string07>
 	<string08>Weet u het zeker?</string08>
 	<string09>Kan niet starten %s</string09>
 	<string10>Het laden van het xml bestand is niet gelukt vanwege een fout</string10>
-	<string11>%s error raised, with message: %s</string11>
+	<string11>%s fout opgetreden, met bericht: %s</string11>
 	<string12>Applicatie naam veld is leeg</string12>
-	<string13>Invalid path to executable</string13>
-	<string14>Max 10 programs in software group</string14>
+	<string13>Ongeldig path naar toepassing</string13>
+	<string14>Max 10 programa's in software groep</string14>
 	<string15>Kan pictogram niet gebruiken %s</string15>
 	<string16>Kan pictogram niet vinden %s</string16>
 	<string17>Opslaan klaar</string17>
-	<string18>Save failed because of an error</string18>
+	<string18>Fout bij het opslaan</string18>
 	<string19>Bezig met importeren...</string19>
 	<string20>Importeren afgebroken vanwege fout</string20>
 	<string21>ASuite was niet goed afgesloten. Vorgige sessie gebruiken?</string21>
-	<string22>Kan deze hotkey niet registreren</string22>
-	<string23>Bezig met scannen...</string23>
-	<string24>A new version of ASuite is available. Do you want to download and install it?</string24>
-	<string25>No version available</string25>
+	<string22>Kan deze sneltoets niet registreren</string22>
+	<string23>Bezig met zoeken...</string23>
+	<string24>Een nieuwe versie van ASuite is beschikbaar. Downlaoden en installeren?</string24>
+	<string25>Geen nieuwe versie beschikbaar</string25>
   </String>
 </ASuite>
