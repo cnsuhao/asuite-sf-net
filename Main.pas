@@ -179,6 +179,8 @@ type
     procedure vstListLoadNode(Sender: TBaseVirtualTree; Node: PVirtualNode;
       Stream: TStream);
     procedure miEditClick(Sender: TObject);
+    procedure vstListFocusChanged(Sender: TBaseVirtualTree; Node: PVirtualNode;
+      Column: TColumnIndex);
   private
     { Private declarations }
     SessionEnding: boolean;
@@ -1534,6 +1536,12 @@ procedure TfrmMain.vstListDragOver(Sender: TBaseVirtualTree; Source: TObject;
   var Effect: Integer; var Accept: Boolean);
 begin
   accept := true;
+end;
+
+procedure TfrmMain.vstListFocusChanged(Sender: TBaseVirtualTree;
+  Node: PVirtualNode; Column: TColumnIndex);
+begin
+  ShowCard(Sender as TVirtualStringTree);
 end;
 
 procedure TfrmMain.vstListFreeNode(Sender: TBaseVirtualTree;
