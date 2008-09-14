@@ -218,6 +218,7 @@ object frmMain: TfrmMain
         OnDblClick = RunExe
         OnDragOver = vstListDragOver
         OnDragDrop = vstListDragDrop
+        OnFocusChanged = vstListFocusChanged
         OnFreeNode = vstListFreeNode
         OnGetText = vstListGetText
         OnPaintText = vstListPaintText
@@ -233,10 +234,6 @@ object frmMain: TfrmMain
     object tbSearch: TTabSheet
       Caption = 'Search'
       ImageIndex = 1
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       DesignSize = (
         186
         337)
