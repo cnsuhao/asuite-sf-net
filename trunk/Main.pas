@@ -1435,7 +1435,6 @@ begin
   begin
     if (LauncherOptions.RunSingleClick) then
       RunExe(Sender);
-    ShowCard(Sender as TVirtualStringTree);
   end;
 end;
 
