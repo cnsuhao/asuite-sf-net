@@ -1,0 +1,334 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ASuite>
+  <Info>
+	<PathReadme>docs\readme.rtf</PathReadme>
+  </Info>
+  <Form1><!--List-->
+	<!--Software's Menu-->
+	<TabListCaption>Λίστα</TabListCaption>
+	<TabSearchCaption>Αναζήτηση</TabSearchCaption>
+	<ButtonSearch>Ψάξε</ButtonSearch>
+	<ColumnName>Όνομα</ColumnName>
+	<ColumnCategory>Κατηγορία</ColumnCategory>
+	<!--ASuite's Menu-->
+	<!--File Menu-->
+	<MenuFile>Αρχείο</MenuFile>
+	<MenuOption>Επιλογές</MenuOption>
+	<MenuSave>Αποθήκευση λίστας</MenuSave>
+	<MenuImportList>Εισαγωγή λίστας...</MenuImportList>
+	<MenuExportList>Εξαγωγή λίστας...</MenuExportList>
+	<MenuScanExecutables>Αναζήτηση για αρχεία...</MenuScanExecutables>
+	<MenuExit>Έξοδος</MenuExit>
+	<!--Edit List Menu/PopUp Menu-->
+	<MenuSortList>Ταξινόμηση λίστας</MenuSortList>
+	<MenuEdit>Επεξεργασία</MenuEdit>
+	<MenuSortCategoryItems>Ταξινόμηση των αντικειμένων αυτής της κατηγορίας</MenuSortCategoryItems>
+	<MenuRun>Τρέξε</MenuRun>
+	<MenuRunAs>Τρέξτο ως...</MenuRunAs>
+	<MenuOpenFolder>Εμφάνισε το φάκελο της εφαρμογής</MenuOpenFolder>
+	<MenuVisitWebSite>Πάνε στην ιστοσελίδα</MenuVisitWebSite>
+	<MenuAddCat>Πρόσθεσε κατηγορία</MenuAddCat>
+	<MenuAddSw>Πρόσθεσε πρόγραμμα</MenuAddSw>
+	<MenuAddGroupSw>Πρόσθεσε ομάδα προγραμμάτων</MenuAddGroupSw>
+	<MenuAddFolder>Πρόσθεσε φάκελο</MenuAddFolder>
+	<MenuAddSeparator>Πρόσθεσε διαχωριστική γραμμή</MenuAddSeparator>
+	<MenuCut>Αποκοπή</MenuCut>
+	<MenuCopy>Αντιγραφή</MenuCopy>
+	<MenuPaste>Επικόληση</MenuPaste>
+	<MenuDelete>Διαγραφή</MenuDelete>
+	<MenuProperty>Ρυθμίσεις</MenuProperty>
+	<!--Help Menu-->
+	<MenuCheckUpdates>Ψάξε για ενημερώσεις</MenuCheckUpdates>
+	<MenuHelp>Βοήθεια</MenuHelp>
+	<MenuStats>Στατιστικά</MenuStats>
+	<MenuASuiteInfo>Περί του ASuite</MenuASuiteInfo>
+	<!--Trayicon Menu-->
+	<TrayiconShowASuite>Εμφάνισε το ASuite</TrayiconShowASuite>
+	<TrayiconMRU>Πρόσφατα</TrayiconMRU>
+	<TrayiconEject>Ασφαλής κατάργηση υλικού</TrayiconEject>
+	<TrayiconExit>Έξοδος</TrayiconExit>
+	<!--Trayicon Default Menu-->
+	<DefaultMenuButtonOptions>Επιλογές...</DefaultMenuButtonOptions>
+	<DefaultMenuButtonSearch>Αναζήτηση...</DefaultMenuButtonSearch>
+	<DefaultMenuButtonAbout>Περί ASuite</DefaultMenuButtonAbout>
+  </Form1>
+  <Form2><!--Card-->
+	<!--ASuite's Page-->
+	<FormCaptionAbout>Περί</FormCaptionAbout>
+	<LabelASVersion>Έκδοση</LabelASVersion>
+	<LabelIntro>Το ASuite είναι μία εφαρμογή είσαγωγής(Launcher) που μπορεί να διαχειριστεί αμέτρητο αριθμό από φακέλους, αρχεία και ιστοσελίδες ώστε να έχετε γρήροση πρόσβαση σε αυτά. Έχει σχεδιαστεί για να λειτουργεί με αφαρούμενους δίσκους USB, σκληρους δίσκους, iPods, κ.α.[br][br]Αφού το Asuite χρησιμοποιηεί εσωτερικές διαδρομές είναι κατάλληλο για φορητές εφαρμογες.</LabelIntro>
+	<LabelInfo>Για περισσότερες πληροφορίες επισκέψου</LabelInfo>
+	<!--Software's Page-->
+	<FormCaptionCard>Πληροφορίες</FormCaptionCard>
+	<GroupBoxSoftware>Πρόγραμμα</GroupBoxSoftware>
+	<LabelNameSw>Όνομα</LabelNameSw>
+	<LabelDeveloper>Δημιουργός</LabelDeveloper>
+	<LabelVersion>Έκδοση</LabelVersion>
+	<LabelWebSite>Αρχική Σελίδα</LabelWebSite>
+	<LabelDescription>Περιγραφή</LabelDescription>
+	<LabelNote>Σημειώσεις</LabelNote>
+	<LabelOpinion>Βαθμολογία</LabelOpinion> 
+  </Form2>
+  <Form3><!--Option-->
+	<Form3Caption>Επιλογές</Form3Caption>
+	<!--General-->
+	<TabGeneralCaption>Γενικά</TabGeneralCaption>
+	<!--Startup-->
+	<GroupBoxStartup>Ξεκίνημα</GroupBoxStartup>
+	<CheckBoxWindowsStartup>Τρέξε το ASuite μόλις ξεκινήσει το σύστημα</CheckBoxWindowsStartup>
+	<CheckBoxStartUp>Εμφάνισε ένα παράθυρο στο ξεκίνημα</CheckBoxStartUp>
+	<CheckBoxMenuStartUp>Εμφάνισε το μενού trayicon στο ξεκίνημα</CheckBoxMenuStartUp>
+	<CheckBoxAutorun>Ενεργοπίηση το autorun</CheckBoxAutorun>
+	<!--Window-->
+	<GroupBoxWindow>Παράθυρο</GroupBoxWindow>
+	<CheckBoxHoldSize>Αποθήκευσε το μέγεθος του παραθύρου</CheckBoxHoldSize>
+	<CheckBoxFormCard>Εμφάνισε πλήροφορίες για την εφαρμογή</CheckBoxFormCard>
+	<CheckBoxWindowOnTop>Το παράθυρο πάντα μπροστά</CheckBoxWindowOnTop>
+	<CheckBoxWindowHotkey>Εμφάνιση παραθύρου όταν πιέζετε hotkey</CheckBoxWindowHotkey>
+	<CheckBoxMenuHotkey>Εμφάνιση μενού trayicon όταν πιέζετε hotkey</CheckBoxMenuHotkey>
+	<CheckBoxCustomTitle>Προσαρμοσμένο όνομα παραθύρου</CheckBoxCustomTitle>
+	<LabelLanguage>Γλώσσα</LabelLanguage>
+	<!--Treeview-->
+	<GroupBoxTreeView>Διακλάδωση</GroupBoxTreeView>
+	<ButtonFontSettings>Ρυθμίσεις φόντου...</ButtonFontSettings>
+	<CheckBoxAutoOpClCat>Αυτόματο Άνοιγμα/Κλείσιμο Κατηγοριών</CheckBoxAutoOpClCat>
+	<CheckBoxBackground>Ενεργό στο παρασκήνιο</CheckBoxBackground>
+	<ButtonBrowseBackground>Browse</ButtonBrowseBackground>
+	<!--Tabs-->
+	<GroupBoxTabs>Καρτέλα</GroupBoxTabs> 
+	<CheckBoxHideSearch>Κρύψε την καρτέλα αναζήτησης</CheckBoxHideSearch>
+	<CheckBoxHideStats>Κρύψε την καρτέλα στατιστικών</CheckBoxHideStats>
+	<!--Advanced-->
+	<TabAdvancedCaption>Προχωρημένα</TabAdvancedCaption>
+	<!--MRU-->
+	<GroupBoxMRU>Πρόσφατα</GroupBoxMRU>
+	<CheckBoxMRU>Ενεργό MRU</CheckBoxMRU>
+	<CheckBoxSubMenuMRU>Το MRU στο υπομενού του trayicon</CheckBoxSubMenuMRU>
+	<LabelMRUMax>Μέγιστος αριθμός MRU</LabelMRUMax>
+	<ButtonClearMRU>Διαγραφή όλων των MRU</ButtonClearMRU>
+	<!--Backup-->
+	<GroupBoxBackup>Backup</GroupBoxBackup>
+	<CheckBoxBackup>Ενεργό backup</CheckBoxBackup>
+	<LabelBackupMax>Μέγιστος αριθμός backup</LabelBackupMax>
+	<ButtonClearBackup>Καθάρισε όλα τα backups</ButtonClearBackup>
+	<!--Check list-->
+	<GroupBoxCheckList>Λίστα ελέγχου</GroupBoxCheckList>
+	<CheckBoxCheckList>Ενεργοποίησε την λίστα ελέγχου</CheckBoxCheckList>
+	<LabelCheckListTime>Χρονικό διάστημα</LabelCheckListTime>
+	<!--Other functions-->
+	<GroupBoxOtherFunctions>Άλλες λειτουργίες</GroupBoxOtherFunctions>
+	<CheckBoxHotKey>Ενεργοιποίησε hotkey</CheckBoxHotKey>
+	<CheckBoxCache>Ενεργοιποιήσε cache</CheckBoxCache>
+	<CheckBoxSaveSecurity>Ενεργοιποιήσε save security</CheckBoxSaveSecurity>
+	<CheckBoxScheduler>Ενεργοιποιήσε χρονοπρογραμματιστή</CheckBoxScheduler>
+	<!--Clear elements-->
+	<GroupBoxClearElements>Καθάρισε τα στοιχεία</GroupBoxClearElements>
+	<LabelClearElements>Καθάρισε το MRU, backups και/ή τα εικονίδια cache</LabelClearElements>
+	<ButtonClearElements>Διαγραφή στοιχείων...</ButtonClearElements>
+	<!--Various-->
+	<TabVariousCaption>Διάφορα</TabVariousCaption>
+	<!--Execution-->
+	<GroupBoxExecution>Εκτέλεση</GroupBoxExecution>
+	<CheckBoxSingleClick>Εκτέλεση με μονό κλικ</CheckBoxSingleClick>
+	<LabelActionOnExe>Πάνω στην εκτέλεση</LabelActionOnExe>
+	<ListActionOnExe1>Απλά τρέξε το αρχείο</ListActionOnExe1>
+	<ListActionOnExe2>Τρέξε και κρύψε το ASuite</ListActionOnExe2>
+	<ListActionOnExe3>Τρέξε και κλείσε το ASuite</ListActionOnExe3>
+	<!--System Tray-->
+	<GroupBoxTrayicon>System Tray</GroupBoxTrayicon>
+	<ButtonCustomTrayicon>Προσαρμοσμένο εικονίδιο</ButtonCustomTrayicon>
+	<CheckBoxTrayicon>Ενεργοποίησε το εικονίδιο System Tray</CheckBoxTrayicon>
+	<ListActionTrayicon1>Καμία ενέργεια</ListActionTrayicon1>
+	<ListActionTrayicon2>Δείξε το παράθυρο</ListActionTrayicon2>
+	<ListActionTrayicon3>Δείξε το μενού</ListActionTrayicon3>
+	<CheckBoxClassicMenu>Χρησιμοποίησε το κλασσικό μενού</CheckBoxClassicMenu>
+	<!--Trayicon Default Menu-->
+	<LabelMenuTheme>Θέματα</LabelMenuTheme>
+	<ButtonMenuButtons>Κουμπιά μενού</ButtonMenuButtons>
+	<CheckBoxMenuFade>Ενεργοποίηση ξεθοριασμένου μενού</CheckBoxMenuFade>
+	<!--Mouse-->
+	<GroupBoxMouse>Αισθητήρες ποντικιού</GroupBoxMouse>
+	<LabelSide>Πλευρά</LabelSide>
+	<LabelTop>Κορυφή</LabelTop>
+	<LabelLeft>Αριστερά</LabelLeft>
+	<LabelRight>Δεξιά</LabelRight>
+	<LabelBottom>Κάτω</LabelBottom>
+	<LabelLeftClick>Αριστερό κλικ</LabelLeftClick>
+	<LabelRightClick>Δεξί κλικ</LabelRightClick>
+	<ListActionMouse1>Απενεργοιποίηση</ListActionMouse1>
+	<ListActionMouse2>Εμφάνιση παραθύρου</ListActionMouse2>
+	<ListActionMouse3>Εμφάνιση προεπιλεγμενου μενού</ListActionMouse3>
+	<ListActionMouse4>Εμφάνιση κλασσικού μενού</ListActionMouse4>
+	<ButtonOk>ΟΚ</ButtonOk>
+	<ButtonCancel>Άκυρο</ButtonCancel>
+  </Form3>
+  <Form45><!--Property Sw/Cat-->
+	<Form45Caption>Ρυθμίσεις</Form45Caption>
+	<TabGeneralCaption>Γενικά</TabGeneralCaption>
+	<TabAdvancedCaption>Προχωρημένα</TabAdvancedCaption>
+	<TabInfoCaption>Πληροφορίες</TabInfoCaption>
+	<LabelName>Όνομα</LabelName>
+	<LabelVersion>Έκδοση</LabelVersion>
+	<LabelDeveloper>Δημιουργός</LabelDeveloper>
+	<LabelWebSite>Αρχική σελίδα</LabelWebSite>
+	<LabelPathExeA>Διαδρομη εφαρμογης/φάκελου/ιστοσελίδας </LabelPathExeA>
+	<LabelPathExeB>Διαδρομη εφαρμογών/φάκελων/ιστοσελίδων</LabelPathExeB>
+	<LabelParameters>Παράμετροι (προαιρετικό)</LabelParameters>
+	<LabelWorkingDir>Προσαρμοσμένη διαδρομή που λειτουργεί (προαιρετικό)</LabelWorkingDir>
+	<LabelPathIcon>Προσαρμοσμένη διαδρομή εικονιδίου (προαιρετικό)</LabelPathIcon>
+	<HideWindow>Στην εκτέλεση κρύψε το παράθυρο</HideWindow>
+	<LabelDescription>Περιγραφή</LabelDescription>
+	<LabelOpinion>Βαθμολόγηση</LabelOpinion>
+	<LabelNote>Σημειώσεις</LabelNote>
+	<LabelInformation1>Κάθε σελίδα στον ASuite χρειάζεται κάποιες πληροφορίες για την αντίστοιχη εφαρμογή. Όλα τα πεδία ειναι προαιρετικά εκτός του ονόματος της εφαρμογής.</LabelInformation1>
+	<LabelInformation3>Σημείωση : Μπορείς να χρησιμοποιήσεις $ASuite ακόμη και όταν οι εφαρμογές είναι στον ίδιο φάκελο με το ASuite.</LabelInformation3>
+	<ButtonBrowse>Browse</ButtonBrowse>
+	<ButtonRetrieve>Ανάκτηση</ButtonRetrieve>
+	<LabelAutoExecute>Αυτόματη εκτέλεση</LabelAutoExecute>
+	<ButtonChangeOrder>Αλλαγή σειράς</ButtonChangeOrder>
+	<ComboBoxAutoExecute0>Ποτέ</ComboBoxAutoExecute0>
+	<ComboBoxAutoExecute1>Πάντα στο ξεκίνημα</ComboBoxAutoExecute1>
+	<ComboBoxAutoExecute2A>Μόνο αν δεν εκτελείτε σε προηγούμενες περιπτώσεις</ComboBoxAutoExecute2A>
+	<ComboBoxAutoExecute2B>Μόνο αν δεν εκτελείτε σε προηγούμενες περιπτώσεις</ComboBoxAutoExecute2B>
+	<ComboBoxAutoExecute3>Πάντα στην απενεργοποίηση</ComboBoxAutoExecute3>
+	<LabelOnExecution>Στην εκτέλεση</LabelOnExecution>
+	<ComboBoxActionOnExe0>Προκαθορισμένα (επιλογές)</ComboBoxActionOnExe0>
+	<ComboBoxActionOnExe1A>Απλά τρέξε το αρχείο</ComboBoxActionOnExe1A>
+	<ComboBoxActionOnExe1B>Απλά τρέξε τα αρχεία</ComboBoxActionOnExe1B>
+	<ComboBoxActionOnExe2>Τρέξε και κρύψε το ASuite</ComboBoxActionOnExe2>
+	<ComboBoxActionOnExe3>Τρέξε και κλείσε το ASuite</ComboBoxActionOnExe3>
+	<CheckBoxHotKey>Ενεργοιποίηση hotkey</CheckBoxHotKey>
+	<LabelWindowState>Κατάσταση παραθύρου</LabelWindowState>
+	<ComboBoxWSNormal>Κανονικό</ComboBoxWSNormal>
+	<ComboBoxWSMinimized>Ελαχιστοποιημένο</ComboBoxWSMinimized>
+	<ComboBoxWSMaximized>Μέγιστοποιημένο</ComboBoxWSMaximized>
+	<LabelDontInsertMRUA>Μην βάλεις αυτό το πρόγραμμα στο MRU</LabelDontInsertMRUA>
+	<LabelDontInsertMRUB>Μην βάλεις αυτή την ομάδα προγραμμάτων στο MRU MRU</LabelDontInsertMRUB>
+	<LabelShortcutDesktop>Κάνε μια συντόμευση στην επιφάνεια εργασίας οταν το ASuite τρέχει</LabelShortcutDesktop>
+	<LabelHideSoftwareMenuA>Κρύψε αυτό το πρόγραμμα απο το μενού</LabelHideSoftwareMenuA>
+	<LabelHideSoftwareMenuB>Κρύψε αυτή την ομάδα προγραμμάτων απο το μενού</LabelHideSoftwareMenuB>
+	<LabelScheduler>Χρονοπρογραμματιστής</LabelScheduler>
+	<ComboBoxSchedulerMode0>Απενεργοποιημένο</ComboBoxSchedulerMode0>
+	<ComboBoxSchedulerMode1>Μία</ComboBoxSchedulerMode1>
+	<ComboBoxSchedulerMode2>Κάθε ώρα</ComboBoxSchedulerMode2>
+	<ComboBoxSchedulerMode3>Κάθε μέρα</ComboBoxSchedulerMode3>
+	<ButtonAddPath>Προσθήκη</ButtonAddPath>
+	<ButtonReplacePath>Αλλαγή</ButtonReplacePath>
+	<ButtonDeletePath>Διαγραφή</ButtonDeletePath>
+	<ButtonOk>ΟΚ</ButtonOk>
+	<ButtonCancel>Άκυρο</ButtonCancel>
+  </Form45>
+  <Form6><!--Import List-->
+	<Form6Caption>Εισαγωγή λίστας</Form6Caption>
+	<LabelPathList>Διαδρομή λίστας</LabelPathList>
+	<LabelList>Διάλεξε εφαρμογές για εισαγωγή</LabelList>
+	<ButtonSelectAll>Επίλεξε τα όλα</ButtonSelectAll>
+	<ButtonDeSelectAll>Μην επιλέγει κανένα</ButtonDeSelectAll>
+	<ButtonBrowse>Browse</ButtonBrowse>
+	<ButtonOk>ΟΚ</ButtonOk>
+	<ButtonCancel>Άκυρο</ButtonCancel>
+  </Form6>
+  <Form7>
+	<Form7Caption>Σάρωση φακέλου</Form7Caption>
+	<LabelFolderPath>Διαδρομή φακέλου</LabelFolderPath>
+	<ButtonBrowse>Browse</ButtonBrowse>
+	<CheckboxSubFolders>Σάρωση υποφακέλων</CheckboxSubFolders>
+	<LabelTypes>Τύποι αρχείων</LabelTypes>
+	<LabelExclude>Εξαίρεση αρχείου</LabelExclude>
+	<ButtonAdd>Προσθήκη</ButtonAdd>
+	<ButtonReplace>Αλλαγή</ButtonReplace>
+	<ButtonDelete>Διαγραφή</ButtonDelete>
+	<CheckboxRetrieveInfo>Ανακτήστε πληροφορίες από της εφαρμογές</CheckboxRetrieveInfo>
+	<ButtonScan>Σάρωση</ButtonScan>
+	<ButtonCancel>Άκυρο</ButtonCancel>
+  </Form7>
+  <Form8>
+	<GroupboxCurrentTask>Τρέχουσα εργασία</GroupboxCurrentTask>
+	<MessageDownload>Κατέβασμα %s</MessageDownload>
+	<GroupboxDownloadInfo>Πληροφορίες κατεβάσματος</GroupboxDownloadInfo>
+	<LabelFileName>Όνομα αρχείου</LabelFileName>
+	<LabelSpeed>Ταχύτητα</LabelSpeed>
+	<LabelTotalSize>Συνολικό μέγεθος</LabelTotalSize>
+	<LabelBytesReceived>Κατεβασμένα Bytes</LabelBytesReceived>
+	<ButtonCancel>Άκυρο</ButtonCancel>
+  </Form8>
+  <Form9>
+	<Form9Caption>Καθαρισμός στοιχείων</Form9Caption>
+	<LabelClearElements>Καθαρισμός των ακόλουθων στοιχείων τώρα:</LabelClearElements>
+	<CheckBoxMRU>MRU</CheckBoxMRU>
+	<CheckBoxBackup>Backups</CheckBoxBackup>
+	<CheckBoxCache>Εικονίδια Cache</CheckBoxCache>
+	<ButtonClear>Καθαρισμός</ButtonClear>
+	<ButtonCancel>Άκυρο</ButtonCancel>
+  </Form9>
+  <Form10>
+	<Form10Caption>Software order</Form10Caption>
+	<LabelInfoStartupOrder>Διάταξη λίστας των εφαρμογών στο ξεκίνημα του ASuite</LabelInfoStartupOrder>
+	<LabelInfoShutdownOrder>Διάταξη λίστας των εφαρμογών στο κλείσιμο του ASuite</LabelInfoShutdownOrder>
+	<ButtonOk>ΟΚ</ButtonOk>
+	<ButtonCancel>Άκυρο</ButtonCancel>
+  </Form10>
+  <Form11>
+	<Form11Caption>Τρέξτο ως</Form11Caption>
+	<LabelUsername>Όνομα Χρήστη</LabelUsername>
+	<LabelPassword>Κωδικός</LabelPassword>
+	<ButtonOk>ΟΚ</ButtonOk>
+	<ButtonCancel>Άκυρο</ButtonCancel>
+  </Form11>
+  <Form12>	
+	<Form12Caption>Αλλάγη κουμπιών του μενού</Form12Caption>
+	<LabelName>Όνομα</LabelName>
+	<LabelPathExe>Διαδρομη εφαρμογης/φάκελου/ιστοσελίδας</LabelPathExe>
+	<LabelPathIcon>Προσαρμοσμένη διαδρομή εικονιδίου (προαιρετικό)</LabelPathIcon>
+	<CheckBoxActiveButton>Ενεργοποίησε αυτό το κουμπί</CheckBoxActiveButton>
+	<ButtonBrowse>Browse</ButtonBrowse>
+	<ButtonOk>ΟΚ</ButtonOk>
+	<ButtonCancel>Άκυρο</ButtonCancel>
+  </Form12>
+  <Form13>
+	<Form13Caption>Στατιστικά</Form13Caption>
+	<!--System-->
+	<GroupBoxSystem>Σύστημα</GroupBoxSystem>
+	<LabelOperatingSystem>Λογισμικό</LabelOperatingSystem>
+	<LabelPcName>Όνομα υπολογιστή</LabelPcName>
+	<LabelCurrentUser>Τρέχων χρήστης</LabelCurrentUser>
+	<!--Drive-->
+	<GroupBoxDrive>Δίσκος %s:</GroupBoxDrive>
+	<LabelSize>Μέγεθος</LabelSize>
+	<LabelFreeSpace>Ελεύθερος χώρος</LabelFreeSpace>
+	<LabelUsedSpace>Χρησιμοποιημένος χώρος</LabelUsedSpace>
+	<!--Launcher-->
+	<GroupBoxASuite>ASuite</GroupBoxASuite>
+	<LabelSwInserted>Προγράμματα</LabelSwInserted>
+	<LabelSwGroupInserted>Ομάδες προγραμμάτων</LabelSwGroupInserted>
+	<LabelCatInserted>Κατηγορίες</LabelCatInserted>
+	<LabelTotal>Σύνολο</LabelTotal>
+  </Form13>
+  <String>
+	<string01>Το αρχείο δεν βρέθηκε</string01>
+	<string02>Πρόβλημα στο όνομα της κατηγορίας: %s</string02>
+	<string03>Πρόβλημα στο όνομα της εφαρμογής: %s</string03>
+	<string04>Χωρίς όνομα</string04>
+	<string05>Χωρίς Περιγραφή</string05>  
+	<string06>Χωρίς Βαθμολόγηση</string06>   
+	<string07>Χωρίς σημειώσεις</string07>
+	<string08>Είσαι σίγουρος/η</string08>
+	<string09>Δεν μπορεί να τρέξει %s</string09>
+	<string10>Η φόρτωση του αρχείου xml δεν ολοκληρώθηκε επειδή ανέκυψε κάποιο πρόβλημα</string10>
+	<string11>%s ανέκυψε σφάλμα , με το μήνυμα: %s</string11>
+	<string12>Το πεδίο με το όνομα της εφαρμογής είναι άδειο</string12>
+	<string13>Λάθος εκτελέσιμη διαδρομή</string13>
+	<string14>Μέχρι 10 προγράμματα σε λίστα προγραμμάτων</string14>
+	<string15>Δεν μπορεί να χρησιμοποιηθεί το εικονίδιο %s</string15>
+	<string16>Δεν μπορεί να βρεθεί το εικονίδιο %s</string16>
+	<string17>Η αποθήκευση ολοκληρώθηκε</string17>
+	<string18>Η αποθήκευση απέτυχε επειδή υπήρξε κάποιο πρόβλημα</string18>
+	<string19>Είσαγωγή σε εξέλιξη...</string19>
+	<string20>Η εισαγωγή απέτυχε επειδή υπήρξε κάποιο πρόβλημα</string20>
+	<string21>Το ASuite δεν απενεργοποιήθηκε σωστά. Επαναφορά τελευταίας εργασίας</string21>
+	<string22>Δεν μπορεί να καταχωρηθεί το hotkey</string22>
+	<string23>Σάρωση σε εξέλιξη...</string23>
+	<string24>Μία νέα έκδοση του ASuite είναι διαθέσιμη. Θέλεις να την κατεβάσεις και να την εγκαταστήσεις</string24>
+	<string25>Καμία έκδοση διαθέσιμη</string25>
+  </String>
+</ASuite>
